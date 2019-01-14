@@ -1,0 +1,481 @@
+### SETUP ###
+
+# first run Kenkel merge-cow-polity.r to create polityCLEAN.csv
+
+library(tidyverse)
+library(readxl)
+library(countrycode)
+library(plotly)
+library(foreach)
+library(patchwork)
+library(ggrepel)
+library(latex2exp)
+library(cowplot)
+library(showtext)
+library(grid)
+library(gridExtra)
+library(ggpubr)
+
+if (dir.exists("temp")) {
+  unlink("temp", recursive=TRUE)
+}
+
+# # get font
+# font_add_google("Open Sans Condensed", regular.wt = 300, bold.wt = 700)
+# 
+# showtext.auto()
+
+### DATA ###
+
+dir.create("temp")
+
+# wars
+warsUrl <- "http://www.correlatesofwar.org/data-sets/COW-war/dyadic-inter-state-war-dataset/at_download/file"
+temp <- tempfile()
+download.file(warsUrl, temp)
+unzip(temp, exdir="temp")
+
+wars <- read_csv("temp/directed_dyadic_war.csv") %>% select(warnum, statea, stateb, warstrtyr, warendyr, batdthb, batdtha) %>% unique() # 1816-2007
+# wars %>% arrange(desc(year)) %>% print(n=100)
+
+# trade
+tradeUrl <- "http://www.correlatesofwar.org/data-sets/bilateral-trade/cow_trade_4.0/at_download/file"
+temp <- tempfile()
+download.file(tradeUrl, temp)
+unzip(temp, exdir="temp")
+
+trade <- read_csv("temp/COW_Trade_4.0/Dyadic_COW_4.0.csv", 
+                  col_types = list(bel_lux_alt_flow1=col_character(),
+                                   bel_lux_alt_flow2=col_character(),
+                                   china_alt_flow1=col_character(),
+                                   china_alt_flow2=col_character(),
+                                   source1=col_character())) %>% select(ccode1, ccode2, year, flow1, flow2) # 1870-2014
+# trade %>% filter(ccode1==450, year==1994) %>% arrange(desc(flow1)) %>% select(source1, source2, everything())
+
+# trade %>% filter(year==1920, ccode1==2, ccode2==20)
+# trade %>% filter(year==1920, ccode1==20, ccode2==2)
+
+# polity
+# temp <- tempfile(fileext=".xls")
+# download.file("http://www.systemicpeace.org/inscr/p4v2017.xls", temp)
+# polity <- read_excel(temp) %>% select(ccode, year, polity)
+
+polity <- read_csv("data/polityCLEAN.csv")
+summary(polity)
+
+# gdp
+temp <- tempfile(fileext=".xlsx")
+download.file("https://www.rug.nl/ggdc/historicaldevelopment/maddison/data/mpd2018.xlsx", temp)
+maddison <- read_excel(temp, sheet=2) %>% select(countrycode, year, cgdppc, pop)
+# maddison %>% filter(countrycode=="USA") %>% print(n=100)
+
+# clean up
+unlink("temp", recursive=TRUE)
+
+### WRANGLE ###
+
+# convert wars to dyad-years
+# warsY <- wars %>%
+#   rowwise() %>%
+#   do(data.frame(warnum=.$warnum, statea=.$statea, stateb=.$stateb,
+#                 year=seq(.$warstrtyr,.$warendyr)))
+
+# trade NAs
+trade$flow1 <- ifelse(trade$flow1==-9, NA, trade$flow1)
+trade$flow2 <- ifelse(trade$flow2==-9, NA, trade$flow2)
+
+# drop trade bizzare observations
+# 450 - Liberia
+# 56 - St. Lucia
+drop <- c(450, 56)
+trade <- trade %>% filter(!(ccode1 %in% drop) & !(ccode2 %in% drop))
+
+# drop maddison pre 1870
+maddison <- maddison %>% filter(year >= 1870)
+maddison$year <- as.integer(maddison$year)
+
+# pad maddison dates
+maddison <- maddison %>% group_by(countrycode) %>% complete(year=seq(max(maddison$year), min(maddison$year)))
+
+# correct weird entries in Maddison
+# former Soviet Union becomes Russia, corresponds to COW entity
+maddison <- maddison %>% filter(countrycode!="RUS")
+maddison$countrycode <- ifelse(maddison$countrycode=="SUN", "RUS", maddison$countrycode)
+
+# maddison codes to COW
+maddison$ccode <- countrycode(maddison$countrycode, "iso3c", "cown")
+
+# interpolate population and gdp data
+maddisonI <- maddison %>% group_by(ccode) %>% 
+  mutate(cgdppc_interpolated=approx(year, cgdppc, xout=year)$y,
+         pop_interpolated=approx(year, pop, xout=year)$y)
+
+maddisonM <- maddisonI %>% select(ccode, year, cgdppc_interpolated, pop_interpolated) %>% ungroup()
+colnames(maddisonM)[colnames(maddisonM) %in% c("cgdppc_interpolated", "pop_interpolated")] <- c("cgdppc", "pop")
+# countrycode(700, "cown", "country.name")
+
+# Maddison has separate entries for Austria and Hungary before 1918
+# combine populations and average gdp per capita for Austria Hungary
+aut1918 <- maddisonM %>% filter(year <= 1918, ccode == 305) %>% select(year, cgdppc, pop)
+colnames(aut1918) <- c("year", "aut_cgdppc", "aut_pop")
+hun1918 <- maddisonM %>% filter(year <= 1918, ccode == 310) %>% select(year, cgdppc, pop)
+colnames(hun1918) <- c("year", "hun_cgdppc", "hun_pop")
+
+authun1918 <- left_join(aut1918, hun1918)
+authun1918$cgdppc <- (authun1918$aut_cgdppc * authun1918$aut_pop + authun1918$hun_cgdppc * authun1918$hun_pop) / (authun1918$hun_pop + aut1918$aut_pop)
+authun1918$pop <- authun1918$hun_pop + authun1918$aut_pop
+authun1918$ccode <- 300
+
+authun1918 <- authun1918 %>% select(ccode, year, cgdppc, pop)
+
+maddisonM <- bind_rows(maddisonM, authun1918)
+
+# maddison %>% filter(ccode==450) %>% print(n=100)
+# maddison %>% filter(countrycode=="RUS") %>% print(n=100)
+# popRussia <- maddison %>% filter(countrycode=="RUS") %>% pull(pop)
+# yRussia <- maddison %>% filter(countrycode=="RUS") %>% pull(year)
+# approx(yRussia, popRussia, xout=yRussia)
+# popRussia
+# popRussia[1] <- NA
+# approx(yRussia, popRussia, xout=yRussia)
+
+# unmatched: 
+# PRI: Puerto Rico
+# PSE: Palestine
+# SRB: Serbia (former Yugoslavia - YUG)
+# HKG
+
+# calculate gdp (pop in thousands)
+maddisonM$gdp <- maddisonM$cgdppc * (maddisonM$pop*1000) / 1000000  # in millions
+maddisonM <- maddisonM %>% select(-cgdppc)
+
+# calculate trade shares
+tradeM <- trade
+tradeM <- left_join(trade, maddisonM, by=c("ccode1"="ccode", "year"))
+colnames(tradeM)[colnames(tradeM)=="gdp"] <- "gdp1"
+colnames(tradeM)[colnames(tradeM)=="pop"] <- "pop1"
+# tradeM %>% filter(ccode1==450, year==1994) %>% print(n=100)
+tradeM <- left_join(tradeM, maddisonM, by=c("ccode2"="ccode", "year"))
+colnames(tradeM)[colnames(tradeM)=="gdp"] <- "gdp2"
+colnames(tradeM)[colnames(tradeM)=="pop"] <- "pop2"
+
+tradeM$share1 <- tradeM$flow1 / tradeM$gdp1
+tradeM$share2 <- tradeM$flow2 / tradeM$gdp2
+
+tradeM$tradeInt <- (tradeM$share1 + tradeM$share2) / 2 # trade integration score
+tradeM$meanGdp <- (tradeM$gdp1 + tradeM$gdp2) / 2
+tradeM$meanPop <- (tradeM$pop1 + tradeM$pop2) / 2
+# tradeM %>% arrange(desc(tradeInt)) %>% print(n=100)
+
+summary(tradeM)
+tradeM %>% filter(ccode1==365 | ccode2==365) %>% filter(year==1899) %>% print(n=100)
+
+
+# taken care of by Kenkel script
+# # clean polity interregnum/transition
+# polity$polity <- ifelse(polity$polity < -10, NA, polity$polity)
+# polity %>% filter(year==1900) %>% print(n=100)
+# countrycode("Russian Federation", "country.name", "cown")
+# 
+# # combine autria and hungary in polity
+# polityAUT <- polity %>% filter(year <= 1918, ccode==305) %>% select(year, polity)
+# colnames(polityAUT) <- c("year", "polityAUT")
+# polityHUN <- polity %>% filter(year <= 1918, ccode==305) %>% select(year, polity)
+# colnames(polityHUN) <- c("year", "polityHUN")
+# 
+# polityAUTHUN <- left_join(polityAUT, polityHUN)
+# polityAUTHUN$polity <- (polityAUTHUN$polityAUT + polityAUTHUN$polityHUN) / 2
+# polityAUTHUN$ccode <- 300
+# polityAUTHUN <- polityAUTHUN %>% select(ccode, year, polity)
+# 
+# polity <- bind_rows(polity, polityAUTHUN)
+# polity %>% filter(year==1918) %>% print(n=100)
+# 
+# # convert USSR to Russia ccode
+# polity$ccode <- ifelse(polity$ccode==364, 365, polity$ccode)
+
+
+
+# append polity
+tradeM <- left_join(tradeM, polity, by=c("ccode1"="ccode", "year"))
+colnames(tradeM)[colnames(tradeM)=="polity"] <- "polity1"
+tradeM <- left_join(tradeM, polity, by=c("ccode2"="ccode", "year"))
+colnames(tradeM)[colnames(tradeM)=="polity"] <- "polity2"
+
+tradeM$meanPolity <- (tradeM$polity1 + tradeM$polity2) / 2
+
+tradeM %>% filter(ccode1==300) %>% select(polity1, polity2, everything())
+
+# lag tradeInt score and meanPolity
+tradeM$dyadID <- paste0(tradeM$ccode1, "-", tradeM$ccode2)
+tradeM <- tradeM %>% group_by(dyadID) %>%
+  mutate(tradeInt.lag=lag(tradeInt),
+         meanPolity.lag=lag(meanPolity))
+
+# compute log tradeInt score
+tradeM$tradeInt.lag.log <- log(tradeM$tradeInt.lag)
+summary(tradeM$tradeInt.lag.log)
+
+# maybe try Kenkel smoother instead
+# inverse hyperbolic sines
+# https://github.com/brentonk/crpn/blob/master/R/00-nmc.r
+ks_stat <- function(x) {
+  x <- x[!is.na(x)]
+  ans <- ecdf(x)(x) - pnorm(x, mean = mean(x), sd = sd(x))
+  max(abs(ans))
+}
+
+theta_candidates <- 2^seq(0, 100)
+x <- tradeM$tradeInt.lag
+loss <- foreach (s = theta_candidates) %do% {
+  ks_stat(asinh(s * x))
+}
+thetaStar <- theta_candidates[which.min(loss)]
+
+tradeM$tradeInt.lag.ihs <- asinh(thetaStar * x)
+summary(tradeM$tradeInt.lag.ihs)
+density(tradeM$tradeInt.lag.ihs) %>% plot()
+
+# append wars
+wars$war <- 1
+
+tradeM <- left_join(tradeM, wars, by=c("ccode1"="statea", "ccode2"="stateb", "year"="warstrtyr"))
+tradeM$war <- ifelse(is.na(tradeM$war), 0, 1)
+
+tradeM$deaths <- tradeM$batdtha + tradeM$batdthb
+
+### PLOT ###
+
+tradeM$zeros <- 0
+
+# choose variables to plot
+tradeM$tradeInt.plot <- tradeM$tradeInt.lag.ihs
+tradeM$meanPolity.plot <- tradeM$meanPolity.lag
+
+# jitter points
+# jF <- 10
+# tradeM$tradeInt.plot <- tradeM$tradeInt.plot %>% jitter(factor=jF)
+# tradeM$meanPolity.plot <- tradeM$meanPolity.plot %>% jitter(factor=jF)
+
+tradeF <- tradeM %>% filter(!is.na(tradeInt.plot) & !is.na(meanPolity.plot)) # filter missing lagged variables
+tradeUF <- tradeM %>% filter(is.na(tradeInt.plot) | is.na(meanPolity.plot))
+summary(tradeF)
+
+tradeF$cname1 <- countrycode(tradeF$ccode1, "cown", "country.name")
+tradeF$cname2 <- countrycode(tradeF$ccode2, "cown", "country.name")
+tradeF$dyadName <- paste0(tradeF$cname1, "-", tradeF$cname2, ", ", tradeF$year)
+
+tradeFwars <- tradeF %>% filter(war==1)
+tradeFpeace <- tradeF %>% filter(war==0)
+
+# add labels to most deadly wars
+# deathsArr <- tradeFwars %>% arrange(desc(deaths)) %>% pull(deaths)
+# deathThres <- deathsArr[5]
+# tradeFwars$lab <- ifelse(tradeFwars$deaths > deathThres, tradeFwars$dyadName, "")
+# tradeFpeace$lab <- ""
+
+# add labels to representative observations
+tradeFwars$lab <- ifelse(tradeFwars$deaths > 1000000,
+                         paste0(tradeFwars$cname1, "-", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
+                         paste(format(round((tradeFwars$deaths) / 1000000, 1), trim = TRUE), "million"),
+                         " battle deaths"),
+                         paste0(tradeFwars$cname1, "-", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
+                                paste(format(round((tradeFwars$deaths) / 1000, 1), trim = TRUE), "thousand"),
+                                " battle deaths")
+                         )
+
+# tradeFwars %>% filter(dyadName=="Hungary-Russian Federation, 1956") %>% select(deaths)
+
+# "Hungary-Russian Federation, 1956"
+keep <- c("France-Germany, 1944", "Armenia-Azerbaijan, 1993")
+tradeFwars$lab <- ifelse(tradeFwars$dyadName %in% keep, tradeFwars$lab, "")
+
+tradeFpeace$lab <- tradeFpeace$dyadName
+
+tradeFwars %>% select(cname1, cname2, year) %>% print(n=150)
+
+# unmerged wars
+warsUnmerged <- tradeUF %>% filter(war==1)
+warsUnmerged %>% select(polity1, polity2, meanPolity.lag, everything()) %>% print(n=150)
+warsUnmerged$cname1 <- countrycode(warsUnmerged$ccode1, "cown", "country.name")
+warsUnmerged$cname2 <- countrycode(warsUnmerged$ccode2, "cown", "country.name")
+
+warsUnmerged %>% select(cname1, cname2, year, tradeInt.lag, meanPolity.lag, everything()) %>% print(n=150)
+polity %>% filter(year==1938) %>% print(n=100)
+
+# get those with polity data available
+tradeUFP <- tradeUF %>% filter(!is.na(meanPolity.plot))
+
+# filter out before 1870 as well
+
+N <- 10000
+sampleI <- sample(seq(1, nrow(tradeFpeace)), N)
+
+tradeS <- tradeFpeace[sampleI, ]
+
+# add representative dot with label
+repPeaceObs <- "Japan-Singapore, 2002"
+if (!(repPeaceObs) %in% tradeS$dyadName) {
+  toAdd <- tradeFpeace %>% filter(dyadName==repPeaceObs)
+  tradeS <- bind_rows(tradeS, toAdd)
+}
+tradeS$lab <- ifelse(tradeS$lab==repPeaceObs, tradeS$lab, "")
+
+# tradeS <- bind_rows(tradeS, tradeMwars)
+# tradeS %>% filter(tradeInt < 0)
+
+# size bounds
+maxSize <- 10
+popSummary <- summary(tradeS$meanPop) / max(tradeS$meanPop) * maxSize
+
+warsAll <- bind_rows(tradeFwars, warsUnmerged)
+
+summary(warsAll$deaths)
+deathsSummary <- summary(warsAll$deaths) / max(warsAll$deaths, na.rm=T) * maxSize
+
+# regression line
+# tradePolityReg <- lm(tradeInt.plot ~ meanPolity, data=tradeM)
+# tradeS$tradeInt.pred <- predict(tradePolityReg, newdata=tradeS)
+# summary(tradeS$tradeInt.pred)
+# summary(tradeS$tradeInt.plot)
+
+# colors: https://picular.co/volcano
+# colors2: https://picular.co/war
+# lineColor <- "#34556D"
+lineColor <- "#191309"
+# pointsColor <- "#CCA686"
+pointsColor <- "#A8BFD9"
+# warsColor <- "#DD2E2B"
+warsColor <- "#B15740"
+# warsColorBoundary <- "#C7502B"
+# warsColorFill <- "#F17929"
+warsColorBoundary <- "#C7502B"
+warsColorFill <- "#F17929"
+
+labelSize <- 11
+titleSize <- 16
+captionSize <- 9
+
+pos <- position_jitter()
+main <- tradeS %>% ggplot(aes(x=meanPolity.plot, y=tradeInt.plot, label=lab)) +
+  # geom_point(size=.5, alpha=.5) +
+  stat_smooth(geom="line", method="lm", se=FALSE, color=lineColor, size=.75, alpha=1) +
+  geom_point(aes(text=dyadName), alpha=.2, fill=pointsColor, color=pointsColor, pch=21,
+             position=pos) +
+  geom_point(data=tradeFwars, aes(size=deaths, text=dyadName), 
+             alpha=1, fill=warsColor, color="black", pch=21, stroke=.5,
+             position=pos) +
+  geom_text_repel(data=tradeFwars, size=3, box.padding = unit(0.75, "lines"), position=pos) +
+  geom_text_repel(data=tradeS, size=3, box.padding = unit(0.75, "lines"), position=pos) +
+  scale_size_continuous(range = c(maxSize / 10, maxSize)) +
+  # geom_line(aes(x=meanPolity, y=tradeInt.pred)) +
+  labs(x="Dyad-Year Average POLITY Score", y="Dyad-Year Economic Integration") +
+  # ggtitle("Political Bias, Trade, and War, 1870-2014") +
+  theme_classic() +
+  theme(axis.title.y=element_text(size=labelSize),
+        axis.ticks.y=element_blank(), axis.text.y=element_blank(),
+        axis.title.x=element_blank()) +
+  theme(axis.text.x=element_text(size=labelSize)) +
+  # theme(axis.text.x=element_blank(), axis.ticks.x=element_blank(), axis.line.x=element_blank()) +
+  guides(size=FALSE)
+
+polityDensity <- tradeS %>% ggplot(aes(x=meanPolity.plot)) +
+  geom_line(stat="density", color=pointsColor) +
+  labs(title="The Commercial-Democratic Peace, 1870-2014") +
+  theme_classic() +
+  theme(axis.text=element_blank(), axis.ticks=element_blank(), 
+        axis.title=element_blank(), axis.line=element_blank(),
+        plot.title=element_text(size=titleSize))
+
+tradeIntDensity <- tradeS %>% ggplot(aes(x=tradeInt.plot)) +
+  geom_line(stat="density", color=pointsColor) +
+  theme_classic() +
+  labs(x="", y="") +
+  theme(axis.text=element_blank(), axis.ticks=element_blank(), axis.title=element_blank(), axis.line=element_blank()) +
+  # theme(plot.margin = unit(c(0, 0, 0, 0), "cm")) +
+  coord_flip()
+
+# unplotted wars with polity data
+# polityRail <- warsUnmerged %>% ggplot(aes(x=meanPolity.plot, y=zeros, size=meanPop)) +
+#   geom_jitter(color=warsColor, alpha=.75, width=.01) +
+#   xlim(-10, 10) +
+#   labs(x="Dyad Average POLITY Score") +
+#   theme(axis.ticks.y=element_blank(), panel.background=element_blank(), 
+#         axis.text.y=element_blank(), axis.line.y=element_blank(),
+#         axis.title.y=element_blank()) +
+#   guides(size=FALSE)
+
+# C <- paste("first line \n second line", expression(frac("x","y")))
+# 
+# plot(expression("some text frac(x,y) \n some more text"))
+# plot(1, main=expression(frac(x,y)))
+# 
+# plot(TeX(expression(paste0(bold("Unit of observation: dyad-year"), "\n", "Economic integration:",
+#                 "more stuff \n", "test"))))
+
+# C <- expression(paste(bold("Data Sources: \n"), "test1 \n", "test2 \n", "test3"))
+# doesn't seem to be working with more than one layer
+
+# C <- "test1 \ntest2 \ntest3 \nbold('fancy one')"
+
+# https://stackoverflow.com/questions/36001047/n-command-not-working-to-make-2-or-3-line-long-figure-caption-using-textgrob/36004120#36004120
+# table_label <- function(label, params=list())  {
+#   
+#   params <- modifyList(list(hjust=0, x=0), params)
+#   
+#   mytheme <- ttheme_minimal(core = list(fg_params = params), parse=TRUE)
+#   disect <- strsplit(label, "\\n")[[1]]
+#   m <- as.matrix(disect)
+#   tableGrob(m, theme=mytheme)
+#   
+# }
+# 
+# txt <- 'bold("Figure 1")\nThis is another line.\n alpha~beta*" are greek letters"'
+# g <- table_label(txt)
+
+text <- paste("iris data set gives the measurements in cm",
+              "of the variables sepal length and width",
+              "and petal length and width, respectively,",
+              "for 50 flowers from each of 3 species of iris.",
+              "The species are Iris setosa, versicolor, and virginica.", sep = " ")
+
+text.p <- ggparagraph(text, size = captionSize)
+
+text.b <- ggparagraph(text, face="bold", size = captionSize)
+
+text.p + text.b + plot_layout(ncol=1)
+
+polityRail <- warsUnmerged %>% ggplot(aes(x=meanPolity.plot)) +
+  geom_histogram(fill=warsColor, alpha=1) +
+  xlim(-10, 10) +
+  labs(x="Dyad-Year Average POLITY Score", y="Wars with\nMissing Trade") +
+  theme(axis.title.x=element_text(size=labelSize), axis.title.y=element_text(size=labelSize),
+        axis.text.x=element_text(size=labelSize), axis.line.x=element_line(),
+        axis.ticks.y=element_blank(), panel.background=element_blank(), 
+        axis.text.y=element_blank(), axis.line.y=element_blank(),
+        plot.caption=element_text(size=captionSize, hjust=0))
+
+polityRailCaption <- polityRail + text.p + plot_layout(ncol=1)
+
+empty <- ggplot() + geom_point(aes(1,1), colour="white")+
+  theme(axis.ticks=element_blank(), panel.background=element_blank(), 
+        axis.text=element_blank(), axis.line=element_blank(),
+        axis.title=element_blank()) 
+
+leftPanel <- polityDensity + main + polityRailCaption + plot_layout(ncol=1, heights=c(1, 8, 4)) 
+rightPanel <- empty + tradeIntDensity + empty + plot_layout(ncol=1, heights=c(1, 8, 4))
+all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
+all
+
+
+# write caption with information directly into figure
+# add individual polity and tradeshares to tooltip
+
+ggplotly(main, tooltip=c("text"))
+
+
+
+
+
+# alternative: let tradeInt denominator be sum of all recorded world trade that year?
+# but then measure depends on country size

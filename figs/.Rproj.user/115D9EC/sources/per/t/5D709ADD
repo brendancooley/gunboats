@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1547216175306.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3783609637",
+    "id" : "5D709ADD",
+    "lastKnownWriteTime" : 1547498772,
+    "last_content_update" : 1547498772440,
+    "path" : "~/Dropbox/1_Papers/tpsp/figs/emp_wars.R",
+    "project_path" : "emp_wars.R",
+    "properties" : {
+        "cursorPosition" : "241,53",
+        "scrollLine" : "219"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
