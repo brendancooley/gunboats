@@ -66,10 +66,8 @@ Because they prefer free trade, *low bias* governments that internalize the inte
 
 source("figs/emp_wars.R")
 
-leftPanel <- polityDensity + main + polityRailCaption + plot_layout(ncol=1, heights=c(1, 10, 4)) 
-rightPanel <- empty + tradeIntDensity + empty + plot_layout(ncol=1, heights=c(1, 10, 4))
-all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
-all
+polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,5))
+
 
 ```
 

@@ -288,10 +288,10 @@ tradeFpeace <- tradeF %>% filter(war==0)
 
 # add labels to representative observations
 tradeFwars$lab <- ifelse(tradeFwars$deaths > 1000000,
-                         paste0(tradeFwars$cname1, "-", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
+                         paste0(tradeFwars$cname1, " - ", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
                          paste(format(round((tradeFwars$deaths) / 1000000, 1), trim = TRUE), "million"),
                          " battle deaths"),
-                         paste0(tradeFwars$cname1, "-", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
+                         paste0(tradeFwars$cname1, " - ", tradeFwars$cname2, ", ", tradeFwars$year, "\n",
                                 paste(format(round((tradeFwars$deaths) / 1000, 1), trim = TRUE), "thousand"),
                                 " battle deaths")
                          )
@@ -513,11 +513,24 @@ empty <- ggplot() + geom_point(aes(1,1), colour="white")+
 # all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
 # all
 
-captionBlockSize <- 2
+mainRight <- main + tradeIntDensity + plot_layout(widths=c(8,1))
+top <- polityDensity + empty + plot_layout(widths=c(8,1))
+top + mainRight + plot_layout(ncol=1, heights=c(1,10))
 
-leftPanel <- polityDensity + main + polityRailCaption + plot_layout(ncol=1, heights=c(1, 10, 4)) 
-rightPanel <- empty + tradeIntDensity + empty + plot_layout(ncol=1, heights=c(1, 10, 4))
+leftPanel <- polityDensity + main + polityRail + caption.a + plot_layout(ncol=1, heights=c(1, 10, 2, 4)) 
+rightPanel <- empty + tradeIntDensity + empty + empty + plot_layout(ncol=1, heights=c(1, 10, 2, 4))
 all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
+all
+
+polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,4))
+
+
+
+# captionBlockSize <- 2
+# 
+# leftPanel <- polityDensity + main + polityRailCaption + plot_layout(ncol=1, heights=c(1, 10, 4)) 
+# rightPanel <- empty + tradeIntDensity + empty + plot_layout(ncol=1, heights=c(1, 10, 4))
+# all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
 # all
 
 # ggarrange(polityDensity, main, polityRail, caption, ncol=1, nrow=4, heights=c(1, 10, 2, captionBlockSize))
