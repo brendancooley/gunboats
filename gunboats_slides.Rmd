@@ -8,12 +8,14 @@ output:
     template: "cooley-reveal.html"
     css: "css/cooley-reveal.css"
     transition: none
+    self-contained: true
     reveal_options:
       slideNumber: true
 ---
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 # TODO cite background image: Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600.
+# TODO left align bulleted lists
 ```
 
 ## The Modern Economic Peace
