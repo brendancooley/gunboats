@@ -513,16 +513,16 @@ empty <- ggplot() + geom_point(aes(1,1), colour="white")+
 # all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
 # all
 
-mainRight <- main + tradeIntDensity + plot_layout(widths=c(8,1))
-top <- polityDensity + empty + plot_layout(widths=c(8,1))
-top + mainRight + plot_layout(ncol=1, heights=c(1,10))
+# mainRight <- main + tradeIntDensity + plot_layout(widths=c(8,1))
+# top <- polityDensity + empty + plot_layout(widths=c(8,1))
+# top + mainRight + plot_layout(ncol=1, heights=c(1,10))
+# 
+# leftPanel <- polityDensity + main + polityRail + caption.a + plot_layout(ncol=1, heights=c(1, 10, 2, 4)) 
+# rightPanel <- empty + tradeIntDensity + empty + empty + plot_layout(ncol=1, heights=c(1, 10, 2, 4))
+# all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
+# all
 
-leftPanel <- polityDensity + main + polityRail + caption.a + plot_layout(ncol=1, heights=c(1, 10, 2, 4)) 
-rightPanel <- empty + tradeIntDensity + empty + empty + plot_layout(ncol=1, heights=c(1, 10, 2, 4))
-all <- leftPanel - rightPanel + plot_layout(widths=c(8, 1))
-all
-
-polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,4))
+# polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,4))
 
 
 

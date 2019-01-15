@@ -62,7 +62,7 @@ Governments care about the trade policy choices of their trading partners becaus
 
 Because they prefer free trade, *low bias* governments that internalize the interests of consumers impose smaller externalities on their trading partners, and present these trading partners with fewer incentives to forcibly impose regime change (Proposition `` `r Pgamma` ``). This decreases the likelihood of war between low bias governments (Proposition `` `r Pwar` ``). To the extent that democracies approximate the low bias ideal, this provides an explanation for the "democratic" component of the modern economic peace. Because these low bias governments also impose smaller barriers to trade, low bias dyads also trade more than their high bias counterparts. Thus, a correlation between trade and peace emerges (spuriously) from the model (Proposition `` `r PeqTrade` ``).
 
-```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "The modern economic peace. Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:emp_wars}", fig.height=8.5, dpi=1250}
+```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "The modern economic peace. Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:emp_wars}", fig.height=8.5, dpi=750}
 
 source("figs/emp_wars.R")
 
