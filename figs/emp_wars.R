@@ -404,6 +404,8 @@ polityDensity <- tradeS %>% ggplot(aes(x=meanPolity.plot)) +
         axis.title=element_blank(), axis.line=element_blank(),
         plot.title=element_text(size=titleSize))
 
+# polityDensity + theme(plot.title = element_blank())
+
 tradeIntDensity <- tradeS %>% ggplot(aes(x=tradeInt.plot)) +
   geom_line(stat="density", color=pointsColor) +
   theme_classic() +

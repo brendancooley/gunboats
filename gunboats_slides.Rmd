@@ -1,0 +1,54 @@
+---
+title: "Gunboat Diplomacy"
+subtitle: "Political Bias, Trade Policy, and War"
+author: Brendan Cooley
+date: "19 January 2019"
+output: 
+  revealjs::revealjs_presentation:
+    template: "cooley-reveal.html"
+    css: "css/cooley-reveal.css"
+    transition: none
+    reveal_options:
+      slideNumber: true
+---
+
+```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+# TODO cite background image: Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600.
+```
+
+## The Modern Economic Peace
+
+```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE, fig.align="center", fig.height=6}
+
+source("figs/emp_wars.R")
+
+polityDensity <- polityDensity + theme(plot.title = element_blank())
+
+polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,15,2))
+
+```
+
+## R Markdown
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## Slide with Bullets
+
+- Bullet 1
+- Bullet 2
+- Bullet 3
+
+## Slide with R Code and Output
+
+```{r}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r, echo=FALSE}
+plot(cars)
+```
+
