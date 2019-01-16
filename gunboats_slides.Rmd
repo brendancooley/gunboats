@@ -8,17 +8,26 @@ output:
     template: "cooley-reveal.html"
     css: "css/cooley-reveal.css"
     transition: none
-    self-contained: true
+    self_contained: false
+    reveal_plugins: ["notes"]
     reveal_options:
       slideNumber: true
 ---
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-# TODO cite background image: Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600.
-# TODO left align bulleted lists
+# TODO: vertical slides currently not behaving
+
+if (file.exists('references.RData')) load('references.RData')
+
+# get helper functions
+source('figs/source.R')
+
+# get params
+source('figs/params.R')
+
 ```
 
-## The Modern Economic Peace
+## The Modern Economic Peace, 1870-2014
 
 ```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE, fig.align="center", fig.height=6}
 
@@ -30,27 +39,235 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 
 ```
 
-## R Markdown
+## Why?
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+. . . 
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+**Dominant Paradigm:** Trade mediates *preexisting* conflicts of interest
 
-## Slide with Bullets
+- Governments value trade, conflict disrupts trade
+  - $\implies$ Commercial peace hypothesis: economic integration reduces war
+- Conflicts of interest: territorial, ideological, etc
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+. . . 
 
-## Slide with R Code and Output
+**Commercial Policy Objectives**
 
-```{r}
-summary(cars)
+- Governments weakly mercantilistic, desiring
+  - Some degree of trade protection at home
+  - Trade liberalization or *market access* abroad
+
+. . . 
+
+**Market Access Externalities**
+
+- Protectionist barriers *shift profits* from foreign to home firms
+- Thus, trade policy itself generates conflicts of interest between mercantilist governments
+
+<aside class="notes">
+- Govs often willing to risk war to pursue commercial policy objectives, see Perry Expeditions, Opium Wars
+</aside>
+
+## Political Bias
+
+**Local definition:** Degree to which government internalizes *narrow* (protectionist) interests of firms at the expense of *broad* (liberal) interests of consumers
+
+- Grossman and Helpman (1994), Bueno de Mesquita et al (2004)
+
+. . . 
+
+**Regimes and Political Bias**
+
+- Democracies afford consumers access to policymaking process, more liberal trade policy preferences than autocracies (Milner and Kubota 2005)
+
+. . . 
+
+**Argument in Brief:** For democracies, liberal preferences $\implies$ smaller conflicts of interest $\implies$ fewer wars
+
+- Additionally, liberal preferences $\implies$ more trade
+- Spurious correlation between trade and peace
+
+## Model Structure {id="modelStructure"}
+
+**Bargaining Environment**
+
+- Two governments bargain over trade policies, $\widetilde{\boldsymbol{\tau}} = \left\{ \tau_i, \tau_j \right\}$
+- "Home" gov $i$ makes TIOLI offer to "foreign" gov $j$
+- Information about $j$'s costs of war held privately
+
+<hr style="height:5px; visibility:hidden;" />
+
+$$
+\widetilde{\boldsymbol{\tau}}^\star(a_i) = \text{argmax } \widetilde{G}_i \left( \widetilde{\boldsymbol{\tau}}(a_i), \omega^\star(\widetilde{\boldsymbol{\tau}}(a_i) | a_j) | a_i \right)
+$$
+<hr style="height:5px; visibility:hidden;" />
+
+- Foreign can accept or declare war
+<hr style="height:5px; visibility:hidden;" />
+$$
+\omega^\star(\widetilde{\boldsymbol{\tau}} | a_j) = \text{argmax } \widetilde{G}_j \left( \widetilde{\boldsymbol{\tau}}, \omega(\widetilde{\boldsymbol{\tau}} | a_j ) \right)
+$$
+<hr style="height:5px; visibility:hidden;" />
+
+<a href="#/bargaining" style="float: right;">Bargaining</a>
+
+. . . 
+
+**International Economy**
+
+- Representative consumer and $n$ firms in each economy, monopolistic competition
+
+    - Krugman 1980, Venables 1987, Ossa 2012
+  
+<a href="#/economy" style="float: right;">Economy</a>
+
+## Government Preferences I {id="GpreferencesI"}
+
+<hr style="height:5px; visibility:hidden;" />
+
+\begin{equation} \label{eq:G}
+G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+\end{equation}
+
+<hr style="height:5px; visibility:hidden;" />
+
+- $V_i^x(\tau_i)$ - consumer welfare
+- $\Pi_i(\tau_i, \tau_j)$ - firm profits
+- $r_i(\tau_i)$ - tariff revenue
+
+*$a_i$ is measure of sensitivity to interests of consumers*
+
+<a href="#/assumptions" style="float: right;">Assumptions</a>
+
+## Government Preferences II {id="GpreferencesII"}
+
+```{r G, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300, cache=TRUE}
+
+source("figs/G.R")
+
+GPlot
+
 ```
 
-## Slide with Plot
+## Non-cooperative Equilibrium {id="nce"}
 
-```{r, echo=FALSE}
-plot(cars)
+```{r iso, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300, cache=TRUE}
+
+source("figs/iso.R")
+
+isoPlot
+
 ```
 
+<aside class="notes">
+- Discuss where each ideal point is.
+- Changing bias parameter shifts best response curve around
+- Govs are perfectly open when bias is lowest
+</aside>
+
+<a href="#/nceDef" style="float: right;">Definition</a>
+
+## Non-cooperative Equilibrium
+
+```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300, cache=TRUE}
+
+brPlot
+
+```
+
+<a href="#/nceDef" style="float: right;">Definition</a>
+
+## Regime Change and Conflicts of Interest
+
+**Optimal Puppet Regimes**
+
+- When a government wins a war, it earns the right to replace the vanquished government with a "puppet" that prefers lower barriers to trade
+
+<hr style="height:5px; visibility:hidden;" />
+$$
+\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+$$
+<hr style="height:5px; visibility:hidden;" />
+
+- Losing governments have puppet's policies imposed on them
+
+. . . 
+
+**Conflicts of Interest**
+
+- Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet
+
+<hr style="height:5px; visibility:hidden;" />
+
+\begin{equation} \label{eq:Gamma}
+\Gamma_i(a_i, a_j) = \overline{G}_i(a_i) - \underline{G}_i(a_i, a_j)
+\end{equation}
+
+## Bargaining Environment
+
+```{r bar, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+source("figs/bar.R")
+
+barPlot
+
+```
+
+<aside class="notes">
+- No conflict of interest for maximally liberal governments
+</aside>
+
+## Results
+
+<hr style="height:4em; visibility:hidden;" />
+
+**Proposition `r Pgamma`:** Conflicts of interest smaller for low bias (democratic) governments.
+
+. . . 
+
+**Proposition `r Pwar`:** The probability of war is lower for low bias (democratic) governments.
+
+. . . 
+
+**Proposition `r PeqTrade`:** Equilibrium trade flows are higher for low bias (democratic) governments.
+
+. . . 
+
+<aside class="notes">
+- Risk-reward dilemma more stark for high bias (autocratic) governments
+</aside>
+
+## Conclusion
+
+- Equilibrium trade policies balance
+  - Domestic political interests
+  - Foreign military constraints
+  
+. . . 
+
+- *Threat* of regime change sufficient to produce changes in policies
+  - Shadow of military power in international political economy
+
+## Thank You {.center}
+
+[brendancooley.com](brendancooley.com)
+
+[bcooley@princeton.edu](bcooley@princeton.edu)
+
+<small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
+
+## Assumptions {id="assumptions"}
+
+<a href="#/GpreferencesI" style="float: right;">Back</a>
+
+## Non-cooperative Equilibrium {id="nceDef"}
+
+<a href="#/nce" style="float: right;">Back</a>
+
+## Bargaining {id="bargaining"}
+
+<a href="#/modelStructure" style="float: right;">Back</a>
+
+## International Economy {id="economy"}
+
+<a href="#/modelStructure" style="float: right;">Back</a>

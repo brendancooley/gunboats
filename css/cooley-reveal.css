@@ -39,9 +39,8 @@ body {
   background-color: #fff; }
 
 .reveal {
-  text-align: left;
   font-family: "Libre Franklin", sans-serif;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: normal;
   color: #000; }
 
@@ -57,6 +56,7 @@ body {
 
 .reveal .slides section,
 .reveal .slides section > section {
+  text-align: left;
   padding: 0;
   line-height: 1.3;
   font-weight: inherit; }
@@ -70,7 +70,6 @@ body {
 .reveal h4,
 .reveal h5,
 .reveal h6 {
-  text-align: left;
   margin: 0 0 20px 0;
   color: #121d3c;
   font-family: "Libre Franklin";
@@ -82,21 +81,37 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3em; }
+  font-size: 1.5em; }
 
 .reveal h2 {
-  font-size: 2em; }
+  font-size: 1.5em; }
 
 .reveal h3 {
-  font-size: 1.5em; }
+  font-size: 1.25em; }
 
 .reveal h4 {
   font-size: 1em; }
 
 .reveal h1 {
   text-shadow: none; }
+  
+.reveal .center {
+  text-align: center !important;
+  margin: auto;
+  width: 50%;
+  border: 3px;
+  padding: 10px;
+}
+
+div.container5 {
+  height: 20em;
+  display: flex;
+  align-items: center }
+div.container5 p {
+  margin: 0 }
 
 .reveal .title {
+        font-size: 2em;
         text-align: center;
         font-family: "AlegreyaSC Bold";
         margin-top: 0px;
@@ -119,7 +134,6 @@ body {
  * OTHER
  *********************************************/
 .reveal p {
-  text-align: left;
   margin: 20px 0;
   line-height: 1.3; }
 
@@ -141,7 +155,8 @@ body {
 .reveal ol,
 .reveal dl,
 .reveal ul {
-  display: inline-block;
+  padding-left: 3em;
+  display: block;
   margin: 0 0 0 1em; }
 
 .reveal ol {
@@ -160,6 +175,7 @@ body {
 .reveal ul ol,
 .reveal ol ol,
 .reveal ol ul {
+  padding-left: 1em;
   display: block;
   margin-left: 40px; }
 
@@ -256,7 +272,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #00008B;
+  color: #B15740;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
