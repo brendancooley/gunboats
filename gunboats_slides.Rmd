@@ -22,6 +22,7 @@ output:
 # TODO: speaker notes don't work with incremental reveal
 # TODO: nested bulleted lists disappear after compilation, fine when knitting
 
+
 if (file.exists('references.RData')) load('references.RData')
 
 # get helper functions
@@ -51,7 +52,7 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 **Dominant Paradigm:** Trade mediates *preexisting* conflicts of interest
 
 - Governments value trade, conflict disrupts trade
-    - $\implies$ Commercial peace hypothesis: economic integration reduces war
+    - $\implies$ Commercial peace hypothesis
 - Conflicts of interest: territorial, ideological, etc
 
 . . . 
@@ -59,8 +60,8 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 **Commercial Policy Objectives**
 
 - Governments weakly mercantilistic, desiring
-  - Some degree of trade protection at home
-  - Trade liberalization or *market access* abroad
+    - Some degree of trade protection at home
+    - Trade liberalization or *market access* abroad
 
 . . . 
 
@@ -69,11 +70,15 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 - Protectionist barriers *shift profits* from foreign to home firms
 - Thus, trade policy itself generates conflicts of interest between mercantilist governments
 
+. . . 
+
+<p class="center">*Perry Expedition: Governments willing to threaten war to open foreign markets*</p>
+
 <aside class="notes">
 - Govs often willing to risk war to pursue commercial policy objectives, see Perry Expeditions, Opium Wars
 </aside>
 
-## Political Bias
+## Political Bias (Jackson and Morelli 2007)
 
 **Local definition:** Degree to which government internalizes *narrow* (protectionist) interests of firms at the expense of *broad* (liberal) interests of consumers
 
@@ -83,11 +88,11 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 
 **Regimes and Political Bias**
 
-- Democracies afford consumers access to policymaking process, more liberal trade policy preferences than autocracies (Milner and Kubota 2005)
+- Democracies afford consumers (voters) access to policymaking process, more liberal trade policy preferences than autocracies (Mayer 1984, Grossman and Helpman 1996, Milner and Kubota 2005)
 
 . . . 
 
-**Argument in Brief:** For democracies, liberal preferences $\implies$ smaller conflicts of interest $\implies$ fewer wars
+**Argument in Brief:** For democracies, liberal preferences $\implies$ smaller market access externalities $\implies$ smaller conflicts of interest $\implies$ fewer wars
 
 - Additionally, liberal preferences $\implies$ more trade
 - Spurious correlation between trade and peace
