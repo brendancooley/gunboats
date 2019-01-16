@@ -10,8 +10,11 @@ output:
     transition: none
     self_contained: true
     # reveal_plugins: ["notes"]
+    lib_dir: index_files
     reveal_options:
       slideNumber: true
+    includes:
+      after_body: plugins.html
 ---
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
