@@ -115,8 +115,9 @@ $$
 - Foreign can accept or declare war
 <hr style="height:5px; visibility:hidden;" />
 $$
-\omega^\star(\widetilde{\boldsymbol{\tau}} | a_j) = \text{argmax } \widetilde{G}_j \left( \widetilde{\boldsymbol{\tau}}, \omega(\widetilde{\boldsymbol{\tau}} | a_j ) \right)
+\omega : \widetilde{\boldsymbol{\tau}}(a_i) \rightarrow \left\{ \text{war}, \neg \text{war} \right\}
 $$
+
 <a href="#/bargaining" style="float: right;">Bargaining</a>
 
 . . . 
@@ -124,7 +125,6 @@ $$
 **International Economy**
 
 - Representative consumer and $n$ firms in each economy, monopolistic competition
-
     - Krugman 1980, Venables 1987, Ossa 2012
   
 <a href="#/economy" style="float: right;">Economy</a>
