@@ -87,7 +87,7 @@ body {
   font-size: 1.5em; }
 
 .reveal h3 {
-  font-size: 1.25em; }
+  font-size: 1em; }
 
 .reveal h4 {
   font-size: 1em; }
@@ -102,13 +102,6 @@ body {
   border: 3px;
   padding: 10px;
 }
-
-div.container5 {
-  height: 20em;
-  display: flex;
-  align-items: center }
-div.container5 p {
-  margin: 0 }
 
 .reveal .title {
         font-size: 2em;

@@ -19,6 +19,7 @@ output:
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 # TODO: vertical slides currently not behaving
+# TODO: speaker notes don't work with incremental reveal
 
 if (file.exists('references.RData')) load('references.RData')
 
@@ -30,7 +31,7 @@ source('figs/params.R')
 
 ```
 
-## The Modern Economic Peace, 1870-2014
+## The Modern Economic Peace, 1870-2014 (Coe)
 
 ```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, cache=TRUE, fig.align="center", fig.height=6}
 
@@ -110,8 +111,6 @@ $$
 $$
 \omega^\star(\widetilde{\boldsymbol{\tau}} | a_j) = \text{argmax } \widetilde{G}_j \left( \widetilde{\boldsymbol{\tau}}, \omega(\widetilde{\boldsymbol{\tau}} | a_j ) \right)
 $$
-<hr style="height:5px; visibility:hidden;" />
-
 <a href="#/bargaining" style="float: right;">Bargaining</a>
 
 . . . 
@@ -138,7 +137,7 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 - $\Pi_i(\tau_i, \tau_j)$ - firm profits
 - $r_i(\tau_i)$ - tariff revenue
 
-*$a_i$ is measure of sensitivity to interests of consumers*
+<p class="center">*$a_i$ is measure of government's sensitivity to interests of consumers*</p>
 
 <a href="#/assumptions" style="float: right;">Assumptions</a>
 
@@ -188,7 +187,7 @@ brPlot
 
 <hr style="height:5px; visibility:hidden;" />
 $$
-\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+\max_{a \in (0, \overline{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
 $$
 <hr style="height:5px; visibility:hidden;" />
 
@@ -236,11 +235,15 @@ barPlot
 
 . . . 
 
+<p class="center">*The Modern Economic Peace*</p>
+
 <aside class="notes">
 - Risk-reward dilemma more stark for high bias (autocratic) governments
 </aside>
 
 ## Conclusion
+
+**Trade Policy in the Shadow of Power**
 
 - Equilibrium trade policies balance
   - Domestic political interests
@@ -249,7 +252,19 @@ barPlot
 . . . 
 
 - *Threat* of regime change sufficient to produce changes in policies
-  - Shadow of military power in international political economy
+
+. . . 
+
+- Exists no simple mapping between domestic preferences and trade policy outcomes (Gawande et al 2009)
+  - IR parlance: "second image" and "second image reversed"
+  
+. . . 
+
+**Conflicts of Interest versus Bargaining Failures**
+
+- Fearon 1995: *given* a conflict of interest, what prevents peaceful settlement?
+- Moravcsik 1997: what do governments want? and why do their objectives bring them into conflict with one another?
+
 
 ## Thank You {.center}
 
@@ -257,20 +272,116 @@ barPlot
 
 [bcooley@princeton.edu](bcooley@princeton.edu)
 
-<small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
-
-## Assumptions {id="assumptions"}
-
-<a href="#/GpreferencesI" style="float: right;">Back</a>
-
-## Non-cooperative Equilibrium {id="nceDef"}
-
-<a href="#/nce" style="float: right;">Back</a>
+<small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
 
 ## Bargaining {id="bargaining"}
+
+- $c_i$ - home government's costs of war
+- $c_j \sim F$ - home's belief about foreign's costs of war
+
+    - $F$ uniform on $[0, \overline{c}]$
+  
+- $\rho$ - probability home government wins war
+
+**Successful Regime Change**
+
+<hr style="height:5px; visibility:hidden;" />
+\begin{equation} \label{eq:Gbar}
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star) | a_i ) = G_i(\tau_i^\star(a_i), 1 | a_i)
+\end{equation}
+<hr style="height:5px; visibility:hidden;" />
+
+**Foreign Imposition of Regime Change**
+
+<hr style="height:5px; visibility:hidden;" />
+\begin{equation} \label{eq:Gubar}
+\underline{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j) | a_i) = G_i(1, \tau_j^\star(a_j) | a_i)
+\end{equation}
+<hr style="height:5px; visibility:hidden;" />
+
+**Foreign Government's Expected Utility for War**
+
+<hr style="height:5px; visibility:hidden;" />
+$$
+\widehat{G}_j(a_j, a_i) = (1 - \rho) \overline{G}_j(a_j) + \rho \underline{G}_j(a_j, a_i) - c_j
+$$
+<hr style="height:5px; visibility:hidden;" />
 
 <a href="#/modelStructure" style="float: right;">Back</a>
 
 ## International Economy {id="economy"}
 
+**Consumers**
+
+<hr style="height:5px; visibility:hidden;" />
+\begin{equation} \label{eq:cMax}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i X_i + Y_i \leq w_i L
+\end{split}
+\end{equation}
+<hr style="height:5px; visibility:hidden;" />
+
+- $X_i$ CES aggregate of differentiated manufactured goods
+
+**Firms**
+
+- $n$ firms producing manufactured goods in each economy
+
+<hr style="height:5px; visibility:hidden;" />
+\begin{equation} \label{eq:Pi}
+\begin{split}
+\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
+& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\end{split}
+\end{equation}
+<hr style="height:5px; visibility:hidden;" />
+
+*Economic equilibrium* is pair of wages $\left\{ w_i, w_j \right\}$ such that international goods market and local factor markets clear
+
 <a href="#/modelStructure" style="float: right;">Back</a>
+
+## Assumptions {id="assumptions"}
+
+<hr style="height:2em; visibility:hidden;" />
+
+**Assumption `r Akappa`:** (costs of war are bounded) $c_i < \kappa$ where $\kappa$ is a postive constant defined in the Appendix.
+
+**Assumption `r aAlpha`:** (agricultural sector sufficiently large)
+<hr style="height:5px; visibility:hidden;" />
+$$
+\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}
+$$ 
+<hr style="height:5px; visibility:hidden;" />
+
+**Assumption `r aA`:** (governments are weak mercantilists) $a_i \in (0, \overline{a})$ with
+<hr style="height:5px; visibility:hidden;" />
+$$
+\overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
+$$
+<hr style="height:5px; visibility:hidden;" />
+
+<a href="#/GpreferencesI" style="float: right;">Back</a>
+
+## Non-cooperative Equilibrium {id="nceDef"}
+
+<hr style="height:3em; visibility:hidden;" />
+
+**Definition `r nceq`:** A *noncooperative equilibrium* is a pair of policies $\left\{ \tau_i^\star(a_i), \tau_j^\star(a_j) \right\}$ such that 
+<hr style="height:5px; visibility:hidden;" />
+$$
+\tau_i^\star(a_i) = \text{argmax } G_i(\tau_i | \tau_j^\star(a_j), a_i)
+$$
+<hr style="height:5px; visibility:hidden;" />
+and
+<hr style="height:5px; visibility:hidden;" />
+$$
+\tau_j^\star(a_j) = \text{argmax } G_j(\tau_j | \tau_i^\star(a_i), a_j)
+$$
+<hr style="height:5px; visibility:hidden;" />
+
+
+**Lemma `r taui`:** $\tau_i^\star(a_i)$ is decreasing in $a_i \in (0, \overline{a})$ with $\tau_i^\star(\overline{a}) = 1$.
+
+<a href="#/nce" style="float: right;">Back</a>
