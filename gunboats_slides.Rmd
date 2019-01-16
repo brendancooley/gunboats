@@ -20,6 +20,7 @@ output:
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 # TODO: vertical slides currently not behaving
 # TODO: speaker notes don't work with incremental reveal
+# TODO: nested bulleted lists disappear after compilation, fine when knitting
 
 if (file.exists('references.RData')) load('references.RData')
 
@@ -50,7 +51,7 @@ polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layou
 **Dominant Paradigm:** Trade mediates *preexisting* conflicts of interest
 
 - Governments value trade, conflict disrupts trade
-  - $\implies$ Commercial peace hypothesis: economic integration reduces war
+    - $\implies$ Commercial peace hypothesis: economic integration reduces war
 - Conflicts of interest: territorial, ideological, etc
 
 . . . 
@@ -246,8 +247,8 @@ barPlot
 **Trade Policy in the Shadow of Power**
 
 - Equilibrium trade policies balance
-  - Domestic political interests
-  - Foreign military constraints
+    - Domestic political interests
+    - Foreign military constraints
   
 . . . 
 
@@ -256,7 +257,7 @@ barPlot
 . . . 
 
 - Exists no simple mapping between domestic preferences and trade policy outcomes (Gawande et al 2009)
-  - IR parlance: "second image" and "second image reversed"
+    - IR parlance: "second image" and "second image reversed"
   
 . . . 
 
