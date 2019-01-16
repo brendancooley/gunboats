@@ -8,8 +8,8 @@ output:
     template: "cooley-reveal.html"
     css: "css/cooley-reveal.css"
     transition: none
-    self_contained: false
-    reveal_plugins: ["notes"]
+    self_contained: true
+    # reveal_plugins: ["notes"]
     reveal_options:
       slideNumber: true
 ---
