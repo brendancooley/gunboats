@@ -140,8 +140,11 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 <hr style="height:5px; visibility:hidden;" />
 
 - $V_i^x(\tau_i)$ - consumer welfare
+    - decreasing in $\tau_i$
 - $\Pi_i(\tau_i, \tau_j)$ - firm profits
+    - increasing in $\tau_i$, decreasing in $\tau_j$
 - $r_i(\tau_i)$ - tariff revenue
+    - non-monotonic in $\tau_i$
 
 <p class="center">*$a_i$ is measure of government's sensitivity to interests of consumers*</p>
 
@@ -315,7 +318,7 @@ $$
 
 <a href="#/modelStructure" style="float: right;">Back</a>
 
-## International Economy {id="economy"}
+## International Economy I {id="economy"}
 
 **Consumers**
 
@@ -343,6 +346,8 @@ $$
 \end{split}
 \end{equation}
 <hr style="height:5px; visibility:hidden;" />
+
+## International Economy II
 
 *Economic equilibrium* is pair of wages $\left\{ w_i, w_j \right\}$ such that international goods market and local factor markets clear
 
