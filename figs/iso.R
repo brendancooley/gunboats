@@ -63,16 +63,20 @@ isoDataM <- isoDataM %>% filter(!(value >= tauStar1 - .03 & value <= tauStar1 + 
 # x <- seq(0, 1, length = length(isoDataM$variable %>% unique()))
 # colors <- tableau_seq_gradient_pal("Orange-Gold")(x)
 
-isoPlot <- ggplot(isoDataM, aes(x=value, y=tau, group=variable, color=variable)) + 
-  geom_line() + 
-  annotate("segment", x=top1 - .1, xend = top1 - .1, y = 1.5, yend = 1.3, arrow = arrow(length = unit(1, "lines"))) +
-  annotate("text", x = top1-.3, y = 1.4, label = "Increasing \niso-welfare", family="Palatino") + 
-  scale_color_gradient_tableau(palette="Blue") +
+isoPlot1 <- ggplot(isoDataM, aes(x=value, y=tau, group=variable, color=variable)) +
   scale_x_continuous(limits=c(1, top1), breaks=c(1, tauStar1), labels=c(1, TeX("$\\tau_i^{*}(a_i)$"))) +
   scale_y_continuous(limits=c(1, top2), breaks=c(1, tauStar2), labels=c(1, TeX("$\\tau_j^{*}(a_j)$"))) +
   theme_classic() +
   labs(x=TeX("$\\tau_i$"), y = TeX("$\\tau_j$"), title = "Government Iso-Welfare Curves") +
   theme(aspect.ratio=1, text=element_text(family="Palatino"), legend.position = "none")
+
+isoPlot2 <- isoPlot1 + 
+  geom_line() + 
+  annotate("segment", x=top1 - .1, xend = top1 - .1, y = 1.5, yend = 1.3, arrow = arrow(length = unit(1, "lines"))) +
+  annotate("text", x = top1-.3, y = 1.4, label = "Increasing \niso-welfare", family="Palatino") + 
+  scale_color_gradient_tableau(palette="Blue") 
+
+isoPlot <- isoPlot2
 
 
 brPlot <- ggplot(isoDataM, aes(x=value, y=tau, group=variable, color=variable)) + 

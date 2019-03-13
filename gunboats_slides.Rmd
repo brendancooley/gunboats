@@ -197,21 +197,45 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 
 ## Government Preferences I
 
-```{r G, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300, cache=TRUE}
+```{r G1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300, cache=TRUE}
 
 source("figs/G.R")
 
-GPlot
+Gplot1
+
+```
+
+## Government Preferences I
+
+```{r G2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300, cache=TRUE}
+
+Gplot2
+
+```
+
+## Government Preferences I
+
+```{r G3, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300, cache=TRUE}
+
+Gplot3
+
+```
+
+## Government Preferences II
+
+```{r iso1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300, cache=TRUE}
+
+source("figs/iso.R")
+
+isoPlot1
 
 ```
 
 ## Government Preferences II {id="iso"}
 
-```{r iso, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300, cache=TRUE}
+```{r iso2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300, cache=TRUE}
 
-source("figs/iso.R")
-
-isoPlot
+isoPlot2
 
 ```
 
