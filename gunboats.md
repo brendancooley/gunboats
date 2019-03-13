@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Tyson Chatagnier, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at the Princeton Political Economy Graduate Colloquium, the Princeton International Relations Graduate Seminar, the Midwest Political Science Association 2018 Annual Meeting, and the Southern Political Science Association 2019 Annual Meeting.
 # jelcodes: JEL codes go here
 
-bibliography: /Users/brendancooley/Dropbox/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -415,7 +415,7 @@ In peaceful outcomes, military power affects trade policy. More specifically, as
 
 
 **Proposition 6:** 
-$\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+In a peaceful bargaining equilibrium (Definition 1), government $i$'s trade barriers are increasing in its miliarys strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 # Discussion
 
