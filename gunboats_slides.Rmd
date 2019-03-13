@@ -325,6 +325,8 @@ barPlot
 
 ## Conclusion
 
+<hr style="height:6em; visibility:hidden;" />
+
 **Conflicts of Interest versus Bargaining Failures**
 
 - *Given* a conflict of interest, what prevents peaceful settlement? [@Fearon1995]
