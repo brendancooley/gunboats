@@ -292,7 +292,7 @@ barPlot
 
 **Proposition `r PeqTrade`:** `r PeqTradeText`
 
-### Shadow of War and Trade Policy
+### Shadow of War in Trade Policy
 
 **Proposition `r PeqTau`:** `r PeqTauText`
 
@@ -324,18 +324,6 @@ barPlot
     + @Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015
 
 ## Conclusion
-
-**Domestic Political Economy of War**
-
-> "We shall invite the minority party to join us...in stopping partisan politics at the water's edge." <br/> $\qquad$ -- Sen. Arthur Vandenberg, 4 October 1948
-
-<center><hr width="50%"></center>
-
-<hr style="height:1em; visibility:hidden;" />
-
-- @Gerschenkron1943, @Williams1988, @Fordham1998, @Kleinberg2013, @Fordham2019
-
-. . . 
 
 **Conflicts of Interest versus Bargaining Failures**
 
