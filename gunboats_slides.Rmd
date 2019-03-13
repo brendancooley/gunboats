@@ -38,7 +38,6 @@ source('figs/source.R')
 # get params
 source('figs/params.R')
 
-
 ```
 
 ## Trade and War: Received Wisdom {id="intro"}
