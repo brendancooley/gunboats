@@ -1,6 +1,6 @@
 ### SETUP ###
 
-source("~/Dropbox/11_Workflow/source.R")
+source("~/Dropbox (Princeton)/11_Workflow/source.R")
 
 libs <- c("tidyverse", "patchwork", "ggrepel", "latex2exp", "ggpubr", "padr")
 ipak(libs)
@@ -13,8 +13,8 @@ if (getwd()=="figs") {
   tradeM <- read_csv("../data/tradeM.csv")
   wars <- read_csv("../data/wars.csv")
 } else {
-  tradeM <- read_csv("../data/tradeM.csv", col_types=list(pop1="n", pop2="n", deaths="n"))
-  wars <- read_csv("../data/wars.csv")
+  tradeM <- read_csv("data/tradeM.csv", col_types=list(pop1="n", pop2="n", deaths="n"))
+  wars <- read_csv("data/wars.csv")
 }
 
 tradeM$deaths <- as.integer(tradeM$deaths)
