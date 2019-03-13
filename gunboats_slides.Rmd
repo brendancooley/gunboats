@@ -38,6 +38,7 @@ source('figs/source.R')
 # get params
 source('figs/params.R')
 
+
 ```
 
 ## Trade and War: Received Wisdom {id="intro"}
@@ -127,7 +128,7 @@ source('figs/params.R')
 
 ## Bargaining Environment
 
-- "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\}$
+- "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2$
 
 . . .
 
@@ -146,11 +147,11 @@ source('figs/params.R')
 
 **Definition `r beq`:** A subgame perfect *bargaining equilibrium* is pair of strategies, $\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)$ such that
 $$
-\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho) = \text{argmax}_{\omega \in \left\{\text{accept}, \text{war} \right\}} \widetilde{G} \left(\widetilde{\boldsymbol{\tau}}, \omega; a_j, c_j; \rho \right)
+\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho) = \text{argmax}_{\omega \in \left\{\text{accept}, \text{war} \right\}} \widetilde{G}_j \left(\widetilde{\boldsymbol{\tau}}, \omega; a_j, c_j, \rho \right)
 $$
 and
 $$
-\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G} \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i; \rho \right) \right]
+\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G}_i \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
 $$
 
 <hr style="height:1em; visibility:hidden;" />
@@ -160,7 +161,7 @@ $$
 <hr style="height:1em; visibility:hidden;" />
 
 - $\widetilde{G}$ government utility
-- $\rho$ probability $i$ wins war (military strength)
+- $\rho \in [0, 1]$ probability $i$ wins war (military strength)
 
 ## Domestic Political Economy {id="dpe"}
 

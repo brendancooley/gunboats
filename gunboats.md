@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Tyson Chatagnier, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at the Princeton Political Economy Graduate Colloquium, the Princeton International Relations Graduate Seminar, the Midwest Political Science Association 2018 Annual Meeting, and the Southern Political Science Association 2019 Annual Meeting.
 # jelcodes: JEL codes go here
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -90,11 +90,11 @@ Let $\tilde{G}(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k
 **Definition 1:** 
 A subgame perfect *bargaining equilibrium* is pair of strategies, $\tilde{\bm{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j)$ such that
 $$
-\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) = \argmax_{\omega \in \left\{\text{accept}, \text{war} \right\}} \tilde{G} \left(\tilde{\bm{\tau}}, \omega; a_j, c_j; \rho \right)
+\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) = \argmax_{\omega \in \left\{\text{accept}, \text{war} \right\}} \tilde{G}_j \left(\tilde{\bm{\tau}}, \omega; a_j, c_j, \rho \right)
 $$
 and
 $$
-\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \argmax_{\bm{\tau} \in [1, \bar{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \tilde{G} \left(\tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i; \rho \right) \right]
+\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \argmax_{\bm{\tau} \in [1, \bar{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \tilde{G}_i \left(\tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
 $$
 
 ## International Economy
@@ -415,7 +415,7 @@ In peaceful outcomes, military power affects trade policy. More specifically, as
 
 
 **Proposition 6:** 
-In a peaceful bargaining equilibrium (Definition 1), government $i$'s trade barriers are increasing in its miliarys strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+In a peaceful bargaining equilibrium (Definition 1), government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 # Discussion
 
