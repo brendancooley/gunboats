@@ -42,13 +42,13 @@ source('figs/params.R')
 
 ## Trade and War: Received Wisdom {id="intro"}
 
-> "Free trade serves the cause of economic progress, and it serves the cause of world peace." -- Ronald Reagan, Nov. 1982
+> "Free trade serves the cause of economic progress, and it serves the cause of world peace." <br/> $\qquad$ -- Ronald Reagan, Nov. 1982
 
 <center><hr width="50%"></center>
 
 . . . 
 
-> "Commercial relations draw states into a web of mutual self-interest that constrains them from using force against one another." -- Oneal and Russett (1999)
+> "Commercial relations draw states into a web of mutual self-interest that constrains them from using force against one another." <br/> $\qquad$ -- Oneal and Russett (1999)
 
 <center><hr width="50%"></center>
 
@@ -101,6 +101,7 @@ source('figs/params.R')
     + @Krugman1980, @Venables1987; @Ossa2012
 - Mercantilist/Politically-Biased Governments
     + @Grossman1994, @BuenodeMesquita2003, @Jackson2007
+    + *Liberal* governments afford consumers greater influence over the trade policymaking process
 - Ultimatum Coercive Bargaining
     + @Fearon1995
 
@@ -109,7 +110,7 @@ source('figs/params.R')
 **Results**
 
 - Trade and Conflict
-    + *Liberal* governments experience smaller conflicts of interest (Proposition `r Pgamma`)
+    + Liberal governments experience smaller conflicts of interest (Proposition `r Pgamma`)
     + "" fight war less frequently (Proposition `r Pwar`)
     + "" trade more when peace prevails (Proposition `r PeqTrade`)
 
@@ -325,7 +326,7 @@ barPlot
 
 **Domestic Political Economy of War**
 
-> "We shall invite the minority party to join us...in stopping partisan politics at the water's edge." -- Sen. Arthur Vandenberg, 4 October 1948
+> "We shall invite the minority party to join us...in stopping partisan politics at the water's edge." <br/> $\qquad$ -- Sen. Arthur Vandenberg, 4 October 1948
 
 <center><hr width="50%"></center>
 
