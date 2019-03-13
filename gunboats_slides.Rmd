@@ -99,7 +99,7 @@ source('figs/params.R')
 
 - "New Trade" International Economy
     + @Krugman1980, @Venables1987; @Ossa2012
-- Mercantilist/Politically-biased Governments
+- Mercantilist/Politically-Biased Governments
     + @Grossman1994, @BuenodeMesquita2003, @Jackson2007
 - Ultimatum Coercive Bargaining
     + @Fearon1995
