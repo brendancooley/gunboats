@@ -4,10 +4,10 @@ title: |
     | \tiny \hfill
     | \Large Political Bias, Trade Policy, and War
 author: Brendan Cooley
-date: \today
+date: 9 April 2019
 abstract: Countries with deep trading relationships rarely fight wars with one another. Here, I develop a theory of trade, war, and political bias, in which both trade and war are endogenous objects. Governments can rectify poor market access conditions abroad through war and subsequent regime change, in which the victorious country installs a liberal "puppet" government abroad. Trade policy bargaining is therefore conducted "in the shadow of power," with counterfactual wars shaping the policy choices that prevail in times of peace. When peace prevails, militarily weak countries are more open to trade than powerful ones, all else equal. Equilibrium trade policies balance domestic interests against military threats from abroad. War is less likely between liberal governments because they prefer less protectionist trade policies. As a result, trade flows and the probability of peace are positively correlated in equilibrium, even though trade does not cause peace.
-thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Tyson Chatagnier, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at the Princeton Political Economy Graduate Colloquium, the Princeton International Relations Graduate Seminar, the Midwest Political Science Association 2018 Annual Meeting, and the Southern Political Science Association 2019 Annual Meeting.
-# jelcodes: JEL codes go here
+thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Tyson Chatagnier, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at the Princeton Political Economy Graduate Colloquium, the Princeton International Relations Graduate Seminar, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
+jelcodes: D72, D74, F13, F51, F52, F54
 
 bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
@@ -37,7 +37,7 @@ suppress-bibliography: true
 
 Countries with deep trading relationships rarely fight wars with one another. Some argue this "commercial peace" is due to the pacifying effect of trade — trade causes peace.^[This literature is vast. See @Gartzke2015 for a complete survey. @Angell1911, @Polachek1980, and @Philippe2008 are representative of this view.] Others say amicable political relations cause trade.^[See, for example, @Pollins1989a, @Barbieri1999, @Benson2007] Trade is usually considered exogenous to conflicts of interest in international relations. Governments fight wars over territorial, ideological, or other non-economic conflicts. Trade intervenes to make these conflicts more costly.
 
-Yet, trade policy is itself a central object of contention in international relations. Governments are mercantilist to some extent [@Gawande2009]. They desire some degree of protection at home and "open doors" abroad. Sometimes, governments are willing to fight wars to achieve these objectives.^[See @Findlay2007 for a chronicle of trade conflicts over the past millennium.] In the 1850s, the U.S. gunboats compelled an autarkic Japanese government to open its markets. Britain and France prosecuted the Opium Wars (1839-1842; 1856-1860) to compel a recalcitrant Chinese government to reform its trade policies. Recently, a proposal to integrate the economies of Ukraine and the European Union led to war between Ukraine and Russia.^[In this case, Moscow conditioned its coercion on the trade policy choices of Kiev, see James Marson and Naftali Bendavid, ["Ukraine to Delay Part of EU Pact Opposed by Russia,"]([https://www.wsj.com/articles/poroshenko-says-eu-agreement-to-be-ratified-next-week-1410519009](https://www.wsj.com/articles/poroshenko-says-eu-agreement-to-be-ratified-next-week-1410519009)) *The Wall Street Journal*, 12 September 2014.] These episodes highlight linkages between trade policy and war. But such linkages may be more common, as the absence of war need not imply the absence of coercive bargaining [@Fearon1995].
+Yet, trade policy is itself a central object of contention in international relations. Governments are mercantilist to some extent [@Gawande2009]. They desire some degree of protection at home and "open doors" abroad. Sometimes, governments are willing to fight wars to achieve these objectives.^[See @Findlay2007 for a chronicle of trade conflicts over the past millennium.] In the 1850s, the U.S. gunboats compelled an autarkic Japanese government to open its markets. Britain and France prosecuted the Opium Wars (1839-1842; 1856-1860) to compel a recalcitrant Chinese government to reform its trade policies. Recently, a proposal to integrate the economies of Ukraine and the European Union led to war between Ukraine and Russia.^[In this case, Moscow conditioned its coercion on the trade policy choices of Kiev, see James Marson and Naftali Bendavid, ["Ukraine to Delay Part of EU Pact Opposed by Russia,"](https://www.wsj.com/articles/poroshenko-says-eu-agreement-to-be-ratified-next-week-1410519009) *The Wall Street Journal*, 12 September 2014.] These episodes highlight linkages between trade policy and war. But such linkages may be more common, as the absence of war need not imply the absence of coercive bargaining [@Fearon1995].
 
 Here, I develop a theory of trade policy bargaining in the shadow of military power, or "gunboat diplomacy." Trade flows and the probability of peace are positively correlated in equilibrium. This correlation emerges not because trade causes peace. Rather, liberal trade policy preferences generate incentives for both trade and peace. When peace prevails, latent military threats influence equilibrium trade policies. These balance domestic political-economic interests against military threats from abroad. Militarily weak countries are more open to trade than powerful ones, all else equal.
 
@@ -49,7 +49,7 @@ As a consequence, governments themselves experience conflicts of interest over t
 
 If a government wins a war, it earns the right to impose regime change and install a "puppet" government abroad.^[See @Owen2002 for an empirical study of regime change.] Puppets open their markets to foreign firms, allowing victorious governments impose their trade policy preferences by force. This is the threat point governments leverage in bilateral trade policy negotiations. War sometimes occurs due to information frictions.
 
-Two primary insights emerge from this environment. First, governments' degree of bias affects their propensity to trade and fight wars. When both governments are liberal, they find little reason to overthrow their counterpart. This decreases the probability of war. Their liberal preferences also result in liberal equilibrium trade policies. Lowering barriers to trade increases trade itself. It is the governments' preference compatibility that produces a relationship between trade and peace. But this relationship is spurious — trade itself has no pacifying effect.
+Two primary insights emerge from this environment. First, governments' degree of bias affects their propensity to trade and fight wars. When both governments are liberal, the costs of regime change never exceed its policy benefits. As a result, highly liberal governments never fight wars with one another. Their liberal preferences also result in liberal equilibrium trade policies. Naturally, lowering barriers to trade increases trade itself. The governments' preference compatibility produces a relationship between trade and peace. But this relationship is spurious — trade itself has no pacifying effect.
 
 Second, even when governments avoid conflict, trade policies reflect the balance of power. Powerful countries can credibly threaten to impose regime change. They leverage this power to extract trade policy concessions and resist liberalization. After bargaining, powerful countries are more protectionist than weaker ones.
 
@@ -57,33 +57,35 @@ The model also rationalizes several well-established empirical facts in internat
 
 Some argue democracies have more liberal trade policy preferences than autocracies [@Milner2005]. Because consumers (voters) prefer free trade, they punish protectionist politicians [@Mayer1984; @Grossman1996].^[For a skeptical take on this mechanism, see @Guisinger2009 and @Betz2019.] This provides a check on the protectionist influence of special interest groups. Translated into this framework, these theories deem democracies less biased than autocracies. If this "liberal democracy" hypothesis is true, the analysis of low bias governments extends to democratic dyads. The model then jointly rationalizes the democratic peace and democracies' propensity for trade openness.^[These facts are depicted in Figure \ref{fig:comdempeace} in the Appendix. For a recent review on the relationship between democracy and peace, see @Reiter2017. @Milner2005 show democratization tends to lead to decreased protectionism.]
 
-The theory's expectations about power and protectionism are, as far as I know, novel. Of course, power and latent preferences interact to produce trade policy and conflict outcomes. An unconditional correlation may not uncover this relationship. I consider these empirical implications in more detail in the Discussion section. There, I also relate the theory to militarism, imperialism, and territorial conflict.
+The theory's implications about power and protectionism are, as far as I know, novel. Of course, power and latent preferences interact to produce trade policy and conflict outcomes. An unconditional correlation may not uncover this relationship. I consider these empirical implications in more detail in the Discussion section. There, I also relate the theory to militarism, imperialism, and territorial conflict.
 
 @Antras2011 and @Carroll2018 are two closely related papers that merit some discussion. @Antras2011 consider a similar model, in which foreign governments can interfere in the domestic political economy of trade. As in this model, foreign influence has a liberalizing effect. In the anarchy of world politics, however such influence can always -– in principle -– take the form of threats, displays, or uses of military force [@Fearon1997]. Analyzing this form of influence allows me to relate the domestic political economy of trade to military power and conflict propensity. @Carroll2018 unifies militarized competition and economic exchange in a more general setting. There, countries' convert commodities into military power, which can in turn be employed to seize others' commodities. Military power is endogenous to the general equilibrium of the international economy. I take power as exogenous and focus on competition over trade *policy*. This more narrow focus allows me to incorporate domestic political economy considerations and make empirical predictions about power, trade policy, and war.
+
+Others have considered policy competition in the shadow of power more generally. @Bils2017 study a model of coercive bargaining over the location of a spatial policy. Like the model studied here, governments vary in the location of their ideal points. They study how uncertainty over the states' ideal points affects conflict propensity. Here, I microfound governments' preferences with a political economy of trade policy and explore how domestic political economic shocks affect the international bargaining environment. This generates unique comparative statics and empirical implications.
 
 # Environment
 
 
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy deternubes how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` 1 `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` 1 `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
 
 ## International Bargaining
 
 Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government utility can therefore be written $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits and tariff reveune.^[$\bar{a}$ is defined below.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad. 
 
-Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. An more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[0, \bar{c}_j]$.
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{\epsilon}, \bar{\epsilon}]$.
 
 As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` 1 `` formalizes this intuition. 
 
 
 
 **Assumption 1:** 
-$c_i < \kappa$ where $\kappa$ is a postive constant defined in the Appendix.
+$\bar{\epsilon} \leq \kappa_j$ and $c_i < \kappa_i(\bar{\epsilon})$ where $\kappa_j$ and $\kappa_i(\bar{\epsilon})$ are positive constants defined in the Appendix.
 
 A strategy for Government $i$ is an offer, $\tilde{\bm{\tau}}(a_i, c_i, \rho)$. A strategy for Government $j$, denoted $\omega(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a mapping between this offer and a choice of whether or not to attempt regime change
 $$
 \omega : \tilde{\bm{\tau}} \rightarrow \left\{ \text{accept}, \text{war} \right\}
 $$
-Let $\tilde{G}(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a bargaining equilibrium which is subgame perfect. 
+Let $\tilde{G}(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a subgame perfect bargaining equilibrium. 
 
 
 
@@ -236,7 +238,7 @@ If Assumption 3 is satisfied, then $G_i(\tau_i; a_i)$ is quasiconcave on $\tau_i
 
 Recall from Definition `` 1 `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Governments with higher bias experience larger conflicts of interest with one another (Proposition `` 3 ``) which makes them more likely to experience wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 5 ``).
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Highly liberal experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
 
 ## Preferences
 
@@ -332,7 +334,7 @@ Proposition 3 states that as government $i$ becomes more welfare-concious, the m
 
 These conflicts of interest structure what sets of policies $i$ will offer and what offers $j$ will prefer to war. Working backward, recall from Definition 1 that $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a function that takes an offer from $i$ and returns a choice of whether or not to declare war. $j$'s utility for war is given by
 \begin{equation*} \label{eq:Ghatj}
-\hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{\zeta_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
+\hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
 \end{equation*}
 
 Note that $j$'s utility can be written in terms of it's conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
@@ -345,16 +347,53 @@ This condition allows us to characterize $\omega^\star(\tilde{\bm{\tau}}; a_j, c
 
 **Lemma 4:** 
 $$
-\omega^\star(\tilde{\bm{\tau}}; a_j, c_j; \rho) = \begin{cases}
+\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) = \begin{cases}
 \text{war} & \text{if } \hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) \\
 \text{accept} & \text{otherwise}
 \end{cases}
 $$
 
-Then, with uniformly distributed costs, the probability that $j$ will declare war is
+If $j$'s conflict of interest with $i$ is small enough, then $i$ can simply offer its ideal point and all cost types of $j$ will accept.
+
+
+
+**Lemma 5:** 
+If
+$$
+W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+$$
+then
+$$
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
+$$
+and
+$$
+\omega^\star(\tau_i^\star(a_i), 1; a_j, c_j, \rho) = \text{accept}
+$$
+for all $c_j \in [\ubar{\epsilon}, \bar{epsilon}]$.
+
+Given our assumptions on the costs of war, we can always find a cutpoint bias type for the foreign country such that all types more liberal than the cutpoint accept $i$'s ideal point.
+
+
+
+**Lemma 6 (Zone of Peace):** 
+For every $\ubar{\epsilon} \in [ 0, \bar{\epsilon} )$ there exists a $a_j(\ubar{\epsilon}, a_i)$ such that for all $a_j \in [ a_j(\ubar{\epsilon}, a_i), \bar{a} )$ the probability of war is 0.
+
+Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences.
+
+
+
+**Proposition 4 (Liberal Peace):** 
+$a_j(\ubar{\epsilon}, a_i)$ is weakly decreasing in $a_i$.
+
+Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace." 
+
+If $a_j < a_j(\ubar{\epsilon}, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
+
+For any offer, the probability that $j$ will declare war is given by
 \begin{equation} \label{eq:prwar}
 \begin{split}
-\text{Pr} \left\{ c_j \leq \zeta_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right\} = F \left( \zeta_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right)
+\text{Pr} \left\{ c_j \leq W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right\} = F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right)
 \end{split}
 \end{equation}
 
@@ -366,12 +405,12 @@ With this quantity known, we can work to characterize $i$'s offer function, $\ti
 With the probability of war given in Equation \ref{eq:prwar}, we can write $i$'s utility for any offer as
 \begin{equation} \label{eq:Gtildei}
 \begin{split}
-\tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( \zeta_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
-\underbrace{F \left( \zeta_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}} 
+\tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}} 
 \end{split}
 \end{equation}
 
-By Definition 1, $i$'s equilibrium offer will maximize this objective function. Lemmas `` 5 `` and `` 6 `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition 3).
+By Definition 1, $i$'s equilibrium offer will maximize this objective function. Lemmas `` 7 `` and `` 8 `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition 3).
 
 
 
@@ -384,51 +423,44 @@ for some $\lambda \in [0, 1]$.
 
 
 
-**Lemma 5:** 
+**Lemma 7:** 
 $\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
 
 
 
-**Lemma 6:** 
+**Lemma 8:** 
 $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leqslant \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$
 
 ![Bargaining space and pareto set \label{fig:bar}](figure/bar-1.png)
 
-The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 5, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas 1 and 2.] However, the closer $i$'s offer is to it's ideal point, the more likely $j$ is to declare war. Thus, government $i$ confronts a classic risk-return trade-off [@Powell1999].
+The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 7, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas 1 and 2.]
 
-Here, however, the severity of this tradeoff depends on the magnitude of $i$'s conflict of interest with $j$. If $i$ and $j$ are maximially welfare concious, they both adopt free trade, obviating the need for any bargaining at all. As $i$ and $j$ become more kleptocratic, the stakes of the negotiation increase. As Proposition `` 4 `` formalizes, this increases the likelihood of war.
-
-
-
-**Proposition 4:** 
-In a bargaining equilibrium (Definition 1), the probability of war is weakly decreasing in $a_i$ and $a_j$.
-
-Conditional on peace, the policy outcomes of the bargaining equilibrium become more liberal as the governments become less biased. This increases trade between the governments.
+How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 
 
 
-**Proposition 5:** 
+**Proposition 5 (Power and Protection):** 
+If $a_j < a_j(\ubar{\epsilon}, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+
+When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
+
+
+
+**Proposition 6 (Liberal Trade):** 
 In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in $a_i$ and $a_j$.
-
-In peaceful outcomes, military power affects trade policy. More specifically, as $i$ becomes more powerful, it adopts higher barriers to trade.
-
-
-
-**Proposition 6:** 
-In a peaceful bargaining equilibrium (Definition 1), government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 # Discussion
 
 
-Propositions 4 and 5 establish that governments that trade intensely experience fewer wars. Trade policy determines trade flows and generates conflicts between governments. Economic integration is not exogenously given. Participation in the international economy is a choice. Trade policy generates large trade frictions, even in today's globalized era [@Anderson2004].
+Jointly, Propositions 4 and 6 establish that the most liberal governments never fight and also trade more than illiberal governments. Trade policy determines trade flows and generates conflicts between governments. Economic integration is not exogenously given. Participation in the international economy is a choice. Trade policy generates large trade frictions, even in today's globalized era [@Anderson2004].
 
 These policy choices are the object of contention between governments. Protectionist barriers cause conflicts of interest between market access-motivated governments. @Mcdonald2004 shows that measures of protection are better predictors of conflict than trade.^[His analysis covers the years 1960-2000.] Trade can persist in the presence of trade barriers. For example, World War I broke out during an era of rapid globalization. @Mcdonald2007 show that the great powers maintained high protective tariffs during this era. These tariffs provided a rationale for conflict over market access conditions, despite high trade volumes. @Chatagnier2015 examine governments whose firms compete in the same export markets. They show these governments are more likely to experience international conflicts.
 
 Firms are the source of belligerent foreign policies in the theory. In Imperial Germany, "iron and rye" advocated for protectionism and expansionist foreign policies [@Gerschenkron1943]. Similar domestic political coalitions emerged in the United States. @Fordham2019 traces the development of the United States as a naval power in the 19th century. He finds protectionist interests were the strongest advocates for the nascent U.S. fleet. At the time, U.S. trade policy was protectionist. Washington also sought preferential market access in developing countries, particularly in Latin America. The fleet served to protect these objectives against military interference from Europe. Commercial objectives also motivated Washington at the dawn of the Cold War [@Fordham1998]. Under Soviet influence, Eastern Europe became closed to trade with the United States. Congressmen representing export-oriented districts tended to support an aggressive military posture toward the Soviet Union. The goal of export-oriented firms, argues Fordham, was to secure market access in Europe and Japan. In the post-Cold War era, Congressmen representing import-exposed districts have tended to support hostile foreign policies toward China, whose exports (plausibly) harm their constituent firms [@Kleinberg2013]. 
 
-Domestic political institutions connect these underlying economic interests to government preferences. I treat these institutions in reduced form, focusing on variation in consumers' ability to influence policy. Consumers pacify foreign policy preferences. If democratic political institutions privilege the interests of consumers, then Propositions 4 and 5 support a commercial-democratic peace. Observational analyses uncover positive correlations between democracy, trade, and peace because of the trade policy preferences of democracies.^[See @Oneal1999 for a representative study.] Liberal preferences increase trade and reduce conflict.
+Domestic political institutions connect these underlying economic interests to government preferences. I treat these institutions in reduced form, focusing on variation in consumers' ability to influence policy. Consumers pacify foreign policy preferences. If democratic political institutions privilege the interests of consumers, then Propositions 4 and 6 support a commercial-democratic peace. Observational analyses uncover positive correlations between democracy, trade, and peace because of the trade policy preferences of democracies.^[See @Oneal1999 for a representative study.] Liberal preferences increase trade and reduce conflict.
 
-Observed trade policies are not a sufficient statistic for government preferences, however. Proposition 6 states that relative military power effects trade policy in peacetime. Governments' trade policies reflect their preferences only up to a war constraint. Liberal *policies* do not imply liberal *preferences*. Several studies have employed @Grossman1994 and @Grossman1995 to structurally estimate governments' welfare-consciousness [@Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015]. International strategic considerations are effectively absent from these models. The domestic political economy determines outcomes. Therefore, a simple inversion on the policy function recovers preferences. My model highlights the importance of the war constraint. Militarily weak, illiberal governments adopt the same policies as liberal governments.
+Observed trade policies are not a sufficient statistic for government preferences, however. Proposition 5 states that relative military power effects trade policy in peacetime. Governments' trade policies reflect their preferences only up to a war constraint. Liberal *policies* do not imply liberal *preferences*. Several studies have employed @Grossman1994 and @Grossman1995 to structurally estimate governments' welfare-consciousness [@Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015]. International strategic considerations are effectively absent from these models. The domestic political economy determines outcomes. Therefore, a simple inversion on the policy function recovers preferences. My model highlights the importance of the war constraint. Militarily weak, illiberal governments adopt the same policies as liberal governments.
 
 Territory plays a central role in theories and empirical studies of interstate conflict.^[The "pie" at stake in bargaining models of war is often motivated as the distribution of territory between the countries. Empirical studies of territorial conflict often conceptualize territorial control as a consumption good, rather than a means to implement policy. See, for example, @Caselli2015. For a review of this literature, see @Schultz2015.] Wars often redraw international borders. In doing so, they also relocate customs barriers and modify the trade policies of captured regions. Gunboat diplomacy and territorial conflict are plausibly substitutes for one another. Governments can acquire foreign market access through territorial annexation or regime change. Territory and trade policy are not exclusive realms of international conflict.
 
@@ -456,7 +488,7 @@ Finally, the theory highlights an underappreciated prerequisite for internationa
 
 ![Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:tradeRD}](figure/tradeRD-1.png)
 
-![The modern economic peace. Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:comdempeace}](figure/comdempeace-1.png)
+![Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:comdempeace}](figure/comdempeace-1.png)
 
 \clearpage
 
@@ -517,6 +549,19 @@ p_i^\star &= \frac{\sigma}{\sigma - 1} w_i
 
 ## Proofs
 
+
+
+
+**Assumption 1:** 
+I restrict $j$'s costs of war such that there exists some government $j$ with $a_j \in [0, \bar{a})$ that would be willing to fight if victory were certain and $i$ offered its ideal point. Formally, this requires
+$$
+\kappa_j = \Gamma_j(0, \bar{a})
+$$
+I then restrict $i$'s costs of war to ensure that it never offers $j$'s ideal point -- an interior solution exists outside of the zone of peace. Formally, this requires
+$$
+\kappa_i(\bar{\epsilon}, a_i) = \min_{\tilde{\bm{\tau}} \in \mathcal{P}} - \bar{\epsilon} \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} }
+$$
+Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this quantity is guaranteed to be positive.
 
 
 
@@ -658,6 +703,49 @@ where the inequalities follow from Lemma 2 and Lemma 3. $\blacksquare$
 
 
 **Lemma 5:** 
+By Lemma 4, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{\epsilon}, \bar{\epsilon} \right]$. Since this offer maximizes $i$'s utility conditional on peace,
+$$
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
+$$
+$\blacksquare$
+
+
+
+**Lemma 6:** 
+Government $j$ will accept $i$'s ideal point so long as
+$$
+W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) \leq \ubar{\epsilon}
+$$
+Note that this condition can be rewritten as
+$$
+\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+$$
+If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{\epsilon}, a_i) = 0$. Otherwise, let $a_j(\ubar{\epsilon}, a_i)$ solve
+$$
+\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{\epsilon}
+$$
+Recall from Proposition 3 that $\Gamma_j(a_j, a_i)$ is decreasing in both arguments. By Assumption 1, 
+$$
+\ubar{\epsilon} < \bar{\epsilon} \leq \kappa_j = \Gamma_j(0, \bar{a})
+$$
+Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{\epsilon}$ large enough. Then, by construction, 
+$$
+\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+$$
+for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 5, this guarantees peace. $\blacksquare$
+
+
+
+**Proposition 4:** 
+We have two cases, either $a_j(\ubar{\epsilon}, a_i) = 0$ or 
+$$
+a_j(\ubar{\epsilon}, a_i) = \Gamma_j^{-1}(\ubar{\epsilon}; a_i)
+$$
+Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition 3), so is its inverse. This is sufficient to guarantee that $a_j(\ubar{\epsilon}, a_i)$ is decreasing in $a_i$. $\blacksquare$
+
+
+
+**Lemma 7:** 
 Suppose $\tilde{\bm{\tau}}^\star(a_i) \notin \mathcal{P}$. It is straightforward to show that this produces a contradiction, namely
 $$
 \tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \notin \argmax_{\tilde{\bm{\tau}} \in [1, \bar{\tau}^2]} \tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)
@@ -668,95 +756,41 @@ First, if $\tilde{\bm{\tau}}^\star \notin \mathcal{P}$, then there exists $\tild
 Take the first case and recall
 \begin{equation*}
 \begin{split}
-\tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \left( 1 - F \left( \zeta_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right) + \\
-F \left( \zeta_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right) 
+\tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right) + \\
+F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right) 
 \end{split}
 \end{equation*}
 
-In the proof of Lemma P4A (below), I show $G_i(\tilde{\bm{\tau}}^\star) > \zeta_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradicition.
+In the proof of Lemma P4A (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradicition. $\blacksquare$
 
 
 
 
 
-**Lemma 6:** 
-Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\tilde{\tau}_i^\star > \tau_i^\star(a_i)$. By Lemma 5, $\tilde{\bm{\tau}}^\star$ must lie in the pareto set. By the definition of $\tau_i^\star(a_i)$, $G_i(\tilde{\tau}_i^\star, \cdot; a_i) < G_i(\tau_i^\star(a_i), \cdot; a_i)$. By Lemma 2, $G_j(\cdot, \tilde{\tau}_i^\star; a_j) < G_j(\cdot, \tau_i^\star(a_i); a_i)$. Thus, a pareto improvement exists, contradicting the hypothesis that $\tilde{\bm{\tau}}^\star$ is an equilibrium offer. $\blacksquare$
-
-
-
-**Proposition 4:** 
-At this point I invoke Assumption 1, so I define the upper bound on $c_i$.
-\begin{equation} \label{eq:kappa}
-\kappa = \min_{\tau_i \in \mathcal{P}_i} - \bar{c} \left( 1 - F \left( \zeta_j(0, 0) - G_j(\cdot, \tilde{\tau}_i; 0) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; 0)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; 0)}{\partial \tau_i} }
-\end{equation}
-
-Because $\frac{\partial G_j(\cdot, \tau_i; 0)}{\partial \tau_i}$ is negative, $\kappa > 0$. 
-
-The proof proceeds through a series of lemmas. Let $\hat{\bm{\tau}}$ solve 
-$$
-G_i(\hat{\bm{\tau}}) = \zeta_i(a_i, a_j) = \rho \bar{G}_i(a_i) + (1 - \rho) \ubar{G}_i(a_i, a_j)
-$$
-subject to $\hat{\bm{\tau}} \in \mathcal{P}$. If no feasible solution exists, then let $\hat{\bm{\tau}} = \left\{ 1, \tau_j^\star(a_j) \right\}$. Note that for all $\tau_i \in \mathcal{P}$, 
-$$
-\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} > 0
-$$
-
-**Lemma P4A:** $\hat{\tau}_i < \tilde{\tau}_i^\star$
-
-**Proof:** From the first order condition of Equation \ref{eq:Gtildei}, we have
-$$
-\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( \zeta_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
-$$
-Rearranging,
-\begin{align*}
-\left( 1 - F \left( \zeta_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( \zeta_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \zeta_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( \zeta_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{c_i}{\bar{c}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} &= \frac{1}{\bar{c}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \zeta_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right)
-\end{align*}
-
-If Assumption 1 is satisfied, then the left-hand side of this equation is negative. Then, for this equality to hold, we must have
-$$
-\zeta_i(a_i, a_j) - G_i(\tilde{\tau}_i) < 0 \implies G_i(\tilde{\tau}_i) > \zeta_i(a_i, a_j) = G_i(\hat{\tau}_i)
-$$
-which in turn implies the Lemma. $\blacksquare$
-
-**Lemma P4B:** $\tilde{\tau}_i^\star(a_i)$ is decreasing in $a_i$ and $\tilde{\tau}_j^\star(a_i)$ is increasing in $a_i$.
-
-**Proof:** It is sufficient to show that $\tilde{G}_i(\tilde{\tau}_i)$ has negative cross partial in $a_i$. 
-$$
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial a_i} < 0
-$$
-From the characteristics of the Pareto set, it is immediate that if $\tilde{\tau}_i^\star(a_i)$ is decreasing in $a_i$, then $\tilde{\tau}_j^\star(a_i)$ is increasing in $\tau_i$, $a_i$. We have
-\begin{align*}
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial a_i} &= \left( 1 - F(\cdot) \right) \underbrace{\frac{\partial^2 G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial a_i}}_{<0} - \frac{1}{\bar{c}} \underbrace{\frac{\partial \hat{G}_j(a_j, a_i)}{\partial a_i}}_{>0} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} + \frac{1}{\bar{c}} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\left( \frac{\partial G_i(\tilde{\tau}_i)}{\partial a_i} - \frac{\partial \hat{G}_i(a_i, a_j)}{\partial a_i} \right)}_{=\phi(\tilde{\tau}_i)}
-\end{align*}
-where
-$$
-\phi(\tilde{\tau}_i) = V_i^x(\tilde{\tau}_i) - \underbrace{\left( \rho V_i^x(\tau_i^\star(a_i)) + (1 - \rho) V_i^x(1) \right)}_{=V(\hat{\tau}_i)}
-$$
-Because $V_i^x$ is a decreasing function of $\tau_i$ and $\hat{\tau}_i < \tilde{\tau}_i^\star$, $\phi(\tilde{\tau}_i) < 0$, confirming that $\tilde{G}_i(\tilde{\tau}_i)$ has negative cross partial in $\tau_i$, $a_i$. This confirms $\tilde{\tau}_i^\star(a_i)$ is weakly decreasing in $a_i$. By the definition of the pareto set, we must have $\tilde{\tau}_j^\star(a_i)$ is weakly increasing in $a_i$. $\blacksquare$
-
-The equilibrium probability of war is
-$$
-F \left( \zeta_j(a_j, a_i) - G_j(\tilde{\tau}_j^\star(a_i), \tilde{\tau}_i^\star(a_i); a_j) \right)
-$$
-Because $G_j$ is increasing in $\tau_j \in \mathcal{P}_j$, $\tau_j^\star(a_i)$ is increasing in $a_i$, and $F(\cdot)$ is an increasing function, the probability of war is decreasing in $a_i$. A similar proof confirms that the equilibrium probability of war is decreasing in $a_j$. $\blacksquare$
+**Lemma 8:** 
+Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\tilde{\tau}_i^\star > \tau_i^\star(a_i)$. By Lemma 7, $\tilde{\bm{\tau}}^\star$ must lie in the pareto set. By the definition of $\tau_i^\star(a_i)$, $G_i(\tilde{\tau}_i^\star, \cdot; a_i) < G_i(\tau_i^\star(a_i), \cdot; a_i)$. By Lemma 2, $G_j(\cdot, \tilde{\tau}_i^\star; a_j) < G_j(\cdot, \tau_i^\star(a_i); a_i)$. Thus, a pareto improvement exists, contradicting the hypothesis that $\tilde{\bm{\tau}}^\star$ is an equilibrium offer. $\blacksquare$
 
 
 
 **Proposition 5:** 
-Equilibrium trade in manufactured goods is 
+By Assumption 1, $i$'s first order condition must characterize the $\tilde{\bm{\tau}}$ when $a_j < a_j(\ubar{\epsilon}, a_i)$. Here, we have
 $$
-x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)
+\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
 $$
-where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 3. Otherwise, the strategic situation is unchanged from that analyzed in the proof of Proposition 4. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also increasing. $\blacksquare$ 
-
-
-
-**Proposition 6:** 
-Note first that 
+Rearranging,
+\begin{align*}
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\bar{\epsilon} \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
+\end{align*}
+By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
 $$
-\frac{\partial \zeta_j}{\partial \rho} = \underline{G}_j - \bar{G}_j < 0
+W_i(a_i, a_j) < G_i(\tilde{\tau}_i)
+$$
+Now note that 
+$$
+\frac{\partial W_j}{\partial \rho} = \underline{G}_j - \bar{G}_j < 0
 $$
 and
 $$
@@ -764,13 +798,23 @@ $$
 $$
 We have
 $$
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{c}} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial \zeta_j}{\partial \rho}}_{<0} - \frac{1}{\bar{c}} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
+\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{\epsilon}} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - \frac{1}{\bar{\epsilon}} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
 $$
 which implies
 $$
 \frac{\partial \tilde{\tau}_i^\star(a_i)}{\partial \rho} > 0
 $$
 as desired. $\blacksquare$ 
+
+
+
+**Proposition 6:** 
+Equilibrium trade in manufactured goods is 
+$$
+x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)
+$$
+where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 3. Otherwise, the strategic situation is unchanged. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also weakly increasing. $\blacksquare$ 
+
 
 \clearpage
 

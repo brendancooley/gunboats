@@ -1,3 +1,5 @@
+bcOrange <- "#BD6121"
+
 sigma <- 5
 n <- 1
 alpha <- .5

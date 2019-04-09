@@ -9,13 +9,8 @@ if (dir.exists("temp")) {
   unlink("temp", recursive=TRUE)
 }
 
-if (getwd()=="figs") {
-  tradeM <- read_csv("../data/tradeM.csv")
-  wars <- read_csv("../data/wars.csv")
-} else {
-  tradeM <- read_csv("data/tradeM.csv", col_types=list(pop1="n", pop2="n", deaths="n"))
-  wars <- read_csv("data/wars.csv")
-}
+tradeM <- read_csv("../data/tradeM.csv", col_types=list(pop1="n", pop2="n", deaths="n"))
+wars <- read_csv("../data/wars.csv")
 
 tradeM$deaths <- as.integer(tradeM$deaths)
 
@@ -95,7 +90,8 @@ lineColor <- "#191309"
 # pointsColor <- "#CCA686"
 pointsColor <- "#A8BFD9"
 # warsColor <- "#DD2E2B"
-warsColor <- "#B15740"
+# warsColor <- "#B15740"
+warsColor <- bcOrange
 # warsColorBoundary <- "#C7502B"
 # warsColorFill <- "#F17929"
 warsColorBoundary <- "#C7502B"
@@ -215,8 +211,8 @@ tradeRD <- bind_rows(tradeRDlist)
 
 tradeRDplot <- ggplot(data=tradeRD, aes(x=t, y=tradeInt.ihs)) +
   geom_jitter(size=.5, alpha=.2, width=.2) +
-  geom_smooth(data=filter(tradeRD, t<=0), method="lm", se=FALSE, color="red") +
-  geom_smooth(data=filter(tradeRD, t>=0), method="lm", se=FALSE, color="red") +
+  geom_smooth(data=filter(tradeRD, t<=0), method="lm", se=FALSE, color=bcOrange) +
+  geom_smooth(data=filter(tradeRD, t>=0), method="lm", se=FALSE, color=bcOrange) +
   geom_vline(xintercept=0, lty=2) +
   labs(x="Years After Beginning of War", y="Dyadic Economic Integration", title="Trade and War",
        caption="") +

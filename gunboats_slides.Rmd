@@ -4,7 +4,7 @@ subtitle: "Political Bias, Trade Policy, and War"
 author: Brendan Cooley
 date: "13 March 2019"
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 output: 
@@ -29,7 +29,6 @@ output:
 # TODO: speaker notes don't work with incremental reveal
 # TODO: nested bulleted lists disappear after compilation, fine when knitting
 
-
 if (file.exists('references.RData')) load('references.RData')
 
 # get helper functions
@@ -37,7 +36,6 @@ source('figs/source.R')
 
 # get params
 source('figs/params.R')
-
 
 ```
 
