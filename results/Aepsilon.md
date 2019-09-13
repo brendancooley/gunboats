@@ -1,0 +1,1 @@
+$\bar{\epsilon} \leq \kappa_j$ and $c_i < \kappa_i(\bar{\epsilon})$ where $\kappa_j$ and $\kappa_i(\bar{\epsilon})$ are positive constants defined in the Appendix.

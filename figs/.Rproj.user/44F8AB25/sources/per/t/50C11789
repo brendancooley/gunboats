@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1547316664434.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3981560401",
+    "id" : "50C11789",
+    "lastKnownWriteTime" : 1547392136,
+    "last_content_update" : 1547392136065,
+    "path" : "~/Dropbox (Princeton)/1_Papers/gunboats/figs/merge-cow-polity.r",
+    "project_path" : "merge-cow-polity.r",
+    "properties" : {
+        "cursorPosition" : "40,23",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

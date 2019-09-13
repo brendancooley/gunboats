@@ -1,0 +1,21 @@
+Government $j$ will accept $i$'s ideal point so long as
+$$
+W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) \leq \ubar{\epsilon}
+$$
+Note that this condition can be rewritten as
+$$
+\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+$$
+If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{\epsilon}, a_i) = 0$. Otherwise, let $a_j(\ubar{\epsilon}, a_i)$ solve
+$$
+\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{\epsilon}
+$$
+Recall from Proposition `r Pgamma` that $\Gamma_j(a_j, a_i)$ is decreasing in both arguments. By Assumption `r AwCosts`, 
+$$
+\ubar{\epsilon} < \bar{\epsilon} \leq \kappa_j = \Gamma_j(0, \bar{a})
+$$
+Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{\epsilon}$ large enough. Then, by construction, 
+$$
+\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+$$
+for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma `r LtauCorner`, this guarantees peace. $\blacksquare$

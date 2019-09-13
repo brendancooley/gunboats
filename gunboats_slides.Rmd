@@ -1,0 +1,541 @@
+---
+title: "Gunboat Diplomacy"
+subtitle: "Political Bias, Trade Policy, and War"
+date: "13 March 2019"
+author: Brendan Cooley
+position: Ph.D. Candidate
+institution: Princeton University
+email: "bcooley (at) princeton.edu"
+
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+biblio-style: apsr
+
+backgroundTitle: "figs/perry.jpg"
+
+output:
+  revealjs::revealjs_presentation:
+    template: "css/cooley-reveal.html"
+    css: "css/cooley-reveal-Alegreya.css"
+    backgroundTransition: none
+    transition: none
+    self_contained: false
+    # reveal_plugins: ["notes"]
+    lib_dir: index_files
+    reveal_options:
+      slideNumber: false
+      progress: false
+      controls: false
+    includes:
+      after_body: css/plugins.html
+---
+
+```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+# TODO: vertical slides currently not behaving
+# TODO: speaker notes don't work with incremental reveal
+# TODO: nested bulleted lists disappear after compilation, fine when knitting
+
+Akappa <- "NA"
+
+if (file.exists('references.RData')) load('references.RData')
+
+# get helper functions
+source('figs/source.R')
+
+# get params
+source('figs/params.R')
+
+```
+
+## Trade and War: Received Wisdom {id="intro"}
+
+> "Free trade serves the cause of economic progress, and it serves the cause of world peace." <br/> $\qquad$ -- Ronald Reagan, Nov. 1982
+
+<center><hr width="50%"></center>
+
+. . .
+
+> "Commercial relations draw states into a web of mutual self-interest that constrains them from using force against one another." <br/> $\qquad$ -- Oneal and Russett (1999)
+
+<center><hr width="50%"></center>
+
+<hr style="height:1em; visibility:hidden;" />
+
+. . .
+
+**Dominant Paradigm:** Trade mediates *preexisting* conflicts of interest
+
+- Conflicts of interest: territorial, ideological, otherwise
+- War disrupts trade, imposes *opportunity costs*
+
+<a href="#/tradeRD" style="float: right;">Trade and War Onset</a>
+
+## Gunboat Diplomacy
+
+**Examples**
+
+- Perry Expeditions (1852-1854)
+- Opium Wars (1839-1842; 1856-1860)
+- Euromaidan and War in Donbass (2014-present)
+
+. . .
+
+**Commercial Policy Objectives**
+
+- Governments are mercantilistic, desiring
+    - Some degree of trade protection at home
+    - Trade liberalization or *market access* abroad
+
+. . .
+
+**Market Access Externalities**
+
+- Protectionist barriers *shift profits* from foreign to home firms
+- Trade policy generates conflicts of interest between mercantilist governments
+
+. . .
+
+**International Anarchy**
+
+- Efforts to address externalities can include threats, displays, and uses of military force
+    + Bargaining critique [@Fearon1995]: absence of war does not imply absence of coercion
+
+## A Theory of Trade Policy in the Shadow of Power {id="overview"}
+
+**Model**
+
+- "New Trade" International Economy
+    + @Krugman1980, @Venables1987; @Ossa2012
+- Mercantilist/Politically-Biased Governments
+    + @Grossman1994, @BuenodeMesquita2003, @Jackson2007
+    + *Liberal* governments afford consumers greater influence over the trade policymaking process
+- Ultimatum Coercive Bargaining
+    + @Fearon1995
+
+. . .
+
+**Results**
+
+- Trade and Conflict
+    + Liberal governments experience smaller conflicts of interest (Proposition `r Pgamma`)
+    + "" fight war less frequently (Proposition `r Pwar`)
+    + "" trade more when peace prevails (Proposition `r PeqTrade`)
+
+. . .
+
+- Trade Policy in the Shadow of Power
+    + Trade policies reflect balance of military power, powerful countries more protectionist in equilibrium (Proposition `r PeqTau`)
+
+. . .
+
+<p class="center">*Trade and peace are correlated, but not because trade causes peace*</p>
+
+<a href="#/literature" style="float: right;">Literature</a>
+
+## Bargaining Environment
+
+- "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2$
+
+. . .
+
+- Foreign accepts or rejects
+    + Rejection results in war for *regime change*
+
+. . .
+
+- Information about $j$'s costs of war ($c_j$) held privately, distributed  $f(c_j)$
+
+. . .
+
+<hr style="height:1em; visibility:hidden;" />
+
+<center><hr width="50%"></center>
+
+**Definition `r beq`:** A subgame perfect *bargaining equilibrium* is pair of strategies, $\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)$ such that
+$$
+\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho) = \text{argmax}_{\omega \in \left\{\text{accept}, \text{war} \right\}} \widetilde{G}_j \left(\widetilde{\boldsymbol{\tau}}, \omega; a_j, c_j, \rho \right)
+$$
+and
+$$
+\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G}_i \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
+$$
+
+<hr style="height:1em; visibility:hidden;" />
+
+<center><hr width="50%"></center>
+
+<hr style="height:1em; visibility:hidden;" />
+
+- $\widetilde{G}$ government utility
+- $\rho \in [0, 1]$ probability $i$ wins war (military strength)
+
+## Domestic Political Economy {id="dpe"}
+
+**Government Preferences**
+
+<hr style="height:1em; visibility:hidden;" />
+
+\begin{equation} \label{eq:G}
+G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+\end{equation}
+
+<hr style="height:1em; visibility:hidden;" />
+
+- $V_i^x(\tau_i)$ - consumer welfare
+    - decreasing in $\tau_i$
+- $\Pi_i(\tau_i, \tau_j)$ - firm profits
+    - increasing in $\tau_i$, decreasing in $\tau_j$
+- $r_i(\tau_i)$ - tariff revenue
+    - non-monotonic in $\tau_i$
+
+<p class="center">*$a_i$ is measure of government's sensitivity to interests of consumers*</p>
+
+<a href="#/assumptions" style="float: right;">Assumptions</a>
+
+. . .
+
+**International Economy**
+
+- Representative consumer and $n$ firms in each economy, monopolistic competition
+    - Krugman 1980, Venables 1987, Ossa 2012
+
+<a href="#/economy" style="float: right;">Economy</a>
+
+## Government Preferences I
+
+```{r G1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
+
+source("figs/G.R")
+
+Gplot1
+
+```
+
+## Government Preferences I
+
+```{r G2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
+
+Gplot2
+
+```
+
+## Government Preferences I
+
+```{r G3, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
+
+Gplot3
+
+```
+
+## Government Preferences II
+
+```{r iso1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+source("figs/iso.R")
+
+isoPlot1
+
+```
+
+## Government Preferences II {id="iso"}
+
+```{r iso2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+isoPlot2
+
+```
+
+<a href="#/Gprefs" style="float: right;">Results</a>
+
+## Noncooperative Equilibrium {id="nce"}
+
+```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+brPlot
+
+```
+
+<a href="#/nceDef" style="float: right;">Definition</a>
+
+## Conflicts of Interest and Regime Change
+
+**Optimal Puppet Regimes**
+
+- When a government wins a war, it earns the right to replace the vanquished government with a "puppet" that prefers lower barriers to trade
+
+<hr style="height:1em; visibility:hidden;" />
+$$
+\max_{a \in (0, \overline{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+$$
+<hr style="height:1em; visibility:hidden;" />
+
+- Losing governments have puppet's policies imposed on them
+
+. . .
+
+**Conflicts of Interest**
+
+- Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet
+
+<hr style="height:1em; visibility:hidden;" />
+
+\begin{equation} \label{eq:Gamma}
+\Gamma_i(a_i, a_j) = \overline{G}_i(a_i) - \underline{G}_i(a_i, a_j)
+\end{equation}
+
+. . .
+
+**Proposition `r Pgamma`:** `r PgammaText`
+
+## Bargaining Environment {id="barEnv"}
+
+```{r bar, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+source("figs/bar.R")
+
+barPlot
+
+```
+
+<a href="#/bargaining" style="float: right;">Bargaining</a>
+
+## Results
+
+<hr style="height:4em; visibility:hidden;" />
+
+### Trade and War
+
+**Proposition `r Pwar`:** `r PwarText`
+
+. . .
+
+**Proposition `r PeqTrade`:** `r PeqTradeText`
+
+
+## Results
+
+<hr style="height:4em; visibility:hidden;" />
+
+### Trade and War
+
+**Proposition `r Pwar`:** `r PwarText`
+
+**Proposition `r PeqTrade`:** `r PeqTradeText`
+
+### Shadow of War in Trade Policy
+
+**Proposition `r PeqTau`:** `r PeqTauText`
+
+## Implications {id="implications"}
+
+**Preferences, Institutions, and the Democratic Peace**
+
+- Hypothesis: Democracies more liberal in trade policy preferences than autocracies
+    + Democratic political institutions and consumer influence over policymaking [@Mayer1984; @Grossman1996; @Milner2005]
+
+. . .
+
+- Conclusion: Democracies trade more, fight less
+    + Democratic peace: @Oneal1999, @Reiter2017
+
+<p style="text-align: right;"><a href="#/comDemPeace">Commercial-Democratic Peace</a></p>
+
+. . .
+
+**Shadow of Power in International Political Economy**
+
+- Equilibrium trade policies balance
+    + Domestic political interests
+    + Foreign military constraints
+
+. . .
+
+- Trade policies *are not* a sufficient statistic for government preferences
+    + @Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015
+
+## Conclusion
+
+<hr style="height:6em; visibility:hidden;" />
+
+**Conflicts of Interest versus Bargaining Failures**
+
+- *Given* a conflict of interest, what prevents peaceful settlement? [@Fearon1995]
+- What do governments want? and why do their objectives bring them into conflict with one another? [@Moravcsik1997]
+
+## Thank You  {.aligncenter}
+
+[brendancooley.com](http://brendancooley.com)
+
+[bcooley@princeton.edu](bcooley@princeton.edu)
+
+<small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
+
+## Trade and War Onset {id="tradeRD"}
+
+```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300}
+
+source("figs/emp_wars.R")
+
+tradeRDplot
+
+```
+
+<a href="#/intro" style="float: right;">Back</a>
+
+## Literature {id="literature"}
+
+- Trade and War
+    + @Angell1911, @Polachek1980, @Gowa1993, @Morrow1999b, @Barbieri1999, @Mansfield2000a, @Gartzke2001, @Mcdonald2004, @Mcdonald2007, @Gartzke2007, @Benson2007, @Philippe2008, @Hegre2010, @Copeland2014
+- Power and Trade
+    + @Hirschman1945, @Krasner1976, @Gourevitch1978, @Pollins1989a, @Pollins1989b, @Antras2011, @Chatagnier2015, @Carroll2018
+- Political Economy of Trade Policy
+    + @Mayer1984, @Grossman1994, @Kono2008, @Gawande2009, @Ossa2011, @Ossa2012, @Ossa2014
+- Democracy and Trade
+    + @Mansfield2000b, @Milner2005
+- Democracy and War
+    + @Lake1992, @Snyder1993, @Oneal1997, @Schultz1998, @Oneal1999, @Schultz2001, @Fearon2008, @CoeND
+
+
+<a href="#/overview" style="float: right;">Back</a>
+
+## Assumptions {id="assumptions"}
+
+<hr style="height:2em; visibility:hidden;" />
+
+**Assumption `r Akappa`:** (costs of war are bounded) $c_i < \kappa$ where $\kappa$ is a postive constant defined in the Appendix.
+
+**Assumption `r aAlpha`:** (agricultural sector sufficiently large)
+<hr style="height:1em; visibility:hidden;" />
+$$
+\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}
+$$
+<hr style="height:1em; visibility:hidden;" />
+
+**Assumption `r aA`:** (governments are weak mercantilists) $a_i \in (0, \overline{a})$ with
+<hr style="height:1em; visibility:hidden;" />
+$$
+\overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
+$$
+<hr style="height:1em; visibility:hidden;" />
+
+<a href="#/dpe" style="float: right;">Back</a>
+
+## Economy {id="economy"}
+
+**Consumption**
+
+\begin{equation} \label{eq:cMax}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i X_i + Y_i \leq w_i L \\
+& \quad X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
+\end{split}
+\end{equation}
+
+**Production**
+
+- $n$ firms producing differentiated goods and outside (agricultural) sector
+
+\begin{equation} \label{eq:Pi}
+\begin{split}
+\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
+& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\end{split}
+\end{equation}
+
+**Revenue**
+
+\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}
+
+<a href="#/dpe" style="float: right;">Back</a>
+
+## Government Preferences {id="Gprefs"}
+
+**Lemma `r qccv`:** `r LqccvText`
+
+<hr style="height:1em; visibility:hidden;" />
+
+<center><hr width="50%"></center>
+
+<hr style="height:1em; visibility:hidden;" />
+
+**Lemma `r tauj`:** `r LtaujText`
+
+<a href="#/iso" style="float: right;">Back</a>
+
+## Noncooperative Equilibrium {id="nceDef"}
+
+**Best Responses Functions**
+
+$$
+\tau_i(a_i, \tau_j) = \text{argmax}_{\tau_i \in [1, \overline{\tau}]} G_i(\tau_i, \tau_j; a_i)
+$$
+and
+$$
+\tau_j(a_j, \tau_i) = \text{argmax}_{\tau_j \in [1, \overline{\tau}]} G_j(\tau_i, \tau_j; a_j)
+$$
+
+<hr style="height:1em; visibility:hidden;" />
+
+<center><hr width="50%"></center>
+
+<hr style="height:1em; visibility:hidden;" />
+
+**Definition `r nceq`:** `r DnceqText`
+
+<hr style="height:1em; visibility:hidden;" />
+
+<center><hr width="50%"></center>
+
+<hr style="height:1em; visibility:hidden;" />
+
+**Lemma `r taui`:** `r LtauiText`
+
+<a href="#/nce" style="float: right;">Back</a>
+
+## Bargaining {id="bargaining"}
+
+**Successful Regime Change**
+
+<hr style="height:1em; visibility:hidden;" />
+\begin{equation} \label{eq:Gbar}
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star) | a_i ) = G_i(\tau_i^\star(a_i), 1 | a_i)
+\end{equation}
+<hr style="height:1em; visibility:hidden;" />
+
+**Foreign Imposition of Regime Change**
+
+<hr style="height:1em; visibility:hidden;" />
+\begin{equation} \label{eq:Gubar}
+\underline{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j) | a_i) = G_i(1, \tau_j^\star(a_j) | a_i)
+\end{equation}
+<hr style="height:1em; visibility:hidden;" />
+
+**Foreign Government's Expected Utility for War**
+
+<hr style="height:1em; visibility:hidden;" />
+$$
+\widehat{G}_j(a_j, a_i) = (1 - \rho) \overline{G}_j(a_j) + \rho \underline{G}_j(a_j, a_i) - c_j
+$$
+<hr style="height:1em; visibility:hidden;" />
+
+<a href="#/barEnv" style="float: right;">Back</a>
+
+## The Commercial-Democratic Peace {id="comDemPeace"}
+
+```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=6}
+
+source("figs/emp_wars.R")
+
+polityDensity <- polityDensity + theme(plot.title = element_blank())
+
+polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,15,2))
+
+```
+
+<a href="#/implications" style="float: right;">Back</a>
+
+<hr style="height:5em; visibility:hidden;" />

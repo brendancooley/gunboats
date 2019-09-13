@@ -1,0 +1,1 @@
+$a_j(\ubar{\epsilon}, a_i)$ is weakly decreasing in $a_i$.

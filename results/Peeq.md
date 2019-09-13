@@ -1,0 +1,1 @@
+If Assumption `r aAlpha` is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.

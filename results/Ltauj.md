@@ -1,0 +1,1 @@
+$G_i(\tau_j)$ is strictly decreasing in $\tau_j$.

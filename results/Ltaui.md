@@ -1,0 +1,1 @@
+$\tau_i^\star(a_i)$ is decreasing in $a_i \in (0, \bar{a})$ with $\tau_i^\star(\bar{a}) = 1$.

@@ -1,0 +1,1 @@
+Follows immediately from Lemma `r tauj` and Lemma `r taui` $\blacksquare$

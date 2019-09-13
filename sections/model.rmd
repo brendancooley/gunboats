@@ -1,0 +1,167 @@
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` `r eeqP` ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` `r eeqD` ``) will exist for any trade policy choices. Lemma `` `r qccv` `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
+
+## International Bargaining
+
+Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government utility can therefore be written $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits and tariff reveune.^[$\bar{a}$ is defined below.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad. 
+
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{\epsilon}, \bar{\epsilon}]$.
+
+As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` `r AwCosts` `` formalizes this intuition. 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+AwCosts <- Atick
+Atick <- Atick + 1
+
+AwCostsText <- knit_child("../results/Aepsilon.md")
+```
+
+**Assumption `r AwCosts`:** `r AwCostsText`
+
+A strategy for Government $i$ is an offer, $\tilde{\bm{\tau}}(a_i, c_i, \rho)$. A strategy for Government $j$, denoted $\omega(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a mapping between this offer and a choice of whether or not to attempt regime change
+$$
+\omega : \tilde{\bm{\tau}} \rightarrow \left\{ \text{accept}, \text{war} \right\}
+$$
+Let $\tilde{G}(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a subgame perfect bargaining equilibrium. 
+
+```{r beq, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+beq <- Dtick
+Dtick <- Dtick + 1
+
+DbeqText <- knit_child("../results/Dbeq.md")
+```
+
+**Definition `r beq`:** `r DbeqText`
+
+## International Economy
+
+Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There are $n_i = n_j = n$ firms in each economy which produce differentiated manufactured goods.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away. I assume that $n$ is large enough such that firms take the price index $P_i$ as given when choosing prices.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012. 
+
+### Tariffs and Prices
+
+Firms engage in monopolistic competition, setting prices in each market to maximize profits, given the preferences of consumers. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j$, and the price paid by consumers for foreign goods, $p_{ij} = \tau_i p_j$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
+
+### Consumption
+
+Consumer preferences over agricultural goods $Y_i$ and aggregated differentiated varieties $X_i$ are Cobb-Douglas, where an exogenous parameter $\alpha \in [0,1]$ controls the consumers' relative preference for differentiated varieties. Consumers therefore solve the following problem
+\begin{equation} \label{eq:cMax}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i X_i + Y_i \leq w_i L
+\end{split}
+\end{equation}
+where $X_i$ is a CES aggregate of manufactured goods $x$, a la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. This gives
+\begin{equation} \label{eq:CES}
+X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
+\end{equation}
+where $\sigma > 1$ is the elasticity of substitution between varieties. The aggregate price level of differentiated goods in each country is described by the CES exact price index
+\begin{equation} \label{eq:P}
+P_i = \left( n p_{ii}^{1-\sigma} + n p_{ij}^{1-\sigma} \right)^{\frac{1}{1 - \sigma}}
+\end{equation}
+
+Equilibrium demand for manufactured goods from $j$ in $i$ is
+\begin{equation} \label{eq:demand}
+x_{ij}^\star(p_{ij}) = p_{ij}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L
+\end{equation}
+
+Indirect utility over manufactured goods is
+\begin{equation} \label{eq:V}
+V_i^x(P_i) = \frac{\alpha w_i L}{P_i}
+\end{equation}
+
+### Production
+
+Firms set prices to maximize profits across home and foreign markets, given consumer demand. Because all firms in country $i$ face the same demand curves at home and abroad, they all set the same price. The quantity that each firm $i$ produces for market $j$ is equal to the demand for $i$'s goods in $j$, $x_{ij}^\star$. The firms' problem is given by
+\begin{equation} \label{eq:Pi}
+\begin{split}
+\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
+& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\end{split}
+\end{equation}
+
+This problem yields equilibrium prices
+\begin{equation} \label{eq:prices}
+p_i^\star = \frac{\sigma}{\sigma - 1} w_i
+\end{equation}
+
+Equilibrium profits can then be computed as $\Pi_i(p_i^\star)$
+\begin{equation} \label{eq:PiStar}
+\Pi_i(p_i^\star) = n \left( \frac{1}{\sigma - 1} w_i \right) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\end{equation}
+
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha w_j L$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government. 
+
+I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
+
+### Economic Equilibrium
+
+Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+eeqD <- Dtick
+Dtick <- Dtick + 1
+
+DeeqText <- knit_child("../results/Deeq.md")
+```
+
+**Definition `r eeqD`:** `r DeeqText`
+
+There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r aAlpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
+
+```{r aAlpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+aAlpha <- Atick
+Atick <- Atick + 1
+
+AalphaText <- knit_child("../results/Aalpha.md")
+```
+
+**Assumption `r aAlpha`:** `r AalphaText`
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+eeqP <- Ptick
+Ptick <- Ptick + 1
+
+PeeqText <- knit_child('../results/Peeq.md')
+```
+
+**Proposition `r eeqP`:** `r PeeqText`
+
+### Tariff Revenue
+
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Unlike typical theories of optimal taxation in public economics [@Dixit1985], these revenues are not returned to the pockets of consumers. This assumption allows for a range of potential government uses for tariff revenue. Tariff revenue can in principle be devoted to any government expenditure. Liberal governments might redistribute it to the population and derive welfare from this redistribution, while illiberal governments might spend it on rennovations to presidential palaces. Regardless the manner in which it is spent, governments value this revenue equally. Total tariff revenue can be written
+\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}
+
+### Government Preferences
+
+Governments value a combination of consumer welfare, producer profits, and tariff revenue.^[Goverments value only the component of consumer welfare derived from the consumption of manufactured goods. With Cobb-Douglas utility and constant returns to scale technology in the agricultural sector, consumers will derive a constant utility from their consumption of agricultural goods $V_i^y$. Thus, total consumer indirect utility $V_i$ is equal to $V_i^x$ up to a constant.] With these quantities derived, we can write
+\begin{equation} \label{eq:G}
+G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+\end{equation}
+
+The exogenous parameter $a_i > 0$ controls the relative weight the government places on consumer welfare, relative to profits and revenue. This conception of government preferences follows @Grossman1994, in which $a_i$ represents the value the government places on campaign contributions relative to consumer welfare.^[In their model, firms lobby for protective tariffs (or export subsidies), promising campaign contributions in exchange for policy deviations from the consumer welfare-maximizing ideal. @Grossman1996 provide additional microfoundations for this objective function in a model of electoral competition, in which the government can employ campaign contributions to influence the vote choice of "uneducated" voters.]
+
+I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
+
+I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` `r aA` `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
+
+```{r aA, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+aA <- Atick
+Atick <- Atick + 1
+
+AaText <- knit_child("../results/Aa.md")
+```
+
+**Assumption `r aA`:** `r AaText`
+
+In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv <- Ltick
+Ltick <- Ltick + 1
+
+LqccvText <- knit_child("../results/Lqccv.md")
+```
+
+**Lemma `r qccv`:** `r LqccvText`

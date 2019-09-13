@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1565120695019.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "467201636",
+    "id" : "E9F9DF78",
+    "lastKnownWriteTime" : 1565120735,
+    "last_content_update" : 1565120735475,
+    "path" : "~/Dropbox (Princeton)/14_Software/R/params.R",
+    "project_path" : "params.R",
+    "properties" : {
+        "cursorPosition" : "1,0",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

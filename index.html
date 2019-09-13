@@ -1,0 +1,1192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="Brendan Cooley" />
+  <meta name="dcterms.date" content="2019-03-13" />
+  <title>Gunboat Diplomacy</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/reveal.css"/>
+
+
+
+<link rel="stylesheet" href="index_files/reveal.js-3.3.0.1/css/theme/simple.css" id="theme">
+
+
+
+  <!-- some tweaks to reveal css -->
+  <style type="text/css">
+    .reveal h1 { font-size: 2.0em; }
+    .reveal h2 { font-size: 1.5em;  }
+    .reveal h3 { font-size: 1.25em;	}
+    .reveal h4 { font-size: 1em;	}
+
+    .reveal .slides>section,
+    .reveal .slides>section>section {
+      padding: 0px 0px;
+    }
+
+    .reveal table {
+      border-width: 0px;
+      border-spacing: 2px;
+      border-style: dotted;
+      border-color: gray;
+      border-collapse: collapse;
+      font-size: 0.7em;
+    }
+
+    .reveal table th {
+      border-width: 0px;
+      padding-left: 10px;
+      padding-right: 25px;
+      font-weight: bold;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+    .reveal table td {
+      border-width: 0px;
+      padding-left: 10px;
+      padding-right: 25px;
+      border-style: dotted;
+      border-color: gray;
+    }
+
+
+  </style>
+
+    <style type="text/css">code{white-space: pre;}</style>
+
+    <link rel="stylesheet" href="css/cooley-reveal-Alegreya.css"/>
+
+<!-- Printing and PDF exports -->
+<script id="paper-css" type="application/dynamic-css">
+
+/* Default Print Stylesheet Template
+   by Rob Glazebrook of CSSnewbie.com
+   Last Updated: June 4, 2008
+
+   Feel free (nay, compelled) to edit, append, and
+   manipulate this file as you see fit. */
+
+
+@media print {
+
+	/* SECTION 1: Set default width, margin, float, and
+	   background. This prevents elements from extending
+	   beyond the edge of the printed page, and prevents
+	   unnecessary background images from printing */
+	html {
+		background: #fff;
+		width: auto;
+		height: auto;
+		overflow: visible;
+	}
+	body {
+		background: #fff;
+		font-size: 20pt;
+		width: auto;
+		height: auto;
+		border: 0;
+		margin: 0 5%;
+		padding: 0;
+		overflow: visible;
+		float: none !important;
+	}
+
+	/* SECTION 2: Remove any elements not needed in print.
+	   This would include navigation, ads, sidebars, etc. */
+	.nestedarrow,
+	.controls,
+	.fork-reveal,
+	.share-reveal,
+	.state-background,
+	.reveal .progress,
+	.reveal .backgrounds {
+		display: none !important;
+	}
+
+	/* SECTION 3: Set body font face, size, and color.
+	   Consider using a serif font for readability. */
+	body, p, td, li, div {
+		font-size: 20pt!important;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		color: #000;
+	}
+
+	/* SECTION 4: Set heading font face, sizes, and color.
+	   Differentiate your headings from your body text.
+	   Perhaps use a large sans-serif for distinction. */
+	h1,h2,h3,h4,h5,h6 {
+		color: #000!important;
+		height: auto;
+		line-height: normal;
+		font-family: Georgia, "Times New Roman", Times, serif !important;
+		text-shadow: 0 0 0 #000 !important;
+		text-align: left;
+		letter-spacing: normal;
+	}
+	/* Need to reduce the size of the fonts for printing */
+	h1 { font-size: 28pt !important;  }
+	h2 { font-size: 24pt !important; }
+	h3 { font-size: 22pt !important; }
+	h4 { font-size: 22pt !important; font-variant: small-caps; }
+	h5 { font-size: 21pt !important; }
+	h6 { font-size: 20pt !important; font-style: italic; }
+
+	/* SECTION 5: Make hyperlinks more usable.
+	   Ensure links are underlined, and consider appending
+	   the URL to the end of the link for usability. */
+	a:link,
+	a:visited {
+		color: #000 !important;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	/*
+	.reveal a:link:after,
+	.reveal a:visited:after {
+		content: " (" attr(href) ") ";
+		color: #222 !important;
+		font-size: 90%;
+	}
+	*/
+
+
+	/* SECTION 6: more reveal.js specific additions by @skypanther */
+	ul, ol, div, p {
+		visibility: visible;
+		position: static;
+		width: auto;
+		height: auto;
+		display: block;
+		overflow: visible;
+		margin: 0;
+		text-align: left !important;
+	}
+	.reveal pre,
+	.reveal table {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.reveal pre code {
+		padding: 20px;
+		border: 1px solid #ddd;
+	}
+	.reveal blockquote {
+		margin: 20px 0;
+	}
+	.reveal .slides {
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 0 !important;
+		zoom: 1 !important;
+
+		overflow: visible !important;
+		display: block !important;
+
+		text-align: left !important;
+		-webkit-perspective: none;
+		   -moz-perspective: none;
+		    -ms-perspective: none;
+		        perspective: none;
+
+		-webkit-perspective-origin: 50% 50%;
+		   -moz-perspective-origin: 50% 50%;
+		    -ms-perspective-origin: 50% 50%;
+		        perspective-origin: 50% 50%;
+	}
+	.reveal .slides section {
+		visibility: visible !important;
+		position: static !important;
+		width: auto !important;
+		height: auto !important;
+		display: block !important;
+		overflow: visible !important;
+
+		left: 0 !important;
+		top: 0 !important;
+		margin-left: 0 !important;
+		margin-top: 0 !important;
+		padding: 60px 20px !important;
+		z-index: auto !important;
+
+		opacity: 1 !important;
+
+		page-break-after: always !important;
+
+		-webkit-transform-style: flat !important;
+		   -moz-transform-style: flat !important;
+		    -ms-transform-style: flat !important;
+		        transform-style: flat !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+
+		-webkit-transition: none !important;
+		   -moz-transition: none !important;
+		    -ms-transition: none !important;
+		        transition: none !important;
+	}
+	.reveal .slides section.stack {
+		padding: 0 !important;
+	}
+	.reveal section:last-of-type {
+		page-break-after: avoid !important;
+	}
+	.reveal section .fragment {
+		opacity: 1 !important;
+		visibility: visible !important;
+
+		-webkit-transform: none !important;
+		   -moz-transform: none !important;
+		    -ms-transform: none !important;
+		        transform: none !important;
+	}
+	.reveal section img {
+		display: block;
+		margin: 15px 0px;
+		background: rgba(255,255,255,1);
+		border: 1px solid #666;
+		box-shadow: none;
+	}
+
+	.reveal section small {
+		font-size: 0.8em;
+	}
+
+}
+</script>
+
+
+<script id="pdf-css" type="application/dynamic-css">
+
+/**
+ * This stylesheet is used to print reveal.js
+ * presentations to PDF.
+ *
+ * https://github.com/hakimel/reveal.js#pdf-export
+ */
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+
+body {
+	margin: 0 auto !important;
+	border: 0;
+	padding: 0;
+	float: none !important;
+	overflow: visible;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+	overflow: visible;
+}
+
+/* Remove any elements not needed in print. */
+.nestedarrow,
+.reveal .controls,
+.reveal .progress,
+.reveal .playback,
+.reveal.overview,
+.fork-reveal,
+.share-reveal,
+.state-background {
+	display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	text-shadow: 0 0 0 #000 !important;
+}
+
+.reveal pre code {
+	overflow: hidden !important;
+	font-family: Courier, 'Courier New', monospace !important;
+}
+
+ul, ol, div, p {
+	visibility: visible;
+	position: static;
+	width: auto;
+	height: auto;
+	display: block;
+	overflow: visible;
+	margin: auto;
+}
+.reveal {
+	width: auto !important;
+	height: auto !important;
+	overflow: hidden !important;
+}
+.reveal .slides {
+	position: static;
+	width: 100%;
+	height: auto;
+
+	left: auto;
+	top: auto;
+	margin: 0 !important;
+	padding: 0 !important;
+
+	overflow: visible;
+	display: block;
+
+	-webkit-perspective: none;
+	   -moz-perspective: none;
+	    -ms-perspective: none;
+	        perspective: none;
+
+	-webkit-perspective-origin: 50% 50%; /* there isn't a none/auto value but 50-50 is the default */
+	   -moz-perspective-origin: 50% 50%;
+	    -ms-perspective-origin: 50% 50%;
+	        perspective-origin: 50% 50%;
+}
+
+.reveal .slides section {
+	page-break-after: always !important;
+
+	visibility: visible !important;
+	position: relative !important;
+	display: block !important;
+	position: relative !important;
+
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+	min-height: 1px;
+
+	opacity: 1 !important;
+
+	-webkit-transform-style: flat !important;
+	   -moz-transform-style: flat !important;
+	    -ms-transform-style: flat !important;
+	        transform-style: flat !important;
+
+	-webkit-transform: none !important;
+	   -moz-transform: none !important;
+	    -ms-transform: none !important;
+	        transform: none !important;
+}
+
+.reveal section.stack {
+	margin: 0 !important;
+	padding: 0 !important;
+	page-break-after: avoid !important;
+	height: auto !important;
+	min-height: auto !important;
+}
+
+.reveal img {
+	box-shadow: none;
+}
+
+.reveal .roll {
+	overflow: visible;
+	line-height: 1em;
+}
+
+/* Slide backgrounds are placed inside of their slide when exporting to PDF */
+.reveal section .slide-background {
+	display: block !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: -1;
+}
+
+/* All elements should be above the slide-background */
+.reveal section>* {
+	position: relative;
+	z-index: 1;
+}
+
+/* Display slide speaker notes when 'showNotes' is enabled */
+.reveal .speaker-notes-pdf {
+	display: block;
+	width: 100%;
+	max-height: none;
+	left: auto;
+	top: auto;
+	z-index: 100;
+}
+
+/* Display slide numbers when 'slideNumber' is enabled */
+.reveal .slide-number-pdf {
+	display: block;
+	position: absolute;
+	font-size: 14px;
+}
+
+</script>
+
+
+<script>
+var style = document.createElement( 'style' );
+style.type = 'text/css';
+var style_script_id = window.location.search.match( /print-pdf/gi ) ? 'pdf-css' : 'paper-css';
+var style_script = document.getElementById(style_script_id).text;
+style.innerHTML = style_script;
+document.getElementsByTagName('head')[0].appendChild(style);
+</script>
+
+
+<!-- add colors for mathjax
+ -->
+ <p style="display:none">
+\[
+\require{color}
+\definecolor{bcOrange}{RGB}{189,97,33}
+\newcommand\iddots{\mathinner{
+  \kern1mu\raise1pt{.}
+  \kern2mu\raise4pt{.}
+  \kern2mu\raise7pt{\Rule{0pt}{7pt}{0pt}.}
+  \kern1mu
+}}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\newcommand{\bm}[1]{\boldsymbol{\mathbf{#1}}}
+\newcommand{\ubar}[1]{\underline{#1}}
+
+\]
+</p>
+
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+
+<section data-background="figs/perry.jpg">
+	<div class="cover-top">
+	  	<h1 class="title">Gunboat Diplomacy</h1>
+			  	<h2 class="subtitle">Political Bias, Trade Policy, and War</h1>
+						<h3 class="date">13 March 2019</h3>
+			</div>
+	<div class="cover-bottom">
+				<h3>Brendan Cooley</h3>
+						<h3>Ph.D. Candidate</h3>
+						<h3>Princeton University</h3>
+						<h3>bcooley (at) princeton.edu</h3>
+			</div>
+</section>
+
+<section id="intro" class="slide level2">
+<h2>Trade and War: Received Wisdom</h2>
+<blockquote>
+<p>“Free trade serves the cause of economic progress, and it serves the cause of world peace.” <br/> <span class="math inline">\(\qquad\)</span> – Ronald Reagan, Nov. 1982</p>
+</blockquote>
+<center>
+<hr width="50%">
+</center>
+<div class="fragment">
+<blockquote>
+<p>“Commercial relations draw states into a web of mutual self-interest that constrains them from using force against one another.” <br/> <span class="math inline">\(\qquad\)</span> – Oneal and Russett (1999)</p>
+</blockquote>
+<center>
+<hr width="50%">
+</center>
+<hr style="height:1em; visibility:hidden;" />
+</div>
+<div class="fragment">
+<p><strong>Dominant Paradigm:</strong> Trade mediates <em>preexisting</em> conflicts of interest</p>
+<ul>
+<li>Conflicts of interest: territorial, ideological, otherwise</li>
+<li>War disrupts trade, imposes <em>opportunity costs</em></li>
+</ul>
+<p><a href="#/tradeRD" style="float: right;">Trade and War Onset</a></p>
+</div>
+</section>
+<section id="gunboat-diplomacy" class="slide level2">
+<h2>Gunboat Diplomacy</h2>
+<p><strong>Examples</strong></p>
+<ul>
+<li>Perry Expeditions (1852-1854)</li>
+<li>Opium Wars (1839-1842; 1856-1860)</li>
+<li>Euromaidan and War in Donbass (2014-present)</li>
+</ul>
+<div class="fragment">
+<p><strong>Commercial Policy Objectives</strong></p>
+<ul>
+<li>Governments are mercantilistic, desiring
+<ul>
+<li>Some degree of trade protection at home</li>
+<li>Trade liberalization or <em>market access</em> abroad</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Market Access Externalities</strong></p>
+<ul>
+<li>Protectionist barriers <em>shift profits</em> from foreign to home firms</li>
+<li>Trade policy generates conflicts of interest between mercantilist governments</li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>International Anarchy</strong></p>
+<ul>
+<li>Efforts to address externalities can include threats, displays, and uses of military force
+<ul>
+<li>Bargaining critique <span class="citation" data-cites="Fearon1995">(Fearon 1995)</span>: absence of war does not imply absence of coercion</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="overview" class="slide level2">
+<h2>A Theory of Trade Policy in the Shadow of Power</h2>
+<p><strong>Model</strong></p>
+<ul>
+<li>“New Trade” International Economy
+<ul>
+<li><span class="citation" data-cites="Krugman1980">Krugman (1980)</span>, <span class="citation" data-cites="Venables1987">Venables (1987)</span>; <span class="citation" data-cites="Ossa2012">Ossa (2012)</span></li>
+</ul></li>
+<li>Mercantilist/Politically-Biased Governments
+<ul>
+<li><span class="citation" data-cites="Grossman1994">Grossman and Helpman (1994)</span>, <span class="citation" data-cites="BuenodeMesquita2003">Bueno De Mesquita et al. (2003)</span>, <span class="citation" data-cites="Jackson2007">Jackson and Morelli (2007)</span></li>
+<li><em>Liberal</em> governments afford consumers greater influence over the trade policymaking process</li>
+</ul></li>
+<li>Ultimatum Coercive Bargaining
+<ul>
+<li><span class="citation" data-cites="Fearon1995">Fearon (1995)</span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<p><strong>Results</strong></p>
+<ul>
+<li>Trade and Conflict
+<ul>
+<li>Liberal governments experience smaller conflicts of interest (Proposition 3)</li>
+<li>&quot;&quot; fight war less frequently (Proposition 4)</li>
+<li>&quot;&quot; trade more when peace prevails (Proposition 6)</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Trade Policy in the Shadow of Power
+<ul>
+<li>Trade policies reflect balance of military power, powerful countries more protectionist in equilibrium (Proposition 5)</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p class="center">
+<em>Trade and peace are correlated, but not because trade causes peace</em>
+</p>
+<p><a href="#/literature" style="float: right;">Literature</a></p>
+</div>
+</section>
+<section id="bargaining-environment" class="slide level2">
+<h2>Bargaining Environment</h2>
+<ul>
+<li>“Home” (<span class="math inline">\(i\)</span>) government makes TIOLI trade policy offer to “foreign” (<span class="math inline">\(j\)</span>) <span class="math inline">\(\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2\)</span></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Foreign accepts or rejects
+<ul>
+<li>Rejection results in war for <em>regime change</em></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Information about <span class="math inline">\(j\)</span>’s costs of war (<span class="math inline">\(c_j\)</span>) held privately, distributed <span class="math inline">\(f(c_j)\)</span></li>
+</ul>
+</div>
+<div class="fragment">
+<hr style="height:1em; visibility:hidden;" />
+<center>
+<hr width="50%">
+</center>
+<p><strong>Definition 1:</strong> A subgame perfect <em>bargaining equilibrium</em> is pair of strategies, <span class="math inline">\(\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)\)</span> and <span class="math inline">\(\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)\)</span> such that <span class="math display">\[
+\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho) = \text{argmax}_{\omega \in \left\{\text{accept}, \text{war} \right\}} \widetilde{G}_j \left(\widetilde{\boldsymbol{\tau}}, \omega; a_j, c_j, \rho \right)
+\]</span> and <span class="math display">\[
+\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G}_i \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
+\]</span></p>
+<hr style="height:1em; visibility:hidden;" />
+<center>
+<hr width="50%">
+</center>
+<hr style="height:1em; visibility:hidden;" />
+<ul>
+<li><span class="math inline">\(\widetilde{G}\)</span> government utility</li>
+<li><span class="math inline">\(\rho \in [0, 1]\)</span> probability <span class="math inline">\(i\)</span> wins war (military strength)</li>
+</ul>
+</div>
+</section>
+<section id="dpe" class="slide level2">
+<h2>Domestic Political Economy</h2>
+<p><strong>Government Preferences</strong></p>
+<hr style="height:1em; visibility:hidden;" />
+<p><span class="math display">\[\begin{equation} \label{eq:G}
+G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+\end{equation}\]</span></p>
+<hr style="height:1em; visibility:hidden;" />
+<ul>
+<li><span class="math inline">\(V_i^x(\tau_i)\)</span> - consumer welfare
+<ul>
+<li>decreasing in <span class="math inline">\(\tau_i\)</span></li>
+</ul></li>
+<li><span class="math inline">\(\Pi_i(\tau_i, \tau_j)\)</span> - firm profits
+<ul>
+<li>increasing in <span class="math inline">\(\tau_i\)</span>, decreasing in <span class="math inline">\(\tau_j\)</span></li>
+</ul></li>
+<li><span class="math inline">\(r_i(\tau_i)\)</span> - tariff revenue
+<ul>
+<li>non-monotonic in <span class="math inline">\(\tau_i\)</span></li>
+</ul></li>
+</ul>
+<p class="center">
+<em><span class="math inline">\(a_i\)</span> is measure of government’s sensitivity to interests of consumers</em>
+</p>
+<p><a href="#/assumptions" style="float: right;">Assumptions</a></p>
+<div class="fragment">
+<p><strong>International Economy</strong></p>
+<ul>
+<li>Representative consumer and <span class="math inline">\(n\)</span> firms in each economy, monopolistic competition
+<ul>
+<li>Krugman 1980, Venables 1987, Ossa 2012</li>
+</ul></li>
+</ul>
+<p><a href="#/economy" style="float: right;">Economy</a></p>
+</div>
+</section>
+<section id="government-preferences-i" class="slide level2">
+<h2>Government Preferences I</h2>
+<p><img src="index_files/figure-revealjs/G1-1.png" width="2400" /></p>
+</section>
+<section id="government-preferences-i-1" class="slide level2">
+<h2>Government Preferences I</h2>
+<p><img src="index_files/figure-revealjs/G2-1.png" width="2400" /></p>
+</section>
+<section id="government-preferences-i-2" class="slide level2">
+<h2>Government Preferences I</h2>
+<p><img src="index_files/figure-revealjs/G3-1.png" width="2400" /></p>
+</section>
+<section id="government-preferences-ii" class="slide level2">
+<h2>Government Preferences II</h2>
+<p><img src="index_files/figure-revealjs/iso1-1.png" width="2400" /></p>
+</section>
+<section id="iso" class="slide level2">
+<h2>Government Preferences II</h2>
+<p><img src="index_files/figure-revealjs/iso2-1.png" width="2400" /></p>
+<p><a href="#/Gprefs" style="float: right;">Results</a></p>
+</section>
+<section id="nce" class="slide level2">
+<h2>Noncooperative Equilibrium</h2>
+<p><img src="index_files/figure-revealjs/br-1.png" width="2400" /></p>
+<p><a href="#/nceDef" style="float: right;">Definition</a></p>
+</section>
+<section id="conflicts-of-interest-and-regime-change" class="slide level2">
+<h2>Conflicts of Interest and Regime Change</h2>
+<p><strong>Optimal Puppet Regimes</strong></p>
+<ul>
+<li>When a government wins a war, it earns the right to replace the vanquished government with a “puppet” that prefers lower barriers to trade</li>
+</ul>
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[
+\max_{a \in (0, \overline{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<ul>
+<li>Losing governments have puppet’s policies imposed on them</li>
+</ul>
+<div class="fragment">
+<p><strong>Conflicts of Interest</strong></p>
+<ul>
+<li>Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet</li>
+</ul>
+<hr style="height:1em; visibility:hidden;" />
+<p><span class="math display">\[\begin{equation} \label{eq:Gamma}
+\Gamma_i(a_i, a_j) = \overline{G}_i(a_i) - \underline{G}_i(a_i, a_j)
+\end{equation}\]</span></p>
+</div>
+<div class="fragment">
+<p><strong>Proposition 3:</strong> <span class="math inline">\(\Gamma_i(a_i, a_j)\)</span> is decreasing in <span class="math inline">\(a_i\)</span>, <span class="math inline">\(a_j\)</span></p>
+</div>
+</section>
+<section id="barEnv" class="slide level2">
+<h2>Bargaining Environment</h2>
+<p><img src="index_files/figure-revealjs/bar-1.png" width="2400" /></p>
+<p><a href="#/bargaining" style="float: right;">Bargaining</a></p>
+</section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
+<hr style="height:4em; visibility:hidden;" />
+<h3 id="trade-and-war">Trade and War</h3>
+<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{\epsilon}, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+<div class="fragment">
+<p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
+</div>
+</section>
+<section id="results-1" class="slide level2">
+<h2>Results</h2>
+<hr style="height:4em; visibility:hidden;" />
+<h3 id="trade-and-war-1">Trade and War</h3>
+<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{\epsilon}, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+<p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
+<h3 id="shadow-of-war-in-trade-policy">Shadow of War in Trade Policy</h3>
+<p><strong>Proposition 5:</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{\epsilon}, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
+</section>
+<section id="implications" class="slide level2">
+<h2>Implications</h2>
+<p><strong>Preferences, Institutions, and the Democratic Peace</strong></p>
+<ul>
+<li>Hypothesis: Democracies more liberal in trade policy preferences than autocracies
+<ul>
+<li>Democratic political institutions and consumer influence over policymaking <span class="citation" data-cites="Mayer1984 Grossman1996 Milner2005">(Mayer 1984; Grossman and Helpman 1996; Milner and Kubota 2005)</span></li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>Conclusion: Democracies trade more, fight less
+<ul>
+<li>Democratic peace: <span class="citation" data-cites="Oneal1999">Oneal and Russett (1999)</span>, <span class="citation" data-cites="Reiter2017">Reiter (2017)</span></li>
+</ul></li>
+</ul>
+<p style="text-align: right;">
+<a href="#/comDemPeace">Commercial-Democratic Peace</a>
+</p>
+</div>
+<div class="fragment">
+<p><strong>Shadow of Power in International Political Economy</strong></p>
+<ul>
+<li>Equilibrium trade policies balance
+<ul>
+<li>Domestic political interests</li>
+<li>Foreign military constraints</li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<ul>
+<li>Trade policies <em>are not</em> a sufficient statistic for government preferences
+<ul>
+<li><span class="citation" data-cites="Goldberg1999">Goldberg and Maggi (1999)</span>; <span class="citation" data-cites="Mitra2006">Mitra, Thomakos, and Ulubasoglu (2006)</span>; <span class="citation" data-cites="Gawande2009">Gawande, Krishna, and Olarreaga (2009)</span>; <span class="citation" data-cites="Gawande2012">Gawande, Krishna, and Olarreaga (2012)</span>; <span class="citation" data-cites="Ossa2014">Ossa (2014)</span>; <span class="citation" data-cites="Gawande2015">Gawande, Krishna, and Olarreaga (2015)</span></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="conclusion" class="slide level2">
+<h2>Conclusion</h2>
+<hr style="height:6em; visibility:hidden;" />
+<p><strong>Conflicts of Interest versus Bargaining Failures</strong></p>
+<ul>
+<li><em>Given</em> a conflict of interest, what prevents peaceful settlement? <span class="citation" data-cites="Fearon1995">(Fearon 1995)</span></li>
+<li>What do governments want? and why do their objectives bring them into conflict with one another? <span class="citation" data-cites="Moravcsik1997">(Moravcsik 1997)</span></li>
+</ul>
+</section>
+<section id="thank-you" class="slide level2 aligncenter">
+<h2>Thank You</h2>
+<p><a href="http://brendancooley.com">brendancooley.com</a></p>
+<p><a href="bcooley@princeton.edu" class="uri">bcooley@princeton.edu</a></p>
+<p><small><strong>Title Slide Image Credit:</strong> Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. <a href="https://library.artstor.org/asset/SS35100_35100_35234600" class="uri">https://library.artstor.org/asset/SS35100_35100_35234600</a></small></p>
+</section>
+<section id="tradeRD" class="slide level2">
+<h2>Trade and War Onset</h2>
+<div class="figure">
+<img src="index_files/figure-revealjs/tradeRD-1.png" alt="\label{fig:tradeRD}" width="2400" />
+<p class="caption">
+
+</p>
+</div>
+<p><a href="#/intro" style="float: right;">Back</a></p>
+</section>
+<section id="literature" class="slide level2">
+<h2>Literature</h2>
+<ul>
+<li>Trade and War
+<ul>
+<li><span class="citation" data-cites="Angell1911">Angell (1911)</span>, @Polachek1980, <span class="citation" data-cites="Gowa1993">Gowa and Mansfield (1993)</span>, <span class="citation" data-cites="Morrow1999b">Morrow (1999)</span>, <span class="citation" data-cites="Barbieri1999">Barbieri and Levy (1999)</span>, <span class="citation" data-cites="Mansfield2000a">Mansfield and Pevehouse (2000)</span>, <span class="citation" data-cites="Gartzke2001">Gartzke, Li, and Boehmer (2001)</span>, <span class="citation" data-cites="Mcdonald2004">McDonald (2004)</span>, <span class="citation" data-cites="Mcdonald2007">McDonald and Sweeney (2007)</span>, <span class="citation" data-cites="Gartzke2007">Gartzke (2007)</span>, <span class="citation" data-cites="Benson2007">Benson and Niou (2007)</span>, <span class="citation" data-cites="Philippe2008">Philippe, Mayer, and Thoenig (2008)</span>, <span class="citation" data-cites="Hegre2010">Hegre, Oneal, and Russett (2010)</span>, <span class="citation" data-cites="Copeland2014">Copeland (2014)</span></li>
+</ul></li>
+<li>Power and Trade
+<ul>
+<li><span class="citation" data-cites="Hirschman1945">Hirschman (1945)</span>, <span class="citation" data-cites="Krasner1976">Krasner (1976)</span>, <span class="citation" data-cites="Gourevitch1978">Gourevitch (1978)</span>, <span class="citation" data-cites="Pollins1989a">Pollins (1989b)</span>, <span class="citation" data-cites="Pollins1989b">Pollins (1989a)</span>, <span class="citation" data-cites="Antras2011">Antràs and Padró i Miquel (2011)</span>, <span class="citation" data-cites="Chatagnier2015">Chatagnier and Kavakli (2015)</span>, <span class="citation" data-cites="Carroll2018">Carroll (2018)</span></li>
+</ul></li>
+<li>Political Economy of Trade Policy
+<ul>
+<li><span class="citation" data-cites="Mayer1984">Mayer (1984)</span>, <span class="citation" data-cites="Grossman1994">Grossman and Helpman (1994)</span>, <span class="citation" data-cites="Kono2008">Kono (2008)</span>, <span class="citation" data-cites="Gawande2009">Gawande, Krishna, and Olarreaga (2009)</span>, <span class="citation" data-cites="Ossa2011">Ossa (2011)</span>, <span class="citation" data-cites="Ossa2012">Ossa (2012)</span>, <span class="citation" data-cites="Ossa2014">Ossa (2014)</span></li>
+</ul></li>
+<li>Democracy and Trade
+<ul>
+<li><span class="citation" data-cites="Mansfield2000b">Mansfield, Milner, and Rosendorff (2000)</span>, <span class="citation" data-cites="Milner2005">Milner and Kubota (2005)</span></li>
+</ul></li>
+<li>Democracy and War
+<ul>
+<li><span class="citation" data-cites="Lake1992">Lake (1992)</span>, <span class="citation" data-cites="Snyder1993">Snyder (1993)</span>, <span class="citation" data-cites="Oneal1997">Oneal and Russet (1997)</span>, <span class="citation" data-cites="Schultz1998">Schultz (1998)</span>, <span class="citation" data-cites="Oneal1999">Oneal and Russett (1999)</span>, <span class="citation" data-cites="Schultz2001">Schultz (2001)</span>, <span class="citation" data-cites="Fearon2008">Fearon (2008)</span>, <span class="citation" data-cites="CoeND">Coe (n.d.)</span></li>
+</ul></li>
+</ul>
+<p><a href="#/overview" style="float: right;">Back</a></p>
+</section>
+<section id="assumptions" class="slide level2">
+<h2>Assumptions</h2>
+<hr style="height:2em; visibility:hidden;" />
+<p><strong>Assumption NA:</strong> (costs of war are bounded) <span class="math inline">\(c_i &lt; \kappa\)</span> where <span class="math inline">\(\kappa\)</span> is a postive constant defined in the Appendix.</p>
+<strong>Assumption 2:</strong> (agricultural sector sufficiently large)
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[
+\alpha &lt; \frac{2}{3} \frac{\sigma}{\sigma - 1}
+\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<strong>Assumption 3:</strong> (governments are weak mercantilists) <span class="math inline">\(a_i \in (0, \overline{a})\)</span> with
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[
+\overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
+\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<p><a href="#/dpe" style="float: right;">Back</a></p>
+</section>
+<section id="economy" class="slide level2">
+<h2>Economy</h2>
+<p><strong>Consumption</strong></p>
+<p><span class="math display">\[\begin{equation} \label{eq:cMax}
+\begin{split}
+\max_{X_i, Y_i} &amp; \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} &amp; \quad P_i X_i + Y_i \leq w_i L \\
+&amp; \quad X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
+\end{split}
+\end{equation}\]</span></p>
+<p><strong>Production</strong></p>
+<ul>
+<li><span class="math inline">\(n\)</span> firms producing differentiated goods and outside (agricultural) sector</li>
+</ul>
+<p><span class="math display">\[\begin{equation} \label{eq:Pi}
+\begin{split}
+\max_{p_i} &amp; \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
+\text{subject to} &amp; \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
+&amp; \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\end{split}
+\end{equation}\]</span></p>
+<p><strong>Revenue</strong></p>
+<p><span class="math display">\[\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}\]</span></p>
+<p><a href="#/dpe" style="float: right;">Back</a></p>
+</section>
+<section id="Gprefs" class="slide level2">
+<h2>Government Preferences</h2>
+<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then <span class="math inline">\(G_i(\tau_i; a_i)\)</span> is quasiconcave on <span class="math inline">\(\tau_i \in \left[ 1, \bar{\tau} \right]\)</span>.</p>
+<hr style="height:1em; visibility:hidden;" />
+<center>
+<hr width="50%">
+</center>
+<hr style="height:1em; visibility:hidden;" />
+<p><strong>Lemma 2:</strong> <span class="math inline">\(G_i(\tau_j)\)</span> is strictly decreasing in <span class="math inline">\(\tau_j\)</span>.</p>
+<p><a href="#/iso" style="float: right;">Back</a></p>
+</section>
+<section id="nceDef" class="slide level2">
+<h2>Noncooperative Equilibrium</h2>
+<p><strong>Best Responses Functions</strong></p>
+<p><span class="math display">\[
+\tau_i(a_i, \tau_j) = \text{argmax}_{\tau_i \in [1, \overline{\tau}]} G_i(\tau_i, \tau_j; a_i)
+\]</span> and <span class="math display">\[
+\tau_j(a_j, \tau_i) = \text{argmax}_{\tau_j \in [1, \overline{\tau}]} G_j(\tau_i, \tau_j; a_j)
+\]</span></p>
+<hr style="height:1em; visibility:hidden;" />
+<center>
+<hr width="50%">
+</center>
+<hr style="height:1em; visibility:hidden;" />
+<p><strong>Definition 3:</strong> A <em>noncooperative equilibrium</em> is a pair of policies <span class="math inline">\(\left\{ \tau_i^\star(a_i), \tau_j^\star(a_j) \right\}\)</span> such that <span class="math display">\[
+\tau_i^\star(a_i) = \tau_i(a_i, \tau_j^\star(a_j))
+\]</span> and <span class="math display">\[
+\tau_j^\star(a_j) = \tau_j(a_j, \tau_i^\star(a_i))
+\]</span></p>
+<hr style="height:1em; visibility:hidden;" />
+<center>
+<hr width="50%">
+</center>
+<hr style="height:1em; visibility:hidden;" />
+<p><strong>Lemma 3:</strong> <span class="math inline">\(\tau_i^\star(a_i)\)</span> is decreasing in <span class="math inline">\(a_i \in (0, \bar{a})\)</span> with <span class="math inline">\(\tau_i^\star(\bar{a}) = 1\)</span>.</p>
+<p><a href="#/nce" style="float: right;">Back</a></p>
+</section>
+<section id="bargaining" class="slide level2">
+<h2>Bargaining</h2>
+<p><strong>Successful Regime Change</strong></p>
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[\begin{equation} \label{eq:Gbar}
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star) | a_i ) = G_i(\tau_i^\star(a_i), 1 | a_i)
+\end{equation}\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<p><strong>Foreign Imposition of Regime Change</strong></p>
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[\begin{equation} \label{eq:Gubar}
+\underline{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j) | a_i) = G_i(1, \tau_j^\star(a_j) | a_i)
+\end{equation}\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<p><strong>Foreign Government’s Expected Utility for War</strong></p>
+<hr style="height:1em; visibility:hidden;" />
+<span class="math display">\[
+\widehat{G}_j(a_j, a_i) = (1 - \rho) \overline{G}_j(a_j) + \rho \underline{G}_j(a_j, a_i) - c_j
+\]</span>
+<hr style="height:1em; visibility:hidden;" />
+<p><a href="#/barEnv" style="float: right;">Back</a></p>
+</section>
+<section id="comDemPeace" class="slide level2">
+<h2>The Commercial-Democratic Peace</h2>
+<p><img src="index_files/figure-revealjs/emp_wars-1.png" width="768" style="display: block; margin: auto;" /></p>
+<p><a href="#/implications" style="float: right;">Back</a></p>
+<hr style="height:5em; visibility:hidden;" />
+<div id="refs" class="references">
+<div id="ref-Angell1911">
+<p>Angell, Norman. 1911. <em>The great illusion: a study of the relation of military power in nations to their economic and social advantage</em>. McClelland; Goodchild.</p>
+</div>
+<div id="ref-Antras2011">
+<p>Antràs, Pol, and Gerard Padró i Miquel. 2011. “Foreign influence and welfare.” <em>Journal of International Economics</em> 84 (2): 135–48.</p>
+</div>
+<div id="ref-Barbieri1999">
+<p>Barbieri, Katherine, and Jack S Levy. 1999. “Sleeping with the enemy: The impact of war on trade.” <em>Journal of Peace Research</em> 36 (4): 463–79.</p>
+</div>
+<div id="ref-Benson2007">
+<p>Benson, Brett V, and Emerson M S Niou. 2007. “Economic Interdependence and Peace: A Game-Theoretic Analysis.” <em>Journal of East Asian Studies</em> 7 (1): 35–59.</p>
+</div>
+<div id="ref-BuenodeMesquita2003">
+<p>Bueno De Mesquita, Bruce, Alastair Smith, Randolph M Siverson, and James D Morrow. 2003. <em>The logic of political survival</em>. MIT press.</p>
+</div>
+<div id="ref-Carroll2018">
+<p>Carroll, Robert J. 2018. “War and Peace in the Marketplace.”</p>
+</div>
+<div id="ref-Chatagnier2015">
+<p>Chatagnier, J Tyson, and Kerim Can Kavakli. 2015. “From Economic Competition to Military Combat: Export Similarity and International Conflict.” <em>Journal of Conflict Resolution</em>, 1–27.</p>
+</div>
+<div id="ref-CoeND">
+<p>Coe, Andrew J. n.d. “The Modern Economic Peace.”</p>
+</div>
+<div id="ref-Copeland2014">
+<p>Copeland, Dale. 2014. <em>Economic Interdependence and War</em>. Princeton, NJ: Princeton University Press.</p>
+</div>
+<div id="ref-Fearon1995">
+<p>Fearon, James D. 1995. “Rationalist explanations for war.” <em>International Organization</em> 49 (03): 379–414.</p>
+</div>
+<div id="ref-Fearon2008">
+<p>———. 2008. “A simple political economy of relations among democracies and autocracies.”</p>
+</div>
+<div id="ref-Gartzke2007">
+<p>Gartzke, Erik. 2007. “The capitalist peace.” <em>American Journal of Political Science</em> 51 (1): 166–91.</p>
+</div>
+<div id="ref-Gartzke2001">
+<p>Gartzke, Erik, Quan Li, and Charles Boehmer. 2001. “Investing in the peace: Economic interdependence and international conflict.” <em>International Organization</em> 55 (02): 391–438.</p>
+</div>
+<div id="ref-Gawande2009">
+<p>Gawande, Kishore, Pravin Krishna, and Marcelo Olarreaga. 2009. “What governments maximize and why: the view from trade.” <em>International Organization</em> 63 (03): 491–532.</p>
+</div>
+<div id="ref-Gawande2012">
+<p>———. 2012. “Lobbying Competition over Trade Policy.” <em>International Economic Review</em> 53 (1): 115–32.</p>
+</div>
+<div id="ref-Gawande2015">
+<p>———. 2015. “A Political-Economic Account of Global Tariffs.” <em>Economics &amp; Politics</em> 27 (2): 204–33.</p>
+</div>
+<div id="ref-Goldberg1999">
+<p>Goldberg, Pinelopi Koujianou, and Giovanni Maggi. 1999. “Protection for Sale: An Empirical Investigation.” <em>American Economic Review</em>, 1135–55.</p>
+</div>
+<div id="ref-Gourevitch1978">
+<p>Gourevitch, Peter. 1978. “The Second Image Reversed: The International Sources of Domestic Politics.” <em>International Organization</em> 32 (4): 881–912.</p>
+</div>
+<div id="ref-Gowa1993">
+<p>Gowa, Joanne, and Edward D Mansfield. 1993. “Power Politics and International Trade.” <em>The American Political Science Review</em> 87 (2): 408–20.</p>
+</div>
+<div id="ref-Grossman1994">
+<p>Grossman, Gene M, and Elhanan Helpman. 1994. “Protection for Sale.” <em>The American Economic Review</em>, 833–50.</p>
+</div>
+<div id="ref-Grossman1996">
+<p>———. 1996. “Electoral Competition and Special Interest Politics.” <em>Review of Economic Studies</em> 63: 265–86.</p>
+</div>
+<div id="ref-Hegre2010">
+<p>Hegre, Håvard, John R Oneal, and Bruce Russett. 2010. “Trade does promote peace: New simultaneous estimates of the reciprocal effects of trade and conflict.” <em>Journal of Peace Research</em> 47 (6): 763–74.</p>
+</div>
+<div id="ref-Hirschman1945">
+<p>Hirschman, Albert O. 1945. <em>National power and the structure of foreign trade</em>. Univ of California Press.</p>
+</div>
+<div id="ref-Jackson2007">
+<p>Jackson, Matthew O, and Massimo Morelli. 2007. “Political bias and war.” <em>The American Economic Review</em>, 1353–73.</p>
+</div>
+<div id="ref-Kono2008">
+<p>Kono, Daniel Yuichi. 2008. “Democracy and Trade Discrimination.” <em>Journal of Politics</em> 70 (4): 942–55.</p>
+</div>
+<div id="ref-Krasner1976">
+<p>Krasner, Stephen D. 1976. “State power and the structure of international trade.” <em>World Politics</em> 28 (03). Cambridge Univ Press: 317–47.</p>
+</div>
+<div id="ref-Krugman1980">
+<p>Krugman, Paul. 1980. “Scale Economies, Product Differentiation, and the Pattern of Trade.” <em>American Economic Review</em> 70 (5): 950–59.</p>
+</div>
+<div id="ref-Lake1992">
+<p>Lake, David A. 1992. “Powerful pacifists: democratic states and war.” <em>American Political Science Review</em> 86 (01): 24–37.</p>
+</div>
+<div id="ref-Mansfield2000b">
+<p>Mansfield, Edward D, Helen V Milner, and B Peter Rosendorff. 2000. “Free to trade: Democracies, autocracies, and international trade.” <em>American Political Science Review</em> 94 (02): 305–21.</p>
+</div>
+<div id="ref-Mansfield2000a">
+<p>Mansfield, Edward D, and Jon C Pevehouse. 2000. “Trade blocs, trade flows, and international conflict.” <em>International Organization</em> 54 (04): 775–808.</p>
+</div>
+<div id="ref-Mayer1984">
+<p>Mayer, Wolfgang. 1984. “Endogenous Tariff Formation.” <em>The American Economic Review</em> 74 (5): 970–85.</p>
+</div>
+<div id="ref-Mcdonald2004">
+<p>McDonald, Patrick J. 2004. “Peace through Trade or Free Trade?” <em>Journal of Conflict Resolution</em> 48 (4): 547–72.</p>
+</div>
+<div id="ref-Mcdonald2007">
+<p>McDonald, Patrick J, and Kevin Sweeney. 2007. “The Achilles’ Heel of Liberal IR Theory?: Globalization and Conflict in the Pre-World War I Era.” <em>World Politics</em> 59 (03): 370–403.</p>
+</div>
+<div id="ref-Milner2005">
+<p>Milner, Helen V, and Keiko Kubota. 2005. “Why the move to free trade? Democracy and trade policy in the developing countries.” <em>International Organization</em> 59 (01): 107–43.</p>
+</div>
+<div id="ref-Mitra2006">
+<p>Mitra, Devashish, Dimitrios D. Thomakos, and Mehmet Ulubasoglu. 2006. “Can we obtain realistic parameter estimates for the ’protection for sale’ model?” <em>Canadian Journal of Economics</em> 39 (1): 187–210.</p>
+</div>
+<div id="ref-Moravcsik1997">
+<p>Moravcsik, Andrew. 1997. “Taking Preferences Seriously: A Liberal Theory of International Politics.” <em>International Organization</em> 51 (4). Cambridge University Press: 513–53.</p>
+</div>
+<div id="ref-Morrow1999b">
+<p>Morrow, James D. 1999. “How could trade affect conflict?” <em>Journal of Peace Research</em> 36 (4): 481–89.</p>
+</div>
+<div id="ref-Oneal1997">
+<p>Oneal, John R, and Bruce M Russet. 1997. “The classical liberals were right: Democracy, interdependence, and conflict, 1950–1985.” <em>International Studies Quarterly</em> 41 (2): 267–93.</p>
+</div>
+<div id="ref-Oneal1999">
+<p>Oneal, John R, and Bruce Russett. 1999. “The Kantian peace: The pacific benefits of democracy, interdependence, and international organizations, 1885–1992.” <em>World Politics</em> 52 (01): 1–37.</p>
+</div>
+<div id="ref-Ossa2011">
+<p>Ossa, Ralph. 2011. “A &quot; New Trade &quot; Theory of GATT/WTO Negotiations.” <em>Journal of Political Economy</em> 119 (1): 122–52.</p>
+</div>
+<div id="ref-Ossa2012">
+<p>———. 2012. “Profits in the &quot;New Trade&quot; Approach to Trade Negotiations.” <em>American Economic Review: Papers &amp; Proceedings</em> 102 (3): 466–69.</p>
+</div>
+<div id="ref-Ossa2014">
+<p>———. 2014. “Trade wars and trade talks with data.” <em>The American Economic Review</em> 104 (12): 4104–46.</p>
+</div>
+<div id="ref-Philippe2008">
+<p>Philippe, Martin, Thierry Mayer, and Mathias Thoenig. 2008. “Make Trade Not War?” <em>Review of Economic Studies</em> 75 (3): 865–900.</p>
+</div>
+<div id="ref-Pollins1989b">
+<p>Pollins, Brian M. 1989a. “Conflict, cooperation, and commerce: The effect of international political interactions on bilateral trade flows.” <em>American Journal of Political Science</em>, 737–61.</p>
+</div>
+<div id="ref-Pollins1989a">
+<p>———. 1989b. “Does Trade Still Follow the Flag?” <em>American Political Science Review</em> 83 (02): 465–80.</p>
+</div>
+<div id="ref-Reiter2017">
+<p>Reiter, Dan. 2017. “Is Democracy a Cause of Peace?” In <em>Oxford Research Encyclopedia of Politics</em>. Oxford University Press.</p>
+</div>
+<div id="ref-Schultz1998">
+<p>Schultz, Kenneth A. 1998. “Domestic opposition and signaling in international crises.” <em>American Political Science Review</em> 92 (04): 829–44.</p>
+</div>
+<div id="ref-Schultz2001">
+<p>———. 2001. <em>Democracy and Coercive Diplomacy</em>. New York: Cambridge University Press.</p>
+</div>
+<div id="ref-Snyder1993">
+<p>Snyder, Jack. 1993. <em>Myths of empire: Domestic politics and international relations</em>. Cornell University Press.</p>
+</div>
+<div id="ref-Venables1987">
+<p>Venables, Anthony J. 1987. “Trade and Trade Policy with Differentiated Products: A Chamberlinian-Ricardian Model.” <em>The Economic Journal</em> 97 (387): 700–717.</p>
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script src="index_files/reveal.js-3.3.0.1/lib/js/head.min.js"></script>
+  <script src="index_files/reveal.js-3.3.0.1/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Display controls in the bottom right corner
+        controls: false,
+        // Display a presentation progress bar
+        progress: false,
+        // Display the page number of the current slide
+        slideNumber: false,
+        // Push each slide change to the browser history
+        history: true,
+        // Vertical centering of slides
+        center: false,
+        // Transition style
+        transition: 'none', // none/fade/slide/convex/concave/zoom
+        // Transition style for full page slide backgrounds
+        backgroundTransition: 'default', // none/fade/slide/convex/concave/zoom
+
+
+
+        // Optional reveal.js plugins
+        dependencies: [
+        ]
+      });
+    </script>
+  <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+<script>
+  (function() {
+    if (window.jQuery) {
+      Reveal.addEventListener( 'slidechanged', function(event) {
+        window.jQuery(event.previousSlide).trigger('hidden');
+        window.jQuery(event.currentSlide).trigger('shown');
+      });
+    }
+  })();
+</script>
+
+<!-- mathjax change font-->
+<script type="text/x-mathjax-config">
+     MathJax.Hub.Config({
+         "HTML-CSS" : {
+             availableFonts : ["STIX-Web","Asana-Math","TeX", "Neo-Euler",],
+             preferredFont : "TeX",
+             webFont : "TeX",
+             imageFont : null
+         }
+     });
+</script>
+
+<!-- mathjax colors-->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+</script>
+
+<script>
+	Reveal.configure({
+	  keyboard: {
+	    40: 'next', // allow up and down to move slides left and right
+	    38: 'prev'
+	  }
+	});
+</script>
+
+<script>
+ Reveal.initialize({
+    // Optional reveal.js plugins
+    dependencies: [
+        { src: 'index_files/reveal.js-3.3.0.1/plugin/zoom-js/zoom.js', async: true },
+        { src: 'index_files/reveal.js-3.3.0.1/plugin/markdown/marked.js', async: true },
+        { src: 'index_files/reveal.js-3.3.0.1/plugin/notes/notes.js', async: true }
+    ]
+});
+</script>
+
+  </body>
+</html>

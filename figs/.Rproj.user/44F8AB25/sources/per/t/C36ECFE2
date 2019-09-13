@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1547155954991.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3221647742",
+    "id" : "C36ECFE2",
+    "lastKnownWriteTime" : 1545257033,
+    "last_content_update" : 1545257033,
+    "path" : "~/Dropbox (Princeton)/1_Papers/gunboats/figs/source.R",
+    "project_path" : "source.R",
+    "properties" : {
+        "cursorPosition" : "24,13",
+        "scrollLine" : "0"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

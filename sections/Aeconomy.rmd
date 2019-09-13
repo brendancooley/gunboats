@@ -1,0 +1,51 @@
+
+**Demand for Manufactured Goods:** Total expenditure on manufactured goods is $\alpha w_i L = P_i X_i$. Cobb Douglas preferences ensure that consumers will spend an $\alpha$-share of their income on manufactured goods. We can derive Equation \ref{eq:demand} by solving Equation \ref{eq:CES} subject to the constraint
+\begin{equation} \label{eq:CESconstraint}
+p_{i1} x_{i1} + p_{i2} x_{i2} \leq \alpha w_i L
+\end{equation} 
+This gives
+$$
+x_{i1} = \left( \frac{p_{i2}}{p_{i1}} \right)^{\sigma} x_{i2}
+$$
+Substituting back into \ref{eq:CESconstraint} gives
+\begin{align*}
+n p_{i1} \left( \frac{p_{i2}}{p_{i1}} \right)^{\sigma} x_{i2} + n p_{i2} x_{i2} &= \alpha w_i L \\
+n p{i1}^{1-\sigma} p_{i2}^{\sigma} x_{i2} + n p_{i2} x_{i2} & = \alpha w_i L \\
+x_{i2} p_{i2}^{\sigma} \left( n p_{i1}^{1-\sigma} + n p_{i2}^{1-\sigma} \right) &= \alpha w_i L \\
+x_{i2} p_{i2}^{\sigma} P_i^{1 - \sigma} &= \alpha w_i L \\
+x_{i2}^\star(p_{i2}) &= p_{i2}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L
+\end{align*}
+An equivalent demand condition can be derived for $x_{i1}^\star(p_{i1})$.
+
+**Indirect Utility:** Indirect utility over manfactured good is $X_i$ evaluated at equilibrium consumption. Substituting our demand equations \ref{eq:demand} into Equation \ref{eq:CES} gives
+\begin{align*}
+V_i^x(P_i) = X_i^\star &= \left( n \left( p_{i1}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \right)^{\frac{\sigma - 1}{\sigma}} + n \left( p_{i2}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \right)^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}} \\
+&= \left( \left( \alpha w_i L P_i^{\sigma - 1} \right)^{\frac{\sigma - 1}{\sigma}} \left( n \left( p_{i1}^{-\sigma} \right)^{\frac{\sigma - 1}{\sigma}} + n \left( p_{i2}^{-\sigma} \right)^{\frac{\sigma - 1}{\sigma}} \right) \right)^{\frac{\sigma}{\sigma - 1}} \\
+&= \alpha w_i L P_i^{\sigma - 1} \left( n p_{i1}^{1 - \sigma} + n p_{i2}^{1 - \sigma} \right)^{\frac{\sigma} \sigma - 1} \\
+&= \alpha w_i L P_i^{\sigma - 1} P_i^{-\sigma} \\
+&= \frac{\alpha w_i L}{P_i}
+\end{align*}
+Note that expenditure on manufactured goods can now be written in terms of the price index. $\alpha w_i L = P_i X_i^\star$. 
+
+**Prices:** The firms' first order condition is
+$$
+\frac{\partial \Pi(p_i)}{\partial p_i} = \left( p_i - w_i \right) \left( \frac{\partial x_{ii}(p_i)}{\partial p_i} + \frac{\partial x_{ji}(p_i)}{\partial p_i} \right) + x_{ii}(p_i) + x_{ji}(p_i) = 0
+$$
+where
+$$
+\frac{\partial x_{ii}(p_i)}{\partial p_i} = - \sigma p_i^{- \sigma - 1} P_i^{\sigma - 1} \alpha w_i L
+$$
+and
+$$
+\frac{\partial x_{ji}(p_i)}{\partial p_i} = - \sigma \tau_j^{-\sigma} p_i^{- \sigma - 1} P_j^{\sigma - 1} \alpha w_j L
+$$
+Note that 
+$$
+- \frac{\sigma}{p_i} \left( x_{ii}(p_i) + x_{ji}(p_i) \right) = \frac{\partial x_{ii}(p_i)}{\partial p_i} + \frac{\partial x_{ji}(p_i)}{\partial p_i}
+$$
+The first order condition then becomes
+\begin{align*}
+\sigma \frac{w_i}{p_i} \left( x_{ii}(p_i) + x_{ji}(p_i) \right) - \sigma \left( x_{ii}(p_i) + x_{ji}(p_i) \right) + \left( x_{ii}(p_i) + x_{ji}(p_i) \right) &= 0 \\
+\sigma \frac{w_i}{p_i} - \sigma + 1 &= 0 \\
+p_i^\star &= \frac{\sigma}{\sigma - 1} w_i
+\end{align*}
