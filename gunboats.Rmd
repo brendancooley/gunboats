@@ -20,6 +20,7 @@ link-citations: true
 output:
 	fig_caption: yes
     citation_package: natbib
+    
 ---
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
