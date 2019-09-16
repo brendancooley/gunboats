@@ -73,7 +73,7 @@ V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
 Firms set prices to maximize profits across home and foreign markets, given consumer demand. Because all firms in country $i$ face the same demand curves at home and abroad, they all set the same factory-gate price. The quantity that each firm $i$ produces for market $j$ is equal to the demand for $i$'s goods in $j$, $x_{ij}^\star(\nu_j)$. It takes one unit of labor to produce each unit of a manufactured good. The firms' problem is given by
 \begin{equation} \label{eq:Pi}
 \begin{split}
-\max_{p_i(\nu_i)} & \quad \Pi_i \left( \right) = \left( p_i(\nu_i) - w_i \right) \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) \\
+\max_{p_i(\nu_i)} & \quad \Pi_i \left( p_i(\nu_i) \right) = \left( p_i(\nu_i) - w_i \right) \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) \\
 \text{subject to} & \quad x_{ii}^\star(\nu_i) = p_i(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i \\
 & \quad x_{ji}^\star(\nu_i) = (\tau_j p_i(\nu_i))^{-\sigma} P_j^{\sigma - 1} \alpha I_i
 \end{split}
@@ -87,10 +87,10 @@ Since prices are constant across firms in both countries, I suppress the variety
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p^\star \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right)
+\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p_i^\star \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p^\star x_{jj}^\star(p^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 

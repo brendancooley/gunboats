@@ -102,7 +102,7 @@ $$
 
 ## International Economy
 
-Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i$ is $I_i = w_i L_i + r_i$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of equal measure in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
+Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i$ is $I_i = w_i L_i + r_i$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of measure 1 in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
 
 ### Tariffs and Prices
 
@@ -138,26 +138,27 @@ V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
 
 ### Production
 
-Firms set prices to maximize profits across home and foreign markets, given consumer demand. Because all firms in country $i$ face the same demand curves at home and abroad, they all set the same price. The quantity that each firm $i$ produces for market $j$ is equal to the demand for $i$'s goods in $j$, $x_{ij}^\star$. The firms' problem is given by
+Firms set prices to maximize profits across home and foreign markets, given consumer demand. Because all firms in country $i$ face the same demand curves at home and abroad, they all set the same factory-gate price. The quantity that each firm $i$ produces for market $j$ is equal to the demand for $i$'s goods in $j$, $x_{ij}^\star(\nu_j)$. It takes one unit of labor to produce each unit of a manufactured good. The firms' problem is given by
 \begin{equation} \label{eq:Pi}
 \begin{split}
-\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
-\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
-& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\max_{p_i(\nu_i)} & \quad \Pi_i \left( p_i(\nu_i) \right) = \left( p_i(\nu_i) - w_i \right) \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(\nu_i) = p_i(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i \\
+& \quad x_{ji}^\star(\nu_i) = (\tau_j p_i(\nu_i))^{-\sigma} P_j^{\sigma - 1} \alpha I_i
 \end{split}
 \end{equation}
 
 This problem yields equilibrium prices
 \begin{equation} \label{eq:prices}
-p_i^\star = \frac{\sigma}{\sigma - 1} w_i
+p_i^\star(\nu_i) = \frac{\sigma}{\sigma - 1} w_i
 \end{equation}
+Since prices are constant across firms in both countries, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p^\star$.
 
-Equilibrium profits can then be computed as $\Pi_i(p_i^\star)$
+Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p_i^\star) = n \left( \frac{1}{\sigma - 1} w_i \right) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p_i^\star \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha w_j L$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
@@ -500,55 +501,55 @@ Finally, the theory highlights an underappreciated prerequisite for internationa
 
 
 
-**Demand for Manufactured Goods:** Total expenditure on manufactured goods is $\alpha w_i L = P_i X_i$. Cobb Douglas preferences ensure that consumers will spend an $\alpha$-share of their income on manufactured goods. We can derive Equation \ref{eq:demand} by solving Equation \ref{eq:CES} subject to the constraint
+**Demand for Manufactured Goods:** Total expenditure on manufactured goods is $\alpha I_i = P_i X_i$. Cobb Douglas preferences ensure that consumers will spend an $\alpha$-share of their income on manufactured goods. We can derive Equation \ref{eq:demand} by solving Equation \ref{eq:CES} subject to the constraint
 \begin{equation} \label{eq:CESconstraint}
-p_{i1} x_{i1} + p_{i2} x_{i2} \leq \alpha w_i L
+\int_{\nu_i} p_{ii}(\nu_i) x_{ii}(\nu_i) d \nu_i + \int_{\nu_j} p_{ij}(\nu_j) x_{ij}(\nu_j) \leq \alpha w_i L
 \end{equation} 
-This gives
-$$
-x_{i1} = \left( \frac{p_{i2}}{p_{i1}} \right)^{\sigma} x_{i2}
-$$
-Substituting back into \ref{eq:CESconstraint} gives
+For any two domestic varieties, $\nu_i$ and $\nu_i^\prime$, we must have
 \begin{align*}
-n p_{i1} \left( \frac{p_{i2}}{p_{i1}} \right)^{\sigma} x_{i2} + n p_{i2} x_{i2} &= \alpha w_i L \\
-n p{i1}^{1-\sigma} p_{i2}^{\sigma} x_{i2} + n p_{i2} x_{i2} & = \alpha w_i L \\
-x_{i2} p_{i2}^{\sigma} \left( n p_{i1}^{1-\sigma} + n p_{i2}^{1-\sigma} \right) &= \alpha w_i L \\
-x_{i2} p_{i2}^{\sigma} P_i^{1 - \sigma} &= \alpha w_i L \\
-x_{i2}^\star(p_{i2}) &= p_{i2}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} p_{ii}(\nu_i^\prime)^{1 - \sigma} &= p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) \\
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime
 \end{align*}
-An equivalent demand condition can be derived for $x_{i1}^\star(p_{i1})$.
+The same must hold for foreign varieties:
+$$
+x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime = \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime
+$$
+Summing these conditions and noting $x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} = x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma}$ at equilibrium consumption gives
+\begin{align*}
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \left( \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime \right) &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime \\
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} P_i^{1 - \sigma} &= \alpha I_i \\
+x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
+\end{align*}
 
-**Indirect Utility:** Indirect utility over manfactured good is $X_i$ evaluated at equilibrium consumption. Substituting our demand equations \ref{eq:demand} into Equation \ref{eq:CES} gives
+**Indirect Utility:** Indirect utility is $X_i^\alpha Y_i^\alpha$ evaluated at equilibrium consumption. Substituting our demand equations \ref{eq:demand} into Equation \ref{eq:CES} gives
 \begin{align*}
-V_i^x(P_i) = X_i^\star &= \left( n \left( p_{i1}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \right)^{\frac{\sigma - 1}{\sigma}} + n \left( p_{i2}^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \right)^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \left( \left( \alpha w_i L P_i^{\sigma - 1} \right)^{\frac{\sigma - 1}{\sigma}} \left( n \left( p_{i1}^{-\sigma} \right)^{\frac{\sigma - 1}{\sigma}} + n \left( p_{i2}^{-\sigma} \right)^{\frac{\sigma - 1}{\sigma}} \right) \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \alpha w_i L P_i^{\sigma - 1} \left( n p_{i1}^{1 - \sigma} + n p_{i2}^{1 - \sigma} \right)^{\frac{\sigma} \sigma - 1} \\
-&= \alpha w_i L P_i^{\sigma - 1} P_i^{-\sigma} \\
-&= \frac{\alpha w_i L}{P_i}
+X_i^\star &= \left( \int_{\nu_i} x_{ii}^\star(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}^\star(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}} \\
+&= P_i^{\sigma - 1} I_i \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
+&= \frac{I_i}{P_i}
 \end{align*}
-Note that expenditure on manufactured goods can now be written in terms of the price index. $\alpha w_i L = P_i X_i^\star$. 
+Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
 
 **Prices:** The firms' first order condition is
 $$
-\frac{\partial \Pi(p_i)}{\partial p_i} = \left( p_i - w_i \right) \left( \frac{\partial x_{ii}(p_i)}{\partial p_i} + \frac{\partial x_{ji}(p_i)}{\partial p_i} \right) + x_{ii}(p_i) + x_{ji}(p_i) = 0
+\frac{\partial \Pi \left( p_i^\star(\nu_i) \right)}{\partial p_i^\star(\nu_i)} = \left( p_i^\star(\nu_i) - w_i \right) \left( \frac{\partial x_{ii}^\star(\nu_i)}{\partial p_i^\star(\nu_i)} + \frac{\partial x_{ji}(\nu_i)}{\partial p_i^\star(\nu_i)} \right) + x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) = 0
 $$
 where
 $$
-\frac{\partial x_{ii}(p_i)}{\partial p_i} = - \sigma p_i^{- \sigma - 1} P_i^{\sigma - 1} \alpha w_i L
+\frac{\partial x_{ii}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma p_i^(\nu_i)^{- \sigma - 1} P_i^{\sigma - 1} \alpha I_i
 $$
 and
 $$
-\frac{\partial x_{ji}(p_i)}{\partial p_i} = - \sigma \tau_j^{-\sigma} p_i^{- \sigma - 1} P_j^{\sigma - 1} \alpha w_j L
+\frac{\partial x_{ji}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
 $$
 Note that 
 $$
-- \frac{\sigma}{p_i} \left( x_{ii}(p_i) + x_{ji}(p_i) \right) = \frac{\partial x_{ii}(p_i)}{\partial p_i} + \frac{\partial x_{ji}(p_i)}{\partial p_i}
+- \frac{\sigma}{p_i^\star(\nu_i)} \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) = \frac{\partial x_{ii}(\nu_i)}{\partial p_i^\star(\nu_i)} + \frac{\partial x_{ji}(\nu_i)}{\partial p_i^\star(\nu_i)}
 $$
 The first order condition then becomes
 \begin{align*}
-\sigma \frac{w_i}{p_i} \left( x_{ii}(p_i) + x_{ji}(p_i) \right) - \sigma \left( x_{ii}(p_i) + x_{ji}(p_i) \right) + \left( x_{ii}(p_i) + x_{ji}(p_i) \right) &= 0 \\
-\sigma \frac{w_i}{p_i} - \sigma + 1 &= 0 \\
-p_i^\star &= \frac{\sigma}{\sigma - 1} w_i
+\sigma \frac{w_i}{p_i^\star(\nu_i)} \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) - \sigma \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) + \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) &= 0 \\
+\sigma \frac{w_i}{p_i^\star(\nu_i)} - \sigma + 1 &= 0 \\
+\frac{\sigma}{\sigma - 1} w_i &=  p_i^\star(\nu_i)
 \end{align*}
 
 ## Proofs
