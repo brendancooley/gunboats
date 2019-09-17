@@ -96,7 +96,7 @@ I assume that firms' welfare is dependent only on their profits, and not influen
 
 ### Tariff Revenue
 
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Total tariff revenue can be written
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j$ in tariff revenue. Total tariff revenue can be written
 \begin{equation} \label{eq:revenue}
 r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 \end{equation}
