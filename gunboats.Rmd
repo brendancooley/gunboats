@@ -45,6 +45,9 @@ PeqTrade <- "NA"
 PeqTau <- "NA"
 Lpareto <- "NA"
 LtildeTau <- "NA"
+Aeconomy <- "NA"
+AddxEmpiricalFacts <- "NA"
+AddxEconomy <- "NA"
 
 if (file.exists('references.RData')) load('references.RData')
 
@@ -93,19 +96,40 @@ Ltick <- 1
 
 # Appendix
 
-## Trade, War, and Democracy: Empirical Facts
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- 1
+AddxEmpiricalFacts <- LETTERS[a]
+
+```
+
+## `r AddxEmpiricalFacts`: Trade, War, and Democracy: Empirical Facts
 
 ```{r, child="sections/Adata.rmd"}
 ```
 
 \clearpage
 
-## International Economy
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
+AddxEconomy <- LETTERS[a]
+
+```
+
+## `r AddxEconomy`: International Economy
 
 ```{r, child="sections/Aeconomy.rmd"}
 ```
 
-## Proofs
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
+AddxProofs <- LETTERS[a]
+
+```
+
+## `r AddxProofs`: Proofs
 
 ```{r, child="sections/Aproofs.rmd"}
 ```

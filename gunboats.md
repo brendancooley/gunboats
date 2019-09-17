@@ -151,40 +151,25 @@ This problem yields equilibrium prices
 \begin{equation} \label{eq:prices}
 p_i^\star(\nu_i) = \frac{\sigma}{\sigma - 1} w_i
 \end{equation}
-Since prices are constant across firms in both countries, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p^\star$.
+Since prices are constant across firms and countries, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p^\star$.
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p_i^\star \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p^\star \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
 ### Economic Equilibrium
 
-Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture.
+Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture. Let $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ and $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$.
 
 
 
 **Definition 2:** 
-An *economic equilibrium* is pair of wages $\left\{w_i, w_j \right\}$ such that international agricultural and manufacturing markets clear
-\begin{equation*}
-\begin{split}
-L_i^y + L_j^y = (1 - \alpha) \left( w_i L + w_j L \right) \\
-L_i^x = n \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right) \\
-L_j^x = n \left( x_{ij}^\star(\tau_i p_j^\star) + x_{jj}^\star(p_j^\star) \right) \\
-L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( w_i L + w_j L \right)
-\end{split}
-\end{equation*}
-and domestic factor markets clear
-\begin{equation*}
-\begin{split}
-L_i^x + L_i^y = L \\
-L_j^x + L_j^y = L
-\end{split}
-\end{equation*}
+An *economic equilibrium* is a function $h : \left\{ \bm{\tau} \right\} \rightarrow \left\{ \bm{w}, \bm{L} \right\}$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices (\ref{eq:prices}) and demands (\ref{eq:demand}).^[These conditions are enumerated in Appendix B.]
 
 There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption 2 guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
@@ -488,16 +473,30 @@ Finally, the theory highlights an underappreciated prerequisite for internationa
 
 # Appendix
 
-## Trade, War, and Democracy: Empirical Facts
 
 
-![Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:tradeRD}](figure/tradeRD-1.png)
+## A: Trade, War, and Democracy: Empirical Facts
 
-![Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:comdempeace}](figure/comdempeace-1.png)
+
+
+```
+## Error in ipak(libs): could not find function "ipak"
+```
+
+```
+## Error in eval(expr, envir, enclos): object 'tradeRDplot' not found
+```
+
+
+```
+## Error in eval(expr, envir, enclos): object 'polityDensity' not found
+```
 
 \clearpage
 
-## International Economy
+
+
+## B: International Economy
 
 
 
@@ -552,7 +551,28 @@ The first order condition then becomes
 \frac{\sigma}{\sigma - 1} w_i &=  p_i^\star(\nu_i)
 \end{align*}
 
-## Proofs
+**Economic Equilibrium:**
+
+pair of wages $\left\{w_i, w_j \right\}$ such that international agricultural and manufacturing markets clear
+\begin{equation*}
+\begin{split}
+L_i^y + L_j^y = (1 - \alpha) \left( w_i L + w_j L \right) \\
+L_i^x = n \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right) \\
+L_j^x = n \left( x_{ij}^\star(\tau_i p_j^\star) + x_{jj}^\star(p_j^\star) \right) \\
+L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( w_i L + w_j L \right)
+\end{split}
+\end{equation*}
+and domestic factor markets clear
+\begin{equation*}
+\begin{split}
+L_i^x + L_i^y = L \\
+L_j^x + L_j^y = L
+\end{split}
+\end{equation*}
+
+
+
+## C: Proofs
 
 
 

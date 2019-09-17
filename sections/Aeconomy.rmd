@@ -49,3 +49,23 @@ The first order condition then becomes
 \sigma \frac{w_i}{p_i^\star(\nu_i)} - \sigma + 1 &= 0 \\
 \frac{\sigma}{\sigma - 1} w_i &=  p_i^\star(\nu_i)
 \end{align*}
+
+**Economic Equilibrium:**
+
+With unit costs of production in manufacturing and agriculture, goods market clearing requires
+\begin{equation*}
+\begin{split}
+L_i^y + L_j^y = (1 - \alpha) \left( I_i + I_j \right) \\
+L_i^x = \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right) \\
+L_j^x = \left( x_{ij}^\star(\tau_i p^\star) + x_{jj}^\star(p^\star) \right) \\
+L_i^x + L_j^x + \Pi_i(p^\star) + \Pi_j(p^\star) = \alpha \left( I_i + I_j \right)
+\end{split}
+\end{equation*}
+
+Domestic factor market clearing requires
+\begin{equation*}
+\begin{split}
+L_i^x + L_i^y = L \\
+L_j^x + L_j^y = L
+\end{split}
+\end{equation*}
