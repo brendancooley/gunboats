@@ -94,6 +94,13 @@ By raising the price of foreign varieties, tariffs shift profits from foreign to
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
+### Tariff Revenue
+
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Total tariff revenue can be written
+\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}
+
 ### Economic Equilibrium
 
 Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture. Let $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ and $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$.
@@ -126,13 +133,6 @@ PeeqText <- knit_child('../results/Peeq.md')
 ```
 
 **Proposition `r eeqP`:** `r PeeqText`
-
-### Tariff Revenue
-
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Unlike typical theories of optimal taxation in public economics [@Dixit1985], these revenues are not returned to the pockets of consumers. This assumption allows for a range of potential government uses for tariff revenue. Tariff revenue can in principle be devoted to any government expenditure. Liberal governments might redistribute it to the population and derive welfare from this redistribution, while illiberal governments might spend it on rennovations to presidential palaces. Regardless the manner in which it is spent, governments value this revenue equally. Total tariff revenue can be written
-\begin{equation} \label{eq:revenue}
-r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
-\end{equation}
 
 ### Government Preferences
 

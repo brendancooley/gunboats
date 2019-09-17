@@ -162,6 +162,13 @@ By raising the price of foreign varieties, tariffs shift profits from foreign to
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
+### Tariff Revenue
+
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Total tariff revenue can be written
+\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}
+
 ### Economic Equilibrium
 
 Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture. Let $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ and $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$.
@@ -183,14 +190,7 @@ $$
 
 
 **Proposition 1:** 
-If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.
-
-### Tariff Revenue
-
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Unlike typical theories of optimal taxation in public economics [@Dixit1985], these revenues are not returned to the pockets of consumers. This assumption allows for a range of potential government uses for tariff revenue. Tariff revenue can in principle be devoted to any government expenditure. Liberal governments might redistribute it to the population and derive welfare from this redistribution, while illiberal governments might spend it on rennovations to presidential palaces. Regardless the manner in which it is spent, governments value this revenue equally. Total tariff revenue can be written
-\begin{equation} \label{eq:revenue}
-r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
-\end{equation}
+If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.
 
 ### Government Preferences
 
@@ -553,16 +553,17 @@ The first order condition then becomes
 
 **Economic Equilibrium:**
 
-pair of wages $\left\{w_i, w_j \right\}$ such that international agricultural and manufacturing markets clear
+With unit costs of production in manufacturing and agriculture, goods market clearing requires
 \begin{equation*}
 \begin{split}
-L_i^y + L_j^y = (1 - \alpha) \left( w_i L + w_j L \right) \\
-L_i^x = n \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right) \\
-L_j^x = n \left( x_{ij}^\star(\tau_i p_j^\star) + x_{jj}^\star(p_j^\star) \right) \\
-L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( w_i L + w_j L \right)
+L_i^y + L_j^y = (1 - \alpha) \left( I_i + I_j \right) \\
+L_i^x = \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right) \\
+L_j^x = \left( x_{ij}^\star(\tau_i p^\star) + x_{jj}^\star(p^\star) \right) \\
+L_i^x + L_j^x + \Pi_i(p^\star) + \Pi_j(p^\star) = \alpha \left( I_i + I_j \right)
 \end{split}
 \end{equation*}
-and domestic factor markets clear
+
+Domestic factor market clearing requires
 \begin{equation*}
 \begin{split}
 L_i^x + L_i^y = L \\
