@@ -1,13 +1,13 @@
-library(tidyverse)
-library(latex2exp)
+# library(tidyverse)
+# library(latex2exp)
 
-path <- getwd() %>% strsplit("/")
-lastPath <- path[[1]][length(path[[1]])]
+# path <- getwd() %>% strsplit("/")
+# lastPath <- path[[1]][length(path[[1]])]
 
-if (lastPath == "figs") {
-  source("source.R")
-  source("params.R")
-}
+# if (lastPath == "figs") {
+#   source("source.R")
+#   source("params.R")
+# }
 
 tau_i <- seq(1, 2, .01)
 tau_j <- 1

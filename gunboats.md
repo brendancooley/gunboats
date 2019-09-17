@@ -164,7 +164,7 @@ I assume that firms' welfare is dependent only on their profits, and not influen
 
 ### Tariff Revenue
 
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p$ in tariff revenue. Total tariff revenue can be written
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j$ in tariff revenue. Total tariff revenue can be written
 \begin{equation} \label{eq:revenue}
 r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 \end{equation}
@@ -229,12 +229,9 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 ## Preferences
 
+![Government preferences over own tariff rates with $a > a^\prime$ \label{fig:G}](figure/G-1.png)
 
-```
-## Error in eval(expr, envir, enclos): object 'GPlot' not found
-```
-
-Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal. 
+Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
 
 ![Government iso-welfare curve over home and foreign tariff rates \label{fig:iso}](figure/iso-1.png)
 
@@ -318,7 +315,7 @@ The magnitude of government $i$'s *conflict of interest* with government $j$ is
 **Proposition 3:** 
 $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, $a_j$
 
-Proposition 3 states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments. 
+Proposition 3 states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
 
 ## Bargaining
 
@@ -376,7 +373,7 @@ Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types
 **Proposition 4 (Liberal Peace):** 
 $a_j(\ubar{\epsilon}, a_i)$ is weakly decreasing in $a_i$.
 
-Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace." 
+Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
 
 If $a_j < a_j(\ubar{\epsilon}, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
@@ -396,7 +393,7 @@ With the probability of war given in Equation \ref{eq:prwar}, we can write $i$'s
 \begin{equation} \label{eq:Gtildei}
 \begin{split}
 \tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
-\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}} 
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}}
 \end{split}
 \end{equation}
 
