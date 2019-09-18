@@ -625,7 +625,7 @@ $$
 **Consumer Indirect Utility**
 
 $$
-\frac{\partial}{}
+\frac{\partial V_i}{\partial \tau_i} = k(\alpha) \alpha P_i(\tau_i)^{\alpha - 1}
 $$
 
 
