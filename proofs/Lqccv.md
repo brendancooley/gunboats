@@ -1,4 +1,4 @@
-For $G_i(\tau_i)$ to be quasiconcave, its first derivative must have a single root with 
+For $G_i(\tau_i)$ to be quasiconcave on $[1, \bar{\tau}]$, its first derivative must have a single root with 
 $$
 \frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i}(1) > 0
 $$
@@ -6,6 +6,24 @@ and
 $$
 \lim_{\tau_i \rightarrow \infty} \frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i} < 0
 $$
+
+I first collect the relevant partial derivatives before proceeding with the proof.
+
+**Government Utility**
+
+$$
+\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i} = a_i \frac{\partial V_i}{\partial \tau_i} + \frac{\partial \Pi_i}{\partial \tau_i}
+$$
+
+**Consumer Indirect Utility**
+
+$$
+\frac{\partial V_i}{\partial \tau_i} = k(\alpha) \alpha P_i(\tau_i)^{\alpha - 1}
+$$
+
+
+
+
 Note that given symmetry across countries, price indices can be written 
 $$
 P_i(\tau_i) = \left( n p^{1 - \sigma} + n (\tau_i p)^{1 - \sigma} \right)^{\frac{1}{1 - \sigma}} = p n^{\frac{1}{1 - \sigma}} \left( 1 + \tau_i^{1 - \sigma} \right)^{\frac{1}{1 - \sigma}}

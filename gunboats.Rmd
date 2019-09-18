@@ -25,9 +25,14 @@ output:
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-rm(list=ls())
-libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggthemes", "latex2exp")
-sapply(libs, require, character.only = TRUE)
+helperPath <- "source/R/"
+helperFiles <- list.files(helperPath)
+for (i in helperFiles) {
+  source(paste0(helperPath, i))
+}
+
+libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggthemes", "ggpubr", "padr", "latex2exp")
+ipak(libs)
 
 # not available
 Pgamma <- "NA"
