@@ -511,7 +511,7 @@ x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
 \begin{align*}
 X_i^\star &= \left( \int_{\nu_i} x_{ii}^\star(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}^\star(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}} \\
 &= P_i^{\sigma - 1} I_i \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \frac{I_i}{P_i}
+&= \frac{\alpha I_i}{P_i}
 \end{align*}
 Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
 
@@ -521,11 +521,11 @@ $$
 $$
 where
 $$
-\frac{\partial x_{ii}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma p_i^(\nu_i)^{- \sigma - 1} P_i^{\sigma - 1} \alpha I_i
+\frac{\partial x_{ii}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma p_i^(\nu_i)^{- \sigma - 1} P_i^{\sigma - 1} \alpha I_i
 $$
 and
 $$
-\frac{\partial x_{ji}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
+\frac{\partial x_{ji}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
 $$
 Note that 
 $$
@@ -589,7 +589,7 @@ Labor allocations to each sector depend on tariff levels. The labor allocation i
 $$
 L_i^x(\bm{\tau}) = x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j)
 $$
-Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$, $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the depedence of the price index on the home tariff $P_i(\tau_i)$.]
+Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$, $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the dependence of the price index on the home tariff $P_i(\tau_i)$.]
 \begin{align*}
 L_i^x(\bar{\tau}, 1) &= p^{-\sigma} P_i(\bar{\tau})^{\sigma - 1} \alpha L + (1 p)^{-\sigma} P_j(1)^{\sigma - 1} \alpha L \\
 &= \frac{p^{-\sigma} \alpha L}{p^{1 - \sigma}} + \frac{p^{-\sigma} \alpha L}{2 p^{1 - \sigma}} \\
@@ -622,11 +622,59 @@ $$
 \frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i} = a_i \frac{\partial V_i}{\partial \tau_i} + \frac{\partial \Pi_i}{\partial \tau_i}
 $$
 
+**Price Index**
+
+\begin{align*}
+\frac{\partial P_i}{\partial \tau_i} &= p \left( 1 + \tau_i^{1 - \sigma} \right)^{\frac{\sigma}{1 - \sigma}} \tau_i^{-\sigma} \\
+&= P_i(\tau_i) \left( 1 + \tau_i^{1 - \sigma} \right)^{-1} \tau_i^{-\sigma} \\
+&= P_i(\tau_i) \chi(\tau_i) \tau_i^{-\sigma}
+\end{align*}
+with
+$$
+\chi(\tau_i) = \left( 1 + \tau_i^{1 - \sigma} \right)^{-1}
+$$
+
 **Consumer Indirect Utility**
 
+\begin{align*}
+\frac{\partial V_i}{\partial \tau_i} &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha - 1} \frac{\partial P_i}{\partial \tau_i} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
+&= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha} \chi(\tau_i) \tau_i^{-\sigma} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
+&= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i \\
+&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star
+\end{align*}
+where
 $$
-\frac{\partial V_i}{\partial \tau_i} = k(\alpha) \alpha P_i(\tau_i)^{\alpha - 1}
+k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
 $$
+
+**Demand**
+
+\begin{align*}
+\frac{\partial x_{ii}^\star}{\partial \tau_i} &= p^{-\sigma} (\sigma - 1) P_i(\tau_i)^{\sigma - 2} \frac{\partial P_i}{\partial \tau_i} \alpha I_i \\
+&= (\sigma - 1) x_{ii}^\star(\tau_i) \chi(\tau_i) \tau_i^{-\sigma}
+\end{align*}
+
+Noting $x_{ij}^\star = \tau_i^{-\sigma} x_{ii}^\star(\tau_i)$, 
+$$
+\frac{\partial x_{ij}^\star}{\partial \tau_i} = - \sigma \tau_i^{-\sigma - 1} x_{ii}^\star(\tau_i) + \tau_i^{-\sigma} \frac{\partial x_{ii}^\star}{\partial \tau_i}
+$$
+
+**Firm Profits**
+
+$$
+\frac{\partial \Pi_i}{\partial \tau_i} = p \frac{\partial x_{ii}^\star}{\partial \tau_i} 
+$$
+
+**Tariff Revenue**
+
+\begin{align*}
+\frac{\partial r_i}{\partial \tau_i} &= p x_{ij}^\star(\tau_i) + p (\tau_i - 1) \frac{\partial x_{ij}^\star}{\partial \tau_i} \\
+&= p \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + p (\tau_i - 1) \left( -\sigma \tau_i^{-\sigma - 1} x_{ii}^\star(\tau_i) + \tau_i^{-\sigma} (\sigma - 1) x_{ii}^\star \chi(\tau_i) \tau_i^{-\sigma} \right) \\
+&= x_{ii}^\star(\tau_i) \tau_i^{-\sigma} p \left( 1 + ( \tau_i - 1 ) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right)
+\end{align*}
+
+
+
 
 
 

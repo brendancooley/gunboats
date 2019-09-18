@@ -23,7 +23,7 @@ x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
 \begin{align*}
 X_i^\star &= \left( \int_{\nu_i} x_{ii}^\star(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}^\star(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}} \\
 &= P_i^{\sigma - 1} I_i \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \frac{I_i}{P_i}
+&= \frac{\alpha I_i}{P_i}
 \end{align*}
 Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
 
@@ -33,11 +33,11 @@ $$
 $$
 where
 $$
-\frac{\partial x_{ii}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma p_i^(\nu_i)^{- \sigma - 1} P_i^{\sigma - 1} \alpha I_i
+\frac{\partial x_{ii}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma p_i^(\nu_i)^{- \sigma - 1} P_i^{\sigma - 1} \alpha I_i
 $$
 and
 $$
-\frac{\partial x_{ji}(\nu_i)}{\partial p_i^(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
+\frac{\partial x_{ji}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
 $$
 Note that 
 $$
