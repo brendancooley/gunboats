@@ -69,7 +69,7 @@ $$
 Simplifying the derivative of the objective function gives
 \begin{equation*}
 \begin{split}
-\frac{\partial G_i}{\partial \tau_i} =& - a k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma - 1} + a k(\alpha) P_i(\tau_i)^{-\alpha} \left( 1 + (\tau_i - 1) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right) + \\
+\frac{\partial G_i}{\partial \tau_i} =& - a k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma - 1} + a k(\alpha) P_i(\tau_i)^{-\alpha} \left( 1 + (\tau_i - 1) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right) + \\
 & (\sigma - 1) \chi_i(\tau_i)
 \end{split}
 \end{equation*}
