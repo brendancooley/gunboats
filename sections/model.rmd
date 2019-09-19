@@ -136,25 +136,25 @@ PeeqText <- knit_child('../results/Peeq.md')
 
 ### Government Preferences
 
-Governments value a combination of consumer welfare, producer profits, and tariff revenue.^[Goverments value only the component of consumer welfare derived from the consumption of manufactured goods. With Cobb-Douglas utility and constant returns to scale technology in the agricultural sector, consumers will derive a constant utility from their consumption of agricultural goods $V_i^y$. Thus, total consumer indirect utility $V_i$ is equal to $V_i^x$ up to a constant.] With these quantities derived, we can write
+Governments value a combination of consumer welfare and producer profits. With these quantities derived, we can write
 \begin{equation} \label{eq:G}
-G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 \end{equation}
 
-The exogenous parameter $a_i > 0$ controls the relative weight the government places on consumer welfare, relative to profits and revenue. This conception of government preferences follows @Grossman1994, in which $a_i$ represents the value the government places on campaign contributions relative to consumer welfare.^[In their model, firms lobby for protective tariffs (or export subsidies), promising campaign contributions in exchange for policy deviations from the consumer welfare-maximizing ideal. @Grossman1996 provide additional microfoundations for this objective function in a model of electoral competition, in which the government can employ campaign contributions to influence the vote choice of "uneducated" voters.]
+The exogenous parameter $a_i$ controls the relative weight the government places on consumer welfare, relative to profits and revenue. This conception of government preferences follows @Grossman1994, in which $a_i$ represents the value the government places on campaign contributions relative to consumer welfare.^[In their model, firms lobby for protective tariffs (or export subsidies), promising campaign contributions in exchange for policy deviations from the consumer welfare-maximizing ideal. @Grossman1996 provide additional microfoundations for this objective function in a model of electoral competition, in which the government can employ campaign contributions to influence the vote choice of "uneducated" voters.]
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
 I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` `r aA` `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
 
 ```{r aA, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-aA <- Atick
+Aa <- Atick
 Atick <- Atick + 1
 
 AaText <- knit_child("../results/Aa.md")
 ```
 
-**Assumption `r aA`:** `r AaText`
+**Assumption `r Aa`:** `r AaText`
 
 In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
 

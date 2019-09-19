@@ -1,0 +1,8 @@
+$$
+\ubar{a} = p^{\alpha - 1} k(\alpha)^{-1}
+$$
+where
+$$
+k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
+$$
+Note that this quantity is strictly positive. 
