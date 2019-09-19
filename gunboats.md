@@ -560,7 +560,7 @@ L_j^x + L_j^y = L
 
 
 
-## C: Proofs
+## C: Constant Definitions
 
 
 
@@ -576,6 +576,11 @@ $$
 $$
 Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this quantity is guaranteed to be positive.
 
+
+
+
+
+## D: Proofs
 
 
 **Proposition 1:** 
@@ -639,8 +644,8 @@ $$
 \begin{align*}
 \frac{\partial V_i}{\partial \tau_i} &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha - 1} \frac{\partial P_i}{\partial \tau_i} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
 &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha} \chi(\tau_i) \tau_i^{-\sigma} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i \\
-&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star
+&= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i + k(\alpha) P_i(\tau_i)^{-\alpha} \\
+&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha}
 \end{align*}
 where
 $$
@@ -673,7 +678,10 @@ $$
 &= x_{ii}^\star(\tau_i) \tau_i^{-\sigma} p \left( 1 + ( \tau_i - 1 ) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right)
 \end{align*}
 
-
+Simplifying the derivative of the objective function gives
+$$
+\frac{\partial G_i}{\partial \tau_i} = - a k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma - 1} + a k(\alpha) P_i(\tau_i) \left( 1 + (\tau_i - 1) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right) + (\sigma - 1) \chi_i(\tau_i)
+$$
 
 
 

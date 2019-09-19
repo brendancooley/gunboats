@@ -1,0 +1,9 @@
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+AwCostsFull <- knit_child("../proofs/Akappa.md")
+```
+
+**Assumption `r AwCosts`:** `r AwCostsFull`
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+PeeqProof <- knit_child("../proofs/Peeq.md")
+```

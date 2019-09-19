@@ -130,6 +130,18 @@ AddxEconomy <- LETTERS[a]
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
 a <- a + 1
+AddxDefinitions <- LETTERS[a]
+
+```
+
+## `r AddxDefinitions`: Constant Definitions
+
+```{r, child="sections/AconstantDefs.rmd"}
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
 AddxProofs <- LETTERS[a]
 
 ```
