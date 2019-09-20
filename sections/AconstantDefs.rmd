@@ -9,7 +9,7 @@ AwCostsFull <- knit_child("../proofs/Akappa.md")
 **Assumption `r Aa`**
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-aAfull <- knit_child("../proofs/Aa.md")
+AaFull <- knit_child("../proofs/Aa.rmd")
 ```
 
-`r AwCostsFull`
+`r AaFull`

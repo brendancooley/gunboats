@@ -578,20 +578,16 @@ Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this qua
 **Assumption 3**
 
 
-```
-## Error in readLines(if (is.character(input2)) {: cannot open the connection
-```
 
 
-I restrict $j$'s costs of war such that there exists some government $j$ with $a_j \in [0, \bar{a})$ that would be willing to fight if victory were certain and $i$ offered its ideal point. Formally, this requires
 $$
-\kappa_j = \Gamma_j(0, \bar{a})
+\ubar{a} = p^{\alpha - 1} k(\alpha)^{-1}
 $$
-I then restrict $i$'s costs of war to ensure that it never offers $j$'s ideal point -- an interior solution exists outside of the zone of peace. Formally, this requires
+where
 $$
-\kappa_i(\bar{\epsilon}, a_i) = \min_{\tilde{\bm{\tau}} \in \mathcal{P}} - \bar{\epsilon} \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} }
+k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
 $$
-Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this quantity is guaranteed to be positive.
+Note that this quantity is strictly positive. 
 
 
 
@@ -662,7 +658,8 @@ $$
 \frac{\partial V_i}{\partial \tau_i} &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha - 1} \frac{\partial P_i}{\partial \tau_i} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
 &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha} \chi(\tau_i) \tau_i^{-\sigma} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
 &= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i}
+&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
+&= k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i}
 \end{align*}
 where
 $$

@@ -33,7 +33,8 @@ $$
 \frac{\partial V_i}{\partial \tau_i} &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha - 1} \frac{\partial P_i}{\partial \tau_i} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
 &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha} \chi(\tau_i) \tau_i^{-\sigma} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
 &= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i}
+&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
+&= k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i}
 \end{align*}
 where
 $$
@@ -83,4 +84,8 @@ $$
 \lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
 $$
 
-Since $\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i}$ is a continuous function, it must therefore have at least one root, by the intermediate value theorem. To see that this root is unique...
+Since $\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i}$ is a continuous function, it must therefore have at least one root, by the intermediate value theorem. To see that this root is unique, note that the first order condition can be rearranged as 
+$$
+\underbrace{(\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma}}_{\psi(\tau_i)} = \underbrace{C + (\sigma - 1) \chi(\tau_i) \left( \left( a k(\alpha) \right)^{-1} P_i(\tau_i)^\alpha + \tau_i^{1 - \sigma} \right) - \frac{\sigma}{\tau_i} }_{\phi(\tau_i)}
+$$
+where $C$ is a constant, $\psi(\tau_i)$ is monotonically decreasing and $\phi(\tau_i)$ is monotonically increasing. $\blacksquare$
