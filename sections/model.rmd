@@ -83,22 +83,22 @@ This problem yields equilibrium prices
 \begin{equation} \label{eq:prices}
 p_i^\star(\nu_i) = \frac{\sigma}{\sigma - 1} w_i
 \end{equation}
-Since prices are constant across firms and countries, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p^\star$.
+Since prices are constant across firms, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p_i^\star$.
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p^\star \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right)
+\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
 ### Tariff Revenue
 
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j$ in tariff revenue. Total tariff revenue can be written
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j^\star$ in tariff revenue. Total tariff revenue can be written
 \begin{equation} \label{eq:revenue}
-r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+r_i(\tau_i) = (\tau_i - 1) p_j^\star x_{ij}^\star(\tau_i p_j^\star)
 \end{equation}
 
 ### Economic Equilibrium
