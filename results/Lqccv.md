@@ -1,4 +1,4 @@
-If Assumption `r aA` is satisfied, then there exists a unique *\tau_i^\star(a_i)* satisfying
+If Assumption `r Aa` is satisfied, then there exists a unique $\tau_i^\star(a_i) \in (1, \bar{\tau})$ satisfying
 $$
 \tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 $$

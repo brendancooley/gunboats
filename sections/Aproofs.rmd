@@ -5,7 +5,7 @@ PeeqProof <- knit_child("../proofs/Peeq.md")
 **Proposition `r eeqP`:** `r PeeqProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-LqccvProof <- knit_child("../proofs/Lqccv.md")
+LqccvProof <- knit_child("../proofs/Lqccv.rmd")
 ```
 
 **Lemma `r qccv`:** `r LqccvProof`

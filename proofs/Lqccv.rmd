@@ -1,0 +1,78 @@
+*TODO define constants*
+
+The result follows from a series of Lemmas.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- 1
+qccv_rev <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_rev`:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
+
+**Proof:**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_rprime <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_rprime`:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$
+
+**Proof:**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_bound <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_bound`:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0$ and $G_i^{\prime}(\tau_i; a_i) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)$ for all $a_i > \ubar{a}$.
+
+**Proof:**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_qccv <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_qccv`:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) < 0$
+
+**Proof:**
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_root <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_root`:** For all $a_i > \ubar{a}$,
+$$
+\evalat[\Big]{ \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} }{\tau_i = 1} > 0
+$$
+and
+$$
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} < 0
+$$
+
+**Proof:** Simplifying the derivative of the objective function gives
+\begin{equation} \label{eq:Gfoc}
+\begin{split}
+\frac{\partial G_i}{\partial \tau_i} =& - a k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma - 1} + a k(\alpha) P_i(\tau_i)^{-\alpha} \left( 1 + (\tau_i - 1) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right) + \\
+& (\sigma - 1) \chi_i(\tau_i)
+\end{split}
+\end{equation}
+
+It is straightforward to verify that for all $a_i > \ubar{a}$,
+$$
+\evalat[\Big]{ \frac{\partial G_i}{\partial \tau_i} }{\tau_i=1} > 0
+$$
+and
+$$
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
+$$
+$\blacksquare$
+
+Lemmas `r Lqccv`.`r qccv_bound` and `r Lqccv`.`r qccv_qccv` imply that 
+$$
+0 > G_i^{\prime \prime}(\tau_i, \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)
+$$
+whenever $G_i^\prime(\tau_i; a_i) = 0$. This guarantees that $G_i(\tau_i; a_i)$ is strictly quasiconcave for all $a_i > \ubar{a}$, ensuring that $\tau_i^\star(a_i)$ is unique. Lemma `r Lqccv`.`r qccv_root` ensures that $\tau_i^\star(a_i)$ is interior to $[1, \bar{\tau}]$. Note that the first order condition (\ref{eq:Gfoc}) does not depend on $\tau_j$, verifying the latter part of the claim. $\blacksquare$
+

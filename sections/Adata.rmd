@@ -1,4 +1,4 @@
-```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:tradeRD}", fig.height=6, dpi=300}
+```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:tradeRD}", fig.height=6, dpi=300, cache=TRUE}
 
 source("../figs/emp_wars.R")
 
@@ -6,7 +6,7 @@ tradeRDplot
 
 ```
 
-```{r comdempeace, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:comdempeace}", fig.height=8.5, dpi=750}
+```{r comdempeace, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:comdempeace}", fig.height=8.5, dpi=750, cache=TRUE}
 
 polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,5))
 

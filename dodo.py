@@ -35,9 +35,18 @@ def task_write_paper():
     yield {
 		'name': "writing paper...",
 		'actions':["R --slave -e \"set.seed(100);knitr::knit('gunboats.rmd')\"",
-                   "pandoc --template=templates/cooley-paper-template.latex --filter pandoc-citeproc -o gunboats.pdf gunboats.md",
-                   "cp -a gunboats.pdf " + website_docs],
+                   "pandoc --template=templates/cooley-paper-template.latex --filter pandoc-citeproc -o gunboats.pdf gunboats.md"],
+        'verbosity': 2,
 	}
+
+def task_post_to_web():
+    """
+
+    """
+    yield {
+        'name': "posting...",
+        'actions': ["cp -a gunboats.pdf " + website_docs]
+    }
 
 def task_slides():
     """build slides"""

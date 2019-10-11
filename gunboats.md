@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -151,22 +151,22 @@ This problem yields equilibrium prices
 \begin{equation} \label{eq:prices}
 p_i^\star(\nu_i) = \frac{\sigma}{\sigma - 1} w_i
 \end{equation}
-Since prices are constant across firms and countries, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p^\star$.
+Since prices are constant across firms, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p_i^\star$.
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = p^\star \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right)
+\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
 ### Tariff Revenue
 
-For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j$ in tariff revenue. Total tariff revenue can be written
+For every unit of manufactured goods imported, the government collects $(\tau_{i} - 1) p_j^\star$ in tariff revenue. Total tariff revenue can be written
 \begin{equation} \label{eq:revenue}
-r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+r_i(\tau_i) = (\tau_i - 1) p_j^\star x_{ij}^\star(\tau_i p_j^\star)
 \end{equation}
 
 ### Economic Equilibrium
@@ -203,7 +203,7 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` 3 `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
+I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` NA `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
 
 
 
@@ -215,7 +215,11 @@ In this model, the number of firms, $n$ is given exogenously. This contrasts wit
 
 
 **Lemma 1:** 
-If Assumption 3 is satisfied, then $G_i(\tau_i; a_i)$ is quasiconcave on $\tau_i \in \left[ 1, \bar{\tau} \right]$.
+If Assumption 3 is satisfied, then there exists a unique $\tau_i^\star(a_i) \in (1, \bar{\tau})$ satisfying
+$$
+\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
+$$
+where $\tau_i^\star(a_i)$ does not depend on $\tau_j$.
 
 # Analysis
 
@@ -623,82 +627,52 @@ If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) 
 
 
 **Lemma 1:** 
-For $G_i(\tau_i)$ to be quasiconcave on $[1, \bar{\tau}]$, its first derivative must have a single root with 
+*TODO define constants*
+
+The result follows from a series of Lemmas.
+
+
+
+**Lemma 1.1:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
+
+**Proof:**
+
+
+
+**Lemma 1.2:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$
+
+**Proof:**
+
+
+
+**Lemma 1.3:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0$ and $G_i^{\prime}(\tau_i; a_i) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)$ for all $a_i > \ubar{a}$.
+
+**Proof:**
+
+
+
+**Lemma 1.4:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) < 0$
+
+**Proof:**
+
+
+
+**Lemma 1.5:** For all $a_i > \ubar{a}$,
 $$
-\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i}(1) > 0
+\evalat[\Big]{ \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} }{\tau_i = 1} > 0
 $$
 and
 $$
-\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i} < 0
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} < 0
 $$
 
-I first collect the relevant partial derivatives before proceeding with the proof.
-
-**Government Utility**
-
-$$
-\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i} = a_i \frac{\partial V_i}{\partial \tau_i} + \frac{\partial \Pi_i}{\partial \tau_i}
-$$
-
-**Price Index**
-
-\begin{align*}
-\frac{\partial P_i}{\partial \tau_i} &= p \left( 1 + \tau_i^{1 - \sigma} \right)^{\frac{\sigma}{1 - \sigma}} \tau_i^{-\sigma} \\
-&= P_i(\tau_i) \left( 1 + \tau_i^{1 - \sigma} \right)^{-1} \tau_i^{-\sigma} \\
-&= P_i(\tau_i) \chi(\tau_i) \tau_i^{-\sigma}
-\end{align*}
-with
-$$
-\chi(\tau_i) = \left( 1 + \tau_i^{1 - \sigma} \right)^{-1}
-$$
-
-**Consumer Indirect Utility**
-
-\begin{align*}
-\frac{\partial V_i}{\partial \tau_i} &= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha - 1} \frac{\partial P_i}{\partial \tau_i} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= k(\alpha) (-\alpha) P_i(\tau_i)^{-\alpha} \chi(\tau_i) \tau_i^{-\sigma} \left( L + r_i(\tau_i) \right) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= - k(\alpha) P_i(\tau_i)^{\sigma - 1} P_i(\tau_i)^{1 - \sigma - \alpha} p^{\sigma} p^{-\sigma} \tau_i^{-\sigma} \chi(\tau_i) \alpha I_i + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= - k(\alpha) P_i(\tau_i)^{1 - \sigma - \alpha} \chi(\tau_i) p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i} \\
-&= k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma} \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + k(\alpha) P_i(\tau_i)^{-\alpha} \frac{\partial r_i}{\partial \tau_i}
-\end{align*}
-where
-$$
-k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
-$$
-
-**Demand**
-
-\begin{align*}
-\frac{\partial x_{ii}^\star}{\partial \tau_i} &= p^{-\sigma} (\sigma - 1) P_i(\tau_i)^{\sigma - 2} \frac{\partial P_i}{\partial \tau_i} \alpha I_i \\
-&= (\sigma - 1) x_{ii}^\star(\tau_i) \chi(\tau_i) \tau_i^{-\sigma}
-\end{align*}
-
-Noting $x_{ij}^\star = \tau_i^{-\sigma} x_{ii}^\star(\tau_i)$, 
-$$
-\frac{\partial x_{ij}^\star}{\partial \tau_i} = - \sigma \tau_i^{-\sigma - 1} x_{ii}^\star(\tau_i) + \tau_i^{-\sigma} \frac{\partial x_{ii}^\star}{\partial \tau_i}
-$$
-
-**Firm Profits**
-
-$$
-\frac{\partial \Pi_i}{\partial \tau_i} = p \frac{\partial x_{ii}^\star}{\partial \tau_i} 
-$$
-
-**Tariff Revenue**
-
-\begin{align*}
-\frac{\partial r_i}{\partial \tau_i} &= p x_{ij}^\star(\tau_i) + p (\tau_i - 1) \frac{\partial x_{ij}^\star}{\partial \tau_i} \\
-&= p \tau_i^{-\sigma} x_{ii}^\star(\tau_i) + p (\tau_i - 1) \left( -\sigma \tau_i^{-\sigma - 1} x_{ii}^\star(\tau_i) + \tau_i^{-\sigma} (\sigma - 1) x_{ii}^\star \chi(\tau_i) \tau_i^{-\sigma} \right) \\
-&= x_{ii}^\star(\tau_i) \tau_i^{-\sigma} p \left( 1 + ( \tau_i - 1 ) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right)
-\end{align*}
-
-Simplifying the derivative of the objective function gives
-\begin{equation*}
+**Proof:** Simplifying the derivative of the objective function gives
+\begin{equation} \label{eq:Gfoc}
 \begin{split}
 \frac{\partial G_i}{\partial \tau_i} =& - a k(\alpha) P_i(\tau_i)^{-\alpha} p^{\sigma - 1} + a k(\alpha) P_i(\tau_i)^{-\alpha} \left( 1 + (\tau_i - 1) \left( (\sigma - 1) \chi(\tau_i) \tau_i^{-\sigma} - \sigma \tau_i^{-1} \right) \right) + \\
 & (\sigma - 1) \chi_i(\tau_i)
 \end{split}
-\end{equation*}
+\end{equation}
 
 It is straightforward to verify that for all $a_i > \ubar{a}$,
 $$
@@ -708,12 +682,14 @@ and
 $$
 \lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
 $$
+$\blacksquare$
 
-Since $\frac{\partial G_i(\tau_i, \tau_j)}{\partial \tau_i}$ is a continuous function, it must therefore have at least one root, by the intermediate value theorem. To see that this root is unique, note that the first order condition can be rearranged as 
+Lemmas 1.3 and 1.4 imply that 
 $$
-\underbrace{\left( p^{1-\sigma} + \sigma - 1 \right)}_{\psi(\tau_i)} = \underbrace{ (\sigma - 1) \left( \tau_i^{1-\sigma} - \tau_i^{\sigma} \right) + \sigma \tau_i^{-1} \chi(\tau_i) + (\sigma - 1) \left( a_i k(\alpha) \right)^{-1} \chi(\tau_i) P(\tau_i)^\alpha }_{\phi(\tau_i)}
+0 > G_i^{\prime \prime}(\tau_i, \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)
 $$
-where $\psi(\tau_i)$ is monotonically increasing and $\phi(\tau_i)$ is monotonically decreasing for all $a_i > \ubar{a}$. $\blacksquare$
+whenever $G_i^\prime(\tau_i; a_i) = 0$. This guarantees that $G_i(\tau_i; a_i)$ is strictly quasiconcave for all $a_i > \ubar{a}$, ensuring that $\tau_i^\star(a_i)$ is unique. Lemma 1.5 ensures that $\tau_i^\star(a_i)$ is interior to $[1, \bar{\tau}]$. Note that the first order condition (\ref{eq:Gfoc}) does not depend on $\tau_j$, verifying the latter part of the claim. $\blacksquare$
+
 
 
 

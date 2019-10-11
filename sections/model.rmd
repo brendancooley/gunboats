@@ -159,10 +159,10 @@ AaText <- knit_child("../results/Aa.md")
 In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-qccv <- Ltick
+Lqccv <- Ltick
 Ltick <- Ltick + 1
 
 LqccvText <- knit_child("../results/Lqccv.md")
 ```
 
-**Lemma `r qccv`:** `r LqccvText`
+**Lemma `r Lqccv`:** `r LqccvText`
