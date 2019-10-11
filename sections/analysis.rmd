@@ -33,14 +33,7 @@ LtaujText <- knit_child("../results/Ltauj.md")
 
 **Lemma `r tauj`:** `r LtaujText`
 
-If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given. Their best response functions are
-$$
-\tau_i(a_i, \tau_j) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i, \tau_j; a_i)
-$$
-and
-$$
-\tau_j(a_j, \tau_i) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_i, \tau_j; a_j)
-$$
+If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 nceq <- Dtick
@@ -50,6 +43,8 @@ DnceqText <- knit_child("../results/Dnceq.md")
 ```
 
 **Definition `r nceq`:** `r DnceqText`
+
+Lemma `r Lqccv` ensures that these optimal policies do not depend on the other government's policy choice. Our next result shows that as governments become more liberal, their optimal tariffs fall.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 taui <- Ltick
@@ -74,7 +69,7 @@ It is clear that each government cares indirectly about the preferences of its b
 
 The optimal puppet's type solves
 $$
-\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
+\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
 $$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
