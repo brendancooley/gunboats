@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -31,7 +31,15 @@ output:
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-# TODO: vertical slides currently not behaving
+helperPath <- "source/R/"
+helperFiles <- list.files(helperPath)
+for (i in helperFiles) {
+  source(paste0(helperPath, i))
+}
+
+libs <- c('tidyverse', "latex2exp", "countrycode", "ggrepel", "ggpubr", "patchwork")
+ipak(libs)
+
 # TODO: speaker notes don't work with incremental reveal
 # TODO: nested bulleted lists disappear after compilation, fine when knitting
 
@@ -370,7 +378,7 @@ barPlot
 
 <small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
 
-## Trade and War Onset {id="tradeRD"}
+## Trade and War Onset {id="tradeRD", cache=TRUE}
 
 ```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300}
 
@@ -526,7 +534,7 @@ $$
 
 ## The Commercial-Democratic Peace {id="comDemPeace"}
 
-```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=6}
+```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=6, cache=TRUE}
 
 source("figs/emp_wars.R")
 

@@ -572,8 +572,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Trade and Conflict
 <ul>
 <li>Liberal governments experience smaller conflicts of interest (Proposition 3)</li>
-<li>&quot;&quot; fight war less frequently (Proposition 4)</li>
-<li>&quot;&quot; trade more when peace prevails (Proposition 6)</li>
+<li>"" fight war less frequently (Proposition 4)</li>
+<li>"" trade more when peace prevails (Proposition 6)</li>
 </ul></li>
 </ul>
 </div>
@@ -796,11 +796,11 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 <section id="thank-you" class="slide level2 aligncenter">
 <h2>Thank You</h2>
 <p><a href="http://brendancooley.com">brendancooley.com</a></p>
-<p><a href="bcooley@princeton.edu" class="uri">bcooley@princeton.edu</a></p>
+<p><a href="bcooley@princeton.edu">bcooley@princeton.edu</a></p>
 <p><small><strong>Title Slide Image Credit:</strong> Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. <a href="https://library.artstor.org/asset/SS35100_35100_35234600" class="uri">https://library.artstor.org/asset/SS35100_35100_35234600</a></small></p>
 </section>
-<section id="tradeRD" class="slide level2">
-<h2>Trade and War Onset</h2>
+<section id="trade-and-war-onset-idtraderd-cachetrue" class="slide level2">
+<h2>Trade and War Onset {id=“tradeRD”, cache=TRUE}</h2>
 <div class="figure">
 <img src="index_files/figure-revealjs/tradeRD-1.png" alt="\label{fig:tradeRD}" width="2400" />
 <p class="caption">
@@ -845,7 +845,7 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 \alpha &lt; \frac{2}{3} \frac{\sigma}{\sigma - 1}
 \]</span>
 <hr style="height:1em; visibility:hidden;" />
-<strong>Assumption 3:</strong> (governments are weak mercantilists) <span class="math inline">\(a_i \in (0, \overline{a})\)</span> with
+<strong>Assumption NA:</strong> (governments are weak mercantilists) <span class="math inline">\(a_i \in (0, \overline{a})\)</span> with
 <hr style="height:1em; visibility:hidden;" />
 <span class="math display">\[
 \overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
@@ -882,7 +882,9 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 </section>
 <section id="Gprefs" class="slide level2">
 <h2>Government Preferences</h2>
-<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then <span class="math inline">\(G_i(\tau_i; a_i)\)</span> is quasiconcave on <span class="math inline">\(\tau_i \in \left[ 1, \bar{\tau} \right]\)</span>.</p>
+<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in (1, \bar{\tau})\)</span> satisfying <span class="math display">\[
+\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
+\]</span> where <span class="math inline">\(\tau_i^\star(a_i)\)</span> does not depend on <span class="math inline">\(\tau_j\)</span>.</p>
 <hr style="height:1em; visibility:hidden;" />
 <center>
 <hr width="50%">
@@ -944,7 +946,7 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <p><img src="index_files/figure-revealjs/emp_wars-1.png" width="768" style="display: block; margin: auto;" /></p>
 <p><a href="#/implications" style="float: right;">Back</a></p>
 <hr style="height:5em; visibility:hidden;" />
-<div id="refs" class="references">
+<div id="refs" class="references" role="doc-bibliography">
 <div id="ref-Angell1911">
 <p>Angell, Norman. 1911. <em>The great illusion: a study of the relation of military power in nations to their economic and social advantage</em>. McClelland; Goodchild.</p>
 </div>
@@ -987,11 +989,11 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <div id="ref-Gawande2009">
 <p>Gawande, Kishore, Pravin Krishna, and Marcelo Olarreaga. 2009. “What governments maximize and why: the view from trade.” <em>International Organization</em> 63 (03): 491–532.</p>
 </div>
-<div id="ref-Gawande2012">
-<p>———. 2012. “Lobbying Competition over Trade Policy.” <em>International Economic Review</em> 53 (1): 115–32.</p>
-</div>
 <div id="ref-Gawande2015">
 <p>———. 2015. “A Political-Economic Account of Global Tariffs.” <em>Economics &amp; Politics</em> 27 (2): 204–33.</p>
+</div>
+<div id="ref-Gawande2012">
+<p>———. 2012. “Lobbying Competition over Trade Policy.” <em>International Economic Review</em> 53 (1): 115–32.</p>
 </div>
 <div id="ref-Goldberg1999">
 <p>Goldberg, Pinelopi Koujianou, and Giovanni Maggi. 1999. “Protection for Sale: An Empirical Investigation.” <em>American Economic Review</em>, 1135–55.</p>
@@ -1021,7 +1023,7 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <p>Kono, Daniel Yuichi. 2008. “Democracy and Trade Discrimination.” <em>Journal of Politics</em> 70 (4): 942–55.</p>
 </div>
 <div id="ref-Krasner1976">
-<p>Krasner, Stephen D. 1976. “State power and the structure of international trade.” <em>World Politics</em> 28 (03). Cambridge Univ Press: 317–47.</p>
+<p>Krasner, Stephen D. 1976. “State power and the structure of international trade.” <em>World Politics</em> 28 (03): 317–47.</p>
 </div>
 <div id="ref-Krugman1980">
 <p>Krugman, Paul. 1980. “Scale Economies, Product Differentiation, and the Pattern of Trade.” <em>American Economic Review</em> 70 (5): 950–59.</p>
@@ -1051,7 +1053,7 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <p>Mitra, Devashish, Dimitrios D. Thomakos, and Mehmet Ulubasoglu. 2006. “Can we obtain realistic parameter estimates for the ’protection for sale’ model?” <em>Canadian Journal of Economics</em> 39 (1): 187–210.</p>
 </div>
 <div id="ref-Moravcsik1997">
-<p>Moravcsik, Andrew. 1997. “Taking Preferences Seriously: A Liberal Theory of International Politics.” <em>International Organization</em> 51 (4). Cambridge University Press: 513–53.</p>
+<p>Moravcsik, Andrew. 1997. “Taking Preferences Seriously: A Liberal Theory of International Politics.” <em>International Organization</em> 51 (4): 513–53.</p>
 </div>
 <div id="ref-Morrow1999b">
 <p>Morrow, James D. 1999. “How could trade affect conflict?” <em>Journal of Peace Research</em> 36 (4): 481–89.</p>
@@ -1063,10 +1065,10 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <p>Oneal, John R, and Bruce Russett. 1999. “The Kantian peace: The pacific benefits of democracy, interdependence, and international organizations, 1885–1992.” <em>World Politics</em> 52 (01): 1–37.</p>
 </div>
 <div id="ref-Ossa2011">
-<p>Ossa, Ralph. 2011. “A &quot; New Trade &quot; Theory of GATT/WTO Negotiations.” <em>Journal of Political Economy</em> 119 (1): 122–52.</p>
+<p>Ossa, Ralph. 2011. “A " New Trade " Theory of GATT/WTO Negotiations.” <em>Journal of Political Economy</em> 119 (1): 122–52.</p>
 </div>
 <div id="ref-Ossa2012">
-<p>———. 2012. “Profits in the &quot;New Trade&quot; Approach to Trade Negotiations.” <em>American Economic Review: Papers &amp; Proceedings</em> 102 (3): 466–69.</p>
+<p>———. 2012. “Profits in the "New Trade" Approach to Trade Negotiations.” <em>American Economic Review: Papers &amp; Proceedings</em> 102 (3): 466–69.</p>
 </div>
 <div id="ref-Ossa2014">
 <p>———. 2014. “Trade wars and trade talks with data.” <em>The American Economic Review</em> 104 (12): 4104–46.</p>
