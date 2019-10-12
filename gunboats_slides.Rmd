@@ -378,9 +378,9 @@ barPlot
 
 <small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
 
-## Trade and War Onset {id="tradeRD", cache=TRUE}
+## Trade and War Onset {id="tradeRD"}
 
-```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300}
+```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300, cache=TRUE}
 
 source("figs/emp_wars.R")
 
@@ -541,6 +541,11 @@ source("figs/emp_wars.R")
 polityDensity <- polityDensity + theme(plot.title = element_blank())
 
 polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,15,2))
+
+rm(tradeM)
+rm(tradeF)
+rm(tradeUF)
+rm(wars)
 
 ```
 
