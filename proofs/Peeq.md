@@ -2,7 +2,7 @@ A competitive agricultural sector guarantees that agricultural producers make ze
 $$
 \left( 1 - w_i \right) Y_i = 0
 $$
-which implies $w_i = 1$ whenever the agricultural sector is active, $Y_i > 0$. From Equation \ref{eq:prices}, this implies $p_i = p_j = p = \frac{\sigma}{\sigma - 1}$. Suppose for now that the agricultural sector is active in both countries, implying wages are equalized across countries and sectors. Below, we verify that this is the case if Assumption `r aAlpha` is satisfied. 
+which implies $w_i = 1$ whenever the agricultural sector is active, $Y_i > 0$. From Equation \ref{eq:prices}, this implies $p_i = p_j = p = \frac{\sigma}{\sigma - 1}$. Suppose for now that the agricultural sector is active in both countries, implying wages are equalized across countries and sectors. Below, we verify that this is the case if Assumption `r Aalpha` is satisfied. 
 
 Labor allocations to each sector depend on tariff levels. The labor allocation in country $i$ to sector $k \in \left\{ x, y \right\}$ can then be written $L_i^k(\bm{\tau})$. The total labor allocation to the manufacturing sector in country $i$ is
 $$

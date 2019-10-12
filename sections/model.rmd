@@ -114,16 +114,16 @@ DeeqText <- knit_child("../results/Deeq.md")
 
 **Definition `r eeqD`:** `r DeeqText`
 
-There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r aAlpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
+There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r Aalpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
-```{r aAlpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-aAlpha <- Atick
+```{r Aalpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+Aalpha <- Atick
 Atick <- Atick + 1
 
 AalphaText <- knit_child("../results/Aalpha.md")
 ```
 
-**Assumption `r aAlpha`:** `r AalphaText`
+**Assumption `r Aalpha`:** `r AalphaText`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 eeqP <- Ptick

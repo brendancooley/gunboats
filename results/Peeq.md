@@ -1,1 +1,1 @@
-If Assumption `r aAlpha` is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.
+If Assumption `r Aalpha` is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.

@@ -386,6 +386,11 @@ source("figs/emp_wars.R")
 
 tradeRDplot
 
+rm(tradeM)
+rm(tradeF)
+rm(tradeUF)
+rm(wars)
+
 ```
 
 <a href="#/intro" style="float: right;">Back</a>
@@ -412,14 +417,14 @@ tradeRDplot
 
 **Assumption `r Akappa`:** (costs of war are bounded) $c_i < \kappa$ where $\kappa$ is a postive constant defined in the Appendix.
 
-**Assumption `r aAlpha`:** (agricultural sector sufficiently large)
+**Assumption `r Aalpha`:** (agricultural sector sufficiently large)
 <hr style="height:1em; visibility:hidden;" />
 $$
 \alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}
 $$
 <hr style="height:1em; visibility:hidden;" />
 
-**Assumption `r aA`:** (governments are weak mercantilists) $a_i \in (0, \overline{a})$ with
+**Assumption `r Aa`:** (governments are weak mercantilists) $a_i \in (0, \overline{a})$ with
 <hr style="height:1em; visibility:hidden;" />
 $$
 \overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)

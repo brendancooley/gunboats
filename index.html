@@ -731,7 +731,7 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 <h2>Results</h2>
 <hr style="height:4em; visibility:hidden;" />
 <h3 id="trade-and-war">Trade and War</h3>
-<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{\epsilon}, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
 <div class="fragment">
 <p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
 </div>
@@ -740,10 +740,10 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 <h2>Results</h2>
 <hr style="height:4em; visibility:hidden;" />
 <h3 id="trade-and-war-1">Trade and War</h3>
-<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{\epsilon}, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
 <p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
 <h3 id="shadow-of-war-in-trade-policy">Shadow of War in Trade Policy</h3>
-<p><strong>Proposition 5:</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{\epsilon}, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
+<p><strong>Proposition 5:</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{c}_j, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
 </section>
 <section id="implications" class="slide level2">
 <h2>Implications</h2>
@@ -845,7 +845,7 @@ G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau
 \alpha &lt; \frac{2}{3} \frac{\sigma}{\sigma - 1}
 \]</span>
 <hr style="height:1em; visibility:hidden;" />
-<strong>Assumption NA:</strong> (governments are weak mercantilists) <span class="math inline">\(a_i \in (0, \overline{a})\)</span> with
+<strong>Assumption 3:</strong> (governments are weak mercantilists) <span class="math inline">\(a_i \in (0, \overline{a})\)</span> with
 <hr style="height:1em; visibility:hidden;" />
 <span class="math display">\[
 \overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
@@ -882,7 +882,7 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 </section>
 <section id="Gprefs" class="slide level2">
 <h2>Government Preferences</h2>
-<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in (1, \bar{\tau})\)</span> satisfying <span class="math display">\[
+<p><strong>Lemma NA:</strong> If Assumption 3 is satisfied, then there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in [1, \bar{\tau})\)</span> satisfying <span class="math display">\[
 \tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 \]</span> where <span class="math inline">\(\tau_i^\star(a_i)\)</span> does not depend on <span class="math inline">\(\tau_j\)</span>.</p>
 <hr style="height:1em; visibility:hidden;" />
@@ -907,16 +907,16 @@ r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 </center>
 <hr style="height:1em; visibility:hidden;" />
 <p><strong>Definition 3:</strong> A <em>noncooperative equilibrium</em> is a pair of policies <span class="math inline">\(\left\{ \tau_i^\star(a_i), \tau_j^\star(a_j) \right\}\)</span> such that <span class="math display">\[
-\tau_i^\star(a_i) = \tau_i(a_i, \tau_j^\star(a_j))
+\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 \]</span> and <span class="math display">\[
-\tau_j^\star(a_j) = \tau_j(a_j, \tau_i^\star(a_i))
+\tau_j^\star(a_j) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_j; a_j)
 \]</span></p>
 <hr style="height:1em; visibility:hidden;" />
 <center>
 <hr width="50%">
 </center>
 <hr style="height:1em; visibility:hidden;" />
-<p><strong>Lemma 3:</strong> <span class="math inline">\(\tau_i^\star(a_i)\)</span> is decreasing in <span class="math inline">\(a_i \in (0, \bar{a})\)</span> with <span class="math inline">\(\tau_i^\star(\bar{a}) = 1\)</span>.</p>
+<p><strong>Lemma 3:</strong> <span class="math inline">\(\tau_i^\star(a_i)\)</span> is strictly decreasing in <span class="math inline">\(a_i\)</span>.</p>
 <p><a href="#/nce" style="float: right;">Back</a></p>
 </section>
 <section id="bargaining" class="slide level2">
