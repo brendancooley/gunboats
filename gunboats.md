@@ -67,20 +67,20 @@ Others have considered policy competition in the shadow of power more generally.
 # Environment
 
 
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` 1 `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` NA `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
 
 ## International Bargaining
 
 Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government utility can therefore be written $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits and tariff reveune.^[$\bar{a}$ is defined below.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
-Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{\epsilon}, \bar{\epsilon}]$.
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
 As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` 1 `` formalizes this intuition.
 
 
 
 **Assumption 1:** 
-$\bar{\epsilon} \leq \kappa_j$ and $c_i < \kappa_i(\bar{\epsilon})$ where $\kappa_j$ and $\kappa_i(\bar{\epsilon})$ are positive constants defined in the Appendix.
+$\bar{c}_j \leq \kappa_j$ and $c_i < \kappa_i(\bar{c}_j)$ where $\kappa_j$ and $\kappa_i(\bar{c}_j)$ are positive constants defined in the Appendix.
 
 A strategy for Government $i$ is an offer, $\tilde{\bm{\tau}}(a_i, c_i, \rho)$. A strategy for Government $j$, denoted $\omega(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a mapping between this offer and a choice of whether or not to attempt regime change
 $$
@@ -203,19 +203,19 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` NA `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
+I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` 3 `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
 
 
 
 **Assumption 3:** 
-$a_i > \ubar{a}$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix C.
+$a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix C and $\bar{a}$ is an arbitrarily large but finite number.
 
 In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
 
 
 
 **Lemma 1:** 
-If Assumption 3 is satisfied, then there exists a unique $\tau_i^\star(a_i) \in (1, \bar{\tau})$ satisfying
+If Assumption 3 is satisfied, then there exists a unique $\tau_i^\star(a_i) \in [1, \bar{\tau})$ satisfying
 $$
 \tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 $$
@@ -243,31 +243,26 @@ Figure \ref{fig:iso} depicts the government's welfare in $\left\{ \tau_i, \tau_j
 **Lemma 2:** 
 $G_i(\tau_j)$ is strictly decreasing in $\tau_j$.
 
-If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given. Their best response functions are
-$$
-\tau_i(a_i, \tau_j) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i, \tau_j; a_i)
-$$
-and
-$$
-\tau_j(a_j, \tau_i) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_i, \tau_j; a_j)
-$$
+If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given.
 
 
 
 **Definition 3:** 
 A *noncooperative equilibrium* is a pair of policies $\left\{ \tau_i^\star(a_i), \tau_j^\star(a_j) \right\}$ such that 
 $$
-\tau_i^\star(a_i) = \tau_i(a_i, \tau_j^\star(a_j))
+\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 $$
 and
 $$
-\tau_j^\star(a_j) = \tau_j(a_j, \tau_i^\star(a_i))
+\tau_j^\star(a_j) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_j; a_j)
 $$
+
+Lemma 1 ensures that these optimal policies do not depend on the other government's policy choice. Our next result shows that as governments become more liberal, their optimal tariffs fall.
 
 
 
 **Lemma 3:** 
-$\tau_i^\star(a_i)$ is decreasing in $a_i \in (0, \bar{a})$ with $\tau_i^\star(\bar{a}) = 1$.
+$\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 
 ![Government best response functions \label{fig:br}](figure/br-1.png)
 
@@ -279,7 +274,7 @@ It is clear that each government cares indirectly about the preferences of its b
 
 The optimal puppet's type solves
 $$
-\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
+\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
 $$
 
 
@@ -293,12 +288,12 @@ If a government wins a war, it will replace the vanquished government with a max
 
 If a government wins a war it adopts its optimal policy and enjoys complete access to the markets of its trading partner. This best case scenario yields the government utility
 \begin{equation*} \label{eq:Gbar}
-\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star); a_i ) = G_i(\tau_i^\star(a_i), 1; a_i)
+\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
 \end{equation*}
 
 If a government loses a war, it is replaced by a puppet and must suffer under the policies implemented by the puppet regime. This is consistent with a notion of the government as a particular amalgamation of social actors that continues to exist at the conclusion of a war. The vanquished government yields utility
 \begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j); a_i) = G_i(1, \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
 \end{equation*}
 
 These outcomes represent upper and lower utility bounds on the outcome of any coercive negotiation. Each government can be made no worse off than if it were to lose a war. And each government can secure no better bargaining outcome than if they were to (costlessly) win a war for regime change. The welfare difference between these two scenarios is taken to be $i$'s *conflict of interest* with $j$. Note that this conflict of interest, unlike standard models of bargaining and war, need not be symmetric. The "pie" at stake in the negotiation over trade policies may be valued differently by each government –- $i$’s preference intensity may be stronger than $j$’s or vice versa. This variation in preference intensity, combined with variable military power, determines bargaining outcomes.
@@ -348,35 +343,35 @@ If $j$'s conflict of interest with $i$ is small enough, then $i$ can simply offe
 **Lemma 5:** 
 If
 $$
-W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
 $$
 then
 $$
-\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right\}
 $$
 and
 $$
-\omega^\star(\tau_i^\star(a_i), 1; a_j, c_j, \rho) = \text{accept}
+\omega^\star(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_j, c_j, \rho) = \text{accept}
 $$
-for all $c_j \in [\ubar{\epsilon}, \bar{\epsilon}]$.
+for all $c_j \in [\ubar{c}_j, \bar{c}_j]$.
 
 Given our assumptions on the costs of war, we can always find a cutpoint bias type for the foreign country such that all types more liberal than the cutpoint accept $i$'s ideal point.
 
 
 
 **Lemma 6 (Zone of Peace):** 
-For every $\ubar{\epsilon} \in [ 0, \bar{\epsilon} )$ there exists a $a_j(\ubar{\epsilon}, a_i)$ such that for all $a_j \in [ a_j(\ubar{\epsilon}, a_i), \bar{a} )$ the probability of war is 0.
+For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.
 
 Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences.
 
 
 
 **Proposition 4 (Liberal Peace):** 
-$a_j(\ubar{\epsilon}, a_i)$ is weakly decreasing in $a_i$.
+$a_j(\ubar{c}_j, a_i)$ is weakly decreasing in $a_i$.
 
-Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
+Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
 
-If $a_j < a_j(\ubar{\epsilon}, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
+If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
 For any offer, the probability that $j$ will declare war is given by
 \begin{equation} \label{eq:prwar}
@@ -417,18 +412,18 @@ $\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
 
 
 **Lemma 8:** 
-$\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leqslant \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$
+$\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
 
 ![Bargaining space and pareto set \label{fig:bar}](figure/bar-1.png)
 
-The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 7, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas 1 and 2.]
+The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 7, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas NA and 2.]
 
 How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 
 
 
 **Proposition 5 (Power and Protection):** 
-If $a_j < a_j(\ubar{\epsilon}, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
 
@@ -569,13 +564,13 @@ L_j^x + L_j^y = L
 
 
 
-I restrict $j$'s costs of war such that there exists some government $j$ with $a_j \in [0, \bar{a})$ that would be willing to fight if victory were certain and $i$ offered its ideal point. Formally, this requires
+I restrict $j$'s costs of war such that there exists some government $j$ with $a_j \in (\ubar{a}, \bar{a}]$ that would be willing to fight if victory were certain and $i$ offered its ideal point. Formally, this requires
 $$
-\kappa_j = \Gamma_j(0, \bar{a})
+\kappa_j = \Gamma_j(\ubar{a}, a_i)
 $$
 I then restrict $i$'s costs of war to ensure that it never offers $j$'s ideal point -- an interior solution exists outside of the zone of peace. Formally, this requires
 $$
-\kappa_i(\bar{\epsilon}, a_i) = \min_{\tilde{\bm{\tau}} \in \mathcal{P}} - \bar{\epsilon} \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} }
+\kappa_i(\bar{c}_j, a_i) = \min_{\tilde{\bm{\tau}} \in \mathcal{P}} - \bar{c}_j \left( 1 - F \left( W_j(\ubar{a}, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} }
 $$
 Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this quantity is guaranteed to be positive.
 
@@ -626,7 +621,7 @@ If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) 
 
 
 
-**Lemma 1:** 
+**Lemma NA:** 
 *TODO define constants*
 
 The result follows from a series of Lemmas.

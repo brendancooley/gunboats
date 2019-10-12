@@ -159,10 +159,6 @@ AddxProofs <- LETTERS[a]
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-rm(tradeM)
-rm(tradeF)
-rm(tradeUF)
-rm(wars)
 save.image('references.RData')
 
 ```

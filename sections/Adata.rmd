@@ -4,6 +4,11 @@ source("../figs/emp_wars.R")
 
 tradeRDplot
 
+rm(tradeM)
+rm(tradeF)
+rm(tradeUF)
+rm(wars)
+
 ```
 
 ```{r comdempeace, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:comdempeace}", fig.height=8.5, dpi=750, cache=TRUE}

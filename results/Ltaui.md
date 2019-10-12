@@ -1,1 +1,1 @@
-$\tau_i^\star(a_i)$ is decreasing in $a_i$.
+$\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
