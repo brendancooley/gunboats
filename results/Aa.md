@@ -1,1 +1,1 @@
-$a_i > \ubar{a}$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix `r AddxDefinitions`.
+$a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix `r AddxDefinitions` and $\bar{a}$ is an arbitrarily large but finite number.

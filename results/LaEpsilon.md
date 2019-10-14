@@ -1,1 +1,1 @@
-For every $\ubar{\epsilon} \in [ 0, \bar{\epsilon} )$ there exists a $a_j(\ubar{\epsilon}, a_i)$ such that for all $a_j \in [ a_j(\ubar{\epsilon}, a_i), \bar{a} )$ the probability of war is 0.
+For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.

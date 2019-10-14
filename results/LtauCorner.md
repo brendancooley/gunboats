@@ -1,13 +1,13 @@
 If
 $$
-W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
 $$
 then
 $$
-\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right\}
 $$
 and
 $$
-\omega^\star(\tau_i^\star(a_i), 1; a_j, c_j, \rho) = \text{accept}
+\omega^\star(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_j, c_j, \rho) = \text{accept}
 $$
-for all $c_j \in [\ubar{\epsilon}, \bar{\epsilon}]$.
+for all $c_j \in [\ubar{c}_j, \bar{c}_j]$.

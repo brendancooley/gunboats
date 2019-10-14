@@ -4,7 +4,7 @@ Here and in the Analysis section, I relegate proofs and derivations of key quant
 
 Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government utility can therefore be written $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits and tariff reveune.^[$\bar{a}$ is defined below.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
-Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{\epsilon}, \bar{\epsilon}]$.
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
 As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` `r AwCosts` `` formalizes this intuition.
 
@@ -114,16 +114,16 @@ DeeqText <- knit_child("../results/Deeq.md")
 
 **Definition `r eeqD`:** `r DeeqText`
 
-There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r aAlpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
+There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r Aalpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
-```{r aAlpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-aAlpha <- Atick
+```{r Aalpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+Aalpha <- Atick
 Atick <- Atick + 1
 
 AalphaText <- knit_child("../results/Aalpha.md")
 ```
 
-**Assumption `r aAlpha`:** `r AalphaText`
+**Assumption `r Aalpha`:** `r AalphaText`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 eeqP <- Ptick
@@ -145,7 +145,7 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` `r aA` `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
+I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` `r Aa` `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
 
 ```{r aA, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Aa <- Atick
@@ -159,10 +159,10 @@ AaText <- knit_child("../results/Aa.md")
 In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-qccv <- Ltick
+Lqccv <- Ltick
 Ltick <- Ltick + 1
 
 LqccvText <- knit_child("../results/Lqccv.md")
 ```
 
-**Lemma `r qccv`:** `r LqccvText`
+**Lemma `r Lqccv`:** `r LqccvText`

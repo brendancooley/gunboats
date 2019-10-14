@@ -62,6 +62,7 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
 :root {
   --font_body: "AlegreyaSans";
   --font_head: "AlegreyaSC";
+  --color_front: #fff;
   --color_head: #0C1A38;
   --color_accent: #bd8e28;
   --color_accent_hover: #8b681d;
@@ -165,26 +166,33 @@ body {
 }
 
 .reveal .cover-top {
-  border-left: 4px solid var(--color_head);
+  border-left: 4px solid var(--color_front);
   padding-left: 10px;
 }
+
 .reveal .cover-top h1 {
   font-size: 1.5em;
   text-align: left;
   font-family: var(--font_head);
-  color: var(--color_head);
+  color: var(--color_front);
+}
+.reveal .cover-top h2 {
+  font-size: 1em;
+  text-align: left;
+  font-family: var(--font_head);
+  color: var(--color_front);
 }
 .reveal .cover-top h3 {
   font-size: .75em;
   text-align: left;
   font-family: var(--font_head);
-  color: var(--color_head);
+  color: var(--color_front);
 }
 
 .reveal .cover-bottom {
   position: fixed;
   bottom: 10%;
-  border-left: 4px solid var(--color_head);
+  border-left: 4px solid var(--color_front);
   padding-left: 10px;
 }
 .reveal .cover-bottom h3 {
@@ -192,7 +200,7 @@ body {
   text-align: left;
   line-height: 1em;
   font-family: var(--font_head);
-  color: var(--color_head);
+  color: var(--color_front);
 }
 
 /*********************************************

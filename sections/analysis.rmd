@@ -33,14 +33,7 @@ LtaujText <- knit_child("../results/Ltauj.md")
 
 **Lemma `r tauj`:** `r LtaujText`
 
-If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given. Their best response functions are
-$$
-\tau_i(a_i, \tau_j) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i, \tau_j; a_i)
-$$
-and
-$$
-\tau_j(a_j, \tau_i) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_i, \tau_j; a_j)
-$$
+If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 nceq <- Dtick
@@ -50,6 +43,8 @@ DnceqText <- knit_child("../results/Dnceq.md")
 ```
 
 **Definition `r nceq`:** `r DnceqText`
+
+Lemma `r Lqccv` ensures that these optimal policies do not depend on the other government's policy choice. Our next result shows that as governments become more liberal, their optimal tariffs fall.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 taui <- Ltick
@@ -74,7 +69,7 @@ It is clear that each government cares indirectly about the preferences of its b
 
 The optimal puppet's type solves
 $$
-\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
+\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
 $$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -92,12 +87,12 @@ If a government wins a war, it will replace the vanquished government with a max
 
 If a government wins a war it adopts its optimal policy and enjoys complete access to the markets of its trading partner. This best case scenario yields the government utility
 \begin{equation*} \label{eq:Gbar}
-\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star); a_i ) = G_i(\tau_i^\star(a_i), 1; a_i)
+\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
 \end{equation*}
 
 If a government loses a war, it is replaced by a puppet and must suffer under the policies implemented by the puppet regime. This is consistent with a notion of the government as a particular amalgamation of social actors that continues to exist at the conclusion of a war. The vanquished government yields utility
 \begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j); a_i) = G_i(1, \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
 \end{equation*}
 
 These outcomes represent upper and lower utility bounds on the outcome of any coercive negotiation. Each government can be made no worse off than if it were to lose a war. And each government can secure no better bargaining outcome than if they were to (costlessly) win a war for regime change. The welfare difference between these two scenarios is taken to be $i$'s *conflict of interest* with $j$. Note that this conflict of interest, unlike standard models of bargaining and war, need not be symmetric. The "pie" at stake in the negotiation over trade policies may be valued differently by each government –- $i$’s preference intensity may be stronger than $j$’s or vice versa. This variation in preference intensity, combined with variable military power, determines bargaining outcomes.
@@ -177,9 +172,9 @@ PwarText <- knit_child("../results/Pwar.md")
 
 **Proposition `r Pwar` (Liberal Peace):** `r PwarText`
 
-Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
+Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
 
-If $a_j < a_j(\ubar{\epsilon}, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
+If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
 For any offer, the probability that $j$ will declare war is given by
 \begin{equation} \label{eq:prwar}
