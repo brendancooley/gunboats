@@ -9,6 +9,9 @@ import helpers
 templatePath = "~/Dropbox\ \(Princeton\)/8_Templates/"
 website_docs = "~/Dropbox\ \(Princeton\)/5_CV/website/static/docs"
 softwarePath = "~/Dropbox\ \(Princeton\)/14_Software/"
+verticatorPath = "~/Dropbox\ \(Princeton\)/8_Templates/plugin/verticator"
+pluginDest = "index_files/reveal.js-3.3.0.1/plugin"
+revealPath = "~/Dropbox\ \(Princeton\)/8_Templates/reveal.js-3.8.0"
 
 def task_source():
     yield {
@@ -55,11 +58,24 @@ def task_slides():
     		'name': "collecting references...",
     		'actions':["R --slave -e \"rmarkdown::render('gunboats_slides.Rmd', output_file='index.html')\""]
         }
+    # build slides, migrate verticator plugin, get new version of reveal.js and rewrite paths in index.html
     yield {
 		'name': "writing slides...",
-		'actions': ["R --slave -e \"rmarkdown::render('gunboats_slides.Rmd', output_file='index.html')\""],
+		'actions': ["R --slave -e \"rmarkdown::render('gunboats_slides.Rmd', output_file='index.html')\"",
+            "cp -a " + verticatorPath + " " + pluginDest,
+            "perl -pi -w -e 's{reveal.js-3.3.0.1}{reveal.js-3.8.0}g' index.html",
+            "cp -r " + revealPath + " index_files/"],
 		'verbosity': 2,
 	}
+
+def task_slides_test():
+    # test pandoc build after rmd for updated revealjs version
+    yield {
+        'name': "writing slides (test)...",
+        'actions': ["R --slave -e \"set.seed(100);knitr::knit('gunboats_slides.rmd')\"",
+                    "pandoc -t html5 -s --template=css/cooley-reveal.html --section-divs -o index.html gunboats_slides.md --mathjax --include-in-header=css/cooley-reveal.css -V revealjs-url=index_files/reveal.js-3.8.0/"],
+        'verbosity': 2,
+    }
 
 def task_other():
     otherFiles = helpers.getFiles("other/")

@@ -31,9 +31,9 @@ $highlighting-css$
 </style>
 $endif$
 
-$if(theme)$
+<!-- $if(theme)$
 <link rel="stylesheet" href="$revealjs-url$/css/theme/$theme$.css" id="theme">
-$endif$
+$endif$ -->
 
 $if(theme-dark)$
 <style type="text/css">
@@ -99,6 +99,9 @@ $for(css)$
     <link rel="stylesheet" href="$css$"/>
 $endfor$
 $endif$
+
+<!-- add verticator css-->
+<link rel="stylesheet" href="css/verticator.css"/>
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -515,6 +518,7 @@ $for(include-before)$
 $include-before$
 $endfor$
   <div class="reveal">
+  	<ul class="verticator"></ul>
     <div class="slides">
 
 $if(title)$

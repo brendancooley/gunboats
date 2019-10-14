@@ -12,6 +12,8 @@ biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
 
+revealjs-url: "index_files/reveal.js-3.8.0"
+
 output:
   revealjs::revealjs_presentation:
     template: "css/cooley-reveal.html"
@@ -21,10 +23,11 @@ output:
     self_contained: false
     # reveal_plugins: ["notes"]
     lib_dir: index_files
+    revealjs-url: "index_files/reveal.js-3.8.0"
     reveal_options:
       slideNumber: false
       progress: false
-      controls: false
+      controls: true
     includes:
       after_body: css/plugins.html
 ---
@@ -42,6 +45,7 @@ ipak(libs)
 
 # TODO: speaker notes don't work with incremental reveal
 # TODO: nested bulleted lists disappear after compilation, fine when knitting
+# TODO: verticator seems to index by section...incremental bullets create fragments and confuse it, not currently working
 
 Akappa <- "NA"
 
@@ -54,6 +58,8 @@ source('figs/source.R')
 source('figs/params.R')
 
 ```
+
+# Vertical Test (I)
 
 ## Trade and War: Received Wisdom {id="intro"}
 
@@ -139,6 +145,8 @@ source('figs/params.R')
 <p class="center">*Trade and peace are correlated, but not because trade causes peace*</p>
 
 <a href="#/literature" style="float: right;">Literature</a>
+
+# Vertical Test (II)
 
 ## Bargaining Environment
 
