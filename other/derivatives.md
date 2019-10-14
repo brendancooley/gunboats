@@ -37,7 +37,7 @@ $$
 &= (\sigma - 1) x_{ii}^\star(\tau_i) \chi(\tau_i) \tau_i^{-\sigma}
 \end{align*}
 
-Noting $x_{ij}^\star = \tau_i^{-\sigma} x_{ii}^\star(\tau_i)$, 
+Noting $x_{ij}^\star = \tau_i^{-\sigma} x_{ii}^\star(\tau_i)$,
 $$
 \frac{\partial x_{ij}^\star}{\partial \tau_i} = - \sigma \tau_i^{-\sigma - 1} x_{ii}^\star(\tau_i) + \tau_i^{-\sigma} \frac{\partial x_{ii}^\star}{\partial \tau_i}
 $$
@@ -45,7 +45,7 @@ $$
 **Firm Profits**
 
 $$
-\frac{\partial \Pi_i}{\partial \tau_i} = p \frac{\partial x_{ii}^\star}{\partial \tau_i} 
+\frac{\partial \Pi_i}{\partial \tau_i} = p \frac{\partial x_{ii}^\star}{\partial \tau_i}
 $$
 
 **Tariff Revenue**
