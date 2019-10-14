@@ -114,7 +114,7 @@ source('figs/params.R')
 - Efforts to address externalities can include threats, displays, and uses of military force
     + Bargaining critique [@Fearon1995]: absence of war does not imply absence of coercion
 
-## A Theory of Trade Policy in the Shadow of Power {id="overview"}
+## A Theory of Trade Policy in the Shadow of Power
 
 **Model**
 
@@ -191,7 +191,7 @@ rm(wars)
 
 ```
 
-# Model Overview
+# Model Overview {id="overview"}
 
 - Two goverments ($i, j$), ultimatum bargaining
 
@@ -239,18 +239,10 @@ rm(wars)
 
 - "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2$
 - Foreign accepts or rejects
+- Information about $j$'s costs of war ($c_j$) held privately, distributed uniform on $[\ubar{c}_j, \bar{c}_j]$
 
 </div>
 <div class="fragment">
-
-- Information about $j$'s costs of war ($c_j$) held privately, distributed  $f(c_j)$
-
-</div>
-<div class="fragment">
-
-<hr style="height:1em; visibility:hidden;" />
-
-<center><hr width="50%"></center>
 
 **Definition `r beq`:** A subgame perfect *bargaining equilibrium* is pair of strategies, $\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)$ such that
 $$
@@ -261,84 +253,160 @@ $$
 \widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G}_i \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
 $$
 
-<hr style="height:1em; visibility:hidden;" />
-
-<center><hr width="50%"></center>
-
-<hr style="height:1em; visibility:hidden;" />
-
 - $\widetilde{G}$ government utility
 - $\rho \in [0, 1]$ probability $i$ wins war (military strength)
 
 </div>
+<div class="fragment">
 
-# Economy
+**Assumption `r AwCosts`:** `r AwCostsText`
+
+</div>
+
+# Economy (I) {id="economy"}
+
+<div class="fragment">
 
 **Primitives**
 
 - Factor endowments: $L_i = L_j = L$
 - Income: $I_i = w_i L_i + r_i(\tau_i)$
-- Mass of firms indexed $\nu_i$, $\int_{\nu_i} d \nu_i = \int_{\nu_j} d \nu_j = 1$
+- Mass of industrial firms indexed $\nu_i$
+    + $\int_{\nu_i} d \nu_i = \int_{\nu_j} d \nu_j = 1$
+    + *No entry $\implies$ positive profits in equilibrium* (short-run)
+
+</div>
+<div class="fragment">
 
 **Consumption**
+
+- Agricultural consumption: $Y_i$
+- Cobb-Douglas upper-level preferences
 
 \begin{equation} \label{eq:cMax}
 \begin{split}
 \max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i X_i + Y_i \leq w_i L \\
-& \quad X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
+\text{subject to} & \quad P_i X_i + Y_i \leq w_i L
 \end{split}
 \end{equation}
+
+</div>
+<div class="fragment">
+
+## Economy (II)
+
+**Consumption (Continued)**
+
+- Industrial consumption: $P_i X_i = \alpha I_i$
+- Constant elasticity of substitution (CES) preferences over industrial varieties
+
+\begin{equation} \label{eq:CES}
+X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}}
+\end{equation}
+
+\begin{equation} \label{eq:P}
+P_i = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j} p_{ij}(\nu_j)^{1-\sigma} d \nu_j \right)^{\frac{1}{1 - \sigma}}
+\end{equation}
+
+- Indirect utility
+
+\begin{equation} \label{eq:V}
+V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
+\end{equation}
+
+## Economy (III)
+
+**Tariffs and Prices**
+
+$$
+p_{ij} = \tau_i p_j(\nu_j)
+$$
+
+- $p_{ij}$ price in country $i$ of industrial goods produced in $j$ 
+- $\tau_i - 1$ ad valorem tariff imposed by $i$ on industrial imports from $j$
+
+. . .
 
 **Production**
 
 \begin{equation} \label{eq:Pi}
 \begin{split}
-\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
-\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
-& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\max_{p_i(\nu_i)} & \quad \Pi_i \left( p_i(\nu_i) \right) = \left( p_i(\nu_i) - w_i \right) \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(\nu_i) = p_i(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i \\
+& \quad x_{ji}^\star(\nu_i) = (\tau_j p_i(\nu_i))^{-\sigma} P_j^{\sigma - 1} \alpha I_i
 \end{split}
 \end{equation}
 
-**Revenue**
+- $x_{ii}^\star(\nu_i)$ - domestic consumption of variety $\nu_i$
+- $x_{ji}^\star(\nu_i)$ - exports of variety $\nu_i$
+
+. . .
+
+**Tariff Revenue**
 
 \begin{equation} \label{eq:revenue}
-r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 \end{equation}
 
-## Domestic Political Economy {id="dpe"}
+- $x_{ij}^\star(\tau_i p_j)$ - total industrial imports
 
-**Government Preferences**
+## Economic Equilibrium
+
+- $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ 
+- $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$
+
+. . . 
+
+**Definition `r eeqD`:** `r DeeqText`
+
+. . . 
+
+**Assumption `r Aalpha`:** `r AalphaText`
+
+. . . 
+
+**Proposition `r eeqP`:** `r PeeqText`
+
+. . .
+
+- Wages constant, positive tariffs...
+    + raise revenue
+    + increase industry profits
+    + *do not manipulate terms of trade* [@Bagwell1999]
+
+# Domestic Political Economy {id="dpe"}
+
+<div class="fragment">
+
+**Government Preferences (I)**
 
 <hr style="height:1em; visibility:hidden;" />
 
 \begin{equation} \label{eq:G}
-G_i(\tau_i, \tau_j | a_i) = a_i V_i^x(\tau_i) + \Pi_i(\tau_i, \tau_j) + r_i(\tau_i)
+G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 \end{equation}
 
 <hr style="height:1em; visibility:hidden;" />
 
-- $V_i^x(\tau_i)$ - consumer welfare
-    - decreasing in $\tau_i$
+- $V_i(\tau_i)$ - consumer welfare
 - $\Pi_i(\tau_i, \tau_j)$ - firm profits
     - increasing in $\tau_i$, decreasing in $\tau_j$
-- $r_i(\tau_i)$ - tariff revenue
-    - non-monotonic in $\tau_i$
 
 <p class="center">*$a_i$ is measure of government's sensitivity to interests of consumers*</p>
 
-<a href="#/assumptions" style="float: right;">Assumptions</a>
+</div>
+<div class="fragment">
 
-. . .
+**Assumption `r Aa`:** `r AaText`
 
-**International Economy**
+</div>
+<div class="fragment">
 
-- Representative consumer and $n$ firms in each economy, monopolistic competition
-    - Krugman 1980, Venables 1987, Ossa 2012
+**Lemma `r Lqccv`:** `r LqccvText`
 
-<a href="#/economy" style="float: right;">Economy</a>
+</div>
 
-## Government Preferences I
+## Government Preferences (II)
 
 ```{r G1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
 
@@ -348,7 +416,7 @@ Gplot1
 
 ```
 
-## Government Preferences I
+## Government Preferences (II)
 
 ```{r G2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
 
@@ -356,7 +424,7 @@ Gplot2
 
 ```
 
-## Government Preferences I
+## Government Preferences (II) {id="objective"}
 
 ```{r G3, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5.5, dpi=300}
 
@@ -364,7 +432,7 @@ Gplot3
 
 ```
 
-## Government Preferences II
+## Government Preferences (III)
 
 ```{r iso1, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
 
@@ -374,7 +442,7 @@ isoPlot1
 
 ```
 
-## Government Preferences II {id="iso"}
+## Government Preferences (III) {id="iso"}
 
 ```{r iso2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
 
@@ -382,9 +450,16 @@ isoPlot2
 
 ```
 
-<a href="#/Gprefs" style="float: right;">Results</a>
+## Government Preferences (IV) {.centercontent}
 
-## Noncooperative Equilibrium {id="nce"}
+- **Lemma `r tauj`:** `r LtaujText`
+- **Lemma `r taui`:** `r LtauiText`
+
+## Noncooperative Equilibrium (I) {.centercontent id="nce"}
+
+**Definition `r nceq`:** `r DnceqText`
+
+## Noncooperative Equilibrium (II)
 
 ```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
 
@@ -392,39 +467,50 @@ brPlot
 
 ```
 
-<a href="#/nceDef" style="float: right;">Definition</a>
+# Conflicts of Interest and Regime Change (I) {id="regimeChange"}
 
-## Conflicts of Interest and Regime Change
+<div class="fragment">
 
 **Optimal Puppet Regimes**
 
+$$
+\max_{a \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+$$
+
 - When a government wins a war, it earns the right to replace the vanquished government with a "puppet" that prefers lower barriers to trade
-
-<hr style="height:1em; visibility:hidden;" />
-$$
-\max_{a \in (0, \overline{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
-$$
-<hr style="height:1em; visibility:hidden;" />
-
 - Losing governments have puppet's policies imposed on them
 
-. . .
+</div>
+<div class="fragment">
+
+**War Outcomes**
+
+\begin{equation*} \label{eq:Gbar}
+\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\end{equation*}
+
+\begin{equation*} \label{eq:Gubar}
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
+\end{equation*}
+
+</div>
+<div class="fragment">
 
 **Conflicts of Interest**
-
-- Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet
-
-<hr style="height:1em; visibility:hidden;" />
 
 \begin{equation} \label{eq:Gamma}
 \Gamma_i(a_i, a_j) = \overline{G}_i(a_i) - \underline{G}_i(a_i, a_j)
 \end{equation}
 
-. . .
+- Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet
+
+</div>
+
+## Conflicts of Interest and Regime Change (II) {.centercontent}
 
 **Proposition `r Pgamma`:** `r PgammaText`
 
-## Bargaining Environment {id="barEnv"}
+## Bargaining Environment (I) {id="barEnv"}
 
 ```{r bar, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
 
@@ -434,11 +520,17 @@ barPlot
 
 ```
 
-<a href="#/bargaining" style="float: right;">Bargaining</a>
+## Bargaining Environment (II)
 
-## Results
+**War Values**
 
-<hr style="height:4em; visibility:hidden;" />
+\begin{align*}
+\hat{G}_j(a_j, a_i) &= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j &= (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
+\end{align*}
+
+- $(1 - \rho)$ - probability $j$ wins the war
+
+# Results {id="results"}
 
 ### Trade and War
 
@@ -463,21 +555,23 @@ barPlot
 
 **Proposition `r PeqTau`:** `r PeqTauText`
 
-## Implications {id="implications"}
+# Implications {id="implications"}
 
 **Preferences, Institutions, and the Democratic Peace**
+
+<div class="fragment">
 
 - Hypothesis: Democracies more liberal in trade policy preferences than autocracies
     + Democratic political institutions and consumer influence over policymaking [@Mayer1984; @Grossman1996; @Milner2005]
 
-. . .
+</div>
+<div class="fragment">
 
 - Conclusion: Democracies trade more, fight less
     + Democratic peace: @Oneal1999, @Reiter2017
 
-<p style="text-align: right;"><a href="#/comDemPeace">Commercial-Democratic Peace</a></p>
-
-. . .
+</div>
+<div class="fragment">
 
 **Shadow of Power in International Political Economy**
 
@@ -485,10 +579,13 @@ barPlot
     + Domestic political interests
     + Foreign military constraints
 
-. . .
+</div>
+<div class="fragment">
 
 - Trade policies *are not* a sufficient statistic for government preferences
     + @Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015
+
+</div>
 
 ## Conclusion
 
@@ -499,7 +596,7 @@ barPlot
 - *Given* a conflict of interest, what prevents peaceful settlement? [@Fearon1995]
 - What do governments want? and why do their objectives bring them into conflict with one another? [@Moravcsik1997]
 
-## Thank You  {.aligncenter}
+# Thank You  {.aligncenter}
 
 [brendancooley.com](http://brendancooley.com)
 
@@ -507,100 +604,33 @@ barPlot
 
 <small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
 
-## Assumptions {id="assumptions"}
-
-<hr style="height:2em; visibility:hidden;" />
-
-**Assumption `r Akappa`:** (costs of war are bounded) $c_i < \kappa$ where $\kappa$ is a postive constant defined in the Appendix.
-
-**Assumption `r Aalpha`:** (agricultural sector sufficiently large)
-<hr style="height:1em; visibility:hidden;" />
-$$
-\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}
-$$
-<hr style="height:1em; visibility:hidden;" />
-
-**Assumption `r Aa`:** (governments are weak mercantilists) $a_i \in (0, \overline{a})$ with
-<hr style="height:1em; visibility:hidden;" />
-$$
-\overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
-$$
-<hr style="height:1em; visibility:hidden;" />
-
-<a href="#/dpe" style="float: right;">Back</a>
-
-## Government Preferences {id="Gprefs"}
-
-**Lemma `r qccv`:** `r LqccvText`
-
-<hr style="height:1em; visibility:hidden;" />
-
-<center><hr width="50%"></center>
-
-<hr style="height:1em; visibility:hidden;" />
-
-**Lemma `r tauj`:** `r LtaujText`
-
-<a href="#/iso" style="float: right;">Back</a>
-
-## Noncooperative Equilibrium {id="nceDef"}
-
-**Best Responses Functions**
-
-$$
-\tau_i(a_i, \tau_j) = \text{argmax}_{\tau_i \in [1, \overline{\tau}]} G_i(\tau_i, \tau_j; a_i)
-$$
-and
-$$
-\tau_j(a_j, \tau_i) = \text{argmax}_{\tau_j \in [1, \overline{\tau}]} G_j(\tau_i, \tau_j; a_j)
-$$
-
-<hr style="height:1em; visibility:hidden;" />
-
-<center><hr width="50%"></center>
-
-<hr style="height:1em; visibility:hidden;" />
-
-**Definition `r nceq`:** `r DnceqText`
-
-<hr style="height:1em; visibility:hidden;" />
-
-<center><hr width="50%"></center>
-
-<hr style="height:1em; visibility:hidden;" />
-
-**Lemma `r taui`:** `r LtauiText`
-
-<a href="#/nce" style="float: right;">Back</a>
-
-## Bargaining {id="bargaining"}
-
-**Successful Regime Change**
-
-<hr style="height:1em; visibility:hidden;" />
-\begin{equation} \label{eq:Gbar}
-\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star) | a_i ) = G_i(\tau_i^\star(a_i), 1 | a_i)
-\end{equation}
-<hr style="height:1em; visibility:hidden;" />
-
-**Foreign Imposition of Regime Change**
-
-<hr style="height:1em; visibility:hidden;" />
-\begin{equation} \label{eq:Gubar}
-\underline{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j) | a_i) = G_i(1, \tau_j^\star(a_j) | a_i)
-\end{equation}
-<hr style="height:1em; visibility:hidden;" />
-
-**Foreign Government's Expected Utility for War**
-
-<hr style="height:1em; visibility:hidden;" />
-$$
-\widehat{G}_j(a_j, a_i) = (1 - \rho) \overline{G}_j(a_j) + \rho \underline{G}_j(a_j, a_i) - c_j
-$$
-<hr style="height:1em; visibility:hidden;" />
-
-<a href="#/barEnv" style="float: right;">Back</a>
+# Table of Contents {id="toc"}
 
 
 
-<hr style="height:5em; visibility:hidden;" />
+<div id="left">
+
+**Sections**
+
+1. <a href="#/intro">Introduction</a>
+2. <a href="#/overview">Model Overview</a>
+3. <a href="#/economy">International Economy</a>
+4. <a href="#/dpe">Domestic Political Economy</a>
+5. <a href="#/regimeChange">Regime Change</a>
+6. <a href="#/results">Results</a>
+7. <a href="#/implications">Discussion</a>
+</div>
+
+<div id="right">
+
+**Quick Links**
+
+1. <a href="#/comDemPeace">Commercial-Democratic Peace</a>
+2. <a href="#/tradeRD">Trade and War</a>
+3. <a href="#/objective">Objective Function</a>
+4. <a href="#/iso">Iso-Welfare Curves</a>
+5. <a href="#/barEnv">Bargaining Environment</a>
+</div>
+
+<!-- hide references -->
+<hr style="height:30em; visibility:hidden;" />

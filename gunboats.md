@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -176,7 +176,7 @@ Consumers lend their labor endowment to the manufacturing and agricultural secto
 
 
 **Definition 2:** 
-An *economic equilibrium* is a function $h : \left\{ \bm{\tau} \right\} \rightarrow \left\{ \bm{w}, \bm{L} \right\}$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices (\ref{eq:prices}) and demands (\ref{eq:demand}).^[These conditions are enumerated in Appendix B.]
+An *economic equilibrium* is a function $h : \left\{ \bm{\tau} \right\} \rightarrow \left\{ \bm{w}, \bm{L} \right\}$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices and corresponding demands.
 
 There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption 2 guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
@@ -190,7 +190,7 @@ $$
 
 
 **Proposition 1:** 
-If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.
+If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[These conditions are enumerated in Appendix B.]
 
 ### Government Preferences
 

@@ -132,7 +132,7 @@ Ptick <- Ptick + 1
 PeeqText <- knit_child('../results/Peeq.md')
 ```
 
-**Proposition `r eeqP`:** `r PeeqText`
+**Proposition `r eeqP`:** `r PeeqText`^[These conditions are enumerated in Appendix `r AddxEconomy`.]
 
 ### Government Preferences
 

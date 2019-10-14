@@ -129,7 +129,8 @@ body {
 
 
 .reveal .centercontent ol,
-.reveal .centercontent ul {
+.reveal .centercontent ul,
+.reveal .centercontent p {
   position: fixed;
   top: 50%;
   -ms-transform: translateY(-50%);
