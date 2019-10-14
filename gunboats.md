@@ -343,7 +343,7 @@ If $j$'s conflict of interest with $i$ is small enough, then $i$ can simply offe
 **Lemma 5:** 
 If
 $$
-W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
 then
 $$

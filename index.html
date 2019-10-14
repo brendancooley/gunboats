@@ -566,7 +566,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </ul></li>
 <li>Ultimatum Coercive Bargaining
 <ul>
-<li><span class="citation" data-cites="Fearon1995">Fearon (1995)</span></li>
+<li><span class="citation" data-cites="Fearon1995">Fearon (1995)</span>, <span class="citation" data-cites="Fey2019">Fey and Kenkel (2019)</span></li>
 </ul></li>
 </ul>
 <div class="fragment">
@@ -631,7 +631,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 </div>
 </section></section>
 <section><section id="overview" class="title-slide slide level1"><h1>Model Overview</h1><ul>
-<li>Two goverments (<span class="math inline">\(i, j\)</span>), ultimatum bargaining</li>
+<li>Two goverments (<span class="math inline">\(i, j\)</span>), ultimatum bargaining over tariffs</li>
+<li>Payoffs depend on international economic effects of tariffs and latent protectionism of governments</li>
 </ul>
 <div class="fragment">
 <p><strong>International Economy</strong></p>
@@ -848,7 +849,6 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </section><section id="iso" class="slide level2">
 <h2>Government Preferences (III)</h2>
 <p><img src="index_files/figure-revealjs/iso2-1.png" width="2400" /></p>
-<p><a href="#/Gprefs" style="float: right;">Results</a></p>
 </section><section id="government-preferences-iv" class="slide level2 centercontent">
 <h2>Government Preferences (IV)</h2>
 <ul>
@@ -865,7 +865,6 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </section><section id="noncooperative-equilibrium-ii" class="slide level2">
 <h2>Noncooperative Equilibrium (II)</h2>
 <p><img src="index_files/figure-revealjs/br-1.png" width="2400" /></p>
-<p><a href="#/nceDef" style="float: right;">Definition</a></p>
 </section></section>
 <section><section id="regimeChange" class="title-slide slide level1"><h1>Conflicts of Interest and Regime Change (I)</h1><div class="fragment">
 <p><strong>Optimal Puppet Regimes</strong></p>
@@ -894,36 +893,78 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <ul>
 <li>Utility difference between (costlessly) winning a war for regime change and being replaced by a puppet</li>
 </ul>
-</div></section><section id="conflicts-of-interest-and-regime-change-ii" class="slide level2">
+</div></section><section id="conflicts-of-interest-and-regime-change-ii" class="slide level2 centercontent">
 <h2>Conflicts of Interest and Regime Change (II)</h2>
 <p><strong>Proposition 3:</strong> <span class="math inline">\(\Gamma_i(a_i, a_j)\)</span> is decreasing in <span class="math inline">\(a_i\)</span>, <span class="math inline">\(a_j\)</span></p>
-<div class="fragment">
+</section><section id="barEnv" class="slide level2">
+<h2>Bargaining Environment (I)</h2>
+<p><img src="index_files/figure-revealjs/bar-1.png" width="2400" /></p>
+</section><section id="bargaining-environment-ii" class="slide level2">
+<h2>Bargaining Environment (II)</h2>
 <p><strong>War Values</strong></p>
 <p><span class="math display">\[\begin{align*}
-\hat{G}_j(a_j, a_i) &amp;= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j &amp;= (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
+\hat{G}_j(a_j, a_i) &amp;= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j \\ 
+&amp;= (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
 \end{align*}\]</span></p>
 <ul>
 <li><span class="math inline">\((1 - \rho)\)</span> - probability <span class="math inline">\(j\)</span> wins the war</li>
 </ul>
-</div>
-</section><section id="barEnv" class="slide level2">
-<h2>Bargaining Environment</h2>
-<p><img src="index_files/figure-revealjs/bar-1.png" width="2400" /></p>
-</section></section>
-<section><section id="results" class="title-slide slide level1"><h1>Results</h1></section><section id="trade-and-war" class="slide level3">
-<h3>Trade and War</h3>
-<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
 <div class="fragment">
-<p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
+<p><strong>Lemma 4:</strong> <span class="math display">\[
+\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) = \begin{cases}
+\text{war} &amp; \text{if } \hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) \\
+\text{accept} &amp; \text{otherwise}
+\end{cases}
+\]</span></p>
 </div>
-</section><section id="results-1" class="slide level2">
-<h2>Results</h2>
-<hr style="height:4em; visibility:hidden;" />
-<h3 id="trade-and-war-1">Trade and War</h3>
-<p><strong>Proposition 4:</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
-<p><strong>Proposition 6:</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
-<h3 id="shadow-of-war-in-trade-policy">Shadow of War in Trade Policy</h3>
-<p><strong>Proposition 5:</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{c}_j, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
+</section></section>
+<section><section id="results" class="title-slide slide level1"><h1>Results</h1><div class="fragment">
+<p><strong>Liberal Peace</strong></p>
+<p><strong>Lemma 5:</strong> If <span class="math display">\[
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
+\]</span> then <span class="math display">\[
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right\}
+\]</span> and <span class="math display">\[
+\omega^\star(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_j, c_j, \rho) = \text{accept}
+\]</span> for all <span class="math inline">\(c_j \in [\ubar{c}_j, \bar{c}_j]\)</span>.</p>
+</div>
+<div class="fragment">
+<p><strong>Lemma 6 (Zone of Peace):</strong> For every <span class="math inline">\(\ubar{c}_j \in [ 0, \bar{c}_j )\)</span> there exists a <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> such that for all <span class="math inline">\(a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )\)</span> the probability of war is 0.</p>
+</div></section><section id="liberal-peace" class="slide level2 centercontent">
+<h2>Liberal Peace</h2>
+<p><strong>Proposition 4 (Liberal Peace):</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+</section><section id="power-and-protection-i" class="slide level2">
+<h2>Power and Protection (I)</h2>
+<p><strong>Probability of War</strong></p>
+<p><span class="math display">\[\begin{equation} \label{eq:prwar}
+\begin{split}
+\text{Pr} \left\{ c_j \leq W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right\} = F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right)
+\end{split}
+\end{equation}\]</span></p>
+<div class="fragment">
+<p><strong>War Value (<span class="math inline">\(i\)</span>)</strong></p>
+<p><span class="math display">\[
+\hat{G}_i(a_i, a_j) = \rho \Gamma_i(a_i, a_j) + \ubar{G}_i(a_i, a_j) - c_i
+\]</span></p>
+</div>
+<div class="fragment">
+<p><strong>Induced Objective Function</strong></p>
+<p><span class="math display">\[\begin{equation} \label{eq:Gtildei}
+\begin{split}
+\tilde{G}_i \left( \tilde{\bm{\tau}}; a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}}
+\end{split}
+\end{equation}\]</span></p>
+</div>
+</section><section id="power-and-protection-ii" class="slide level2 centercontent">
+<h2>Power and Protection (II)</h2>
+<p><strong>Proposition 5 (Power and Protection):</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{c}_j, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
+</section><section id="liberal-trade-i" class="slide level2">
+<h2>Liberal Trade (I)</h2>
+<p><img src="index_files/figure-revealjs/bar2-1.png" width="2400" /></p>
+</section><section id="liberal-trade-ii" class="slide level2 centercontent">
+<h2>Liberal Trade (II)</h2>
+<p><strong>Proposition 6 (Liberal Trade):</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
 </section></section>
 <section><section id="implications" class="title-slide slide level1"><h1>Implications</h1><p><strong>Preferences, Institutions, and the Democratic Peace</strong></p>
 <div class="fragment">
@@ -941,9 +982,6 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <li>Democratic peace: <span class="citation" data-cites="Oneal1999">Oneal and Russett (1999)</span>, <span class="citation" data-cites="Reiter2017">Reiter (2017)</span></li>
 </ul></li>
 </ul>
-<p style="text-align: right;">
-<a href="#/comDemPeace">Commercial-Democratic Peace</a>
-</p>
 </div>
 <div class="fragment">
 <p><strong>Shadow of Power in International Political Economy</strong></p>
@@ -1034,6 +1072,9 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </div>
 <div id="ref-Fearon2008">
 <p>———. 2008. “A simple political economy of relations among democracies and autocracies.”</p>
+</div>
+<div id="ref-Fey2019">
+<p>Fey, Mark, and Brenton Kenkel. 2019. “Is an Ultimatum the Last Word on Crisis Bargaining?” <em>Journal of Politics</em>.</p>
 </div>
 <div id="ref-Gartzke2007">
 <p>Gartzke, Erik. 2007. “The capitalist peace.” <em>American Journal of Political Science</em> 51 (1): 166–91.</p>

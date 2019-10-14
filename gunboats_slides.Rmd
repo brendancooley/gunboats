@@ -124,7 +124,7 @@ source('figs/params.R')
     + @Grossman1994, @BuenodeMesquita2003, @Jackson2007
     + *Liberal* governments afford consumers greater influence over the trade policymaking process
 - Ultimatum Coercive Bargaining
-    + @Fearon1995
+    + @Fearon1995, @Fey2019
 
 . . .
 
@@ -193,7 +193,8 @@ rm(wars)
 
 # Model Overview {id="overview"}
 
-- Two goverments ($i, j$), ultimatum bargaining
+- Two goverments ($i, j$), ultimatum bargaining over tariffs
+- Payoffs depend on international economic effects of tariffs and latent protectionism of governments
 
 <div class="fragment">
 
@@ -525,35 +526,81 @@ barPlot
 **War Values**
 
 \begin{align*}
-\hat{G}_j(a_j, a_i) &= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j &= (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
+\hat{G}_j(a_j, a_i) &= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j \\ 
+&= (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
 \end{align*}
 
 - $(1 - \rho)$ - probability $j$ wins the war
 
+. . .
+
+**Lemma `r omegaStar`:** `r LomegaStarText`
+
 # Results {id="results"}
 
-### Trade and War
+<div class="fragment">
 
-**Proposition `r Pwar`:** `r PwarText`
+**Liberal Peace**
+
+**Lemma `r LtauCorner`:** `r LtauCornerText`
+
+</div>
+<div class="fragment">
+
+**Lemma `r LaEpsilon` (Zone of Peace):** `r LaEpsilonText`
+
+</div>
+
+## Liberal Peace {.centercontent}
+
+**Proposition `r Pwar` (Liberal Peace):** `r PwarText`
+
+## Power and Protection (I)
+
+**Probability of War**
+
+\begin{equation} \label{eq:prwar}
+\begin{split}
+\text{Pr} \left\{ c_j \leq W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right\} = F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right)
+\end{split}
+\end{equation}
 
 . . .
 
-**Proposition `r PeqTrade`:** `r PeqTradeText`
+**War Value ($i$)**
 
+$$
+\hat{G}_i(a_i, a_j) = \rho \Gamma_i(a_i, a_j) + \ubar{G}_i(a_i, a_j) - c_i
+$$
 
-## Results
+. . . 
 
-<hr style="height:4em; visibility:hidden;" />
+**Induced Objective Function**
 
-### Trade and War
+\begin{equation} \label{eq:Gtildei}
+\begin{split}
+\tilde{G}_i \left( \tilde{\bm{\tau}}; a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}}
+\end{split}
+\end{equation}
 
-**Proposition `r Pwar`:** `r PwarText`
+## Power and Protection (II) {.centercontent}
 
-**Proposition `r PeqTrade`:** `r PeqTradeText`
+**Proposition `r PeqTau` (Power and Protection):** `r PeqTauText`
 
-### Shadow of War in Trade Policy
+## Liberal Trade (I)
 
-**Proposition `r PeqTau`:** `r PeqTauText`
+```{r bar2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+
+source("figs/bar.R")
+
+barPlot
+
+```
+
+## Liberal Trade (II) {.centercontent}
+
+**Proposition `r PeqTrade` (Liberal Trade):** `r PeqTradeText`
 
 # Implications {id="implications"}
 
