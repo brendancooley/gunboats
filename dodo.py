@@ -10,7 +10,7 @@ templatePath = "~/Dropbox\ \(Princeton\)/8_Templates/"
 website_docs = "~/Dropbox\ \(Princeton\)/5_CV/website/static/docs"
 softwarePath = "~/Dropbox\ \(Princeton\)/14_Software/"
 verticatorPath = "~/Dropbox\ \(Princeton\)/8_Templates/plugin/verticator"
-pluginDest = "index_files/reveal.js-3.3.0.1/plugin"
+pluginDest = "index_files/reveal.js-3.8.0/plugin"
 revealPath = "~/Dropbox\ \(Princeton\)/8_Templates/reveal.js-3.8.0"
 
 def task_source():

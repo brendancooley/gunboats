@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -59,9 +59,7 @@ source('figs/params.R')
 
 ```
 
-# Vertical Test (I)
-
-## Trade and War: Received Wisdom {id="intro"}
+# Trade and War: Received Wisdom {id="intro"}
 
 > "Free trade serves the cause of economic progress, and it serves the cause of world peace." <br/> $\qquad$ -- Ronald Reagan, Nov. 1982
 
