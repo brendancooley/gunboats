@@ -28,8 +28,6 @@ output:
       slideNumber: false
       progress: false
       controls: true
-    includes:
-      after_body: css/plugins.html
 ---
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -45,7 +43,7 @@ ipak(libs)
 
 # TODO: speaker notes don't work with incremental reveal
 # TODO: nested bulleted lists disappear after compilation, fine when knitting
-# TODO: verticator seems to index by section...incremental bullets create fragments and confuse it, not currently working
+# TODO: need to manually add fragments on first vertical slide (. . .) doesn't work
 
 Akappa <- "NA"
 
@@ -61,11 +59,14 @@ source('figs/params.R')
 
 # Trade and War: Received Wisdom {id="intro"}
 
+<div class="fragment">
+
 > "Free trade serves the cause of economic progress, and it serves the cause of world peace." <br/> $\qquad$ -- Ronald Reagan, Nov. 1982
 
 <center><hr width="50%"></center>
 
-. . .
+</div>
+<div class="fragment">
 
 > "Commercial relations draw states into a web of mutual self-interest that constrains them from using force against one another." <br/> $\qquad$ -- Oneal and Russett (1999)
 
@@ -73,14 +74,15 @@ source('figs/params.R')
 
 <hr style="height:1em; visibility:hidden;" />
 
-. . .
+</div>
+<div class="fragment">
 
 **Dominant Paradigm:** Trade mediates *preexisting* conflicts of interest
 
 - Conflicts of interest: territorial, ideological, otherwise
 - War disrupts trade, imposes *opportunity costs*
 
-<a href="#/tradeRD" style="float: right;">Trade and War Onset</a>
+</div>
 
 ## Gunboat Diplomacy
 
@@ -140,12 +142,14 @@ source('figs/params.R')
 
 . . .
 
-<p class="center">*Trade and peace are correlated, but not because trade causes peace*</p>
+<hr style="height:1em; visibility:hidden;" />
+
+<p class="center">*Trade and peace are correlated in equilibrium, but not because trade causes peace*</p>
 
 ## Literature {id="literature"}
 
 - Trade and War
-    + @Angell1911, @Polachek1980, @Gowa1993, @Morrow1999b, @Barbieri1999, @Mansfield2000a, @Gartzke2001, @Mcdonald2004, @Mcdonald2007, @Gartzke2007, @Benson2007, @Philippe2008, @Hegre2010, @Copeland2014
+    + @Angell1911,  @Polachek1980, @Gowa1993, @Morrow1999b, @Barbieri1999, @Mansfield2000a, @Gartzke2001, @Mcdonald2004, @Mcdonald2007, @Gartzke2007, @Benson2007, @Philippe2008, @Hegre2010, @Copeland2014
 - Power and Trade
     + @Hirschman1945, @Krasner1976, @Gourevitch1978, @Pollins1989a, @Pollins1989b, @Antras2011, @Chatagnier2015, @Carroll2018
 - Political Economy of Trade Policy
@@ -187,20 +191,62 @@ rm(wars)
 
 ```
 
-# Bargaining Environment
+# Model Overview
+
+- Two goverments ($i, j$), ultimatum bargaining
+
+<div class="fragment">
+
+**International Economy**
+
+- Mass of firms in each country ("industry"), produce differentiated varieties $\nu_i$
+    + Outside sector ("agriculture")
+- Profit-shifting motivations for tariffs
+
+</div>
+<div class="fragment">
+
+**Domestic Political Economy**
+
+- Governments maximize weighted combination of consumer welfare and industry profits
+    + Variation in preferences (open-protectionist)
+- Tension in trade policy
+    + Tariffs increase profits
+    + Decrease consumer welfare
+
+</div>
+<div class="fragment">
+
+**International Bargaining**
+
+- Threat point: regime change
+    + Power: probability government wins a war for regime change
+    + Victorious governments impose new preferences on vanquished governments
+- Ultimatum offer: pair of tariffs
+    + Private information over wars costs $\implies$ war in equilibrium
+
+</div>
+
+## Comparative Statics {.centercontent}
+
+- $\Delta$ Preferences $\rightarrow \text{Pr} (\text{war})$
+- $\Delta$ Preferences $\rightarrow$ protection, trade flows
+- $\Delta$ Military power $\rightarrow$ protection, trade flows
+
+## Bargaining Environment
+
+<div class="fragment">
 
 - "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2$
-
-. . .
-
 - Foreign accepts or rejects
-    + Rejection results in war for *regime change*
 
-. . .
+</div>
+<div class="fragment">
 
 - Information about $j$'s costs of war ($c_j$) held privately, distributed  $f(c_j)$
 
-. . .
+</div>
+<div class="fragment">
 
 <hr style="height:1em; visibility:hidden;" />
 
@@ -223,6 +269,42 @@ $$
 
 - $\widetilde{G}$ government utility
 - $\rho \in [0, 1]$ probability $i$ wins war (military strength)
+
+</div>
+
+# Economy
+
+**Primitives**
+
+- Factor endowments: $L_i = L_j = L$
+- Income: $I_i = w_i L_i + r_i(\tau_i)$
+- Mass of firms indexed $\nu_i$, $\int_{\nu_i} d \nu_i = \int_{\nu_j} d \nu_j = 1$
+
+**Consumption**
+
+\begin{equation} \label{eq:cMax}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i X_i + Y_i \leq w_i L \\
+& \quad X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
+\end{split}
+\end{equation}
+
+**Production**
+
+\begin{equation} \label{eq:Pi}
+\begin{split}
+\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
+\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
+& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
+\end{split}
+\end{equation}
+
+**Revenue**
+
+\begin{equation} \label{eq:revenue}
+r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
+\end{equation}
 
 ## Domestic Political Economy {id="dpe"}
 
@@ -444,38 +526,6 @@ $$
 \overline{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
 $$
 <hr style="height:1em; visibility:hidden;" />
-
-<a href="#/dpe" style="float: right;">Back</a>
-
-## Economy {id="economy"}
-
-**Consumption**
-
-\begin{equation} \label{eq:cMax}
-\begin{split}
-\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i X_i + Y_i \leq w_i L \\
-& \quad X_i = \left( n x_{ii}^{\frac{\sigma - 1}{\sigma}} + n x_{ij}^{\frac{\sigma - 1}{\sigma}} \right)^{\frac{\sigma}{\sigma - 1}}
-\end{split}
-\end{equation}
-
-**Production**
-
-- $n$ firms producing differentiated goods and outside (agricultural) sector
-
-\begin{equation} \label{eq:Pi}
-\begin{split}
-\max_{p_i} & \quad \Pi_i(p_i) = \left( p_i - w_i \right) \left( x_{ii}^\star(p_i) + x_{ji}^\star(p_i) \right) \\
-\text{subject to} & \quad x_{ii}^\star(p_i) = p_i^{-\sigma} P_i^{\sigma - 1} \alpha w_i L \\
-& \quad x_{ji}^\star(p_i) = (\tau_j p_i)^{-\sigma} P_j^{\sigma - 1} \alpha w_j L
-\end{split}
-\end{equation}
-
-**Revenue**
-
-\begin{equation} \label{eq:revenue}
-r_i(\tau_i) = n (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
-\end{equation}
 
 <a href="#/dpe" style="float: right;">Back</a>
 

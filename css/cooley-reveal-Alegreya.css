@@ -128,7 +128,8 @@ body {
 }
 
 
-.reveal .centercontent ol {
+.reveal .centercontent ol,
+.reveal .centercontent ul {
   position: fixed;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -294,7 +295,7 @@ body {
 .reveal strong,
 .reveal b {
   font-weight: bold;
-  color: var(--color_head);
+  color: var(--color_accent);
   }
 
 .reveal em {

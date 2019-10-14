@@ -101,7 +101,7 @@ $endfor$
 $endif$
 
 <!-- add verticator css-->
-<link rel="stylesheet" href="css/verticator.css"/>
+<link rel="stylesheet" href="css/verticator.css">
 
 <!-- Printing and PDF exports -->
 <script id="paper-css" type="application/dynamic-css">
@@ -769,29 +769,29 @@ $endif$
         },
 $endif$
 		
+		// verticator options
 		verticator: {
-		darktheme: false,
-		color: '',
-		oppositecolor: ''
+
 		},
 
         // Optional reveal.js plugins
         dependencies: [
-$if(plugin-notes)$
-          { src: '$revealjs-url$/plugin/notes/notes.js', async: true },
-$endif$
-$if(plugin-search)$
-          { src: '$revealjs-url$/plugin/search/search.js', async: true },
-$endif$
-$if(plugin-zoom)$
-          { src: '$revealjs-url$/plugin/zoom-js/zoom.js', async: true },
-$endif$
-$if(plugin-chalkboard)$
-          { src: '$revealjs-url$/plugin/chalkboard/chalkboard.js', async: true },
-$endif$
-$if(plugin-menu)$
-          { src: '$revealjs-url$/plugin/menu/menu.js', async: true },
-$endif$
+			$if(plugin-notes)$
+			          { src: '$revealjs-url$/plugin/notes/notes.js', async: true },
+			$endif$
+			$if(plugin-search)$
+			          { src: '$revealjs-url$/plugin/search/search.js', async: true },
+			$endif$
+			$if(plugin-zoom)$
+			          { src: '$revealjs-url$/plugin/zoom-js/zoom.js', async: true },
+			$endif$
+			$if(plugin-chalkboard)$
+			          { src: '$revealjs-url$/plugin/chalkboard/chalkboard.js', async: true },
+			$endif$
+			$if(plugin-menu)$
+			          { src: '$revealjs-url$/plugin/menu/menu.js', async: true },
+			$endif$
+	        { src: 'index_files/reveal.js-3.3.0.1/plugin/verticator/verticator.js'}
         ]
       });
     </script>
