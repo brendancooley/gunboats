@@ -1,1 +1,0 @@
-If Assumption `r aA` is satisfied, then $G_i(\tau_i; a_i)$ is quasiconcave on $\tau_i \in \left[ 1, \bar{\tau} \right]$.
