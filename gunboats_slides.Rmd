@@ -142,11 +142,52 @@ source('figs/params.R')
 
 <p class="center">*Trade and peace are correlated, but not because trade causes peace*</p>
 
-<a href="#/literature" style="float: right;">Literature</a>
+## Literature {id="literature"}
 
-# Vertical Test (II)
+- Trade and War
+    + @Angell1911, @Polachek1980, @Gowa1993, @Morrow1999b, @Barbieri1999, @Mansfield2000a, @Gartzke2001, @Mcdonald2004, @Mcdonald2007, @Gartzke2007, @Benson2007, @Philippe2008, @Hegre2010, @Copeland2014
+- Power and Trade
+    + @Hirschman1945, @Krasner1976, @Gourevitch1978, @Pollins1989a, @Pollins1989b, @Antras2011, @Chatagnier2015, @Carroll2018
+- Political Economy of Trade Policy
+    + @Mayer1984, @Grossman1994, @Kono2008, @Gawande2009, @Ossa2011, @Ossa2012, @Ossa2014
+- Democracy and Trade
+    + @Mansfield2000b, @Milner2005
+- Democracy and War
+    + @Lake1992, @Snyder1993, @Oneal1997, @Schultz1998, @Oneal1999, @Schultz2001, @Fearon2008, @CoeND
 
-## Bargaining Environment
+## The Commercial-Democratic Peace {id="comDemPeace"}
+
+```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=6, cache=TRUE}
+
+source("figs/emp_wars.R")
+
+polityDensity <- polityDensity + theme(plot.title = element_blank())
+
+polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,15,2))
+
+rm(tradeM)
+rm(tradeF)
+rm(tradeUF)
+rm(wars)
+
+```
+
+## Trade and War Onset {id="tradeRD"}
+
+```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300, cache=TRUE}
+
+source("figs/emp_wars.R")
+
+tradeRDplot
+
+rm(tradeM)
+rm(tradeF)
+rm(tradeUF)
+rm(wars)
+
+```
+
+# Bargaining Environment
 
 - "Home" ($i$) government makes TIOLI trade policy offer to "foreign" ($j$) $\widetilde{\boldsymbol{\tau}} = \left\{ \widetilde{\tau}_i, \widetilde{\tau}_j \right\} \in [1, \bar{\tau}]^2$
 
@@ -384,39 +425,6 @@ barPlot
 
 <small>**Title Slide Image Credit:** Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. https://library.artstor.org/asset/SS35100_35100_35234600</small>
 
-## Trade and War Onset {id="tradeRD"}
-
-```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "\\label{fig:tradeRD}", fig.height=5.5, dpi=300, cache=TRUE}
-
-source("figs/emp_wars.R")
-
-tradeRDplot
-
-rm(tradeM)
-rm(tradeF)
-rm(tradeUF)
-rm(wars)
-
-```
-
-<a href="#/intro" style="float: right;">Back</a>
-
-## Literature {id="literature"}
-
-- Trade and War
-    + @Angell1911, @Polachek1980, @Gowa1993, @Morrow1999b, @Barbieri1999, @Mansfield2000a, @Gartzke2001, @Mcdonald2004, @Mcdonald2007, @Gartzke2007, @Benson2007, @Philippe2008, @Hegre2010, @Copeland2014
-- Power and Trade
-    + @Hirschman1945, @Krasner1976, @Gourevitch1978, @Pollins1989a, @Pollins1989b, @Antras2011, @Chatagnier2015, @Carroll2018
-- Political Economy of Trade Policy
-    + @Mayer1984, @Grossman1994, @Kono2008, @Gawande2009, @Ossa2011, @Ossa2012, @Ossa2014
-- Democracy and Trade
-    + @Mansfield2000b, @Milner2005
-- Democracy and War
-    + @Lake1992, @Snyder1993, @Oneal1997, @Schultz1998, @Oneal1999, @Schultz2001, @Fearon2008, @CoeND
-
-
-<a href="#/overview" style="float: right;">Back</a>
-
 ## Assumptions {id="assumptions"}
 
 <hr style="height:2em; visibility:hidden;" />
@@ -543,23 +551,6 @@ $$
 
 <a href="#/barEnv" style="float: right;">Back</a>
 
-## The Commercial-Democratic Peace {id="comDemPeace"}
 
-```{r emp_wars, echo=FALSE, warning=FALSE, message=FALSE, fig.align="center", fig.height=6, cache=TRUE}
-
-source("figs/emp_wars.R")
-
-polityDensity <- polityDensity + theme(plot.title = element_blank())
-
-polityDensity + empty + main + tradeIntDensity + polityRail + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,15,2))
-
-rm(tradeM)
-rm(tradeF)
-rm(tradeUF)
-rm(wars)
-
-```
-
-<a href="#/implications" style="float: right;">Back</a>
 
 <hr style="height:5em; visibility:hidden;" />
