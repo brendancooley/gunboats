@@ -77,7 +77,7 @@ body {
 
 .reveal {
   font-family: var(--font_body), sans-serif;
-  font-size: 28px;
+  font-size: 24px;
   font-weight: normal;
   color: #000; }
 
@@ -128,7 +128,9 @@ body {
 }
 
 
-.reveal .centercontent ol {
+.reveal .centercontent ol,
+.reveal .centercontent ul,
+.reveal .centercontent p {
   position: fixed;
   top: 50%;
   -ms-transform: translateY(-50%);
@@ -159,8 +161,8 @@ body {
 #right {
   left:31.25%;
   top: 75px;
-  float: right;
-  text-align: right;
+  float: left;
+  text-align: left;
   z-index:-10;
   width:50%;
 }
@@ -294,7 +296,7 @@ body {
 .reveal strong,
 .reveal b {
   font-weight: bold;
-  color: var(--color_head);
+  color: var(--color_accent);
   }
 
 .reveal em {
