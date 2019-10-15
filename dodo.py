@@ -68,15 +68,6 @@ def task_slides():
 		'verbosity': 2,
 	}
 
-def task_slides_test():
-    # test pandoc build after rmd for updated revealjs version
-    yield {
-        'name': "writing slides (test)...",
-        'actions': ["R --slave -e \"set.seed(100);knitr::knit('gunboats_slides.rmd')\"",
-                    "pandoc -t html5 -s --template=css/cooley-reveal.html --section-divs -o index.html gunboats_slides.md --mathjax --include-in-header=css/cooley-reveal.css -V revealjs-url=index_files/reveal.js-3.8.0/"],
-        'verbosity': 2,
-    }
-
 def task_other():
     otherFiles = helpers.getFiles("other/")
     for i in range(len(otherFiles)):
