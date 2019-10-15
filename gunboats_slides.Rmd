@@ -254,8 +254,9 @@ $$
 \widetilde{\boldsymbol{\tau}}^\star(a_i, c_i, \rho) \in \text{argmax}_{\boldsymbol{\tau} \in [1, \overline{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \widetilde{G}_i \left(\widetilde{\boldsymbol{\tau}}, \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
 $$
 
-- $\widetilde{G}$ government utility
-- $\rho \in [0, 1]$ probability $i$ wins war (military strength)
+- $\widetilde{G}$ - government utility
+- $a_i$ - preference for protectionism
+- $\rho \in [0, 1]$ - probability $i$ wins war (military strength)
 
 </div>
 <div class="fragment">
