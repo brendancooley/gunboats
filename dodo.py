@@ -62,9 +62,9 @@ def task_slides():
     yield {
 		'name': "writing slides...",
 		'actions': ["R --slave -e \"rmarkdown::render('gunboats_slides.Rmd', output_file='index.html')\"",
-            "cp -a " + verticatorPath + " " + pluginDest,
             "perl -pi -w -e 's{reveal.js-3.3.0.1}{reveal.js-3.8.0}g' index.html",
-            "cp -r " + revealPath + " index_files/"],
+            "cp -r " + revealPath + " index_files/",
+            "cp -a " + verticatorPath + " " + pluginDest],
 		'verbosity': 2,
 	}
 
