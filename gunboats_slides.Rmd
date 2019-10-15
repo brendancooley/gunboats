@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -200,7 +200,7 @@ rm(wars)
 
 **International Economy**
 
-- Mass of firms in each country ("industry"), produce differentiated varieties $\nu_i$
+- Mass of firms in each country ("industry"), produce differentiated varieties
     + Outside sector ("agriculture")
 - Profit-shifting motivations for tariffs
 
@@ -323,8 +323,8 @@ $$
 p_{ij} = \tau_i p_j(\nu_j)
 $$
 
-- $p_{ij}$ price in country $i$ of industrial goods produced in $j$ 
-- $\tau_i - 1$ ad valorem tariff imposed by $i$ on industrial imports from $j$
+- $p_{ij}$ - price in country $i$ of industrial goods produced in $j$ 
+- $\tau_i - 1$ - ad valorem tariff imposed by $i$ on industrial imports from $j$
 
 . . .
 
