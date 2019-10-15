@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -282,7 +282,7 @@ $$
 
 **Consumption**
 
-- Agricultural consumption: $Y_i$
+- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
 - Cobb-Douglas upper-level preferences
 
 \begin{equation} \label{eq:cMax}
@@ -488,7 +488,7 @@ $$
 **War Outcomes**
 
 \begin{equation*} \label{eq:Gbar}
-\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
 \end{equation*}
 
 \begin{equation*} \label{eq:Gubar}
@@ -508,9 +508,26 @@ $$
 
 </div>
 
-## Conflicts of Interest and Regime Change (II) {.centercontent}
+## Conflicts of Interest and Regime Change (II)
 
 **Proposition `r Pgamma`:** `r PgammaText`
+
+. . . 
+
+- Recall war outcomes
+
+\begin{equation*}
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\end{equation*}
+
+\begin{equation*}
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
+\end{equation*}
+
+. . . 
+
+- Increasing $a_i$ reduces difference between $\tau_i^\star(a_i)$ and $\tau_i^\star(\bar{a})$
+- Increasing $a_j$ reduces difference between $\tau_j^\star(a_j)$ and $\tau_j^\star(\bar{a})$
 
 ## Bargaining Environment (I) {id="barEnv"}
 
