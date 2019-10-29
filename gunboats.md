@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -622,29 +622,27 @@ If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) 
 
 
 **Lemma 1:** 
-*TODO define constants*
-
 The result follows from a series of Lemmas.
 
 
 
 **Preliminaries:** Let
 $$
-A(\tau_i) = \left( 1 + \tau_i \right)^{-1} \tau_i^{-\sigma}
+A(\tau_i) = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
 $$
 $$
 B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
 $$
+$$
+C(\tau_i) = (\tau_i - 1) B(\tau_i) + 1
+$$
 and
 $$
-C(\tau_i) = \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)}
+\lambda(\tau_i) = \frac{r_i(\tau_i)}{I_i(\tau_i)}
 $$
 where
 $$
 B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
-$$
-$$
-C^\prime(\tau_i) = C(\tau_i) r_i^\prime(\tau_i) I_i(\tau_i)^{-1}
 $$
 
 **Lemma 1.1:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
@@ -656,26 +654,37 @@ $$
 and 
 \begin{align*}
 r_i^\prime(\tau_i) &= (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
-&= B(\tau_i) r_i(\tau_i) + \frac{r_i(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
-&= \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)} \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) \\
-&= C(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right)
+r_i^\prime(\tau_i) &= B(\tau_i) r_i(\tau_i) + \lambda(\tau_i) r_i^\prime(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+(1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= (\tau_i - 1) B(\tau_i) r_i(\tau_i) + r_i(\tau_i) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= r_i(\tau_i) \left( (\tau_i - 1) B(\tau_i) + 1 \right) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= r_i(\tau_i) C(\tau_i)
 \end{align*}
 
-Note that because $r_i(\tau_i) < I_i(\tau_i)$, $C(\tau_i)$ is positive and if $r_i^\prime(\tau_i) > 0$, then
-\begin{equation} \label{eq:rprime1}
-r_i(\tau_i) < - \frac{p^\star x_{ij}^\star(\tau_i)}{B(\tau_i)}
-\end{equation}
-Moreover, $C^\prime(\tau_i) \geq 0$ whenever $r^\prime(\tau_i) > 0$. 
+Note that because $\lambda(\tau_i) < 1$ and $B(\tau_i) < 0$, then $C(\tau_i) \in (0, 1)$ whenever $r_i^\prime(\tau_i) > 0$. Also, the definition of $r_i(\tau_i)$ implies
+$$
+\tau_i - 1 = \frac{r_i(\tau_i)}{p^\star x_{ij}^\star(\tau_i)}
+$$
 
-Taking the second derivative and applying these facts about $C(\tau_i)$, we have
-\begin{align*} 
-r_i^{\prime \prime}(\tau_i) =& C^\prime(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + p^\star x_{ij}^{\star \prime}(\tau_i) \right) \\
-=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
-& C^\prime(\tau_i) p^\star x_{ij}^\star(\tau_i) + C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i) \\
-=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
-& 2 C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i)
+Taking the second derivative, we have
+\begin{align*}
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^{\prime \prime}(\tau_i) =& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) \lambda^\prime(\tau_i) r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - (\tau_i - 1) I_i(\tau_i)^{-1} r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{r_i^\prime(\tau_i)}{p^\star x_{ij}^\star(\tau_i)} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{C(\tau_i)}{(1 - \lambda(\tau_i))} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - r_i^\prime(\tau_i) \left( 1 - (1 - C(\tau_i)) \lambda(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& \underbrace{- r_i^\prime(\tau_i) \left( 1 - (1 - C(\tau_i)) \lambda(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i)}_{<0 \text{ (I)}} + \underbrace{C^\prime(\tau_i) r_i(\tau_i)}_{<0 \text{ (II)}}
 \end{align*}
-whenever $r_i^\prime(\tau_i) > 0$.
+
+To see why (II) holds, note
+\begin{align*}
+\tau_i C^\prime(\tau_i) &= \tau_i (\tau_i - 1) B^\prime(\tau_i) + \tau_i B(\tau_i) \\
+&= (\tau_i - 1) \tau_i \left( (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2} \right) + \tau_i \left( (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1} \right) \\
+&= (\sigma - 1) \tau_i A(\tau_i) \tau_i B(\tau_i) + \sigma - \tau_i B^\prime(\tau_i) + (\sigma - 1) \tau_i A(\tau_i) - \sigma \\
+&= (\sigma - 1) \tau_i A(\tau_i) \underbrace{\left( \tau_i B(\tau_i) + 1 \right)}_{<0} - \tau_i B^\prime(\tau_i)
+\end{align*}
+where the inequality follows from the fact that $\tau_i B(\tau_i) < -1$. $\blacksquare$
 
 
 
