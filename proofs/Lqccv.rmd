@@ -7,9 +7,54 @@ qccv_tick <- 1
 qccv_rev <- qccv_tick
 ```
 
+**Preliminaries:** Let
+$$
+A(\tau_i) = \left( 1 + \tau_i \right)^{-1} \tau_i^{-\sigma}
+$$
+$$
+B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
+$$
+and
+$$
+C(\tau_i) = \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)}
+$$
+where
+$$
+B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
+$$
+$$
+C^\prime(\tau_i) = C(\tau_i) r_i^\prime(\tau_i) I_i(\tau_i)^{-1}
+$$
+
 **Lemma `r Lqccv`.`r qccv_rev`:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
 
-**Proof:**
+**Proof:** Using the above quantities, we can write
+$$
+x_{ij}^{\star \prime}(\tau_i) = B(\tau_i) x_{ij}^\star(\tau_i) + \frac{x_{ij}^\star(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i)
+$$
+and 
+\begin{align*}
+r_i^\prime(\tau_i) &= (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+&= B(\tau_i) r_i(\tau_i) + \frac{r_i(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+&= \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)} \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) \\
+&= C(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right)
+\end{align*}
+
+Note that because $r_i(\tau_i) < I_i(\tau_i)$, $C(\tau_i)$ is positive and if $r_i^\prime(\tau_i) > 0$, then
+\begin{equation} \label{eq:rprime1}
+r_i(\tau_i) < - \frac{p^\star x_{ij}^\star(\tau_i)}{B(\tau_i)}
+\end{equation}
+Moreover, $C^\prime(\tau_i) \geq 0$ whenever $r^\prime(\tau_i) > 0$. 
+
+Taking the second derivative and applying these facts about $C(\tau_i)$, we have
+\begin{align*} 
+r_i^{\prime \prime}(\tau_i) =& C^\prime(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + p^\star x_{ij}^{\star \prime}(\tau_i) \right) \\
+=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
+& C^\prime(\tau_i) p^\star x_{ij}^\star(\tau_i) + C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i) \\
+=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
+& 2 C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i)
+\end{align*}
+whenever $r_i^\prime(\tau_i) > 0$.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 qccv_tick <- qccv_tick + 1

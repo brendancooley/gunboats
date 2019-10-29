@@ -87,7 +87,7 @@ Since prices are constant across firms, I suppress the variety and country indic
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\Pi_i(p^\star) = \int_{v_i} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
 By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.

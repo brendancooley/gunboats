@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -155,7 +155,7 @@ Since prices are constant across firms, I suppress the variety and country indic
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i, v_j} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\Pi_i(p^\star) = \int_{v_i} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
 \end{equation}
 
 By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
@@ -621,16 +621,61 @@ If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) 
 
 
 
-**Lemma NA:** 
+**Lemma 1:** 
 *TODO define constants*
 
 The result follows from a series of Lemmas.
 
 
 
+**Preliminaries:** Let
+$$
+A(\tau_i) = \left( 1 + \tau_i \right)^{-1} \tau_i^{-\sigma}
+$$
+$$
+B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
+$$
+and
+$$
+C(\tau_i) = \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)}
+$$
+where
+$$
+B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
+$$
+$$
+C^\prime(\tau_i) = C(\tau_i) r_i^\prime(\tau_i) I_i(\tau_i)^{-1}
+$$
+
 **Lemma 1.1:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
 
-**Proof:**
+**Proof:** Using the above quantities, we can write
+$$
+x_{ij}^{\star \prime}(\tau_i) = B(\tau_i) x_{ij}^\star(\tau_i) + \frac{x_{ij}^\star(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i)
+$$
+and 
+\begin{align*}
+r_i^\prime(\tau_i) &= (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+&= B(\tau_i) r_i(\tau_i) + \frac{r_i(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+&= \frac{1}{1 - r_i(\tau_i) / I_i(\tau_i)} \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) \\
+&= C(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right)
+\end{align*}
+
+Note that because $r_i(\tau_i) < I_i(\tau_i)$, $C(\tau_i)$ is positive and if $r_i^\prime(\tau_i) > 0$, then
+\begin{equation} \label{eq:rprime1}
+r_i(\tau_i) < - \frac{p^\star x_{ij}^\star(\tau_i)}{B(\tau_i)}
+\end{equation}
+Moreover, $C^\prime(\tau_i) \geq 0$ whenever $r^\prime(\tau_i) > 0$. 
+
+Taking the second derivative and applying these facts about $C(\tau_i)$, we have
+\begin{align*} 
+r_i^{\prime \prime}(\tau_i) =& C^\prime(\tau_i) \left( B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + p^\star x_{ij}^{\star \prime}(\tau_i) \right) \\
+=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
+& C^\prime(\tau_i) p^\star x_{ij}^\star(\tau_i) + C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i) \\
+=& C^\prime(\tau_i) B(\tau_i) r_i(\tau_i) + C(\tau_i) \left( B(\tau_i) r^\prime(\tau_i) + B^\prime(\tau_i) r_i(\tau_i) + B(\tau_i) p^\star x_{ij}^\star(\tau_i) \right) + \\
+& 2 C(\tau_i) p^\star x_{ij}^\star(\tau_i) I(\tau_i)^{-1} r_i^\prime(\tau_i)
+\end{align*}
+whenever $r_i^\prime(\tau_i) > 0$.
 
 
 
