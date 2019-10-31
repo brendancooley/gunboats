@@ -1,5 +1,5 @@
-We have two cases, either $a_j(\ubar{\epsilon}, a_i) = 0$ or 
+We have two cases, either $a_j(\ubar{c}, a_i) = 0$ or 
 $$
-a_j(\ubar{\epsilon}, a_i) = \Gamma_j^{-1}(\ubar{\epsilon}; a_i)
+a_j(\ubar{c}, a_i) = \Gamma_j^{-1}(\ubar{c}; a_i)
 $$
 Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition `r Pgamma`), so is its inverse. This is sufficient to guarantee that $a_j(\ubar{\epsilon}, a_i)$ is decreasing in $a_i$. $\blacksquare$
