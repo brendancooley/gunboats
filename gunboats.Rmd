@@ -35,23 +35,28 @@ libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwor
 ipak(libs)
 
 # not available
-Pgamma <- "NA"
-Pwar <- "NA"
-AwCosts <- "NA"
-eeqP <- "NA"
-eeqD <- "NA"
-qccv <- "NA"
+Deeq <- "NA"
+Dcoi <- "NA"
+Dnceq <- "NA"
+Dbeq <- "NA"
+
 Aalpha <- "NA"
 Aa <- "NA"
-tauj <- "NA"
-nceq <- "NA"
-coi <- "NA"
+AwCosts <- "NA"
+
+Pgamma <- "NA"
+Pwar <- "NA"
+Peeq <- "NA"
 PeqTrade <- "NA"
 PeqTau <- "NA"
+
+Lqccv <- "NA"
 Lpareto <- "NA"
 LtildeTau <- "NA"
 Lqccv <- "NA"
-Aeconomy <- "NA"
+Ltauj <- "NA"
+
+AddxEconomy <- "NA"
 AddxEmpiricalFacts <- "NA"
 AddxEconomy <- "NA"
 AddxDefinitions <- "NA"

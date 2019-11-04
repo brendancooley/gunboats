@@ -5,29 +5,6 @@ qccv_tick <- 1
 qccv_rev <- qccv_tick
 ```
 
-**Preliminaries:** Let
-$$
-A(\tau_i) = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
-$$
-$$
-B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
-$$
-$$
-C(\tau_i) = (\tau_i - 1) B(\tau_i) + 1
-$$
-and
-$$
-\lambda(\tau_i) = \frac{r_i(\tau_i)}{I_i(\tau_i)}
-$$
-with
-$$
-A^\prime(\tau_i) = A(\tau_i) B(\tau_i)
-$$
-and
-$$
-B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
-$$
-
 **Lemma `r Lqccv`.`r qccv_rev`:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
 
 **Proof:** Using the above quantities, we can write
@@ -52,7 +29,8 @@ $$
 Taking the second derivative, we have
 \begin{align*}
 (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^{\prime \prime}(\tau_i) =& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) \lambda^\prime(\tau_i) r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
-=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + \\
+& C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - (\tau_i - 1) I_i(\tau_i)^{-1} r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{r_i^\prime(\tau_i)}{p^\star x_{ij}^\star(\tau_i)} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{C(\tau_i)}{(1 - \lambda(\tau_i))} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
@@ -74,7 +52,7 @@ qccv_tick <- qccv_tick + 1
 qccv_rprime <- qccv_tick
 ```
 
-**Lemma `r Lqccv`.`r qccv_rprime`:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$ for all $a_i > \ubar{a}_i$
+**Lemma `r Lqccv`.`r qccv_rprime`:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$ for all $a_i > \ubar{a}$
 
 **Proof:** The first order condition is
 \begin{equation} \label{eq:Gfoc}
@@ -169,7 +147,7 @@ $$
 $$
 \lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
 $$
-for all $a_i > \ubar{a}$. 
+for all $a_i > \ubar{a}$. To see the second claim, note
 $$
 \evalat[\Big]{ \frac{\partial G_i}{\partial \tau_i} }{\tau_i=1} = \Pi_i^\prime(\tau_i) > 0
 $$

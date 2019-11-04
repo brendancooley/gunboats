@@ -2,12 +2,13 @@ Government $i$'s optimal policy does not depend on the policy choice of $j$. As 
 $$
 \frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} < 0
 $$
-Here we have
+Applying derivations from the proof of Lemma `r Lqccv`,
 \begin{align*}
-\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} &= - \frac{\sigma - 1}{\sigma} n^{\frac{1}{\sigma - 1}} \left( 1 + \tau_i^{1 - \sigma} \right)^{\frac{1}{\sigma - 1} - 1} \tau_i^{- \sigma} \alpha L
+\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} &= V_i^\prime(\tau_i) \\
+&= r^\prime(\tau_i) P_i(\tau_i)^{\alpha} - \alpha P_i(\tau_i)^{\alpha} I(\tau_i) A(\tau_i) \\
+&= \alpha P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} r^\prime(\tau_i) - A(\tau_i) \right) \\ 
+&= \alpha P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} \left( (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) - A(\tau_i) \right) \\
+&= P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + A(\tau)_i - A(\tau_i) \right) \\
+&= P_i(\tau_i)^{\alpha} \alpha^{-1} (\tau_i - 1) p^\star \underbrace{x_{ij}^{\star \prime}(\tau_i)}_{<0}
 \end{align*}
-To see that $\tau_i^\star(\bar{a}) = 1$, we can show that the first order condition evaluated at $\tau_i = 1$ equals zero when $a_i = \bar{a}$. From above, the first order condition evaluated at $\tau_i = 1$ is
-$$
-0 = - a_i p^{-1} (2n)^{\frac{1}{\sigma - 1}} + \sigma + \frac{1}{2} (1 - \sigma) (1 + p^{-1})
-$$
-Substituting $\bar{a}$ confirms that $\tau_i^\star(\bar{a}) = 1$. $\blacksquare$
+where the final inequality follows from Lemma `r Ltauj`. $\blacksquare$

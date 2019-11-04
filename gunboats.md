@@ -67,11 +67,11 @@ Others have considered policy competition in the shadow of power more generally.
 # Environment
 
 
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` NA `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. Lemma `` 1 `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
 
 ## International Bargaining
 
-Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government utility can therefore be written $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits and tariff reveune.^[$\bar{a}$ is defined below.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
+Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
 Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
@@ -86,7 +86,7 @@ A strategy for Government $i$ is an offer, $\tilde{\bm{\tau}}(a_i, c_i, \rho)$. 
 $$
 \omega : \tilde{\bm{\tau}} \rightarrow \left\{ \text{accept}, \text{war} \right\}
 $$
-Let $\tilde{G}(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a subgame perfect bargaining equilibrium.
+Let $\tilde{G}_k(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a subgame perfect bargaining equilibrium.
 
 
 
@@ -102,11 +102,11 @@ $$
 
 ## International Economy
 
-Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i$ is $I_i = w_i L_i + r_i$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of measure 1 in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
+Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i(\tau_i)$ is $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of measure 1 in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
 
 ### Tariffs and Prices
 
-Firms engage in monopolistic competition, setting prices in each market to maximize profits, given the preferences of consumers. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods, $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
+Firms engage in monopolistic competition, setting prices in each market to maximize profits, given the preferences of consumers. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods. The price of foreign goods in the home market is $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
 
 ### Consumption
 
@@ -117,13 +117,13 @@ Consumer preferences over agricultural goods $Y_i$ and aggregated differentiated
 \text{subject to} & \quad P_i X_i + Y_i \leq w_i L
 \end{split}
 \end{equation}
-where $X_i$ is a CES aggregate of manufactured goods $x$, a la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
+where $X_i$ is a CES aggregate of manufactured goods $x$, à la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
 \begin{equation} \label{eq:CES}
 X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}}
 \end{equation}
 where $\sigma > 1$ is the elasticity of substitution between varieties. The real price level of differentiated goods in each country is described by the CES exact price index
 \begin{equation} \label{eq:P}
-P_i = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j} p_{ij}(\nu_j)^{1-\sigma} d \nu_j \right)^{\frac{1}{1 - \sigma}}
+P_i(\tau_i) = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j} p_{ij}(\nu_j)^{1-\sigma} d \nu_j \right)^{\frac{1}{1 - \sigma}}
 \end{equation}
 
 Equilibrium demand for manufactured goods from $j$ in $i$ is
@@ -131,9 +131,9 @@ Equilibrium demand for manufactured goods from $j$ in $i$ is
 x_{ij}^\star(\nu_j) = p_{ij}(\nu_j)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
 \end{equation}
 
-With prices of agricultural goods serving as numeraire, $Y_i = (1 - \alpha) I_i$ and consumer indirect utility is
+With prices of agricultural goods serving as numeraire, $Y_i = (1 - \alpha) I_i(\tau_i)$ and consumer indirect utility is
 \begin{equation} \label{eq:V}
-V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
+V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\tau_i)^\alpha}
 \end{equation}
 
 ### Production
@@ -142,8 +142,8 @@ Firms set prices to maximize profits across home and foreign markets, given cons
 \begin{equation} \label{eq:Pi}
 \begin{split}
 \max_{p_i(\nu_i)} & \quad \Pi_i \left( p_i(\nu_i) \right) = \left( p_i(\nu_i) - w_i \right) \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) \\
-\text{subject to} & \quad x_{ii}^\star(\nu_i) = p_i(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i \\
-& \quad x_{ji}^\star(\nu_i) = (\tau_j p_i(\nu_i))^{-\sigma} P_j^{\sigma - 1} \alpha I_i
+\text{subject to} & \quad x_{ii}^\star(\nu_i) = p_i(\nu_i)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i) \\
+& \quad x_{ji}^\star(\nu_i) = (\tau_j p_i(\nu_i))^{-\sigma} P_j(\tau_j)^{\sigma - 1} \alpha I_i(\tau_j)
 \end{split}
 \end{equation}
 
@@ -151,16 +151,19 @@ This problem yields equilibrium prices
 \begin{equation} \label{eq:prices}
 p_i^\star(\nu_i) = \frac{\sigma}{\sigma - 1} w_i
 \end{equation}
-Since prices are constant across firms, I suppress the variety and country indices and write $p_i^\star(\nu_i) = p_i^\star$.
+Since prices are constant across firms, I suppress the variety indices and write $p_i^\star(\nu_i) = p_i^\star$. Total consumption of manufactured goods from $i$ in $j$ is
+$$
+x_{ji}^\star(\tau_j) = \int_{\nu_i} x_{ji}^\star(\nu_i) d \nu_i
+$$
 
 Total profits for all firms in country $i$ can then be computed as
 \begin{equation} \label{eq:PiStar}
-\Pi_i(p^\star) = \int_{v_i} \Pi_i(p^\star) = (p_i^\star - w_i) \left( x_{ii}^\star(p_i^\star) + x_{ji}^\star(\tau_j p_i^\star) \right)
+\Pi_i(\tau_i, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j p_i^\star) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(p_j^\star) \rightarrow \alpha I_j$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(\tau_j) \rightarrow \alpha I_j(\tau_j)$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
-I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
+I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i(\tau_i)$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
 ### Tariff Revenue
 
@@ -171,7 +174,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j^\star x_{ij}^\star(\tau_i p_j^\star)
 
 ### Economic Equilibrium
 
-Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then wages must equalize across sectors, $w_i^x = w_i^y = w_i$.^[More specifically, because agricultural goods serve as the numeraire, $w_i = 1$.] Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture. Let $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ and $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$.
+Consumers lend their labor endowment to the manufacturing and agricultural sectors in order to maximize their income. If both sectors are active, then $w_i = 1$ because the agricultural sector is competitive and serves as numeraire. Let $L_i^x$ denote the amount of labor $i$ allocates toward manufacturing and $L_i^y$ the amount of labor $i$ allocates toward agriculture. Let $\bm{w} = \left\{ w_i, w_j \right\}$ and $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$.
 
 
 
@@ -190,7 +193,7 @@ $$
 
 
 **Proposition 1:** 
-If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i^x = w_i^y = w_j^x = w_j^y = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[These conditions are enumerated in Appendix B.]
+If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[These conditions are enumerated in Appendix B.]
 
 ### Government Preferences
 
@@ -210,12 +213,12 @@ I focus the analysis on the interesting case in which these mixed motives cause 
 **Assumption 3:** 
 $a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix C and $\bar{a}$ is an arbitrarily large but finite number.
 
-In this model, the number of firms, $n$ is given exogenously. This contrasts with standard models of international trade in which a zero profit condition disciplines the number of firms any country can support [@Krugman1980]. For this reason, $\bar{a}$ depends on $n$. As $n$ gets large, the consumer benefits from the availability of more varieties of manufactured goods -- $\bar{a}$ must fall in order to compensate for this artificial positive shock to indirect utility.
+Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
 
 
 
 **Lemma 1:** 
-If Assumption 3 is satisfied, then there exists a unique $\tau_i^\star(a_i) \in [1, \bar{\tau})$ satisfying
+If Assumption 3 is satisfied, then for all $a_i \in (\ubar{a}, \bar{a}]$, there exists a unique $\tau_i^\star(a_i) \in [1, \bar{\tau})$ satisfying
 $$
 \tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 $$
@@ -499,17 +502,17 @@ $$
 Summing these conditions and noting $x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} = x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma}$ at equilibrium consumption gives
 \begin{align*}
 x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \left( \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime \right) &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime \\
-x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} P_i^{1 - \sigma} &= \alpha I_i \\
-x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} P_i(\tau_i)^{1 - \sigma} &= \alpha I_i(\tau_i) \\
+x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i)
 \end{align*}
 
 **Indirect Utility:** Indirect utility is $X_i^\alpha Y_i^\alpha$ evaluated at equilibrium consumption. Substituting our demand equations \ref{eq:demand} into Equation \ref{eq:CES} gives
 \begin{align*}
 X_i^\star &= \left( \int_{\nu_i} x_{ii}^\star(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}^\star(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= P_i^{\sigma - 1} I_i \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \frac{\alpha I_i}{P_i}
+&= P_i(\tau_i)^{\sigma - 1} I_i(\tau_i) \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} + p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
+&= \alpha \frac{I_i(\tau_i)}{P_i(\tau_i)}
 \end{align*}
-Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
+Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i(\tau_i)$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
 
 **Prices:** The firms' first order condition is
 $$
@@ -539,10 +542,10 @@ The first order condition then becomes
 With unit costs of production in manufacturing and agriculture, goods market clearing requires
 \begin{equation*}
 \begin{split}
-L_i^y + L_j^y = (1 - \alpha) \left( I_i + I_j \right) \\
-L_i^x = \left( x_{ii}^\star(p^\star) + x_{ji}^\star(\tau_j p^\star) \right) \\
-L_j^x = \left( x_{ij}^\star(\tau_i p^\star) + x_{jj}^\star(p^\star) \right) \\
-L_i^x + L_j^x + \Pi_i(p^\star) + \Pi_j(p^\star) = \alpha \left( I_i + I_j \right)
+L_i^y + L_j^y = (1 - \alpha) \left( I_i(\tau_i) + I_j(\tau_j) \right) \\
+L_i^x = \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right) \\
+L_j^x = \left( x_{ij}^\star(\tau_i) + x_{jj}^\star(\tau_j) \right) \\
+L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( I_i(\tau_i) + I_j(\tau_j) \right)
 \end{split}
 \end{equation*}
 
@@ -580,7 +583,7 @@ Because $\frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} < 0$, this qua
 
 
 $$
-\ubar{a} = (\sigma - 1) k(\alpha)^{-1} p^{\alpha} (1 - p^{-1})
+\ubar{a} = (\sigma - 1) k(\alpha)^{-1} (p^\star)^{\alpha} (1 - (p^\star)^{-1})
 $$
 where
 $$
@@ -590,49 +593,16 @@ This quantity is derived by letting
 $$
 \ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-1} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
 $$
-Note that it is strictly positive. 
+where this quantity features in the proof of Lemma 1. Note that it is strictly positive. 
 
 
 
 ## D: Proofs
 
 
-
-
-**Proposition 1:** 
-A competitive agricultural sector guarantees that agricultural producers make zero profits. This zero profit condition implies
+Restatements of results from the main text proceed all proofs. Lemmas 1, 2, and 3 exploit the following definitions:
 $$
-\left( 1 - w_i \right) Y_i = 0
-$$
-which implies $w_i = 1$ whenever the agricultural sector is active, $Y_i > 0$. From Equation \ref{eq:prices}, this implies $p_i = p_j = p = \frac{\sigma}{\sigma - 1}$. Suppose for now that the agricultural sector is active in both countries, implying wages are equalized across countries and sectors. Below, we verify that this is the case if Assumption 2 is satisfied. 
-
-Labor allocations to each sector depend on tariff levels. The labor allocation in country $i$ to sector $k \in \left\{ x, y \right\}$ can then be written $L_i^k(\bm{\tau})$. The total labor allocation to the manufacturing sector in country $i$ is
-$$
-L_i^x(\bm{\tau}) = x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j)
-$$
-Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$, $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the dependence of the price index on the home tariff $P_i(\tau_i)$.]
-\begin{align*}
-L_i^x(\bar{\tau}, 1) &= p^{-\sigma} P_i(\bar{\tau})^{\sigma - 1} \alpha L + (1 p)^{-\sigma} P_j(1)^{\sigma - 1} \alpha L \\
-&= \frac{p^{-\sigma} \alpha L}{p^{1 - \sigma}} + \frac{p^{-\sigma} \alpha L}{2 p^{1 - \sigma}} \\
-&= \frac{\alpha L}{p} + \frac{1}{2} \frac{\alpha L}{p} \\
-&= \frac{3}{2} \frac{\sigma - 1}{\sigma} \alpha L
-\end{align*}
-Allocation to the agricultural sector is then, by the labor market clearing condition, 
-$$
-L_i^y(\bar{\tau}, 1) = L - L_i^x(\bar{\tau}, 1)
-$$
-If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) > 0$. Because total labor allocation to the manufacturing sector achieves its maximum at $\left\{ \bar{\tau}, 1 \right\}$, $L_i^y(\bm{\tau}) > 0$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$. Moreover, $L_i^x(\bm{\tau}) > 0$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[This follows from the fact that $L_i^x(1, \bar{\tau}) > 0$ and the monotonicities established above.] This demonstrates the proposition. $\blacksquare$
-
-
-
-**Lemma 1:** 
-The result follows from a series of Lemmas.
-
-
-
-**Preliminaries:** Let
-$$
-A(\tau_i) = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
+A(\tau_i) = p^\star x_{ij}^\star(\tau_i) (\alpha I(\tau_i))^{-1} = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
 $$
 $$
 B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
@@ -652,6 +622,50 @@ and
 $$
 B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
 $$
+
+
+
+
+**Proposition 1:** 
+If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.
+
+**Proof:** 
+A competitive agricultural sector guarantees that agricultural producers make zero profits. This zero profit condition implies
+$$
+\left( 1 - w_i \right) Y_i = 0
+$$
+which implies $w_i = 1$ whenever the agricultural sector is active, $Y_i > 0$. From Equation \ref{eq:prices}, this implies $p_i^\star = p_j^\star = p^\star = \frac{\sigma}{\sigma - 1}$. Suppose for now that the agricultural sector is active in both countries, implying wages are equalized across countries and sectors. Below, we verify that this is the case if Assumption 2 is satisfied. 
+
+Labor allocations to each sector depend on tariff levels. The labor allocation in country $i$ to sector $k \in \left\{ x, y \right\}$ can then be written $L_i^k(\bm{\tau})$. The total labor allocation to the manufacturing sector in country $i$ is
+$$
+L_i^x(\bm{\tau}) = x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j)
+$$
+Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$ (see Lemma 2.), $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the dependence of the price index on the home tariff $P_i(\tau_i)$.]
+\begin{align*}
+L_i^x(\bar{\tau}, 1) &= p^{-\sigma} P_i(\bar{\tau})^{\sigma - 1} \alpha L + (1 p)^{-\sigma} P_j(1)^{\sigma - 1} \alpha L \\
+&= \frac{p^{-\sigma} \alpha L}{p^{1 - \sigma}} + \frac{p^{-\sigma} \alpha L}{2 p^{1 - \sigma}} \\
+&= \frac{\alpha L}{p} + \frac{1}{2} \frac{\alpha L}{p} \\
+&= \frac{3}{2} \frac{\sigma - 1}{\sigma} \alpha L
+\end{align*}
+Allocation to the agricultural sector is then, by the labor market clearing condition, 
+$$
+L_i^y(\bar{\tau}, 1) = L - L_i^x(\bar{\tau}, 1)
+$$
+If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) > 0$. Because total labor allocation to the manufacturing sector achieves its maximum at $\left\{ \bar{\tau}, 1 \right\}$, $L_i^y(\bm{\tau}) > 0$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$. Moreover, $L_i^x(\bm{\tau}) > 0$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[This follows from the fact that $L_i^x(1, \bar{\tau}) > 0$ and the monotonicities established above.] This demonstrates the proposition. $\blacksquare$
+
+
+
+**Lemma 1:** 
+If Assumption 3 is satisfied, then for all $a_i \in (\ubar{a}, \bar{a}]$, there exists a unique $\tau_i^\star(a_i) \in [1, \bar{\tau})$ satisfying
+$$
+\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
+$$
+where $\tau_i^\star(a_i)$ does not depend on $\tau_j$.
+
+**Proof:** 
+The result follows from a series of Lemmas.
+
+
 
 **Lemma 1.1:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
 
@@ -677,7 +691,8 @@ $$
 Taking the second derivative, we have
 \begin{align*}
 (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^{\prime \prime}(\tau_i) =& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) \lambda^\prime(\tau_i) r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
-=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + \\
+& C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - (\tau_i - 1) I_i(\tau_i)^{-1} r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{r_i^\prime(\tau_i)}{p^\star x_{ij}^\star(\tau_i)} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
 =& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{C(\tau_i)}{(1 - \lambda(\tau_i))} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
@@ -782,7 +797,7 @@ $$
 $$
 \lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
 $$
-for all $a_i > \ubar{a}$. 
+for all $a_i > \ubar{a}$. To see the second claim, note
 $$
 \evalat[\Big]{ \frac{\partial G_i}{\partial \tau_i} }{\tau_i=1} = \Pi_i^\prime(\tau_i) > 0
 $$
@@ -799,41 +814,65 @@ whenever $G_i^\prime(\tau_i; a_i) = 0$. This guarantees that $G_i(\tau_i; a_i)$ 
 
 
 **Lemma 2:** 
+$G_i(\tau_j)$ is strictly decreasing in $\tau_j$.
+
+**Proof:** 
 It is sufficient to show that 
 $$
 \frac{\partial G_i(\tau_j)}{\partial \tau_{j}} < 0
 $$
-Here we have
+Note that 
+$$
+\frac{\partial G_i(\tau_j)}{\partial \tau_{j}} = (p^\star - 1) x_{ji}^{\star \prime}(\tau_j)
+$$
+From the proof of Lemma 1, we have 
 \begin{align*}
-\frac{ \partial G_i(\tau_j) }{ \partial \tau_j } &= n (p - 1) \frac{ \partial x_{ji}^\star(p \tau_j) }{ \partial \tau_j } \\
-&= \tau_j^{-\sigma - 1} \left( 1 + \tau_j^{1 - \sigma} \right)^{-1} \left( \frac{\sigma - 1}{\sigma} \right) \alpha L \underbrace{\left( \frac{\sigma - 1}{\tau_j^{\sigma - 1} + 1} - \sigma \right)}_{<0}
+x_{ji}^{\star \prime}(\tau_j) &= B(\tau_j) x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} r_j^\prime(\tau_j) \\
+&= B(\tau_j) x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} \left( (\tau_j - 1) p^\star x_{ji}^{\star \prime}(\tau_j) + p^\star x_{ji}^\star(\tau_j) \right) \\
+&= B(\tau_j) x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} \left( \frac{r_j(\tau_j)}{x_{ji}^\star(\tau_j)} x_{ji}^{\star \prime}(\tau_j) + p^\star x_{ji}^\star(\tau_j) \right) \\
+&= B(\tau_j) x_{ji}^\star(\tau_j) + \lambda(\tau_j) x_{ji}^{\star \prime}(\tau_j) + p^\star x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} \\
+(1 - \lambda(\tau_j)) x_{ji}^{\star \prime}(\tau_j)&= x_{ji}^\star(\tau_j) \left( B(\tau_j) + p^\star x_{ji}^\star(\tau_j) I(\tau_j)^{-1} \right) \\
+&= x_{ji}^\star(\tau_j) \left( B(\tau_j) + \alpha A(\tau_j) \right) \\
+&< x_{ji}^\star(\tau_j) \left( B(\tau_j) + A(\tau_j) \right) \\
+&= \sigma \tau^{-1} \underbrace{\left( \left( 1 + \tau_j^{1-\sigma} \right)^{-1} \tau_j^{-\sigma - 1} - 1 \right)}_{<0}
 \end{align*}
+$\blacksquare$
 
 
 
 **Lemma 3:** 
+$\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
+
+**Proof:** 
 Government $i$'s optimal policy does not depend on the policy choice of $j$. As such, it is sufficient to show that the government's objective function has a negative cross partial with respect to $\tau_i$, $a_i$,
 $$
 \frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} < 0
 $$
-Here we have
+Applying derivations from the proof of Lemma 1,
 \begin{align*}
-\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} &= - \frac{\sigma - 1}{\sigma} n^{\frac{1}{\sigma - 1}} \left( 1 + \tau_i^{1 - \sigma} \right)^{\frac{1}{\sigma - 1} - 1} \tau_i^{- \sigma} \alpha L
+\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} &= V_i^\prime(\tau_i) \\
+&= r^\prime(\tau_i) P_i(\tau_i)^{\alpha} - \alpha P_i(\tau_i)^{\alpha} I(\tau_i) A(\tau_i) \\
+&= \alpha P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} r^\prime(\tau_i) - A(\tau_i) \right) \\ 
+&= \alpha P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} \left( (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \right) - A(\tau_i) \right) \\
+&= P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + A(\tau)_i - A(\tau_i) \right) \\
+&= P_i(\tau_i)^{\alpha} \alpha^{-1} (\tau_i - 1) p^\star \underbrace{x_{ij}^{\star \prime}(\tau_i)}_{<0}
 \end{align*}
-To see that $\tau_i^\star(\bar{a}) = 1$, we can show that the first order condition evaluated at $\tau_i = 1$ equals zero when $a_i = \bar{a}$. From above, the first order condition evaluated at $\tau_i = 1$ is
-$$
-0 = - a_i p^{-1} (2n)^{\frac{1}{\sigma - 1}} + \sigma + \frac{1}{2} (1 - \sigma) (1 + p^{-1})
-$$
-Substituting $\bar{a}$ confirms that $\tau_i^\star(\bar{a}) = 1$. $\blacksquare$
+where the final inequality follows from Lemma 2. $\blacksquare$
 
 
 
 **Proposition 2:** 
+$a^\star = \bar{a}$
+
+**Proof:** 
 Follows immediately from Lemma 2 and Lemma 3 $\blacksquare$
 
 
 
 **Proposition 3:** 
+$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, $a_j$
+
+**Proof: **
 To establish that $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, note that derivative of $\Gamma_i(a_i, a_j)$ taken with respect to $a_i$ is
 \begin{align*}
 \frac{\partial \Gamma_i(a_i, a_j)}{\partial a_i} &= \left. \frac{\partial G_i(\tau_i^\star(a_i), 1; a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(a_i), 1 \right\}} + \underbrace{\frac{\partial G_i(\tau_i^\star(a_i), 1; a_i)}{\partial \tau_i^\star(a_i)}}_{=0} \frac{\partial \tau_i^\star(a_i)}{\partial a_i} - \left. \frac{\partial G_i(1, \tau_j^\star(a_j); a_i)}{\partial a_i} \right|_{\left\{ 1, \tau_j^\star(a_j) \right\}} \\
@@ -848,6 +887,21 @@ where the inequalities follow from Lemma 2 and Lemma 3. $\blacksquare$
 
 
 **Lemma 5:** 
+If
+$$
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
+$$
+then
+$$
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right\}
+$$
+and
+$$
+\omega^\star(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_j, c_j, \rho) = \text{accept}
+$$
+for all $c_j \in [\ubar{c}_j, \bar{c}_j]$.
+
+**Proof:** 
 By Lemma 4, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{\epsilon}, \bar{\epsilon} \right]$. Since this offer maximizes $i$'s utility conditional on peace,
 $$
 \tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
@@ -857,6 +911,9 @@ $\blacksquare$
 
 
 **Lemma 6:** 
+For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.
+
+**Proof:** 
 Government $j$ will accept $i$'s ideal point so long as
 $$
 W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) \leq \ubar{\epsilon}
@@ -882,6 +939,9 @@ for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. 
 
 
 **Proposition 4:** 
+$a_j(\ubar{c}_j, a_i)$ is weakly decreasing in $a_i$.
+
+**Proof:** 
 We have two cases, either $a_j(\ubar{c}, a_i) = 0$ or 
 $$
 a_j(\ubar{c}, a_i) = \Gamma_j^{-1}(\ubar{c}; a_i)
@@ -891,6 +951,9 @@ Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition 3), so is its inv
 
 
 **Lemma 7:** 
+$\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
+
+**Proof:** 
 Suppose $\tilde{\bm{\tau}}^\star(a_i) \notin \mathcal{P}$. It is straightforward to show that this produces a contradiction, namely
 $$
 \tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \notin \argmax_{\tilde{\bm{\tau}} \in [1, \bar{\tau}^2]} \tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)
@@ -913,11 +976,17 @@ In the proof of Lemma P4A (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_
 
 
 **Lemma 8:** 
+$\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
+
+**Proof:** 
 Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\tilde{\tau}_i^\star > \tau_i^\star(a_i)$. By Lemma 7, $\tilde{\bm{\tau}}^\star$ must lie in the pareto set. By the definition of $\tau_i^\star(a_i)$, $G_i(\tilde{\tau}_i^\star, \cdot; a_i) < G_i(\tau_i^\star(a_i), \cdot; a_i)$. By Lemma 2, $G_j(\cdot, \tilde{\tau}_i^\star; a_j) < G_j(\cdot, \tau_i^\star(a_i); a_i)$. Thus, a pareto improvement exists, contradicting the hypothesis that $\tilde{\bm{\tau}}^\star$ is an equilibrium offer. $\blacksquare$
 
 
 
 **Proposition 5:** 
+If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+
+**Proof:** 
 By Assumption 1, $i$'s first order condition must characterize the $\tilde{\bm{\tau}}$ when $a_j < a_j(\ubar{\epsilon}, a_i)$. Here, we have
 $$
 \frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
@@ -954,6 +1023,9 @@ as desired. $\blacksquare$
 
 
 **Proposition 6:** 
+In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in $a_i$ and $a_j$.
+
+**Proof:** 
 Equilibrium trade in manufactured goods is 
 $$
 x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)

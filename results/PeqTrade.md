@@ -1,1 +1,1 @@
-In a peaceful bargaining equilibrium (Definition `r beq`), trade is weakly increasing in $a_i$ and $a_j$.
+In a peaceful bargaining equilibrium (Definition `r Dbeq`), trade is weakly increasing in $a_i$ and $a_j$.

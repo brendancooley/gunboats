@@ -1,78 +1,128 @@
+Restatements of results from the main text proceed all proofs. Lemmas `r Lqccv`, `r Ltauj`, and `r Ltaui` exploit the following definitions:
+$$
+A(\tau_i) = p^\star x_{ij}^\star(\tau_i) (\alpha I(\tau_i))^{-1} = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
+$$
+$$
+B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
+$$
+$$
+C(\tau_i) = (\tau_i - 1) B(\tau_i) + 1
+$$
+and
+$$
+\lambda(\tau_i) = \frac{r_i(\tau_i)}{I_i(\tau_i)}
+$$
+with
+$$
+A^\prime(\tau_i) = A(\tau_i) B(\tau_i)
+$$
+and
+$$
+B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
+$$
+
+
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PeeqProof <- knit_child("../proofs/Peeq.md")
 ```
 
-**Proposition `r eeqP`:** `r PeeqProof`
+**Proposition `r Peeq`:** `r PeeqText`
+
+**Proof:** `r PeeqProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LqccvProof <- knit_child("../proofs/Lqccv.rmd")
 ```
 
-**Lemma `r Lqccv`:** `r LqccvProof`
+**Lemma `r Lqccv`:** `r LqccvText`
+
+**Proof:** `r LqccvProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtaujProof <- knit_child("../proofs/Ltauj.md")
 ```
 
-**Lemma `r tauj`:** `r LtaujProof`
+**Lemma `r Ltauj`:** `r LtaujText`
+
+**Proof:** `r LtaujProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtauiProof <- knit_child("../proofs/Ltaui.md")
 ```
 
-**Lemma `r taui`:** `r LtauiProof`
+**Lemma `r Ltaui`:** `r LtauiText`
+
+**Proof:** `r LtauiProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PastarProof <- knit_child("../proofs/Pastar.md")
 ```
 
-**Proposition `r astar`:** `r PastarProof`
+**Proposition `r Pastar`:** `r PastarText`
+
+**Proof:** `r PastarProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PgammaProof <- knit_child("../proofs/Pgamma.md")
 ```
 
-**Proposition `r Pgamma`:** `r PgammaProof`
+**Proposition `r Pgamma`:** `r PgammaText`
+
+**Proof: **`r PgammaProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtauCornerProof <- knit_child("../proofs/LtauCorner.md")
 ```
 
-**Lemma `r LtauCorner`:** `r LtauCornerProof`
+**Lemma `r LtauCorner`:** `r LtauCornerText`
+
+**Proof:** `r LtauCornerProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LaEpsilonProof <- knit_child("../proofs/LaEpsilon.rmd")
 ```
 
-**Lemma `r LaEpsilon`:** `r LaEpsilonProof`
+**Lemma `r LaEpsilon`:** `r LaEpsilonText`
+
+**Proof:** `r LaEpsilonProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PwarProof <- knit_child("../proofs/Pwar.rmd")
 ```
 
-**Proposition `r Pwar`:** `r PwarProof`
+**Proposition `r Pwar`:** `r PwarText`
+
+**Proof:** `r PwarProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LparetoProof <- knit_child("../proofs/Lpareto.md")
 ```
 
-**Lemma `r Lpareto`:** `r LparetoProof`
+**Lemma `r Lpareto`:** `r LparetoText`
+
+**Proof:** `r LparetoProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtildeTauProof <- knit_child("../proofs/LtildeTau.md")
 ```
 
-**Lemma `r LtildeTau`:** `r LtildeTauProof`
+**Lemma `r LtildeTau`:** `r LtildeTauText`
+
+**Proof:** `r LtildeTauProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PeqTauProof <- knit_child("../proofs/PeqTau.md")
 ```
 
-**Proposition `r PeqTau`:** `r PeqTauProof` 
+**Proposition `r PeqTau`:** `r PeqTauText`
+
+**Proof:** `r PeqTauProof` 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PeqTradeProof <- knit_child("../proofs/PeqTrade.md")
 ```
 
-**Proposition `r PeqTrade`:** `r PeqTradeProof` 
+**Proposition `r PeqTrade`:** `r PeqTradeText`
+
+**Proof:** `r PeqTradeProof` 
 

@@ -7,4 +7,4 @@ where the final inequality holds because $\tau_i^\star(a_i) > 1$ for all $a_i < 
 \begin{align*}
 \frac{\partial \Gamma_i(a_i, a_j)}{\partial a_j} &= - \underbrace{\frac{\partial G_i(1, \tau_j^\star(a_j); a_i)}{\partial \tau_j^\star(a_j)}}_{<0} \underbrace{\frac{\partial \tau_j^\star(a_j)}{\partial a_j}}_{<0}
 \end{align*}
-where the inequalities follow from Lemma `r tauj` and Lemma `r taui`. $\blacksquare$
+where the inequalities follow from Lemma `r Ltauj` and Lemma `r Ltaui`. $\blacksquare$
