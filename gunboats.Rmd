@@ -4,7 +4,7 @@ title: |
     | \tiny \hfill
     | \Large Political Bias, Trade Policy, and War
 author: Brendan Cooley
-date: 9 April 2019
+date: 4 November 2019
 abstract: Countries with deep trading relationships rarely fight wars with one another. Here, I develop a theory of trade, war, and political bias, in which both trade and war are endogenous objects. Governments can rectify poor market access conditions abroad through war and subsequent regime change, in which the victorious country installs a liberal "puppet" government abroad. Trade policy bargaining is therefore conducted "in the shadow of power," with counterfactual wars shaping the policy choices that prevail in times of peace. When peace prevails, militarily weak countries are more open to trade than powerful ones, all else equal. Equilibrium trade policies balance domestic interests against military threats from abroad. War is less likely between liberal governments because they prefer less protectionist trade policies. As a result, trade flows and the probability of peace are positively correlated in equilibrium, even though trade does not cause peace.
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
@@ -25,26 +25,41 @@ output:
 
 ```{r libs, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-rm(list=ls())
-libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggthemes", "latex2exp")
-sapply(libs, require, character.only = TRUE)
+helperPath <- "source/R/"
+helperFiles <- list.files(helperPath)
+for (i in helperFiles) {
+  source(paste0(helperPath, i))
+}
+
+libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggthemes", "ggpubr", "padr", "latex2exp")
+ipak(libs)
 
 # not available
+Deeq <- "NA"
+Dcoi <- "NA"
+Dnceq <- "NA"
+Dbeq <- "NA"
+
+Aalpha <- "NA"
+Aa <- "NA"
+AwCosts <- "NA"
+
 Pgamma <- "NA"
 Pwar <- "NA"
-AwCosts <- "NA"
-eeqP <- "NA"
-eeqD <- "NA"
-qccv <- "NA"
-aAlpha <- "NA"
-aA <- "NA"
-tauj <- "NA"
-nceq <- "NA"
-coi <- "NA"
+Peeq <- "NA"
 PeqTrade <- "NA"
 PeqTau <- "NA"
+
+Lqccv <- "NA"
 Lpareto <- "NA"
 LtildeTau <- "NA"
+Lqccv <- "NA"
+Ltauj <- "NA"
+
+AddxEconomy <- "NA"
+AddxEmpiricalFacts <- "NA"
+AddxEconomy <- "NA"
+AddxDefinitions <- "NA"
 
 if (file.exists('references.RData')) load('references.RData')
 
@@ -93,19 +108,52 @@ Ltick <- 1
 
 # Appendix
 
-## Trade, War, and Democracy: Empirical Facts
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- 1
+AddxEmpiricalFacts <- LETTERS[a]
+
+```
+
+## `r AddxEmpiricalFacts`: Trade, War, and Democracy: Empirical Facts
 
 ```{r, child="sections/Adata.rmd"}
 ```
 
 \clearpage
 
-## International Economy
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
+AddxEconomy <- LETTERS[a]
+
+```
+
+## `r AddxEconomy`: International Economy
 
 ```{r, child="sections/Aeconomy.rmd"}
 ```
 
-## Proofs
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
+AddxDefinitions <- LETTERS[a]
+
+```
+
+## `r AddxDefinitions`: Constant Definitions
+
+```{r, child="sections/AconstantDefs.rmd"}
+```
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+
+a <- a + 1
+AddxProofs <- LETTERS[a]
+
+```
+
+## `r AddxProofs`: Proofs
 
 ```{r, child="sections/Aproofs.rmd"}
 ```
@@ -116,11 +164,6 @@ Ltick <- 1
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 
-
-rm(tradeM)
-rm(tradeF)
-rm(tradeUF)
-rm(wars)
 save.image('references.RData')
 
 ```

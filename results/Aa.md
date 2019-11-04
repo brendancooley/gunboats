@@ -1,4 +1,1 @@
-$a_i \in (0, \bar{a})$ with
-$$
-\bar{a} = (2n)^{\frac{1}{1-\sigma}} \left( \frac{\sigma}{\sigma - 1} + \frac{1}{2} \right)
-$$
+$a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constant defined in Appendix `r AddxDefinitions` and $\bar{a}$ is an arbitrarily large but finite number.

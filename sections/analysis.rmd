@@ -1,6 +1,6 @@
-Recall from Definition `` `r beq` `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
+Recall from Definition `` `r Dbeq` `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` `r tauj` ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` `r nceq` ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` `r beq` ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` `r coi` ``), and makes regime change relatively more appealing. Highly liberal experience smaller conflicts of interest with one another (Proposition `` `r Pgamma` ``) which makes them unwilling to initiate wars (Proposition `` `r Pwar` ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` `r PeqTrade` ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` `r PeqTau` ``)
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` `r Ltauj` ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` `r Dnceq` ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` `r Dbeq` ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` `r Dcoi` ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` `r Pgamma` ``) which makes them unwilling to initiate wars (Proposition `` `r Pwar` ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` `r PeqTrade` ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` `r PeqTau` ``)
 
 ## Preferences
 
@@ -8,11 +8,11 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 source("../figs/G.R")
 
-GPlot
+Gplot
 
 ```
 
-Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal. 
+Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
 
 ```{r iso, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government iso-welfare curve over home and foreign tariff rates \\label{fig:iso}", fig.pos="t", fig.height=5, dpi=300}
 
@@ -25,40 +25,35 @@ isoPlot
 Figure \ref{fig:iso} depicts the government's welfare in $\left\{ \tau_i, \tau_j \right\}$ space. By decreasing the market access afforded to firms in $i$, non-zero tariffs in $j$ strictly decrease the government's welfare. For any given $\tau_i$, the government's welfare is increasing as $\tau_j$ decreases.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-tauj <- Ltick
+Ltauj <- Ltick
 Ltick <- Ltick + 1
 
 LtaujText <- knit_child("../results/Ltauj.md")
 ```
 
-**Lemma `r tauj`:** `r LtaujText`
+**Lemma `r Ltauj`:** `r LtaujText`
 
-If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given. Their best response functions are
-$$
-\tau_i(a_i, \tau_j) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i, \tau_j; a_i)
-$$
-and
-$$
-\tau_j(a_j, \tau_i) = \argmax_{\tau_j \in [1, \bar{\tau}]} G_j(\tau_i, \tau_j; a_j)
-$$
+If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-nceq <- Dtick
+Dnceq <- Dtick
 Dtick <- Dtick + 1
 
 DnceqText <- knit_child("../results/Dnceq.md")
 ```
 
-**Definition `r nceq`:** `r DnceqText`
+**Definition `r Dnceq`:** `r DnceqText`
+
+Lemma `r Lqccv` ensures that these optimal policies do not depend on the other government's policy choice. Our next result shows that as governments become more liberal, their optimal tariffs fall.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-taui <- Ltick
+Ltaui <- Ltick
 Ltick <- Ltick + 1
 
 LtauiText <- knit_child("../results/Ltaui.md")
 ```
 
-**Lemma `r taui`:** `r LtauiText`
+**Lemma `r Ltaui`:** `r LtauiText`
 
 ```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government best response functions \\label{fig:br}", fig.pos="t", fig.height=5, dpi=300}
 
@@ -70,21 +65,21 @@ Figure \ref{fig:br} depicts each governments' best response curves through the p
 
 ## Regime Change
 
-It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma `r taui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (0, \bar{a}]$ denote the type of the optimal puppet government.
+It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma `r Ltaui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
-\max_{a \in (0, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
+\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
 $$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-astar <- Ptick
+Pastar <- Ptick
 Ptick <- Ptick + 1
 
 PastarText <- knit_child("../results/Pastar.md")
 ```
 
-**Proposition `r astar`:** `r PastarText`
+**Proposition `r Pastar`:** `r PastarText`
 
 If a government wins a war, it will replace the vanquished government with a maximimally-responsive puppet. This government will adopt no trade barriers, providing maximal market access for the victorious country's firms. This is the threat point that governments leverage in international coercive bargaining.
 
@@ -92,24 +87,24 @@ If a government wins a war, it will replace the vanquished government with a max
 
 If a government wins a war it adopts its optimal policy and enjoys complete access to the markets of its trading partner. This best case scenario yields the government utility
 \begin{equation*} \label{eq:Gbar}
-\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(a^\star); a_i ) = G_i(\tau_i^\star(a_i), 1; a_i)
+\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
 \end{equation*}
 
 If a government loses a war, it is replaced by a puppet and must suffer under the policies implemented by the puppet regime. This is consistent with a notion of the government as a particular amalgamation of social actors that continues to exist at the conclusion of a war. The vanquished government yields utility
 \begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(a^\star), \tau_j^\star(a_j); a_i) = G_i(1, \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
 \end{equation*}
 
 These outcomes represent upper and lower utility bounds on the outcome of any coercive negotiation. Each government can be made no worse off than if it were to lose a war. And each government can secure no better bargaining outcome than if they were to (costlessly) win a war for regime change. The welfare difference between these two scenarios is taken to be $i$'s *conflict of interest* with $j$. Note that this conflict of interest, unlike standard models of bargaining and war, need not be symmetric. The "pie" at stake in the negotiation over trade policies may be valued differently by each government –- $i$’s preference intensity may be stronger than $j$’s or vice versa. This variation in preference intensity, combined with variable military power, determines bargaining outcomes.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-coi <- Dtick
+Dcoi <- Dtick
 Dtick <- Dtick + 1
 
 DcoiText <- knit_child("../results/Dcoi.md")
 ```
 
-**Definition `r coi`:** `r DcoiText`
+**Definition `r Dcoi`:** `r DcoiText`
 
 ```{r Pgamma, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Pgamma <- Ptick
@@ -120,11 +115,11 @@ PgammaText <- knit_child("../results/Pgamma.md")
 
 **Proposition `r Pgamma`:** `r PgammaText`
 
-Proposition `r Pgamma` states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments. 
+Proposition `r Pgamma` states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
 
 ## Bargaining
 
-These conflicts of interest structure what sets of policies $i$ will offer and what offers $j$ will prefer to war. Working backward, recall from Definition `r beq` that $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a function that takes an offer from $i$ and returns a choice of whether or not to declare war. $j$'s utility for war is given by
+These conflicts of interest structure what sets of policies $i$ will offer and what offers $j$ will prefer to war. Working backward, recall from Definition `r Dbeq` that $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a function that takes an offer from $i$ and returns a choice of whether or not to declare war. $j$'s utility for war is given by
 \begin{equation*} \label{eq:Ghatj}
 \hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
 \end{equation*}
@@ -177,9 +172,9 @@ PwarText <- knit_child("../results/Pwar.md")
 
 **Proposition `r Pwar` (Liberal Peace):** `r PwarText`
 
-Whenever $a_j \geq a_j(\ubar{\epsilon}, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace." 
+Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
 
-If $a_j < a_j(\ubar{\epsilon}, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
+If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
 For any offer, the probability that $j$ will declare war is given by
 \begin{equation} \label{eq:prwar}
@@ -197,11 +192,11 @@ With the probability of war given in Equation \ref{eq:prwar}, we can write $i$'s
 \begin{equation} \label{eq:Gtildei}
 \begin{split}
 \tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
-\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}} 
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}}
 \end{split}
 \end{equation}
 
-By Definition `r beq`, $i$'s equilibrium offer will maximize this objective function. Lemmas `` `r Lpareto` `` and `` `r LtildeTau` `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition `r nceq`).
+By Definition `r Dbeq`, $i$'s equilibrium offer will maximize this objective function. Lemmas `` `r Lpareto` `` and `` `r LtildeTau` `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition `r Dnceq`).
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Dpareto <- Dtick
@@ -238,7 +233,7 @@ barPlot
 
 ```
 
-The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma `r Lpareto`, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas `r qccv` and `r tauj`.]
+The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma `r Lpareto`, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemmas `r Lqccv` and `r Ltauj`.]
 
 How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 

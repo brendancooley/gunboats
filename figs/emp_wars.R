@@ -1,17 +1,17 @@
 ### SETUP ###
 
-helperPath <- "source/R/"
-helperFiles <- list.files(helperPath)
-for (i in helperFiles) {
-  source(paste0(helperPath, i))
-}
+# helperPath <- "source/R/"
+# helperFiles <- list.files(helperPath)
+# for (i in helperFiles) {
+#   source(paste0(helperPath, i))
+# }
 
-libs <- c("tidyverse", "patchwork", "ggrepel", "latex2exp", "ggpubr", "padr", "countrycode")
-ipak(libs)
+# libs <- c("tidyverse", "patchwork", "ggrepel", "latex2exp", "ggpubr", "padr", "countrycode")
+# ipak(libs)
 
-if (dir.exists("temp")) {
-  unlink("temp", recursive=TRUE)
-}
+# if (dir.exists("temp")) {
+#   unlink("temp", recursive=TRUE)
+# }
 
 tradeM <- read_csv("https://www.dropbox.com/s/g7e4q94drqbqg6w/trade.csv?dl=1", col_types=list(pop1="n", pop2="n", deaths="n"))
 wars <- read_csv("https://www.dropbox.com/s/ry1y4s153mi6v8c/wars.csv?dl=1")

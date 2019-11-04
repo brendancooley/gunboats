@@ -1,0 +1,162 @@
+The result follows from a series of Lemmas.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- 1
+qccv_rev <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_rev`:** $r_i^\prime(\tau_i) > 0 \implies r_i^{\prime \prime}(\tau_i) < 0$
+
+**Proof:** Using the above quantities, we can write
+$$
+x_{ij}^{\star \prime}(\tau_i) = B(\tau_i) x_{ij}^\star(\tau_i) + \frac{x_{ij}^\star(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i)
+$$
+and 
+\begin{align*}
+r_i^\prime(\tau_i) &= (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+r_i^\prime(\tau_i) &= B(\tau_i) r_i(\tau_i) + \lambda(\tau_i) r_i^\prime(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+(1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= B(\tau_i) r_i(\tau_i) + p^\star x_{ij}^\star(\tau_i) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= (\tau_i - 1) B(\tau_i) r_i(\tau_i) + r_i(\tau_i) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= r_i(\tau_i) \left( (\tau_i - 1) B(\tau_i) + 1 \right) \\
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) &= r_i(\tau_i) C(\tau_i)
+\end{align*}
+
+Note that because $\lambda(\tau_i) < 1$ and $B(\tau_i) < 0$, then $C(\tau_i) \in (0, 1)$ whenever $r_i^\prime(\tau_i) > 0$. Also, the definition of $r_i(\tau_i)$ implies
+$$
+\tau_i - 1 = \frac{r_i(\tau_i)}{p^\star x_{ij}^\star(\tau_i)}
+$$
+
+Taking the second derivative, we have
+\begin{align*}
+(\tau_i - 1) (1 - \lambda(\tau_i)) r_i^{\prime \prime}(\tau_i) =& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) \lambda^\prime(\tau_i) r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - \left( (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) - (\tau_i - 1) (1 - \lambda(\tau_i)) r_i^\prime(\tau_i)^2 I_i(\tau_i)^{-1} \right) + C(\tau_i) r_i^\prime(\tau_i) + \\
+& C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - (\tau_i - 1) I_i(\tau_i)^{-1} r_i^\prime(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{r_i^\prime(\tau_i)}{p^\star x_{ij}^\star(\tau_i)} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - (1 - \lambda(\tau_i)) r_i^\prime(\tau_i) \left( 1 - \lambda(\tau_i) \frac{C(\tau_i)}{(1 - \lambda(\tau_i))} \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& - r_i^\prime(\tau_i) \left( 1 - (1 - C(\tau_i)) \lambda(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i) + C^\prime(\tau_i) r_i(\tau_i) \\
+=& \underbrace{- r_i^\prime(\tau_i) \left( 1 - (1 - C(\tau_i)) \lambda(\tau_i) \right) + C(\tau_i) r_i^\prime(\tau_i)}_{<0 \text{ (I)}} + \underbrace{C^\prime(\tau_i) r_i(\tau_i)}_{<0 \text{ (II)}}
+\end{align*}
+
+Inequality (I) holds because $\lambda(\tau_i) < 1$. To see why (II) holds, note
+\begin{align*}
+\tau_i C^\prime(\tau_i) &= \tau_i (\tau_i - 1) B^\prime(\tau_i) + \tau_i B(\tau_i) \\
+&= (\tau_i - 1) \tau_i \left( (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2} \right) + \tau_i \left( (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1} \right) \\
+&= (\sigma - 1) \tau_i A(\tau_i) \tau_i B(\tau_i) + \sigma - \tau_i B^\prime(\tau_i) + (\sigma - 1) \tau_i A(\tau_i) - \sigma \\
+&= (\sigma - 1) \tau_i A(\tau_i) \underbrace{\left( \tau_i B(\tau_i) + 1 \right)}_{<0} - \tau_i B^\prime(\tau_i)
+\end{align*}
+where the inequality follows from the fact that $\tau_i B(\tau_i) < -1$. $\blacksquare$
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_rprime <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_rprime`:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$ for all $a_i > \ubar{a}$
+
+**Proof:** The first order condition is
+\begin{equation} \label{eq:Gfoc}
+0 = - \alpha a_i V_i(\tau_i) A(\tau_i) + a_i r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} + \Pi_i^\prime(\tau_i)
+\end{equation}.
+Rearranging,
+\begin{align*}
+\alpha a_i V_i(\tau_i) A(\tau_i) - \Pi_i^\prime(\tau_i) &= a_i r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \\
+\underbrace{ \frac{P_i(\tau_i)^\alpha}{a_i} \left( \alpha a_i V_i(\tau_i) A(\tau_i) - \Pi_i^\prime(\tau_i) \right)}_{>0} &= r_i^\prime(\tau_i)
+\end{align*}
+By construction, the left hand side is zero when $a_i = \ubar{a}$. It is therefore strictly positive for all $a_i > \ubar{a}$. $\blacksquare$
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_bound <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_bound`:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0$ and $G_i^{\prime}(\tau_i; a_i) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)$ for all $a_i > \ubar{a}$.
+
+**Proof:** Note first that when $G_i^{\prime}(\tau_i; a_i)$, $V_i^{\prime \prime}(\tau_i) < 0$ for all $a_i > \ubar{a}$. 
+\begin{align*}
+k(\alpha)^{-1} V_i^{\prime \prime}(\tau_i) &= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( V_i^\prime(\tau_i) + V_i(\tau_i) B(\tau_i) + r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) \\
+&= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( 2 r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} - \alpha V_i(\tau_i) A(\tau_i) + V_i(\tau_i) B(\tau_i) \right)
+\end{align*}
+When $G_i^{\prime}(\tau_i; a_i) = 0$, $P_i(\tau_i)^{-\alpha} r_i^\prime(\tau_i) = \alpha V_i(\tau_i) A_i(\tau_i) - \frac{1}{a_i} \Pi_i^\prime(\tau_i)$. Then, 
+$$
+k(\alpha)^{-1} V_i^{\prime \prime}(\tau_i) = P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \underbrace{\left( \alpha V_i(\tau_i) A(\tau_i) - \frac{2}{a_i} \Pi_i^\prime(\tau_i) + V_i(\tau_i) B(\tau_i) \right)}_{\phi(\tau_i)}
+$$
+Because $B(\tau_i) < 0$, $\phi_i(\tau_i) < 0$ when $a_i = \ubar{a}$. As $a_i \rightarrow \infty$, 
+\begin{align*}
+\phi(\tau_i) \rightarrow & \alpha V_i(\tau_i) A(\tau_i) + V_i(\tau_i) B(\tau_i) \\
+=& \alpha V_i(\tau_i) A(\tau_i) + V_i(\tau_i) \left( (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1} \right) \\
+<& V_i(\tau_i) \left( \sigma A(\tau_i) - \sigma \tau_i^{-1} \right) < 0
+\end{align*}
+So $\phi_i(\tau_i) < 0$ whenever $a_i \in (\ubar{a}, \infty)$. Additionally, $G_i^{\prime}(\tau_i; a_i) = 0 \implies r_i(\tau_i) > 0 \implies r_i^{\prime \prime} (\tau_i) < 0$ by the preceding Lemmas. So $G_i^{\prime}(\tau_i; a_i) = 0 \implies V_i^{\prime \prime}(\tau_i) < 0$. Now, note
+$$
+G_i^{\prime \prime}(\tau_i; a_i) = a_i V_i^{\prime \prime}(\tau_i) + \Pi_i^{\prime \prime}(\tau_i)
+$$
+Because $\ubar{a} < a_i$, the result follows immediately. 
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_qccv <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_qccv`:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) < 0$
+
+**Proof:** Note that 
+$$
+\Pi_i^{\prime \prime}(\tau_i) = (\sigma - 1) \Pi_i^\prime(\tau_i) A(\tau_i) + (\sigma - 1) \Pi_i(\tau_i) A(\tau_i) B(\tau_i) + D(\tau_i)
+$$
+with
+$$
+\Pi_i^\prime(\tau_i) = (\sigma - 1) \Pi(\tau_i) A(\tau_i) + \frac{\Pi_i(\tau_i)}{I_i(\tau_i)} r_i^\prime(\tau_i)
+$$
+and 
+$$
+D(\tau_i) = \frac{\Pi_i(\tau_i)}{I_i(\tau_i)} r_i^{\prime \prime}(\tau_i) + r_i^\prime(\tau_i) \frac{\Pi_i(\tau_i)}{I_i(\tau_i)} \left( (\sigma - 1) A(\tau_i) \frac{r_i^\prime(\tau_i)}{I_i(\tau_i)} \right)
+$$
+
+Applying the derivations from the previous result,
+\begin{align*}
+G_i^{\prime \prime}(\tau_i; \ubar{a}) =& \ubar{a} V_i^{\prime \prime}(\tau_i) + \Pi_i^{\prime \prime}(\tau_i) \\
+=& \ubar{a} k(\alpha) \left( P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( V_i(\tau_i) B(\tau_i) - \alpha V_i(\tau_i) A(\tau_i) \right) \right) + \\ 
+& (\sigma - 1) \Pi_i^\prime(\tau_i) A(\tau_i) + (\sigma - 1) \Pi_i(\tau_i) A(\tau_i) B(\tau_i) + D(\tau_i) \\
+=& \ubar{a} k(\alpha) \left( P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \Pi_i^\prime(\tau_i) B(\tau_i) + \alpha A(\tau_i) \Pi_i^\prime(\tau_i) \right) + \\
+& (\sigma - 1) \Pi_i^\prime(\tau_i) A(\tau_i) + \Pi_i^\prime(\tau_i) B(\tau_i) + D(\tau_i) \\
+=& \ubar{a} k(\alpha)  P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) + \ubar{a} k(\alpha) \Pi_i^\prime(\tau_i) \left( \alpha A(\tau_i) - B(\tau_i) \right) + \\
+& \Pi_i^\prime(\tau_i) \left( (\sigma - 1) A(\tau_i) + B(\tau_i) \right) + D(\tau_i) \\
+=& \ubar{a} k(\alpha)  P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) + \underbrace{(\sigma - 1) (p^{\alpha} (1 - p^{-1}))}_{=\beta < 1} \left( \alpha A(\tau_i) - B(\tau_i) \right) + \\
+& \Pi_i^\prime(\tau_i) \left( (\sigma - 1) A(\tau_i) + B(\tau_i) \right) + D(\tau_i) \\
+<& \ubar{a} k(\alpha)  P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) + \left( A(\tau_i) - B(\tau_i) \right) + \Pi_i^\prime(\tau_i) \left( (\sigma - 1) A(\tau_i) + B(\tau_i) \right) \\
+=& \ubar{a} k(\alpha)  P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) + \Pi_i^\prime(\tau_i) \left( \sigma A(\tau_i) + B(\tau_i) \right) < 0
+\end{align*}
+$\blacksquare$
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+qccv_tick <- qccv_tick + 1
+qccv_root <- qccv_tick
+```
+
+**Lemma `r Lqccv`.`r qccv_root`:** For all $a_i > \ubar{a}$,
+$$
+\evalat[\Big]{ \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} }{\tau_i = 1} > 0
+$$
+and
+$$
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i(\tau_i; a_i)}{\partial \tau_i} < 0
+$$
+
+**Proof:** Recall the first order condition in \ref{eq:Gfoc}. By construction, 
+$$
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
+$$
+for all $a_i > \ubar{a}$. To see the second claim, note
+$$
+\evalat[\Big]{ \frac{\partial G_i}{\partial \tau_i} }{\tau_i=1} = \Pi_i^\prime(\tau_i) > 0
+$$
+
+$\blacksquare$
+
+Lemmas `r Lqccv`.`r qccv_bound` and `r Lqccv`.`r qccv_qccv` imply that 
+$$
+0 > G_i^{\prime \prime}(\tau_i, \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)
+$$
+whenever $G_i^\prime(\tau_i; a_i) = 0$. This guarantees that $G_i(\tau_i; a_i)$ is strictly quasiconcave for all $a_i > \ubar{a}$, ensuring that $\tau_i^\star(a_i)$ is unique. Lemma `r Lqccv`.`r qccv_root` ensures that $\tau_i^\star(a_i)$ is interior to $[1, \bar{\tau}]$. Note that the first order condition (\ref{eq:Gfoc}) does not depend on $\tau_j$, verifying the latter part of the claim. $\blacksquare$
+
