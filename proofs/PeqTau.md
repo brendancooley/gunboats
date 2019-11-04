@@ -1,6 +1,6 @@
-By Assumption `r AwCosts`, $i$'s first order condition must characterize the $\tilde{\bm{\tau}}$ when $a_j < a_j(\ubar{\epsilon}, a_i)$. Here, we have
+By Assumption `r AwCosts`, $i$'s first order condition must characterize $\tilde{\tau}_i^\star$ when $a_j < a_j(\ubar{c}_j, a_i)$. Here, we have
 $$
-\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
+\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
 $$
 Rearranging,
 \begin{align*}
