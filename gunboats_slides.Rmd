@@ -46,6 +46,7 @@ ipak(libs)
 # TODO: need to manually add fragments on first vertical slide (. . .) doesn't work
 
 Akappa <- "NA"
+Dbeq <- "NA"
 
 if (file.exists('references.RData')) load('references.RData')
 
@@ -245,7 +246,7 @@ rm(wars)
 </div>
 <div class="fragment">
 
-**Definition `r beq`:** A subgame perfect *bargaining equilibrium* is pair of strategies, $\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)$ such that
+**Definition `r Dbeq`:** A subgame perfect *bargaining equilibrium* is pair of strategies, $\widetilde{\boldsymbol{\tau}}^\star(a_i, c_i)$ and $\omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j)$ such that
 $$
 \omega^\star(\widetilde{\boldsymbol{\tau}}; a_j, c_j, \rho) = \text{argmax}_{\omega \in \left\{\text{accept}, \text{war} \right\}} \widetilde{G}_j \left(\widetilde{\boldsymbol{\tau}}, \omega; a_j, c_j, \rho \right)
 $$
@@ -359,7 +360,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 
 . . . 
 
-**Definition `r eeqD`:** `r DeeqText`
+**Definition `r Deeq`:** `r DeeqText`
 
 . . . 
 
@@ -367,7 +368,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 
 . . . 
 
-**Proposition `r eeqP`:** `r PeeqText`
+**Proposition `r Peeq`:** `r PeeqText`
 
 . . .
 
@@ -454,12 +455,12 @@ isoPlot2
 
 ## Government Preferences (IV) {.centercontent}
 
-- **Lemma `r tauj`:** `r LtaujText`
-- **Lemma `r taui`:** `r LtauiText`
+- **Lemma `r Ltauj`:** `r LtaujText`
+- **Lemma `r Ltaui`:** `r LtauiText`
 
 ## Noncooperative Equilibrium (I) {.centercontent id="nce"}
 
-**Definition `r nceq`:** `r DnceqText`
+**Definition `r Dnceq`:** `r DnceqText`
 
 ## Noncooperative Equilibrium (II)
 
