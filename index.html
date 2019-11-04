@@ -796,7 +796,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 \]</span></p>
 </div>
 <div class="fragment">
-<p><strong>Proposition 1:</strong> If Assumption 2 is satisfied, then a unique economic equilibrium exists with <span class="math inline">\(L_i^x, L_i^y, L_j^x, L_j^y &gt; 0\)</span> and <span class="math inline">\(w_i^x = w_i^y = w_j^x = w_j^y = 1\)</span> for all <span class="math inline">\(\bm{\tau} \in [1, \bar{\tau}]^2\)</span>.</p>
+<p><strong>Proposition 1:</strong> If Assumption 2 is satisfied, then a unique economic equilibrium exists with <span class="math inline">\(L_i^x, L_i^y, L_j^x, L_j^y &gt; 0\)</span> and <span class="math inline">\(w_i = w_j = 1\)</span> for all <span class="math inline">\(\bm{\tau} \in [1, \bar{\tau}]^2\)</span>.</p>
 </div>
 <div class="fragment">
 <ul>
@@ -832,7 +832,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <p><strong>Assumption 3:</strong> <span class="math inline">\(a_i \in (\ubar{a}, \bar{a}]\)</span> for all <span class="math inline">\(i\)</span> where <span class="math inline">\(\ubar{a}\)</span> is a positive constant defined in Appendix C and <span class="math inline">\(\bar{a}\)</span> is an arbitrarily large but finite number.</p>
 </div>
 <div class="fragment">
-<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in [1, \bar{\tau})\)</span> satisfying <span class="math display">\[
+<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then for all <span class="math inline">\(a_i \in (\ubar{a}, \bar{a}]\)</span>, there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in [1, \bar{\tau})\)</span> satisfying <span class="math display">\[
 \tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
 \]</span> where <span class="math inline">\(\tau_i^\star(a_i)\)</span> does not depend on <span class="math inline">\(\tau_j\)</span>.</p>
 </div></section><section id="government-preferences-ii" class="slide level2">
@@ -1283,13 +1283,17 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
              preferredFont : "TeX",
              webFont : "TeX",
              imageFont : null
-         }
+         },
+         TeX: {  }
      });
 </script>
 
 <!-- mathjax colors-->
 <script type="text/x-mathjax-config">
-  MathJax.Hub.Config({ TeX: { extensions: ["color.js"] }});
+  MathJax.Hub.Config({ TeX: { 
+  						extensions: ["color.js"],
+  						equationNumbers: { autoNumber: "AMS" } 
+  					}});
 </script>
 
 <!-- <script>
