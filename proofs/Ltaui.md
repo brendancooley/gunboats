@@ -1,6 +1,6 @@
 Government $i$'s optimal policy does not depend on the policy choice of $j$. As such, it is sufficient to show that the government's objective function has a negative cross partial with respect to $\tau_i$, $a_i$,
 $$
-\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} < 0
+\frac{\partial^2 G_i}{\partial a_i \partial \tau_{i}} < 0
 $$
 Applying derivations from the proof of Lemma `r Lqccv`,
 \begin{align*}

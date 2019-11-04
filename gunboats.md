@@ -4,7 +4,7 @@ title: |
     | \tiny \hfill
     | \Large Political Bias, Trade Policy, and War
 author: Brendan Cooley
-date: 9 April 2019
+date: 4 November 2019
 abstract: Countries with deep trading relationships rarely fight wars with one another. Here, I develop a theory of trade, war, and political bias, in which both trade and war are endogenous objects. Governments can rectify poor market access conditions abroad through war and subsequent regime change, in which the victorious country installs a liberal "puppet" government abroad. Trade policy bargaining is therefore conducted "in the shadow of power," with counterfactual wars shaping the policy choices that prevail in times of peace. When peace prevails, militarily weak countries are more open to trade than powerful ones, all else equal. Equilibrium trade policies balance domestic interests against military threats from abroad. War is less likely between liberal governments because they prefer less protectionist trade policies. As a result, trade flows and the probability of peace are positively correlated in equilibrium, even though trade does not cause peace.
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
@@ -229,7 +229,7 @@ where $\tau_i^\star(a_i)$ does not depend on $\tau_j$.
 
 Recall from Definition `` 1 `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Highly liberal experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
 
 ## Preferences
 
@@ -273,7 +273,7 @@ Figure \ref{fig:br} depicts each governments' best response curves through the p
 
 ## Regime Change
 
-It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (0, \bar{a}]$ denote the type of the optimal puppet government.
+It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -711,7 +711,7 @@ where the inequality follows from the fact that $\tau_i B(\tau_i) < -1$. $\black
 
 
 
-**Lemma 1.2:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$ for all $a_i > \ubar{a}_i$
+**Lemma 1.2:** $G_i^\prime(\tau_i; a_i) = 0 \implies r_i^{\prime}(\tau_i) > 0$ for all $a_i > \ubar{a}$
 
 **Proof:** The first order condition is
 \begin{equation} \label{eq:Gfoc}
@@ -823,7 +823,7 @@ $$
 $$
 Note that 
 $$
-\frac{\partial G_i(\tau_j)}{\partial \tau_{j}} = (p^\star - 1) x_{ji}^{\star \prime}(\tau_j)
+\frac{\partial G_i(\tau_j)}{\partial \tau_{j}} = \frac{\partial \Pi_i(\tau_i, \tau_j)}{\partial \tau_j} = (p^\star - 1) x_{ji}^{\star \prime}(\tau_j)
 $$
 From the proof of Lemma 1, we have 
 \begin{align*}
@@ -846,7 +846,7 @@ $\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 **Proof:** 
 Government $i$'s optimal policy does not depend on the policy choice of $j$. As such, it is sufficient to show that the government's objective function has a negative cross partial with respect to $\tau_i$, $a_i$,
 $$
-\frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} < 0
+\frac{\partial^2 G_i}{\partial a_i \partial \tau_{i}} < 0
 $$
 Applying derivations from the proof of Lemma 1,
 \begin{align*}
@@ -875,14 +875,15 @@ $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, $a_j$
 **Proof: **
 To establish that $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, note that derivative of $\Gamma_i(a_i, a_j)$ taken with respect to $a_i$ is
 \begin{align*}
-\frac{\partial \Gamma_i(a_i, a_j)}{\partial a_i} &= \left. \frac{\partial G_i(\tau_i^\star(a_i), 1; a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(a_i), 1 \right\}} + \underbrace{\frac{\partial G_i(\tau_i^\star(a_i), 1; a_i)}{\partial \tau_i^\star(a_i)}}_{=0} \frac{\partial \tau_i^\star(a_i)}{\partial a_i} - \left. \frac{\partial G_i(1, \tau_j^\star(a_j); a_i)}{\partial a_i} \right|_{\left\{ 1, \tau_j^\star(a_j) \right\}} \\
-&= \underbrace{V_i^x(P_i(\tau_i^\star(a_i))) - V_i^x(P_i(1))}_{<0}
+\frac{\partial \Gamma_i(a_i, a_j)}{\partial a_i} =& \left. \frac{\partial G_i(\tau_i^\star(a_i), \tau_i^\star(\bar{a}); a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(a_i), \tau_j^\star(\bar{a}) \right\}} + \underbrace{\frac{\partial G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)}{\partial \tau_i^\star(a_i)}}_{=0} \frac{\partial \tau_i^\star(a_i)}{\partial a_i} - \\
+& \left. \frac{\partial G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(\bar{a}), \tau_j^\star(a_j) \right\}} \\
+=& \underbrace{V_i(P_i(\tau_i^\star(a_i))) - V_i(P_i(\tau_i^\star(\bar{a})))}_{<0}
 \end{align*}
-where the final inequality holds because $\tau_i^\star(a_i) > 1$ for all $a_i < \bar{a}$. To see that $\Gamma_i(a_i, a_j)$ is decreasing in $a_j$, note
+where the final inequality holds because $\tau_i^\star(a_i) > \tau_i^\star(\bar{a})$ for all $a_i < \bar{a}$. To see that $\Gamma_i(a_i, a_j)$ is decreasing in $a_j$, note
 \begin{align*}
-\frac{\partial \Gamma_i(a_i, a_j)}{\partial a_j} &= - \underbrace{\frac{\partial G_i(1, \tau_j^\star(a_j); a_i)}{\partial \tau_j^\star(a_j)}}_{<0} \underbrace{\frac{\partial \tau_j^\star(a_j)}{\partial a_j}}_{<0}
+\frac{\partial \Gamma_i(a_i, a_j)}{\partial a_j} &= - \underbrace{\frac{\partial G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)}{\partial \tau_j^\star(a_j)}}_{<0} \underbrace{\frac{\partial \tau_j^\star(a_j)}{\partial a_j}}_{<0}
 \end{align*}
-where the inequalities follow from Lemma 2 and Lemma 3. $\blacksquare$
+where the inequalities follow from Lemmas 2 and 3. $\blacksquare$
 
 
 
@@ -902,9 +903,9 @@ $$
 for all $c_j \in [\ubar{c}_j, \bar{c}_j]$.
 
 **Proof:** 
-By Lemma 4, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{\epsilon}, \bar{\epsilon} \right]$. Since this offer maximizes $i$'s utility conditional on peace,
+By Lemma 4, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{c}_j, \bar{c}_j \right]$. Since this offer maximizes $i$'s utility conditional on peace,
 $$
-\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), 1 \right\}
+\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_j^\star(\bar{a}) \right\}
 $$
 $\blacksquare$
 
@@ -916,25 +917,25 @@ For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)
 **Proof:** 
 Government $j$ will accept $i$'s ideal point so long as
 $$
-W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) \leq \ubar{\epsilon}
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) \leq \ubar{c}_j
 $$
 Note that this condition can be rewritten as
 $$
-\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+\Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
 If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{\epsilon}, a_i) = 0$. Otherwise, let $a_j(\ubar{\epsilon}, a_i)$ solve
 $$
-\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{\epsilon}
+\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{c}_j
 $$
 Recall from Proposition 3 that $\Gamma_j(a_j, a_i)$ is decreasing in both arguments. By Assumption 1, 
 $$
-\ubar{\epsilon} < \bar{\epsilon} \leq \kappa_j = \Gamma_j(0, \bar{a})
+\ubar{c}_j < \bar{c}_j \leq \kappa_j = \Gamma_j(\ubar{a}, a_i)
 $$
-Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{\epsilon}$ large enough. Then, by construction, 
+Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{c}_j$ large enough. Then, by construction, 
 $$
 \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
 $$
-for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 5, this guarantees peace. $\blacksquare$
+for all $a_j \geq a_j(\ubar{c}_j, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 5, this guarantees peace. $\blacksquare$
 
 
 
@@ -942,11 +943,11 @@ for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. 
 $a_j(\ubar{c}_j, a_i)$ is weakly decreasing in $a_i$.
 
 **Proof:** 
-We have two cases, either $a_j(\ubar{c}, a_i) = 0$ or 
+We have two cases, either $a_j(\ubar{c}, a_i) = \ubar{a}$ or 
 $$
 a_j(\ubar{c}, a_i) = \Gamma_j^{-1}(\ubar{c}; a_i)
 $$
-Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition 3), so is its inverse. This is sufficient to guarantee that $a_j(\ubar{\epsilon}, a_i)$ is decreasing in $a_i$. $\blacksquare$
+Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition 3), so is its inverse. This is sufficient to guarantee that $a_j(\ubar{c}_j, a_i)$ is decreasing in $a_i$. $\blacksquare$
 
 
 
@@ -969,7 +970,7 @@ F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_
 \end{split}
 \end{equation*}
 
-In the proof of Lemma P4A (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradicition. $\blacksquare$
+In the proof of Proposition 5 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradicition. $\blacksquare$
 
 
 
@@ -993,10 +994,10 @@ $$
 $$
 Rearranging,
 \begin{align*}
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{\epsilon}} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\bar{\epsilon} \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\bar{c}_j \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
 \end{align*}
 By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
 $$
@@ -1012,7 +1013,7 @@ $$
 $$
 We have
 $$
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{\epsilon}} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - \frac{1}{\bar{\epsilon}} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
+\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{c}_j} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - \frac{1}{\bar{c}_j} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
 $$
 which implies
 $$

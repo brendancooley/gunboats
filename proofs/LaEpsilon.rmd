@@ -1,21 +1,21 @@
 Government $j$ will accept $i$'s ideal point so long as
 $$
-W_j(a_j, a_i) - G_j(1, \tau_i^\star(a_i); a_j) \leq \ubar{\epsilon}
+W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) \leq \ubar{c}_j
 $$
 Note that this condition can be rewritten as
 $$
-\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+\Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
 If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{\epsilon}, a_i) = 0$. Otherwise, let $a_j(\ubar{\epsilon}, a_i)$ solve
 $$
-\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{\epsilon}
+\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{c}_j
 $$
 Recall from Proposition `r Pgamma` that $\Gamma_j(a_j, a_i)$ is decreasing in both arguments. By Assumption `r AwCosts`, 
 $$
-\ubar{\epsilon} < \bar{\epsilon} \leq \kappa_j = \Gamma_j(0, \bar{a})
+\ubar{c}_j < \bar{c}_j \leq \kappa_j = \Gamma_j(\ubar{a}, a_i)
 $$
-Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{\epsilon}$ large enough. Then, by construction, 
+Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{c}_j$ large enough. Then, by construction, 
 $$
 \Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
 $$
-for all $a_j \geq a_j(\ubar{\epsilon}, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma `r LtauCorner`, this guarantees peace. $\blacksquare$
+for all $a_j \geq a_j(\ubar{c}_j, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma `r LtauCorner`, this guarantees peace. $\blacksquare$
