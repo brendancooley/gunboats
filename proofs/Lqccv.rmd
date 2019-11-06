@@ -72,7 +72,7 @@ qccv_bound <- qccv_tick
 
 **Lemma `r Lqccv`.`r qccv_bound`:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0$ and $G_i^{\prime}(\tau_i; a_i) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)$ for all $a_i > \ubar{a}$.
 
-**Proof:** Note first that when $G_i^{\prime}(\tau_i; a_i)$, $V_i^{\prime \prime}(\tau_i) < 0$ for all $a_i > \ubar{a}$. 
+**Proof:** Note first that when $G_i^{\prime}(\tau_i; a_i) = 0$, $V_i^{\prime \prime}(\tau_i) < 0$ for all $a_i > \ubar{a}$. 
 \begin{align*}
 k(\alpha)^{-1} V_i^{\prime \prime}(\tau_i) &= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( V_i^\prime(\tau_i) + V_i(\tau_i) B(\tau_i) + r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) \\
 &= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( 2 r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} - \alpha V_i(\tau_i) A(\tau_i) + V_i(\tau_i) B(\tau_i) \right)
