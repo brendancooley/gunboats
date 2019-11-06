@@ -728,7 +728,7 @@ By construction, the left hand side is zero when $a_i = \ubar{a}$. It is therefo
 
 **Lemma 1.3:** $G_i^{\prime}(\tau_i; \ubar{a}) = 0$ and $G_i^{\prime}(\tau_i; a_i) = 0 \implies G_i^{\prime \prime}(\tau_i; \ubar{a}) > G_i^{\prime \prime}(\tau_i; a_i)$ for all $a_i > \ubar{a}$.
 
-**Proof:** Note first that when $G_i^{\prime}(\tau_i; a_i)$, $V_i^{\prime \prime}(\tau_i) < 0$ for all $a_i > \ubar{a}$. 
+**Proof:** Note first that when $G_i^{\prime}(\tau_i; a_i) = 0$, $V_i^{\prime \prime}(\tau_i) < 0$ for all $a_i > \ubar{a}$. 
 \begin{align*}
 k(\alpha)^{-1} V_i^{\prime \prime}(\tau_i) &= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( V_i^\prime(\tau_i) + V_i(\tau_i) B(\tau_i) + r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) \\
 &= P_i(\tau_i)^{-\alpha} r_i^{\prime \prime} (\tau_i) - \alpha A(\tau_i) \left( 2 r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} - \alpha V_i(\tau_i) A(\tau_i) + V_i(\tau_i) B(\tau_i) \right)
@@ -877,7 +877,7 @@ To establish that $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, note that derivat
 \begin{align*}
 \frac{\partial \Gamma_i(a_i, a_j)}{\partial a_i} =& \left. \frac{\partial G_i(\tau_i^\star(a_i), \tau_i^\star(\bar{a}); a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(a_i), \tau_j^\star(\bar{a}) \right\}} + \underbrace{\frac{\partial G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)}{\partial \tau_i^\star(a_i)}}_{=0} \frac{\partial \tau_i^\star(a_i)}{\partial a_i} - \\
 & \left. \frac{\partial G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)}{\partial a_i} \right|_{\left\{ \tau_i^\star(\bar{a}), \tau_j^\star(a_j) \right\}} \\
-=& \underbrace{V_i(P_i(\tau_i^\star(a_i))) - V_i(P_i(\tau_i^\star(\bar{a})))}_{<0}
+=& \underbrace{V_i(\tau_i^\star(a_i)) - V_i(\tau_i^\star(\bar{a}))}_{<0}
 \end{align*}
 where the final inequality holds because $\tau_i^\star(a_i) > \tau_i^\star(\bar{a})$ for all $a_i < \bar{a}$. To see that $\Gamma_i(a_i, a_j)$ is decreasing in $a_j$, note
 \begin{align*}
@@ -970,7 +970,7 @@ F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_
 \end{split}
 \end{equation*}
 
-In the proof of Proposition 5 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradicition. $\blacksquare$
+In the proof of Proposition 5 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradiction. $\blacksquare$
 
 
 
@@ -990,14 +990,14 @@ If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barri
 **Proof:** 
 By Assumption 1, $i$'s first order condition must characterize $\tilde{\tau}_i^\star$ when $a_j < a_j(\ubar{c}_j, a_i)$. Here, we have
 $$
-\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
+\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
 $$
 Rearranging,
 \begin{align*}
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\bar{c}_j \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+(\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
 \end{align*}
 By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
 $$
@@ -1013,7 +1013,7 @@ $$
 $$
 We have
 $$
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{c}_j} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - \frac{1}{\bar{c}_j} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
+\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
 $$
 which implies
 $$
@@ -1031,7 +1031,19 @@ Equilibrium trade in manufactured goods is
 $$
 x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)
 $$
-where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 3. Otherwise, the strategic situation is unchanged. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also weakly increasing. $\blacksquare$ 
+And total trade is 
+$$
+x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j) + \mid x_{ij}^\star(\tau_i) - x_{ji}^\star(\tau_j) \mid
+$$
+where $\mid x_{ij}^\star(\tau_i) - x_{ji}^\star(\tau_j) \mid$ is the (market clearing) value of agricultural trade. We have established that $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. It therefore remains to show that $\tilde{\tau}_i^\star(a_i, a_j)$ and $\tilde{\tau}_j^\star(a_i, a_j)$ are decreasing in $a_i, a_j$. First, $\frac{\partial \tilde{\tau}_i^\star(a_i, a_j)}{\partial a_i} < 0$ because the cross partial
+\begin{align*}
+\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} &= \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial^2 G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i^2} - \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial W_j(a_j, a_i)}{\partial a_i} + \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\cdot, \tilde{\tau}_i | a_j)}{\partial \tau_i} \left( \frac{\partial G_i(\tilde{\tau}_i, \cdot; a_i)}{\partial \tilde{\tau}_i} - \frac{\partial \hat{G}_i(a_i, a_j)}{\partial a_i} \right) \\
+&= \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial^2 G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i^2} - \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial W_j(a_j, a_i)}{\partial a_i} + \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\cdot, \tilde{\tau}_i | a_j)}{\partial \tau_i} \left( V_i(\tilde{\tau}_i) - \left( \rho V_i(\tau_i^\star(a_i)) + (1 - \rho) V_i(\tau_i^\star(\bar{a}) \right) \right)
+\end{align*}
+is negative. 
+
+
+$\blacksquare$ 
 
 
 \clearpage
