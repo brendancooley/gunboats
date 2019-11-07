@@ -63,7 +63,7 @@ Rearranging,
 \alpha a_i V_i(\tau_i) A(\tau_i) - \Pi_i^\prime(\tau_i) &= a_i r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \\
 \underbrace{ \frac{P_i(\tau_i)^\alpha}{a_i} \left( \alpha a_i V_i(\tau_i) A(\tau_i) - \Pi_i^\prime(\tau_i) \right)}_{>0} &= r_i^\prime(\tau_i)
 \end{align*}
-By construction, the left hand side is zero when $a_i = \ubar{a}$. It is therefore strictly positive for all $a_i > \ubar{a}$. $\blacksquare$
+By construction, the left hand side is zero (as $\tau_i \rightarrow \infty$) when $a_i = \ubar{a}$. It is therefore strictly positive for all $a_i > \ubar{a}$. $\blacksquare$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 qccv_tick <- qccv_tick + 1
