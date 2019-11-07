@@ -9,7 +9,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Adrien Bilal, Tyson Chatagnier, Noel Foster, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, Kris Ramsay, Bryan Schonfeld, and Sondre Solstad, Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -591,7 +591,7 @@ k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
 $$
 This quantity is derived by letting
 $$
-\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-1} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
+\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
 $$
 where this quantity features in the proof of Lemma 1. Note that it is strictly positive. 
 
@@ -994,9 +994,9 @@ $$
 $$
 Rearranging,
 \begin{align*}
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
+\left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
 (\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
 \end{align*}
 By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
@@ -1013,7 +1013,7 @@ $$
 $$
 We have
 $$
-\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
+\frac{\partial^2 \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i \partial \rho} = - \frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{>0} \underbrace{\frac{\partial W_j}{\partial \rho}}_{<0} - \frac{1}{\bar{c}_j - \ubar{c}_j} \underbrace{\frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i}}_{<0} \underbrace{\frac{\partial \hat{G}_i}{\partial \rho}}_{>0} > 0
 $$
 which implies
 $$
