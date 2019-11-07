@@ -923,9 +923,9 @@ Note that this condition can be rewritten as
 $$
 \Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
-If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{\epsilon}, a_i) = 0$. Otherwise, let $a_j(\ubar{\epsilon}, a_i)$ solve
+If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{c}_j, a_i) = 0$. Otherwise, let $a_j(\ubar{c}_j, a_i)$ solve
 $$
-\Gamma_j(a_j(\ubar{\epsilon}, a_i), a_i) = \ubar{c}_j
+\Gamma_j(a_j(\ubar{c}_j, a_i), a_i) = \ubar{c}_j
 $$
 Recall from Proposition 3 that $\Gamma_j(a_j, a_i)$ is decreasing in both arguments. By Assumption 1, 
 $$
@@ -933,7 +933,7 @@ $$
 $$
 Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exists for $\ubar{c}_j$ large enough. Then, by construction, 
 $$
-\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}
+\Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
 for all $a_j \geq a_j(\ubar{c}_j, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 5, this guarantees peace. $\blacksquare$
 
