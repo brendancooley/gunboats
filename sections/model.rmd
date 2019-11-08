@@ -1,4 +1,4 @@
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` `r Peeq` ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` `r Deeq` ``) will exist for any trade policy choices. Lemma `` `r Lqccv` `` states that within this environment, government preferences over their own trade policies are well-behaved and admit interior optima. These serve as the governments ideal points' in the coercive bargaining game that determines equilibrium policies.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` `r Peeq` ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` `r Deeq` ``) will exist for any trade policy choices. This economy allows us to describe governments preferences over consumer welfare and producer profits. As governments become more liberal, they prefer to adopt low barriers to trade. This variation affects how governments behave in the coercive bargaining game that follows.
 
 ## International Bargaining
 
@@ -148,7 +148,7 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-I focus the analysis on the interesting case in which these mixed motives cause the government to prefer some degree of protection. Assumption `` `r Aa` `` guarantees that the government would adopt a positive tariff in a world in which coercive bargaining did not occur. This requires that the government's weight on consumer welfare be sufficiently small.^[Even in today's relatively open international economy, it is rare to observe governments dismantling all barriers to trade. Those governments that adopt low tariff barriers often substitute with higher non-tariff barriers to trade. See @Kono2006.]
+Assumption `` `r Aa` `` guarantees that the government prefers an interior tariff. This requires that the government's weight on consumer welfare be sufficiently large.
 
 ```{r aA, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Aa <- Atick
@@ -160,12 +160,3 @@ AaText <- knit_child("../results/Aa.md")
 **Assumption `r Aa`:** `r AaText`
 
 Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-Lqccv <- Ltick
-Ltick <- Ltick + 1
-
-LqccvText <- knit_child("../results/Lqccv.md")
-```
-
-**Lemma `r Lqccv`:** `r LqccvText`

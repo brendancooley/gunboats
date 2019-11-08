@@ -37,3 +37,38 @@ P_i(\tau_i)^{-\alpha} r_i(\tau_i) B(\tau_i) =& P_i(\tau_i)^{-\alpha} r_i^\prime(
 =& \alpha V_i(\tau_i) A(\tau_i) - P_i(\tau_i)^{-\alpha} A(\tau_i) \alpha I(\tau_i) \\
 =& 0
 \end{align*}
+
+## Attempt $\infty$
+
+**Lemmas**
+
+$$
+r^\prime(\tau_i) + r(\tau_i) > 0
+$$
+$$
+B(\tau_i) + B^\prime(\tau_i) < 0
+$$
+$$
+(\sigma - 1) A(\tau_i) + B(\tau_i) + \alpha A(x) < 0
+$$
+$$
+\frac{1}{1 - \lambda(\tau_i)} > \frac{\lambda(\tau_i)}{1-\lambda(\tau_i)} r_i^\prime(\tau_i)
+$$
+
+*At the moment I can kill everything except the indirect effects (note that these operate on profit derivative too, but aren't shown here. Write this up and put it down for a little while.**
+
+**Derivations**
+$$
+\Pi^{\prime \prime} = \left( (\sigma - 1) A(\tau_i) + B(\tau_i) \right) x_{ii}^\star(\tau_i) A(\tau_i)
+$$
+$$
+V_i^{\prime \prime}(\tau_i) = r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} A(\tau_i) - \alpha V_i^\prime(\tau_i) A(\tau_i) - \alpha V_i(\tau_i) A^\prime(\tau_i)
+$$
+(without indirect effects)
+$$
+r_i^{\prime \prime}(\tau_i) = B^\prime(\tau_i) P(\tau_i)^{-\alpha} r_i(\tau_i) + B(\tau_i) + \alpha V_i(\tau_i) A(\tau_i) B(\tau_i)
+$$
+(indirect effect from imports...kills second term in $V^{\prime \prime})
+$$
+\alpha A(\tau_i) r_i^\prime(\tau_i)
+$$

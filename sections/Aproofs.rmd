@@ -1,24 +1,9 @@
-Restatements of results from the main text proceed all proofs. Lemmas `r Lqccv`, `r Ltauj`, and `r Ltaui` exploit the following definitions:
+Restatements of results from the main text proceed all proofs. Lemmas `r Ltauj`, and `r Ltaui` exploit the following definitions:
 $$
 A(\tau_i) = p^\star x_{ij}^\star(\tau_i) (\alpha I(\tau_i))^{-1} = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
 $$
 $$
 B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
-$$
-$$
-C(\tau_i) = (\tau_i - 1) B(\tau_i) + 1
-$$
-and
-$$
-\lambda(\tau_i) = \frac{r_i(\tau_i)}{I_i(\tau_i)}
-$$
-with
-$$
-A^\prime(\tau_i) = A(\tau_i) B(\tau_i)
-$$
-and
-$$
-B^\prime(\tau_i) = (\sigma - 1) A(\tau_i) B(\tau_i) + \sigma \tau_i^{-2}
 $$
 
 
@@ -29,14 +14,6 @@ PeeqProof <- knit_child("../proofs/Peeq.md")
 **Proposition `r Peeq`:** `r PeeqText`
 
 **Proof:** `r PeeqProof`
-
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-LqccvProof <- knit_child("../proofs/Lqccv.rmd")
-```
-
-**Lemma `r Lqccv`:** `r LqccvText`
-
-**Proof:** `r LqccvProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtaujProof <- knit_child("../proofs/Ltauj.md")
