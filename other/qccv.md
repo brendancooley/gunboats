@@ -12,6 +12,28 @@ V_i^{\prime \prime}(\tau_i) &= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} -
 &= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} A(\tau_i) - \alpha V_i(\tau_i) A^\prime(\tau_i) \\
 &= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} A(\tau_i) - \alpha V_i(\tau_i) A(\tau_i) B(\tau_i) \\
 &= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha^2 V_i(\tau_i) A(\tau_i)^2 - \alpha V_i(\tau_i) A(\tau_i) B(\tau_i) \\
-&= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha A(\tau_i) V_i(\tau_i) \underbrace{\left( \alpha A(\tau_i) + B(\tau_i) \right)}_{<0}
+&= r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha} - \alpha A(\tau_i) V_i(\tau_i) \left( \alpha A(\tau_i) + B(\tau_i) \right)
 \end{align*}
-Moreover since $r_i^{\prime}(\tau_i) > 0$ then $r_i^{\prime \prime}(\tau_i) < 0$.
+
+Now examine $r_i^{\prime \prime}(\tau_i) P(\tau_i)^{-\alpha}$
+\begin{align*}
+P_i(\tau_i)^{-\alpha} r_i^{\prime \prime}(\tau_i) =& P_i(\tau_i)^{-\alpha} \left( r_i^\prime(\tau_i) B(\tau_i) + r_i(\tau_i) B^\prime(\tau_i) + x_{ij}^\star(\tau_i) B(\tau_i) + \lambda^\prime(\tau_i) r_i^\prime(\tau_i) + \lambda(\tau_i) r_i^{\prime \prime}(\tau_i) + p x_{ij}^{\star}(\tau_i) \left( \alpha I_i(\tau_i) \right)^{-1} r_i^\prime(\tau_i) \right) \\
+=& P_i(\tau_i)^{-\alpha} \left( r_i^\prime(\tau_i) B(\tau_i) + r_i(\tau_i) B^\prime(\tau_i) + p x_{ij}^\star(\tau_i) B(\tau_i) + \lambda^\prime(\tau_i) r_i^\prime(\tau_i) + \lambda(\tau_i) r_i^{\prime \prime}(\tau_i) + A(\tau_i) r_i^\prime(\tau_i) \right) \\
+=& P_i(\tau_i)^{-\alpha} r_i(\tau_i) B^\prime(\tau_i) + P_i(\tau_i)^{-\alpha} r_i^\prime(\tau_i) \left( A(\tau_i) + B(\tau_i) \right) + \alpha I(\tau_i) P_i(\tau_i)^{-\alpha} A(\tau_i) B(\tau_i) + \\
+& P_i(\tau_i)^{-\alpha} \left( \lambda^\prime(\tau_i) r_i^\prime(\tau_i) + \lambda(\tau_i) r_i^{\prime \prime}(\tau_i) \right) \\
+=& P_i(\tau_i)^{-\alpha} r_i(\tau_i) B^\prime(\tau_i) + \alpha V(\tau_i) A(\tau_i) \left( A(\tau_i) + B(\tau_i) \right) + \alpha V(\tau_i) B(\tau_i) + \\
+& P_i(\tau_i)^{-\alpha} \left( \lambda^\prime(\tau_i) r_i^\prime(\tau_i) + \lambda(\tau_i) r_i^{\prime \prime}(\tau_i) \right) \\
+=& P_i(\tau_i)^{-\alpha} r_i(\tau_i) B^\prime(\tau_i) + \alpha V(\tau_i) A(\tau_i) \left( A(\tau_i) + B(\tau_i) \right) + \alpha V(\tau_i) B(\tau_i) + \\
+& \alpha V(\tau_i) A(\tau_i) I(\tau_i)^{-1} (1 - \lambda(\tau_i)) + P_i(\tau_i)^{-\alpha} \lambda(\tau_i) r_i^{\prime \prime}(\tau_i)
+\end{align*}
+
+Finally note $B^\prime(\tau_i) < - B(\tau_i)$ and 
+$$
+r_i(\tau_i) = B(\tau_i)^{-1} \left( r_i^\prime(\tau_i) - p x_{ij}^\star(\tau_i) \right)
+$$
+Then, 
+\begin{align*}
+P_i(\tau_i)^{-\alpha} r_i(\tau_i) B(\tau_i) =& P_i(\tau_i)^{-\alpha} r_i^\prime(\tau_i) - P_i(\tau_i)^{-\alpha} p x_{ij}^\star(\tau_i) \\
+=& \alpha V_i(\tau_i) A(\tau_i) - P_i(\tau_i)^{-\alpha} A(\tau_i) \alpha I(\tau_i) \\
+=& 0
+\end{align*}
