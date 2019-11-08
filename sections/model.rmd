@@ -148,7 +148,7 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-Assumption `` `r Aa` `` guarantees that the government prefers an interior tariff. This requires that the government's weight on consumer welfare be sufficiently large.
+Assumption `` `r Aa` `` guarantees that the government prefers an interior tariff ($\tau_i < \bar{\tau}$). This requires that the government's weight on consumer welfare be sufficiently large.
 
 ```{r aA, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Aa <- Atick
