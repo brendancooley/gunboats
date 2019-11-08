@@ -206,7 +206,7 @@ The exogenous parameter $a_i$ controls the relative weight the government places
 
 I take $a_i$ as a measure of the representativeness of $i$'s government. When $a_i$ is small (high bias), the government privileges the narrow interests of firms and its own revenue. As $a_i$ gets larger (low bias), the welfare of consumers plays a larger role in determining the governments' preferences. If democracies are more sensitive to the interests of consumers, then we would expect them to have higher values of $a_i$ than autocracies.
 
-Assumption `` 3 `` guarantees that the government prefers an interior tariff. This requires that the government's weight on consumer welfare be sufficiently large.
+Assumption `` 3 `` guarantees that the government prefers an interior tariff ($\tau_i < \bar{\tau}$). This requires that the government's weight on consumer welfare be sufficiently large.
 
 
 
@@ -584,7 +584,7 @@ This quantity is derived by letting
 $$
 \ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
 $$
-where this quantity features in the proof of Lemma NA. Note that it is strictly positive. 
+. Note that it is strictly positive. 
 
 
 

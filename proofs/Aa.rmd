@@ -9,4 +9,4 @@ This quantity is derived by letting
 $$
 \ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
 $$
-where this quantity features in the proof of Lemma `r Lqccv`. Note that it is strictly positive. 
+. Note that it is strictly positive. 
