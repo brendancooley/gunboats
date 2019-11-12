@@ -9,7 +9,7 @@ Rearranging,
 \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
 (\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
 \end{align*}
-By Assumption `r AwCosts`, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
+By Assumption `r AwCosts`, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value,^[Note also that by applying the definition of $W_i$, wwe see this condition implies $G_i(\tilde{\bm{\tau}})$ is concave about the pareto set.] 
 $$
 W_i(a_i, a_j) < G_i(\tilde{\tau}_i)
 $$
