@@ -160,3 +160,14 @@ AaText <- knit_child("../results/Aa.md")
 **Assumption `r Aa`:** `r AaText`
 
 Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
+
+Lemma `r Lint` formalizes the claims that ideal points are interior to the policy space. 
+
+```{r Lint, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+Lint <- Ltick
+Ltick <- Ltick + 1
+
+LintText <- knit_child("../results/Lint.md")
+```
+
+**Lemma `r Lint`:** `r LintText`

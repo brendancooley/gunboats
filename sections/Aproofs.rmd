@@ -16,6 +16,14 @@ PeeqProof <- knit_child("../proofs/Peeq.md")
 **Proof:** `r PeeqProof`
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+LintProof <- knit_child("../proofs/Lint.md")
+```
+
+**Lemma `r Lint`:** `r LintText`
+
+**Proof:** `r LintProof`
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 LtaujProof <- knit_child("../proofs/Ltauj.md")
 ```
 

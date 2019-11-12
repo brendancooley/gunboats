@@ -4,11 +4,11 @@ $$
 $$
 and analagously for $\tau_j$. IFT implies there exists a function $\tau_i(\lambda)$ with
 $$
-\tau_i^\prime(\lambda) = \frac{ \frac{\partial f(\tau_i, \lambda)}{\partial \lambda} }{ \frac{\partial f(\tau_i, \lambda)}{\partial \tau_i} } = - \frac{\frac{\partial G_i}{\partial \tau_i} - \frac{\partial G_j}{\partial \tau_i}}{\lambda \frac{\partial^2 G_i}{\partial \tau_i^2} + (1 - \lambda) \frac{\partial^2 G_j}{\partial \tau_j^2} }
+\tau_i^\prime(\lambda) = - \frac{ \frac{\partial f(\tau_i, \lambda)}{\partial \lambda} }{ \frac{\partial f(\tau_i, \lambda)}{\partial \tau_i} } = - \frac{\frac{\partial G_i}{\partial \tau_i} - \frac{\partial G_j}{\partial \tau_i}}{\lambda \frac{\partial^2 G_i}{\partial \tau_i^2} + (1 - \lambda) \frac{\partial^2 G_j}{\partial \tau_j^2} }
 $$
 and
 $$
-\tau_j^\prime(\lambda) = \frac{ \frac{\partial f(\tau_j, \lambda)}{\partial \lambda} }{ \frac{\partial f(\tau_j, \lambda)}{\partial \tau_j} } = - \frac{\frac{\partial G_i}{\partial \tau_j} - \frac{\partial G_j}{\partial \tau_j}}{\lambda \frac{\partial^2 G_i}{\partial \tau_j^2} + (1 - \lambda) \frac{\partial^2 G_j}{\partial \tau_j^2} }
+\tau_j^\prime(\lambda) = - \frac{ \frac{\partial f(\tau_j, \lambda)}{\partial \lambda} }{ \frac{\partial f(\tau_j, \lambda)}{\partial \tau_j} } = - \frac{\frac{\partial G_i}{\partial \tau_j} - \frac{\partial G_j}{\partial \tau_j}}{\lambda \frac{\partial^2 G_i}{\partial \tau_j^2} + (1 - \lambda) \frac{\partial^2 G_j}{\partial \tau_j^2} }
 $$
 
 The numerators are positive and negative respectively. The denominators are not unambiguosly signed. Concavity of the objective requires
