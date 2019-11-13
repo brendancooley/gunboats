@@ -2,27 +2,27 @@ p <- function(sigma) {
   return(sigma / (sigma - 1))
 }
 
-P <- function(sigma, n, tau_i) {
-  return( p(sigma) * n^(1/(1-sigma)) * (1 + tau_i^(1 - sigma))^(1 / (1 - sigma)) )
+P <- function(sigma,  tau_i) {
+  return( p(sigma) * (1 + tau_i^(1 - sigma))^(1 / (1 - sigma)) )
 }
 
-x <- function(p, tau, sigma, n, alpha, L) {
-  p^(-sigma) * P(sigma, n, tau)^(sigma - 1) * alpha * L
+x <- function(p, tau, sigma, alpha, L) {
+  p^(-sigma) * P(sigma, tau)^(sigma - 1) * alpha * L
 }
 
-Pi <- function(tau_i, tau_j, sigma, n, alpha, L) {
-  return(n * (p(sigma) - 1) * (x(p(sigma), tau_i, sigma, n, alpha, L) + x(p(sigma) * tau_j, tau_j, sigma, n, alpha, L)))
+Pi <- function(tau_i, tau_j, sigma, alpha, L) {
+  return(n * (p(sigma) - 1) * (x(p(sigma), tau_i, sigma, alpha, L) + x(p(sigma) * tau_j, tau_j, sigma, alpha, L)))
 }
 
-r <- function(tau_i, sigma, n, alpha, L) {
-  return(n * (tau_i - 1) * p(sigma) * x(p(sigma) * tau_i, tau_i, sigma, n, alpha, L) )
+r <- function(tau_i, sigma, alpha, L) {
+  return((tau_i - 1) * p(sigma) * x(p(sigma) * tau_i, tau_i, sigma, alpha, L) )
 }
 
-V <- function(tau_i, sigma, n, alpha, L) {
-  return( (alpha * L) / P(sigma, n, tau_i) )
+V <- function(tau_i, sigma, alpha, L) {
+  return( alpha^alpha * (1-alpha)^alpha * (L + r(tau_i, sigma, alpha, L)) / P(sigma, tau_i)^alpha )
 }
 
-G <- function(tau_i, tau_j, a_i, sigma, n, alpha, L) {
-  return(a_i * V(tau_i, sigma, n, alpha, L) + Pi(tau_i, tau_j, sigma, n, alpha, L) + r(tau_i, sigma, n, alpha, L))
+G <- function(tau_i, tau_j, a_i, sigma, alpha, L) {
+  return(a_i * V(tau_i, sigma, alpha, L) + Pi(tau_i, tau_j, sigma, alpha, L))
 }
 
