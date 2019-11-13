@@ -1,1 +1,1 @@
-In a peaceful bargaining equilibrium (Definition `r Dbeq`), trade is weakly increasing in $a_i$ and $a_j$.
+If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
