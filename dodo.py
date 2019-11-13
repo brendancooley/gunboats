@@ -30,6 +30,12 @@ def task_prep_slides():
 					"cp -a " + templatePath + "slides/ " + "css/"]
 	}
 
+def task_figs():
+    yield {
+        'name': 'building figs...',
+        'actions': ["cd figs/;  latexmk -pdf aLine.tex; latexmk -c"]
+    }
+
 def task_write_paper():
     if os.path.isfile("references.RData") is False:
         yield {

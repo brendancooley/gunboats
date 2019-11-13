@@ -1,19 +1,19 @@
-# library(tidyverse)
-# library(latex2exp)
+library(tidyverse)
+library(latex2exp)
 
-# path <- getwd() %>% strsplit("/")
-# lastPath <- path[[1]][length(path[[1]])]
+path <- getwd() %>% strsplit("/")
+lastPath <- path[[1]][length(path[[1]])]
 
-# if (lastPath == "figs") {
-#   source("source.R")
-#   source("params.R")
-# }
+if (lastPath == "figs") {
+  source("source.R")
+  source("params.R")
+}
 
 tau_i <- seq(1, 2, .01)
 tau_j <- 1
 
-G_vals1 <- G(tau_i, tau_j, a1, sigma, n, alpha, L)
-G_vals2 <- G(tau_i, tau_j, a2, sigma, n, alpha, L)
+G_vals1 <- G(tau_i, tau_j, a1, sigma, alpha, L)
+G_vals2 <- G(tau_i, tau_j, a2, sigma, alpha, L)
 G_vals1_n <- (G_vals1 - min(G_vals1)) / (max(G_vals1) - min(G_vals1))
 G_vals2_n <- (G_vals2 - min(G_vals2)) / (max(G_vals2) - min(G_vals2))
 
