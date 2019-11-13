@@ -231,19 +231,9 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 ## Preferences
 
-
-```
-## Error in G(tau_i, tau_j, a1, sigma, n, alpha, L): unused argument (L)
-```
-
 ![Government preferences over own tariff rates with $a > a^\prime$ \label{fig:G}](figure/G-1.png)
 
 Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
-
-
-```
-## Error in fn(par, ...): unused argument (n = 1)
-```
 
 ![Government iso-welfare curve over home and foreign tariff rates \label{fig:iso}](figure/iso-1.png)
 
@@ -373,7 +363,9 @@ Given our assumptions on the costs of war, we can always find a cutpoint bias ty
 **Lemma 6 (Zone of Peace):** 
 For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.
 
-Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences.
+Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences. Figure \ref{fig:zop} depicts this result.
+
+![As the home government becomes more liberal, the set of foreign types that accept its ideal point expands. \label{fig:zop}](figs/aLine.pdf)
 
 
 

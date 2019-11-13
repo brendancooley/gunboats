@@ -11,18 +11,18 @@ if (lastPath == "figs") {
   source("params.R")
 }
 
-a2 <- a1 <- 0
+a2 <- a1 <- 1
 
-tauStar1 <- optim(par=1, fn=G, tau_j=1, a=a1, sigma=sigma, n=n, alpha=alpha, L=L, method="Brent", lower=1, upper=100, control=list(fnscale=-1))$par
-tauStar2 <- optim(par=1, fn=G, tau_j=1, a=a2, sigma=sigma, n=n, alpha=alpha, L=L, method="Brent", lower=1, upper=100, control=list(fnscale=-1))$par
+tauStar1 <- optim(par=1, fn=G, tau_j=1, a=a1, sigma=sigma, alpha=alpha, L=L, method="Brent", lower=1, upper=100, control=list(fnscale=-1))$par
+tauStar2 <- optim(par=1, fn=G, tau_j=1, a=a2, sigma=sigma, alpha=alpha, L=L, method="Brent", lower=1, upper=100, control=list(fnscale=-1))$par
 
-G1min <-  G(1, tauStar2, a1, sigma, n, alpha, L)
-G1max <-  G(tauStar1, 1, a1, sigma, n, alpha, L)
+G1min <-  G(1, tauStar2, a1, sigma, alpha, L)
+G1max <-  G(tauStar1, 1, a1, sigma, alpha, L)
 
 Gseq <- seq(G1min, G1max, length.out=8)
 
-iso <- function(tau_i, tau_j, a, sigma, n, alpha, L, Gbar) {
-  return(abs(G(tau_i, tau_j, a, sigma, n, alpha, L) - Gbar))
+iso <- function(tau_i, tau_j, a, sigma, alpha, L, Gbar) {
+  return(abs(G(tau_i, tau_j, a, sigma, alpha, L) - Gbar))
 }
 
 top1 <- 2 * (tauStar1 - 1) + 1
@@ -36,8 +36,8 @@ for (i in Gseq) {
   isoVecL <- c()
   isoVecR <- c()
   for (j in tauSeq) {
-    isoVecL <- c(isoVecL, optim(par=1, fn=iso, tau_j=j, a=a1, sigma=sigma, n=n, alpha=alpha, L=L, Gbar=i, lower=1, upper=tauStar1 - .01, method="Brent")$par)
-    isoVecR <- c(isoVecR, optim(par=1, fn=iso, tau_j=j, a=a1, sigma=sigma, n=n, alpha=alpha, L=L, Gbar=i, lower=tauStar1 + .01, upper=top1, method="Brent")$par)
+    isoVecL <- c(isoVecL, optim(par=1, fn=iso, tau_j=j, a=a1, sigma=sigma, alpha=alpha, L=L, Gbar=i, lower=1, upper=tauStar1 - .01, method="Brent")$par)
+    isoVecR <- c(isoVecR, optim(par=1, fn=iso, tau_j=j, a=a1, sigma=sigma, alpha=alpha, L=L, Gbar=i, lower=tauStar1 + .01, upper=top1, method="Brent")$par)
   }
   isoListL[[tick]] <- isoVecL
   isoListR[[tick]] <- isoVecR
