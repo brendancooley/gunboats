@@ -875,7 +875,7 @@ If $a_j \geq a_j(\ubar{c}_j, a_i)$ then $\tilde{\bm{\tau}}^\star = \left\{ \tau_
 $$
 x_{ij}^\star(\tau_i^\star(a_i)) + x_{ji}^\star(\tau_j^\star(\bar{a}))
 $$
-By Lemma `Ltaui`, $\tau_i^\star(a_i)$ is decreasing in $a_i$ and $x_{ij}^\star(\tau_i)$ is decreasing in $\tau_i$. Then, within the zone of peace, equilibrium trade in manufactured goods is increasing in $a_i$. $\blacksquare$ 
+By Lemma 3, $\tau_i^\star(a_i)$ is decreasing in $a_i$ and $x_{ij}^\star(\tau_i)$ is decreasing in $\tau_i$. Then, within the zone of peace, equilibrium trade in manufactured goods is increasing in $a_i$. $\blacksquare$ 
 
 
 \clearpage
