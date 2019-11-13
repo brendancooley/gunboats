@@ -104,7 +104,7 @@ PeqTauProof <- knit_child("../proofs/PeqTau.md")
 **Proof:** `r PeqTauProof` 
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-PeqTradeProof <- knit_child("../proofs/PeqTrade.md")
+PeqTradeProof <- knit_child("../proofs/PeqTrade.rmd")
 ```
 
 **Proposition `r PeqTrade`:** `r PeqTradeText`

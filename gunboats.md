@@ -231,9 +231,19 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 ## Preferences
 
+
+```
+## Error in G(tau_i, tau_j, a1, sigma, n, alpha, L): unused argument (L)
+```
+
 ![Government preferences over own tariff rates with $a > a^\prime$ \label{fig:G}](figure/G-1.png)
 
 Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
+
+
+```
+## Error in fn(par, ...): unused argument (n = 1)
+```
 
 ![Government iso-welfare curve over home and foreign tariff rates \label{fig:iso}](figure/iso-1.png)
 
@@ -431,7 +441,7 @@ When peace prevails, liberal governments also settle on more open trade policy r
 
 
 **Proposition 6 (Liberal Trade):** 
-In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in $a_i$ and $a_j$.
+If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
 
 # Discussion
 
@@ -845,7 +855,7 @@ Rearranging,
 \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
 (\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
 \end{align*}
-By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value, 
+By Assumption 1, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value,^[Note also that by applying the definition of $W_i$, wwe see this condition implies $G_i(\tilde{\bm{\tau}})$ is concave about the pareto set.] 
 $$
 W_i(a_i, a_j) < G_i(\tilde{\tau}_i)
 $$
@@ -870,14 +880,14 @@ as desired. $\blacksquare$
 
 
 **Proposition 6:** 
-In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in $a_i$ and $a_j$.
+If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
 
 **Proof:** 
-Equilibrium trade in manufactured goods is 
+If $a_j \geq a_j(\ubar{c}_j, a_i)$ then $\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_j^\star(\bar{a}) \right\}$ by Lemma 5. Equilibrium trade in manufactured goods is then
 $$
-x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)
+x_{ij}^\star(\tau_i^\star(a_i)) + x_{ji}^\star(\tau_j^\star(\bar{a}))
 $$
-where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 3. Otherwise, the strategic situation is unchanged. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also weakly increasing. $\blacksquare$ 
+By Lemma `Ltaui`, $\tau_i^\star(a_i)$ is decreasing in $a_i$ and $x_{ij}^\star(\tau_i)$ is decreasing in $\tau_i$. Then, within the zone of peace, equilibrium trade in manufactured goods is increasing in $a_i$. $\blacksquare$ 
 
 
 \clearpage
