@@ -1,10 +1,10 @@
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` `r Peeq` ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` `r Deeq` ``) will exist for any trade policy choices. This economy allows us to describe governments preferences over consumer welfare and producer profits. As governments become more liberal, they prefer to adopt low barriers to trade. This variation affects how governments behave in the coercive bargaining game that follows.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows. These in turn determine the welfare of consumers, firms, and the governments that represent them. Proposition `` `r Peeq` ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` `r Deeq` ``) will exist for any feasible trade policy choices. This economy allows us to write government preferences as an indirect function of trade policy choices. As governments become more liberal, they prefer to adopt low barriers to trade. This variation affects how governments behave in the coercive bargaining game that follows.
 
 ## International Bargaining
 
-Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
+Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [\ubar{a}, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
-Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it (TIOLI) offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995.^[While this bargaining protocol is restrictive, @Fey2019 show more complex bargaining processes are equivalent to a TIOLI offer in terms of their associated payoffs and probability of war.] Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $a^\star$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
 As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` `r AwCosts` `` formalizes this intuition.
 
@@ -38,7 +38,7 @@ Government preferences in the game described above depend on the mechanics of th
 
 ### Tariffs and Prices
 
-Firms engage in monopolistic competition, setting prices in each market to maximize profits, given the preferences of consumers. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods. The price of foreign goods in the home market is $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
+Firms engage in monopolistic competition, setting prices in each market to maximize profits, given consumer demand. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods. The price of foreign manufactured goods in the home market is $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
 
 ### Consumption
 
@@ -49,7 +49,7 @@ Consumer preferences over agricultural goods $Y_i$ and aggregated differentiated
 \text{subject to} & \quad P_i X_i + Y_i \leq w_i L
 \end{split}
 \end{equation}
-where $X_i$ is a CES aggregate of manufactured goods $x$, à la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
+where $X_i$ is a CES aggregate of manufactured goods $x$, à la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu_j)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
 \begin{equation} \label{eq:CES}
 X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}}
 \end{equation}
@@ -60,7 +60,7 @@ P_i(\tau_i) = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j
 
 Equilibrium demand for manufactured goods from $j$ in $i$ is
 \begin{equation} \label{eq:demand}
-x_{ij}^\star(\nu_j) = p_{ij}(\nu_j)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
+x_{ij}^\star(\nu_j) = p_{ij}(\nu_j)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i)
 \end{equation}
 
 With prices of agricultural goods serving as numeraire, $Y_i = (1 - \alpha) I_i(\tau_i)$ and consumer indirect utility is
@@ -93,7 +93,7 @@ Total profits for all firms in country $i$ can then be computed as
 \Pi_i(\tau_i, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(\tau_j) \rightarrow \alpha I_j(\tau_j)$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for imported manufactured goods contracts ($x_{ji}^\star(\tau_j) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(\tau_j) \rightarrow \alpha I_j(\tau_j)$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i(\tau_i)$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
@@ -117,7 +117,7 @@ DeeqText <- knit_child("../results/Deeq.md")
 
 **Definition `r Deeq`:** `r DeeqText`
 
-There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r Aalpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
+If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption `r Aalpha` guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
 ```{r Aalpha, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Aalpha <- Atick
@@ -126,7 +126,7 @@ Atick <- Atick + 1
 AalphaText <- knit_child("../results/Aalpha.md")
 ```
 
-**Assumption `r Aalpha`:** `r AalphaText`
+**Assumption `r Aalpha`:** `r AalphaText`^[These conditions are enumerated in Appendix `r AddxEconomy`.]
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Peeq <- Ptick
@@ -135,7 +135,7 @@ Ptick <- Ptick + 1
 PeeqText <- knit_child('../results/Peeq.md')
 ```
 
-**Proposition `r Peeq`:** `r PeeqText`^[These conditions are enumerated in Appendix `r AddxEconomy`.]
+**Proposition `r Peeq`:** `r PeeqText`
 
 ### Government Preferences
 
@@ -161,7 +161,7 @@ AaText <- knit_child("../results/Aa.md")
 
 Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
 
-Lemma `r Lint` formalizes the claims that ideal points are interior to the policy space. 
+Lemma `r Lint` formalizes the claims that ideal points, denoted $\tau_i^\star(a_i)$, are interior to the policy space.
 
 ```{r Lint, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Lint <- Ltick

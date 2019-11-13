@@ -40,23 +40,23 @@ Countries with deep trading relationships rarely fight wars with one another. So
 
 Yet, trade policy is itself a central object of contention in international relations. Governments are mercantilist to some extent [@Gawande2009]. They desire some degree of protection at home and "open doors" abroad. Sometimes, governments are willing to fight wars to achieve these objectives.^[See @Findlay2007 for a chronicle of trade conflicts over the past millennium.] In the 1850s, the U.S. gunboats compelled an autarkic Japanese government to open its markets. Britain and France prosecuted the Opium Wars (1839-1842; 1856-1860) to compel a recalcitrant Chinese government to reform its trade policies. Recently, a proposal to integrate the economies of Ukraine and the European Union led to war between Ukraine and Russia.^[In this case, Moscow conditioned its coercion on the trade policy choices of Kiev, see James Marson and Naftali Bendavid, ["Ukraine to Delay Part of EU Pact Opposed by Russia,"](https://www.wsj.com/articles/poroshenko-says-eu-agreement-to-be-ratified-next-week-1410519009) *The Wall Street Journal*, 12 September 2014.] These episodes highlight linkages between trade policy and war. But such linkages may be more common, as the absence of war need not imply the absence of coercive bargaining [@Fearon1995].
 
-Here, I develop a theory of trade policy bargaining in the shadow of military power, or "gunboat diplomacy." Trade flows and the probability of peace are positively correlated in equilibrium. This correlation emerges not because trade causes peace. Rather, liberal trade policy preferences generate incentives for both trade and peace. When peace prevails, latent military threats influence equilibrium trade policies. These balance domestic political-economic interests against military threats from abroad. Militarily weak countries are more open to trade than powerful ones, all else equal.
+Here, I develop a theory of trade policy bargaining in the shadow of military power, or "gunboat diplomacy." Trade flows and the probability of peace are positively correlated in equilibrium. This correlation emerges not because trade causes peace. Rather, liberal trade policy preferences generate incentives for both trade and peace. When peace prevails, latent military threats influence equilibrium trade policies, which balance domestic political-economic interests against military threats from abroad. Militarily weak countries are more open to trade than powerful ones, all else equal.
 
-The model considers the interaction between two governments (home and foreign). The governments value consumers' welfare, firms' profits, and tariff revenue. These components of government utility depend on an underlying "new trade" international economy [@Krugman1980; @Venables1987]. Governments differ in how much influence consumers have over policymaking.^[This setup mirrors @Grossman1994.] I refer to this variation as the governments' degree of political *bias*.^[This phraseology borrows from @Jackson2007. In their model, political bias determines the extent to which the pivotal decision maker internalizes the costs of war. Conceptually, bias is similar to the size of the selectorate in the model of @BuenodeMesquita2003.] Tariffs help firms by shielding them from competition, but raise prices for consumers. *Low bias* or *liberal* governments prefer lower tariffs.
+The model considers the interaction between two governments (home and foreign), which value a weighted average of consumer welfare and firm profits. These components of government utility themselves depend on the workings of an underlying "new trade" international economy [@Krugman1980; @Venables1987]. Governments differ in how much influence consumers have over policymaking.^[This setup mirrors @Grossman1994.] I refer to this variation as the governments' degree of political *bias*.^[This phraseology borrows from @Jackson2007. In their model, political bias determines the extent to which the pivotal decision maker internalizes the costs of war. Conceptually, bias is similar to the size of the selectorate in the model of @BuenodeMesquita2003.] Tariffs help firms by shielding them from competition, but raise prices for consumers. *Low bias* or *liberal* governments prefer lower tariffs.
 
 Governments care about trade policy choices abroad because of market access externalities [@Ossa2011; @Ossa2012]. Firms' profits depend on their ability to access foreign markets. High tariffs shift profits from foreign to home firms. Therefore, firms on opposite sides of a border experience a conflict of interest over trade policy. Firms desire protection at home and liberalization abroad. The greater their bias, the more the governments internalize these interests.
 
-As a consequence, governments themselves experience conflicts of interest over trade policy. The magnitudes of these conflicts of interest vary as a function of the governments' bias. When governments value consumer welfare, they prefer to adopt low barriers to trade. In doing so, they impose small market access externalities on their trading partners. Governments' relations are harmonious when they both hold liberal trade policy preferences. There is no incentive for conflict, militarized or otherwise. As governments become less liberal, conflicts of interest become more severe.
+As a consequence, governments themselves experience conflicts of interest over trade policy, which vary as a function of the governments' bias. When governments value consumer welfare, they prefer to adopt low barriers to trade. In doing so, they impose small market access externalities on their trading partners. When both governments hold liberal policy preferences, their relations are harmonious -- there is no incentive for conflict, militarized or otherwise. As governments become less liberal, conflicts of interest become more severe.
 
 If a government wins a war, it earns the right to impose regime change and install a "puppet" government abroad.^[See @Owen2002 for an empirical study of regime change.] Puppets open their markets to foreign firms, allowing victorious governments impose their trade policy preferences by force. This is the threat point governments leverage in bilateral trade policy negotiations. War sometimes occurs due to information frictions.
 
-Two primary insights emerge from this environment. First, governments' degree of bias affects their propensity to trade and fight wars. When both governments are liberal, the costs of regime change never exceed its policy benefits. As a result, highly liberal governments never fight wars with one another. Their liberal preferences also result in liberal equilibrium trade policies. Naturally, lowering barriers to trade increases trade itself. The governments' preference compatibility produces a relationship between trade and peace. But this relationship is spurious — trade itself has no pacifying effect.
+Two primary insights emerge from this environment. First, governments' degree of bias affects their propensity to trade and fight wars. When both governments are liberal, the costs of regime change never exceed its policy benefits. As a result, highly liberal governments never fight wars with one another. Their liberal preferences also result in liberal equilibrium trade policies. Naturally, lowering barriers to trade increases trade itself. The governments' preference compatibility produces a relationship between trade and peace, but this relationship is spurious — trade itself has no pacifying effect.
 
 Second, even when governments avoid conflict, trade policies reflect the balance of power. Powerful countries can credibly threaten to impose regime change. They leverage this power to extract trade policy concessions and resist liberalization. After bargaining, powerful countries are more protectionist than weaker ones.
 
 The model also rationalizes several well-established empirical facts in international relations. Bilateral trade tends to decrease before wars and rebound thereafter.^[This relationship is shown in Figure \ref{fig:tradeRD} in the Appendix.] In the model, protectionist preference shocks decrease trade, but also increase the likelihood of war. As a consequence, periods of depressed trade correlate with war onset. Conversely, regime change following war causes a liberal preference shock to the losing country's government. Trade increases after wars, as in the data.
 
-Some argue democracies have more liberal trade policy preferences than autocracies [@Milner2005]. Because consumers (voters) prefer free trade, they punish protectionist politicians [@Mayer1984; @Grossman1996].^[For a skeptical take on this mechanism, see @Guisinger2009 and @Betz2019.] This provides a check on the protectionist influence of special interest groups. Translated into this framework, these theories deem democracies less biased than autocracies. If this "liberal democracy" hypothesis is true, the analysis of low bias governments extends to democratic dyads. The model then jointly rationalizes the democratic peace and democracies' propensity for trade openness.^[These facts are depicted in Figure \ref{fig:comdempeace} in the Appendix. For a recent review on the relationship between democracy and peace, see @Reiter2017. @Milner2005 show democratization tends to lead to decreased protectionism.]
+Some argue democracies have more liberal trade policy preferences than autocracies [@Milner2005]. Because consumers (voters) prefer free trade, they punish protectionist politicians [@Mayer1984; @Grossman1996].^[For a skeptical take on this mechanism, see @Guisinger2009 and @Betz2019.] This provides a check on the protectionist influence of special interest groups. Translated into this framework, these theories deem democracies less biased than autocracies. If this "liberal democracy" hypothesis holds, the analysis of low bias governments extends to democratic dyads. The model then jointly rationalizes the democratic peace and democracies' propensity for trade openness.^[These facts are depicted in Figure \ref{fig:comdempeace} in the Appendix. For a recent review on the relationship between democracy and peace, see @Reiter2017. @Milner2005 show democratization tends to lead to decreased protectionism.]
 
 The theory's implications about power and protectionism are, as far as I know, novel. Of course, power and latent preferences interact to produce trade policy and conflict outcomes. An unconditional correlation may not uncover this relationship. I consider these empirical implications in more detail in the Discussion section. There, I also relate the theory to militarism, imperialism, and territorial conflict.
 
@@ -67,13 +67,13 @@ Others have considered policy competition in the shadow of power more generally.
 # Environment
 
 
-Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows and the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any trade policy choices. This economy allows us to describe governments preferences over consumer welfare and producer profits. As governments become more liberal, they prefer to adopt low barriers to trade. This variation affects how governments behave in the coercive bargaining game that follows.
+Here and in the Analysis section, I relegate proofs and derivations of key quantities to the Appendix, in order to ease exposition. I first present the context in which governments bargain, followed by the international economy. The general equilibrium of the economy determines how trade policies affect prices, wages, and trade flows. These in turn determine the welfare of consumers, firms, and the governments that represent them. Proposition `` 1 ``, presented in this section, states that given our assumptions, an *economic equilibrium* (Definition `` 2 ``) will exist for any feasible trade policy choices. This economy allows us to write government preferences as an indirect function of trade policy choices. As governments become more liberal, they prefer to adopt low barriers to trade. This variation affects how governments behave in the coercive bargaining game that follows.
 
 ## International Bargaining
 
-Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [0, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
+Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left\{ \tau_i, \tau_j \right\} \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [\ubar{a}, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
-Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995. Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $\tilde{a}_j$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
+Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it (TIOLI) offer $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i, \tilde{\tau}_j \right\}$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995.^[While this bargaining protocol is restrictive, @Fey2019 show more complex bargaining processes are equivalent to a TIOLI offer in terms of their associated payoffs and probability of war.] Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $a^\star$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
 As is standard in bargaining models of war, the costs of war must be bounded, or the proposing country will never risk conflict. Assumption `` 1 `` formalizes this intuition.
 
@@ -106,7 +106,7 @@ Government preferences in the game described above depend on the mechanics of th
 
 ### Tariffs and Prices
 
-Firms engage in monopolistic competition, setting prices in each market to maximize profits, given the preferences of consumers. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods. The price of foreign goods in the home market is $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
+Firms engage in monopolistic competition, setting prices in each market to maximize profits, given consumer demand. Governments can shift the prices that consumers pay for foreign goods by charging a uniform import tariff on manufactured goods, $\tau_i - 1$. This drives a wedge between the price set by foreign firms, $p_j(\nu_j)$, and the price paid by consumers for foreign goods. The price of foreign manufactured goods in the home market is $p_{ij}(\nu_j) = \tau_i p_j(\nu_j)$. The price in the agricultural sector serves as the numeraire, $p_i^y = 1$. The government collects the revenue raised from tariffs.
 
 ### Consumption
 
@@ -117,7 +117,7 @@ Consumer preferences over agricultural goods $Y_i$ and aggregated differentiated
 \text{subject to} & \quad P_i X_i + Y_i \leq w_i L
 \end{split}
 \end{equation}
-where $X_i$ is a CES aggregate of manufactured goods $x$, à la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
+where $X_i$ is a CES aggregate of manufactured goods $x$, à la @Dixit1977. Consumers value each differentiated good equally. Home and foreign goods are distinguished only by their price. Let $x_{ij}(\nu_j)$ denote the quantity of differentiated goods produced in country $j$ that are consumed in country $i$. Consumer's utility over differentiated goods is
 \begin{equation} \label{eq:CES}
 X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}}
 \end{equation}
@@ -128,7 +128,7 @@ P_i(\tau_i) = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j
 
 Equilibrium demand for manufactured goods from $j$ in $i$ is
 \begin{equation} \label{eq:demand}
-x_{ij}^\star(\nu_j) = p_{ij}(\nu_j)^{-\sigma} P_i^{\sigma - 1} \alpha I_i
+x_{ij}^\star(\nu_j) = p_{ij}(\nu_j)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i)
 \end{equation}
 
 With prices of agricultural goods serving as numeraire, $Y_i = (1 - \alpha) I_i(\tau_i)$ and consumer indirect utility is
@@ -161,7 +161,7 @@ Total profits for all firms in country $i$ can then be computed as
 \Pi_i(\tau_i, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right)
 \end{equation}
 
-By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for foreign manufactured goods contracts ($x_{ji}^\star(\tau_j) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(\tau_j) \rightarrow \alpha I_j(\tau_j)$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
+By raising the price of foreign varieties, tariffs shift profits from foreign to home producers. As tariffs get large ($\tau_j \rightarrow \bar{\tau}$), demand for imported manufactured goods contracts ($x_{ji}^\star(\tau_j) \rightarrow 0$). Consumers substitute toward home varieties ($p_j^\star x_{jj}^\star(\tau_j) \rightarrow \alpha I_j(\tau_j)$), increasing local profits. While consumers are harmed by the imposition of tariffs ($\frac{\partial V_j}{\partial \tau_j} < 0$), local producers benefit. The preferences of home consumers are aligned with those of *foreign* firms, both of which desire liberal trade policies from the home government.
 
 I assume that firms' welfare is dependent only on their profits, and not influenced by the aggregate price level ($P_i(\tau_i)$) within the economy. This is consistent with the special case of @Grossman1994 in which firm owners are "small" in the broader population. A more complex preference structure would emerge if this assumption were violated, or if firms employed intermediate goods in production.
 
@@ -181,19 +181,19 @@ Consumers lend their labor endowment to the manufacturing and agricultural secto
 **Definition 2:** 
 An *economic equilibrium* is a function $h : \left\{ \bm{\tau} \right\} \rightarrow \left\{ \bm{w}, \bm{L} \right\}$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices and corresponding demands.
 
-There is a natural conflict of interest between consumers and producers within the economy. Producers prefer higher prices and consumers prefer lower prices. If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption 2 guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
+If the agricultural sector is active, it pins down wages and nullifies incentives for governments to employ tariffs for purposes of manipulating the terms of trade. Assumption 2 guarantees that the agricultural sector will remain active regardless of the governments' choices of trade policies. Substantively, it requires that consumers spend a large enough proportion of their income on agricultural goods to prevent the specialization of either country in the production of manufactured goods. This allows me to focus analysis on profit shifting incentives for trade policy, as in @Ossa2012.
 
 
 
 **Assumption 2:** 
 $$
 \alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}
-$$ 
+$$ ^[These conditions are enumerated in Appendix B.]
 
 
 
 **Proposition 1:** 
-If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.^[These conditions are enumerated in Appendix B.]
+If Assumption 2 is satisfied, then a unique economic equilibrium exists with $L_i^x, L_i^y, L_j^x, L_j^y > 0$ and $w_i = w_j = 1$ for all $\bm{\tau} \in [1, \bar{\tau}]^2$.
 
 ### Government Preferences
 
@@ -215,7 +215,7 @@ $a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constan
 
 Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
 
-Lemma 1 formalizes the claims that ideal points are interior to the policy space. 
+Lemma 1 formalizes the claims that ideal points, denoted $\tau_i^\star(a_i)$, are interior to the policy space.
 
 
 
@@ -227,7 +227,7 @@ $\tau_i^\star(a_i) \in (1, \bar{\tau})$
 
 Recall from Definition `` 1 `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, trade also increases as governments become more liberal so long as the shadow of war is absent (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
 
 ## Preferences
 
@@ -271,7 +271,7 @@ Figure \ref{fig:br} depicts each governments' best response curves through the p
 
 ## Regime Change
 
-It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
+It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -310,7 +310,7 @@ The magnitude of government $i$'s *conflict of interest* with government $j$ is
 
 
 **Proposition 3:** 
-$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, $a_j$
+$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$ and $a_j$
 
 Proposition 3 states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
 
@@ -372,7 +372,12 @@ Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types
 **Proposition 4 (Liberal Peace):** 
 $a_j(\ubar{c}_j, a_i)$ is weakly decreasing in $a_i$.
 
-Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
+Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace." When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
+
+
+
+**Proposition 5 (Liberal Trade):** 
+If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
 
 If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
@@ -417,32 +422,25 @@ $\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
 **Lemma 8:** 
 $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
 
-These Lemmas establish that any policy proposal is efficient and that tariffs are weakly lower than those in the noncooperative equilibrium. How Government $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
+These Lemmas establish that any policy proposal is efficient and that tariffs are weakly lower than those in the noncooperative equilibrium. How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 
 
 
-**Proposition 5 (Power and Protection):** 
-If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
-
-When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
-
-
-
-**Proposition 6 (Liberal Trade):** 
-If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
+**Proposition 6 (Power and Protection):** 
+If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength, i.e. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 # Discussion
 
 
-Jointly, Propositions 4 and 6 establish that the most liberal governments never fight and also trade more than illiberal governments. Trade policy determines trade flows and generates conflicts between governments. Economic integration is not exogenously given. Participation in the international economy is a choice. Trade policy generates large trade frictions, even in today's globalized era [@Anderson2004].
+Jointly, Propositions 4 and 5 establish that the most liberal governments never fight and also trade more than illiberal governments. Contra the commercial peace framework, trade is endogenously determined by governments trade policy choices. These endogenous trade policies determines trade flows and generate conflicts between governments. Economic integration is not exogenously given. Rather, participation in the international economy is a choice. Even in today's globalized era, such policy frictions persist [@Anderson2004, @Cooley2019b].
 
-These policy choices are the object of contention between governments. Protectionist barriers cause conflicts of interest between market access-motivated governments. @Mcdonald2004 shows that measures of protection are better predictors of conflict than trade.^[His analysis covers the years 1960-2000.] Trade can persist in the presence of trade barriers. For example, World War I broke out during an era of rapid globalization. @Mcdonald2007 show that the great powers maintained high protective tariffs during this era. These tariffs provided a rationale for conflict over market access conditions, despite high trade volumes. @Chatagnier2015 examine governments whose firms compete in the same export markets. They show these governments are more likely to experience international conflicts.
+These policy choices are the object of contention between governments in the model. Protectionist barriers cause conflicts of interest between market access-motivated governments. @Mcdonald2004 shows that measures of protection are better predictors of conflict than trade.^[His analysis covers the years 1960-2000.] Trade can persist in the presence of trade barriers. For example, World War I broke out during an era of rapid globalization. @Mcdonald2007 show that the great powers maintained high protective tariffs during this era, which provided a rationale for conflict over market access conditions, despite high trade volumes. @Chatagnier2015 examine governments whose firms compete in the same export markets. They show these governments are more likely to experience international conflicts.
 
 Firms are the source of belligerent foreign policies in the theory. In Imperial Germany, "iron and rye" advocated for protectionism and expansionist foreign policies [@Gerschenkron1943]. Similar domestic political coalitions emerged in the United States. @Fordham2019 traces the development of the United States as a naval power in the 19th century. He finds protectionist interests were the strongest advocates for the nascent U.S. fleet. At the time, U.S. trade policy was protectionist. Washington also sought preferential market access in developing countries, particularly in Latin America. The fleet served to protect these objectives against military interference from Europe. Commercial objectives also motivated Washington at the dawn of the Cold War [@Fordham1998]. Under Soviet influence, Eastern Europe became closed to trade with the United States. Congressmen representing export-oriented districts tended to support an aggressive military posture toward the Soviet Union. The goal of export-oriented firms, argues Fordham, was to secure market access in Europe and Japan. In the post-Cold War era, Congressmen representing import-exposed districts have tended to support hostile foreign policies toward China, whose exports (plausibly) harm their constituent firms [@Kleinberg2013]. 
 
-Domestic political institutions connect these underlying economic interests to government preferences. I treat these institutions in reduced form, focusing on variation in consumers' ability to influence policy. Consumers pacify foreign policy preferences. If democratic political institutions privilege the interests of consumers, then Propositions 4 and 6 support a commercial-democratic peace. Observational analyses uncover positive correlations between democracy, trade, and peace because of the trade policy preferences of democracies.^[See @Oneal1999 for a representative study.] Liberal preferences increase trade and reduce conflict.
+Domestic political institutions connect these underlying economic interests to government preferences. I treat these institutions in reduced form, focusing on variation in consumers' ability to influence policy. Consumers pacify foreign policy preferences. If democratic political institutions privilege the interests of consumers, then Propositions 4 and 5 support a commercial-democratic peace. Observational analyses uncover positive correlations between democracy, trade, and peace because of the trade policy preferences of democracies.^[See @Oneal1999 for a representative study.] Liberal preferences increase trade and reduce conflict.
 
-Observed trade policies are not a sufficient statistic for government preferences, however. Proposition 5 states that relative military power effects trade policy in peacetime. Governments' trade policies reflect their preferences only up to a war constraint. Liberal *policies* do not imply liberal *preferences*. Several studies have employed @Grossman1994 and @Grossman1995 to structurally estimate governments' welfare-consciousness [@Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015]. International strategic considerations are effectively absent from these models. The domestic political economy determines outcomes. Therefore, a simple inversion on the policy function recovers preferences. My model highlights the importance of the war constraint. Militarily weak, illiberal governments adopt the same policies as liberal governments.
+Observed trade policies are not a sufficient statistic for government preferences, however. Proposition 6 states that relative military power effects trade policy in peacetime. Governments' trade policies reflect their preferences only up to a war constraint. Liberal *policies* do not imply liberal *preferences*. Several studies have employed @Grossman1994 and @Grossman1995 to structurally estimate governments' welfare-consciousness [@Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015]. International strategic considerations are effectively absent from these models. The domestic political economy determines outcomes. Therefore, a simple inversion on the policy function recovers preferences. The model developed here highlights the importance of the war constraint. Militarily weak, illiberal governments adopt the same policies as liberal governments.
 
 Territory plays a central role in theories and empirical studies of interstate conflict.^[The "pie" at stake in bargaining models of war is often motivated as the distribution of territory between the countries. Empirical studies of territorial conflict often conceptualize territorial control as a consumption good, rather than a means to implement policy. See, for example, @Caselli2015. For a review of this literature, see @Schultz2015.] Wars often redraw international borders. In doing so, they also relocate customs barriers and modify the trade policies of captured regions. Gunboat diplomacy and territorial conflict are plausibly substitutes for one another. Governments can acquire foreign market access through territorial annexation or regime change. Territory and trade policy are not exclusive realms of international conflict.
 
@@ -714,7 +712,7 @@ Follows immediately from Lemma 2 and Lemma 3 $\blacksquare$
 
 
 **Proposition 3:** 
-$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, $a_j$
+$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$ and $a_j$
 
 **Proof: **
 To establish that $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$, note that derivative of $\Gamma_i(a_i, a_j)$ taken with respect to $a_i$ is
@@ -814,7 +812,7 @@ F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_
 \end{split}
 \end{equation*}
 
-In the proof of Proposition 5 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradiction. $\blacksquare$
+In the proof of Proposition 6 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_i(a_i, a_j) \geq \hat{G}_i(a_i, a_j)$. Also, $F(\tilde{\bm{\tau}}^\star) \leq F(\tilde{\bm{\tau}}^\prime)$. Then, if 1) or 2), then $\tilde{G}_i \left( \tilde{\bm{\tau}}^\prime, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) | a_i, c_i, \rho \right) > \tilde{G}_i \left( \tilde{\bm{\tau}}^\star, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right)$, producing the desired contradiction. $\blacksquare$
 
 
 
@@ -828,8 +826,8 @@ Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\t
 
 
 
-**Proposition 5:** 
-If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+**Proposition 6:** 
+If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength, i.e. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
 
 **Proof:** 
 By Assumption 1, $i$'s first order condition must characterize $\tilde{\tau}_i^\star$ when $a_j < a_j(\ubar{c}_j, a_i)$. Here, we have
@@ -867,7 +865,7 @@ as desired. $\blacksquare$
 
 
 
-**Proposition 6:** 
+**Proposition 5:** 
 If $a_j \geq a_j(\ubar{c}_j, a_i)$ then trade in manufactured goods is increasing in $a_i$. 
 
 **Proof:** 

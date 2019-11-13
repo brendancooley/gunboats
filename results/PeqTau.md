@@ -1,1 +1,1 @@
-If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.
+If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barriers are increasing in its military strength, i.e. $\tilde{\tau}_i^\star(a_i, c_i, \rho)$ is increasing in $\rho$.

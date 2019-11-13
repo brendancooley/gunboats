@@ -1,6 +1,6 @@
 Recall from Definition `` `r Dbeq` `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` `r Ltauj` ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` `r Dnceq` ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` `r Dbeq` ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` `r Dcoi` ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` `r Pgamma` ``) which makes them unwilling to initiate wars (Proposition `` `r Pwar` ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` `r PeqTrade` ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` `r PeqTau` ``)
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` `r Ltauj` ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` `r Dnceq` ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` `r Dbeq` ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` `r Dcoi` ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` `r Pgamma` ``) which makes them unwilling to initiate wars (Proposition `` `r Pwar` ``). Because they prefer lower trade barriers, trade also increases as governments become more liberal so long as the shadow of war is absent (Proposition `` `r PeqTrade` ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` `r PeqTau` ``)
 
 ## Preferences
 
@@ -65,7 +65,7 @@ Figure \ref{fig:br} depicts each governments' best response curves through the p
 
 ## Regime Change
 
-It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma `r Ltaui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
+It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma `r Ltaui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -174,7 +174,16 @@ PwarText <- knit_child("../results/Pwar.md")
 
 **Proposition `r Pwar` (Liberal Peace):** `r PwarText`
 
-Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace."
+Whenever $a_j \geq a_j(\ubar{c}_j, a_i)$, $i$ offers its ideal point which is accepted by $j$. This guarantees peace. $j$ is more willing to accept $i$'s ideal point as it becomes more liberal, because $i$'s ideal policy imposes smaller and smaller externalities on $j$. This generates a "Liberal Peace." When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
+
+```{r PeqTrade, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+PeqTrade <- Ptick
+Ptick <- Ptick + 1
+
+PeqTradeText <- knit_child("../results/PeqTrade.md")
+```
+
+**Proposition `r PeqTrade` (Liberal Trade):** `r PeqTradeText`
 
 If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff [@Powell1999]. Offers closer to $i$'s ideal point yield higher utility conditional on acceptance, but also generate a higher risk of war. Here, the shadow of power affects equilibrium policies.
 
@@ -227,7 +236,7 @@ LtildeTauText <- knit_child("../results/LtildeTau.md")
 
 **Lemma `r LtildeTau`:** `r LtildeTauText`
 
-These Lemmas establish that any policy proposal is efficient and that tariffs are weakly lower than those in the noncooperative equilibrium. How Government $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
+These Lemmas establish that any policy proposal is efficient and that tariffs are weakly lower than those in the noncooperative equilibrium. How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 
 ```{r PeqTau, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 PeqTau <- Ptick
@@ -237,14 +246,3 @@ PeqTauText <- knit_child("../results/PeqTau.md")
 ```
 
 **Proposition `r PeqTau` (Power and Protection):** `r PeqTauText`
-
-When peace prevails, liberal governments also settle on more open trade policy regimes overall. Naturally, reducing trade costs increases trade between the governments.
-
-```{r PeqTrade, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
-PeqTrade <- Ptick
-Ptick <- Ptick + 1
-
-PeqTradeText <- knit_child("../results/PeqTrade.md")
-```
-
-**Proposition `r PeqTrade` (Liberal Trade):** `r PeqTradeText`
