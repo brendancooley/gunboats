@@ -68,7 +68,7 @@ $$
 $$
 r_i^{\prime \prime}(\tau_i) = B^\prime(\tau_i) P(\tau_i)^{-\alpha} r_i(\tau_i) + B(\tau_i) + \alpha V_i(\tau_i) A(\tau_i) B(\tau_i)
 $$
-(indirect effect from imports...kills second term in $V^{\prime \prime})
+(indirect effect from imports...kills second term in $V^{\prime \prime}$)
 $$
 \alpha A(\tau_i) r_i^\prime(\tau_i)
 $$

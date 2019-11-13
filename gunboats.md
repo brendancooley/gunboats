@@ -215,12 +215,19 @@ $a_i \in (\ubar{a}, \bar{a}]$ for all $i$ where $\ubar{a}$ is a positive constan
 
 Notably, $\ubar{a}$ depends positively on the consumers' elasticity of substitution, $\sigma$. As $\sigma$ increases, manufactured varieties become more substitutable, and foreign varieties become less valuable to consumers. Governments therefore prefer higher tariffs, all else equal. $\ubar{a}$ increases with $\sigma$ in order to ensure that no government prefers prohibitive tariffs.
 
+Lemma 1 formalizes the claims that ideal points are interior to the policy space. 
+
+
+
+**Lemma 1:** 
+$\tau_i^\star(a_i) \in (1, \bar{\tau})$
+
 # Analysis
 
 
 Recall from Definition `` 1 `` that a bargaining equilibrium is a trade policy offer from the home country, and a decision of whether or not to declare war, given this offer, from the foreign country. This section analyzes how these equilibrium choices vary as a function of the governments' bias types.
 
-The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 1 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
+The results can be summarized as follows. Because they internalize the welfare of consumers, liberal governments prefer to adopt lower tariffs (Lemma `` 2 ``). If governments were unable to bargain, a non-cooperative equilibrium (Definition `` 3 ``) would emerge in which governments simply implemented their ideal tariffs. This non-cooperative equilibrium serves as a baseline from which governments compare offers in a bargaining equilibrium (Definition `` 1 ``). As governments' degree of bias increases, they impose larger and larger externalities on one another in a non-cooperative equilibrium. This increases the degree of conflict of interest between the governments (Definition `` 4 ``), and makes regime change relatively more appealing. Liberal governments experience smaller conflicts of interest with one another (Proposition `` 3 ``) which makes them unwilling to initiate wars (Proposition `` 4 ``). Because they prefer lower trade barriers, liberal governments also trade more in any bargaining equilibrium (Proposition `` 6 ``). Finally, militarily powerful governments adopt higher barriers to trade in equilibrium (Proposition `` 5 ``)
 
 ## Preferences
 
@@ -234,7 +241,7 @@ Figure \ref{fig:iso} depicts the government's welfare in $\left\{ \tau_i, \tau_j
 
 
 
-**Lemma 1:** 
+**Lemma 2:** 
 $G_i(\tau_j)$ is strictly decreasing in $\tau_j$.
 
 If the governments were prohibited from bargaining, they would each simply choose the policy that maximized their utility, taking the other country's policy choice as given.
@@ -255,7 +262,7 @@ Our next result shows that as governments become more liberal, their optimal tar
 
 
 
-**Lemma 2:** 
+**Lemma 3:** 
 $\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 
 ![Government best response functions \label{fig:br}](figure/br-1.png)
@@ -264,7 +271,7 @@ Figure \ref{fig:br} depicts each governments' best response curves through the p
 
 ## Regime Change
 
-It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 2) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
+It is clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -322,7 +329,7 @@ This condition allows us to characterize $\omega^\star(\tilde{\bm{\tau}}; a_j, c
 
 
 
-**Lemma 3:** 
+**Lemma 4:** 
 $$
 \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho) = \begin{cases}
 \text{war} & \text{if } \hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) \\
@@ -334,7 +341,7 @@ If $j$'s conflict of interest with $i$ is small enough, then $i$ can simply offe
 
 
 
-**Lemma 4:** 
+**Lemma 5:** 
 If
 $$
 W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
@@ -353,10 +360,10 @@ Given our assumptions on the costs of war, we can always find a cutpoint bias ty
 
 
 
-**Lemma 5 (Zone of Peace):** 
+**Lemma 6 (Zone of Peace):** 
 For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.
 
-Lemma 5 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences.
+Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences.
 
 
 
@@ -387,7 +394,7 @@ With the probability of war given in Equation \ref{eq:prwar}, we can write $i$'s
 \end{split}
 \end{equation}
 
-By Definition 1, $i$'s equilibrium offer will maximize this objective function. Lemmas `` 6 `` and `` 7 `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition 3).
+By Definition 1, $i$'s equilibrium offer will maximize this objective function. Lemmas `` 7 `` and `` 8 `` state that an offer will lie inside the pareto set and that proposed trade policies will be weakly more liberal than those in a noncooperative equilibrium (Definition 3).
 
 
 
@@ -400,17 +407,17 @@ for some $\lambda \in [0, 1]$.
 
 
 
-**Lemma 6:** 
+**Lemma 7:** 
 $\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
 
 
 
-**Lemma 7:** 
+**Lemma 8:** 
 $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
 
 ![Bargaining space and pareto set \label{fig:bar}](figure/bar-1.png)
 
-The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 6, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemma 1.]
+The bargaining enviroment is depicted in Figure \ref{fig:bar}. Government $i$'s ideal point lies in the bottom right corner of the bargaining space, in which $j$ opens its markets completely and $i$ implements $\tau_i^\star(a_i, c_i, \rho)$. Government $j$'s ideal point, conversely, lies in the top left corner. By Lemma 7, $i$'s offer will lie along the dark line connecting these ideal points. Government $i$'s utility is strictly decreasing as it moves along the pareto set toward $j$'s ideal point.^[This observation follows from Lemma 2.]
 
 How $i$ chooses to resolve the risk-return tradeoff depends on its military power. Relatively powerful governments can implement their ideal point with high probability through war. They run little risk that the foreign government would reject an offer close to their ideal point. Conversely, weak governments are likely to lose a war over market access, and therefore must concede more to their counterpart. Military power therefore affects trade policy. Because $i$'s ideal point features more protection of its own market than $j$'s ideal point, as $i$ becomes more powerful, it proposes higher levels of protection for itself. If this offer is accepted and peace prevails, powerful countries will be more closed to international trade.
 
@@ -582,16 +589,16 @@ k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
 $$
 This quantity is derived by letting
 $$
-\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} \left( V_i^\prime(\tau_i) - r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} \right) + \left( \Pi_i^\prime(\tau_i) - \frac{x_{ii}^\star(\tau_i)}{I(\tau_i)} r_i^\prime(\tau_i) \right) = 0 \right\}
+\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} a_i V_i^\prime(\tau_i) + \Pi_i^\prime(\tau_i) = 0 \right\}
 $$
-. Note that it is strictly positive. 
+. Note that it is positive. 
 
 
 
 ## D: Proofs
 
 
-Restatements of results from the main text proceed all proofs. Lemmas 1, and 2 exploit the following definitions:
+Restatements of results from the main text proceed all proofs. Lemmas 2, and 3 exploit the following definitions:
 $$
 A(\tau_i) = p^\star x_{ij}^\star(\tau_i) (\alpha I(\tau_i))^{-1} = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
 $$
@@ -616,7 +623,7 @@ Labor allocations to each sector depend on tariff levels. The labor allocation i
 $$
 L_i^x(\bm{\tau}) = x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j)
 $$
-Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$ (see Lemma 1.), $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the dependence of the price index on the home tariff $P_i(\tau_i)$.]
+Because $x_{ii}^\star(\tau_i)$ is increasing in $\tau_i$ and $x_{ji}^\star(\tau_j)$ is decreasing in $\tau_j$ (see Lemma 2.), $L_i^x(\bm{\tau})$ is monotone increasing in $\tau_i$ and monotone decreasing in $\tau_j$. This implies $L_i^x(\bm{\tau})$ attains its maximum at $\left\{ \bar{\tau}, 1 \right\}$^[Here we note the dependence of the price index on the home tariff $P_i(\tau_i)$.]
 \begin{align*}
 L_i^x(\bar{\tau}, 1) &= p^{-\sigma} P_i(\bar{\tau})^{\sigma - 1} \alpha L + (1 p)^{-\sigma} P_j(1)^{\sigma - 1} \alpha L \\
 &= \frac{p^{-\sigma} \alpha L}{p^{1 - \sigma}} + \frac{p^{-\sigma} \alpha L}{2 p^{1 - \sigma}} \\
@@ -632,6 +639,27 @@ If $\alpha < \frac{2}{3} \frac{\sigma}{\sigma - 1}$, then $L_i^y(\bar{\tau}, 1) 
 
 
 **Lemma 1:** 
+$\tau_i^\star(a_i) \in (1, \bar{\tau})$
+
+**Proof:** 
+The first order condition is
+\begin{equation} \label{eq:Gfoc}
+0 = - \alpha a_i V_i(\tau_i) A(\tau_i) + a_i r_i^\prime(\tau_i) P_i(\tau_i)^{-\alpha} + \Pi_i^\prime(\tau_i)
+\end{equation}
+
+By construction, 
+$$
+\lim_{\tau_i \rightarrow \infty} \frac{\partial G_i}{\partial \tau_i} < 0
+$$
+for all $a_i > \ubar{a}$. Additionally,
+$$
+\evalat[\Big]{ \frac{\partial G_i}{\partial \tau_i} }{\tau_i=1} = \evalat[\Big]{ \frac{\partial \Pi(\tau_i)}{\partial \tau_i} }{\tau_i=1} > 0
+$$
+. This precludes $\tau_i \in \left\{ 1, \bar{\tau} \right\}$ from being optimal. From each corner point, the directional derivative toward the interior of the policy space is positive. $\blacksquare$
+
+
+
+**Lemma 2:** 
 $G_i(\tau_j)$ is strictly decreasing in $\tau_j$.
 
 **Proof:** 
@@ -642,8 +670,8 @@ $$
 Note that 
 $$
 \frac{\partial G_i(\tau_j)}{\partial \tau_{j}} = \frac{\partial \Pi_i(\tau_i, \tau_j)}{\partial \tau_j} = (p^\star - 1) x_{ji}^{\star \prime}(\tau_j)
-$$
-From the proof of Lemma NA, we have 
+$$.
+The derivative of home exports with respect to the foreign tariff is
 \begin{align*}
 x_{ji}^{\star \prime}(\tau_j) &= B(\tau_j) x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} r_j^\prime(\tau_j) \\
 &= B(\tau_j) x_{ji}^\star(\tau_j) + \frac{x_{ji}^\star(\tau_j)}{I(\tau_j)} \left( (\tau_j - 1) p^\star x_{ji}^{\star \prime}(\tau_j) + p^\star x_{ji}^\star(\tau_j) \right) \\
@@ -658,15 +686,15 @@ $\blacksquare$
 
 
 
-**Lemma 2:** 
+**Lemma 3:** 
 $\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 
 **Proof:** 
-Government $i$'s optimal policy does not depend on the policy choice of $j$. As such, it is sufficient to show that the government's objective function has a negative cross partial with respect to $\tau_i$, $a_i$,
+Government $i$'s optimal policy does not depend on the policy choice of $j$. As such, it is sufficient to show that the government's objective function has a negative cross partial with respect to $\tau_i$, $a_i$, or
 $$
 \frac{\partial^2 G_i}{\partial a_i \partial \tau_{i}} < 0
-$$
-Applying derivations from the proof of Lemma NA,
+$$.
+This can be written
 \begin{align*}
 \frac{\partial^2 G_i}{\partial a_i \partial \tau_{ij}} &= V_i^\prime(\tau_i) \\
 &= r^\prime(\tau_i) P_i(\tau_i)^{\alpha} - \alpha P_i(\tau_i)^{\alpha} I(\tau_i) A(\tau_i) \\
@@ -675,7 +703,7 @@ Applying derivations from the proof of Lemma NA,
 &= P_i(\tau_i)^{\alpha} I(\tau_i) \left( (\alpha I(\tau_i))^{-1} (\tau_i - 1) p^\star x_{ij}^{\star \prime}(\tau_i) + A(\tau)_i - A(\tau_i) \right) \\
 &= P_i(\tau_i)^{\alpha} \alpha^{-1} (\tau_i - 1) p^\star \underbrace{x_{ij}^{\star \prime}(\tau_i)}_{<0}
 \end{align*}
-where the final inequality follows from Lemma 1. $\blacksquare$
+where the final inequality follows from Lemma 2. $\blacksquare$
 
 
 
@@ -683,7 +711,7 @@ where the final inequality follows from Lemma 1. $\blacksquare$
 $a^\star = \bar{a}$
 
 **Proof:** 
-Follows immediately from Lemma 1 and Lemma 2 $\blacksquare$
+Follows immediately from Lemma 2 and Lemma 3 $\blacksquare$
 
 
 
@@ -701,11 +729,11 @@ where the final inequality holds because $\tau_i^\star(a_i) > \tau_i^\star(\bar{
 \begin{align*}
 \frac{\partial \Gamma_i(a_i, a_j)}{\partial a_j} &= - \underbrace{\frac{\partial G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)}{\partial \tau_j^\star(a_j)}}_{<0} \underbrace{\frac{\partial \tau_j^\star(a_j)}{\partial a_j}}_{<0}
 \end{align*}
-where the inequalities follow from Lemmas 1 and 2. $\blacksquare$
+where the inequalities follow from Lemmas 2 and 3. $\blacksquare$
 
 
 
-**Lemma 4:** 
+**Lemma 5:** 
 If
 $$
 W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
@@ -721,7 +749,7 @@ $$
 for all $c_j \in [\ubar{c}_j, \bar{c}_j]$.
 
 **Proof:** 
-By Lemma 3, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{c}_j, \bar{c}_j \right]$. Since this offer maximizes $i$'s utility conditional on peace,
+By Lemma 4, $\tilde{\bm{\tau}} = \left\{ \tau_i^\star(a_i), 1 \right\}$ will be accepted for all cost types $c_j \in \left[ \ubar{c}_j, \bar{c}_j \right]$. Since this offer maximizes $i$'s utility conditional on peace,
 $$
 \tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_j^\star(\bar{a}) \right\}
 $$
@@ -729,7 +757,7 @@ $\blacksquare$
 
 
 
-**Lemma 5:** 
+**Lemma 6:** 
 For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)$ such that for all $a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )$ the probability of war is 0.
 
 **Proof:** 
@@ -741,7 +769,7 @@ Note that this condition can be rewritten as
 $$
 \Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
-If $\Gamma_j(a_j, a_i) \leq \ubar{\epsilon}$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{c}_j, a_i) = 0$. Otherwise, let $a_j(\ubar{c}_j, a_i)$ solve
+If $\Gamma_j(a_j, a_i) \leq \ubar{c}_j$ for all $a_j \in [0, \bar{a})$, set $a_j(\ubar{c}_j, a_i) = 0$. Otherwise, let $a_j(\ubar{c}_j, a_i)$ solve
 $$
 \Gamma_j(a_j(\ubar{c}_j, a_i), a_i) = \ubar{c}_j
 $$
@@ -753,7 +781,7 @@ Since $\Gamma_j(a_j, a_i)$ is continuous and decreasing in $a_j$, a solution exi
 $$
 \Gamma_j(a_j, a_i) \leq \ubar{c}_j
 $$
-for all $a_j \geq a_j(\ubar{c}_j, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 4, this guarantees peace. $\blacksquare$
+for all $a_j \geq a_j(\ubar{c}_j, a_i)$ and $j$ accepts $i$'s ideal point. By Lemma 5, this guarantees peace. $\blacksquare$
 
 
 
@@ -769,7 +797,7 @@ Since $\Gamma_j(a_j, a_i)$ is decreasing in $a_i$ (Proposition 3), so is its inv
 
 
 
-**Lemma 6:** 
+**Lemma 7:** 
 $\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \mathcal{P}$
 
 **Proof:** 
@@ -794,11 +822,11 @@ In the proof of Proposition 5 (below), I show $G_i(\tilde{\bm{\tau}}^\star) > W_
 
 
 
-**Lemma 7:** 
+**Lemma 8:** 
 $\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
 
 **Proof:** 
-Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\tilde{\tau}_i^\star > \tau_i^\star(a_i)$. By Lemma 6, $\tilde{\bm{\tau}}^\star$ must lie in the pareto set. By the definition of $\tau_i^\star(a_i)$, $G_i(\tilde{\tau}_i^\star, \cdot; a_i) < G_i(\tau_i^\star(a_i), \cdot; a_i)$. By Lemma 1, $G_j(\cdot, \tilde{\tau}_i^\star; a_j) < G_j(\cdot, \tau_i^\star(a_i); a_i)$. Thus, a pareto improvement exists, contradicting the hypothesis that $\tilde{\bm{\tau}}^\star$ is an equilibrium offer. $\blacksquare$
+Suppose, for sake of contradiction, that for some $\tilde{\bm{\tau}}^\star$, $\tilde{\tau}_i^\star > \tau_i^\star(a_i)$. By Lemma 7, $\tilde{\bm{\tau}}^\star$ must lie in the pareto set. By the definition of $\tau_i^\star(a_i)$, $G_i(\tilde{\tau}_i^\star, \cdot; a_i) < G_i(\tau_i^\star(a_i), \cdot; a_i)$. By Lemma 2, $G_j(\cdot, \tilde{\tau}_i^\star; a_j) < G_j(\cdot, \tau_i^\star(a_i); a_i)$. Thus, a pareto improvement exists, contradicting the hypothesis that $\tilde{\bm{\tau}}^\star$ is an equilibrium offer. $\blacksquare$
 
 
 
@@ -849,7 +877,7 @@ Equilibrium trade in manufactured goods is
 $$
 x_{ij}^\star(\tau_i) + x_{ji}^\star(\tau_j)
 $$
-where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 2. Otherwise, the strategic situation is unchanged. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also weakly increasing. $\blacksquare$ 
+where both $x_{ij}^\star(\tau_i)$ and $x_{ji}^\star(\tau_j)$ are decreasing in each country's tariff rate. The bounds of the pareto set are decreasing in $a_i$, $a_j$ by Lemma 3. Otherwise, the strategic situation is unchanged. Thus, $\tilde{\tau}_i^\star(a_i)$ and $\tilde{\tau}_j^\star(a_i)$ are weakly decreasing in $a_i$. Thus, equilibrium trade is also weakly increasing. $\blacksquare$ 
 
 
 \clearpage

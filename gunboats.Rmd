@@ -55,6 +55,7 @@ Lpareto <- "NA"
 LtildeTau <- "NA"
 Lqccv <- "NA"
 Ltauj <- "NA"
+Lint <- "NA"
 
 AddxEconomy <- "NA"
 AddxEmpiricalFacts <- "NA"
