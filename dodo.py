@@ -33,7 +33,7 @@ def task_prep_slides():
 def task_figs():
     yield {
         'name': 'building figs...',
-        'actions': ["cd figs/;  latexmk -pdf aLine.tex; latexmk -c"]
+        'actions': ["cd figs/;  latexmk -pdf aLine.tex; latexmk -c; magick -density 300 aLine.pdf aLine.png"]
     }
 
 def task_write_paper():

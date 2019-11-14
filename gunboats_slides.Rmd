@@ -1,7 +1,7 @@
 ---
 title: "Gunboat Diplomacy"
 subtitle: "Political Bias, Trade Policy, and War"
-date: "13 March 2019"
+date: "14 November 2019"
 author: Brendan Cooley
 position: Ph.D. Candidate
 institution: Princeton University
@@ -133,8 +133,8 @@ source('figs/params.R')
 
 - Trade and Conflict
     + Liberal governments experience smaller conflicts of interest (Proposition `r Pgamma`)
-    + "" fight war less frequently (Proposition `r Pwar`)
-    + "" trade more when peace prevails (Proposition `r PeqTrade`)
+    + Most liberal governments never fight wars (Proposition `r Pwar`)
+    + When shadow of power absent, trade increasing as governments become more liberal (Proposition `r PeqTrade`)
 
 . . .
 
@@ -266,16 +266,16 @@ $$
 
 </div>
 
-# Economy (I) {id="economy"}
+# Economy (Overview) {id="economy"}
 
 <div class="fragment">
 
 **Primitives**
 
-- Factor endowments: $L_i = L_j = L$
-- Income: $I_i = w_i L_i + r_i(\tau_i)$
-- Mass of industrial firms indexed $\nu_i$
-    + $\int_{\nu_i} d \nu_i = \int_{\nu_j} d \nu_j = 1$
+- Income: $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$
+    + Factor endowments: $L_i = L_j = L$
+- Mass of "manufacturing" firms producing differentiated products, indexed $\nu_i$
+    + Monopolistic competition [New Trade, @Krugman1980]
     + *No entry $\implies$ positive profits in equilibrium* (short-run)
 
 </div>
@@ -284,17 +284,91 @@ $$
 **Consumption**
 
 - Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
-- Cobb-Douglas upper-level preferences
 
-\begin{equation} \label{eq:cMax}
+\begin{equation*}
 \begin{split}
 \max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i X_i + Y_i \leq w_i L
+\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
 \end{split}
-\end{equation}
+\end{equation*}
 
 </div>
 <div class="fragment">
+
+**Domestic Conflict of Interest**
+
+\begin{equation*}
+V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\tau_i)^\alpha}
+\end{equation*}
+
+\begin{equation*}
+\Pi_i(\tau_i, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right)
+\end{equation*}
+
+</div>
+
+## Economy (Overview)
+
+**Primitives**
+
+- Income: $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$
+    + Factor endowments: $L_i = L_j = L$
+- Mass of "manufacturing" firms producing differentiated products, indexed $\nu_i$
+    + Monopolistic competition [New Trade, @Krugman1980]
+    + *No entry $\implies$ positive profits in equilibrium* (short-run)
+
+**Consumption**
+
+- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
+
+\begin{equation*}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
+\end{split}
+\end{equation*}
+
+**Domestic Conflict of Interest**
+
+\begin{equation*}
+V_i(\color{bcYellow} \tau_i \color{black}) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\color{bcYellow} \tau_i \color{black})}{P_i(\color{bcYellow} \tau_i \color{black})^\alpha}
+\end{equation*}
+
+\begin{equation*}
+\Pi_i(\color{bcYellow} \tau_i \color{black}, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\color{bcYellow} \tau_i \color{black}) + x_{ji}^\star(\tau_j) \right)
+\end{equation*}
+
+## Economy (Overview)
+
+
+**Primitives**
+
+- Income: $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$
+    + Factor endowments: $L_i = L_j = L$
+- Mass of "manufacturing" firms producing differentiated products, indexed $\nu_i$
+    + Monopolistic competition [New Trade, @Krugman1980]
+    + *No entry $\implies$ positive profits in equilibrium* (short-run)
+
+**Consumption**
+
+- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
+
+\begin{equation*}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
+\end{split}
+\end{equation*}
+
+**Domestic Conflict of Interest**
+
+\begin{equation*}
+V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\tau_i)^\alpha}
+\end{equation*}
+
+\begin{equation*}
+\Pi_i(\tau_i, \color{bcYellow} \tau_j \color{black}) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\color{bcYellow} \tau_j \color{black}) \right)
+\end{equation*}
 
 ## Economy (II)
 
@@ -309,12 +383,6 @@ X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \i
 
 \begin{equation} \label{eq:P}
 P_i = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j} p_{ij}(\nu_j)^{1-\sigma} d \nu_j \right)^{\frac{1}{1 - \sigma}}
-\end{equation}
-
-- Indirect utility
-
-\begin{equation} \label{eq:V}
-V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
 \end{equation}
 
 ## Economy (III)
@@ -355,7 +423,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 
 ## Economic Equilibrium
 
-- $\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }$ 
+- $\bm{w} = \left\{ w_i, w_j \right\}$ 
 - $\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }$
 
 . . . 
@@ -405,7 +473,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </div>
 <div class="fragment">
 
-**Lemma `r Lqccv`:** `r LqccvText`
+**Lemma `r Lint`:** `r LintText`
 
 </div>
 
@@ -477,7 +545,7 @@ brPlot
 **Optimal Puppet Regimes**
 
 $$
-\max_{a \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+\max_{\color{bcYellow} a \color{black} \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(\color{bcYellow} a \color{black}) | a_i )
 $$
 
 - When a government wins a war, it earns the right to replace the vanquished government with a "puppet" that prefers lower barriers to trade
@@ -486,14 +554,19 @@ $$
 </div>
 <div class="fragment">
 
+**Proposition `r Pastar`:** `r PastarText`
+
+</div>
+<div class="fragment">
+
 **War Outcomes**
 
 \begin{equation*} \label{eq:Gbar}
-\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\color{bcYellow} \bar{a} \color{black}); a_i)
 \end{equation*}
 
 \begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\color{bcYellow} \bar{a} \color{black}), \tau_j^\star(a_j); a_i)
 \end{equation*}
 
 </div>
@@ -530,17 +603,7 @@ $$
 - Increasing $a_i$ reduces difference between $\tau_i^\star(a_i)$ and $\tau_i^\star(\bar{a})$
 - Increasing $a_j$ reduces difference between $\tau_j^\star(a_j)$ and $\tau_j^\star(\bar{a})$
 
-## Bargaining Environment (I) {id="barEnv"}
-
-```{r bar, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
-
-source("figs/bar.R")
-
-barPlot
-
-```
-
-## Bargaining Environment (II)
+## Bargaining Environment
 
 **War Values**
 
@@ -559,8 +622,6 @@ barPlot
 
 <div class="fragment">
 
-**Liberal Peace**
-
 **Lemma `r LtauCorner`:** `r LtauCornerText`
 
 </div>
@@ -570,9 +631,15 @@ barPlot
 
 </div>
 
-## Liberal Peace {.centercontent}
+## Liberal Peace
+
+![test](figs/aLine.png)
 
 **Proposition `r Pwar` (Liberal Peace):** `r PwarText`
+
+**Proposition `r PeqTrade` (Liberal Trade):** `r PeqTradeText`
+
+- $a_i \uparrow \implies \tau_i^\star(a_i) \downarrow \implies x_{ij}^\star(\tau_i^\star(a_i)) \uparrow$
 
 ## Power and Protection (I)
 
@@ -607,21 +674,33 @@ $$
 
 **Proposition `r PeqTau` (Power and Protection):** `r PeqTauText`
 
-## Liberal Trade (I)
+# Implications (I) {id="implications"}
 
-```{r bar2, echo=FALSE, warning=FALSE, message=FALSE, fig.height=5, dpi=300}
+<div class="fragment">
 
-source("figs/bar.R")
+**Commercial Peace: Globalization or Liberalism?**
 
-barPlot
+- Barriers to trade (globalization) result of governments' *choices*
+- Liberalization of government preferences increases trade *and* reduces incentives for conflict
+- Economic exchange or policy liberalization as root cause of peace?
+    + Market access and conflict: @Mcdonald2004, @Mcdonald2007; @Chatagnier2015
+- Political economy of foreign policy belligerence
+    + @Gerschenkron1943, @Fordham2019, @Fordham1998, @Kleinberg2013
 
-```
+</div>
+<div class="fragment">
 
-## Liberal Trade (II) {.centercontent}
+**Shadow of Power in International Political Economy**
 
-**Proposition `r PeqTrade` (Liberal Trade):** `r PeqTradeText`
+- Equilibrium trade policies balance
+    + Domestic political interests
+    + Foreign military constraints
+- Trade policies *are not* a sufficient statistic for government preferences
+    + @Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015
 
-# Implications {id="implications"}
+</div>
+
+## Implications (II)
 
 **Preferences, Institutions, and the Democratic Peace**
 
@@ -637,30 +716,15 @@ barPlot
     + Democratic peace: @Oneal1999, @Reiter2017
 
 </div>
-<div class="fragment">
 
-**Shadow of Power in International Political Economy**
-
-- Equilibrium trade policies balance
-    + Domestic political interests
-    + Foreign military constraints
-
-</div>
-<div class="fragment">
-
-- Trade policies *are not* a sufficient statistic for government preferences
-    + @Goldberg1999; @Mitra2006; @Gawande2009; @Gawande2012; @Ossa2014; @Gawande2015
-
-</div>
-
-## Conclusion
+# Conclusion
 
 <hr style="height:6em; visibility:hidden;" />
 
 **Conflicts of Interest versus Bargaining Failures**
 
 - *Given* a conflict of interest, what prevents peaceful settlement? [@Fearon1995]
-- What do governments want? and why do their objectives bring them into conflict with one another? [@Moravcsik1997]
+- What do governments want? and why do their objectives bring them into conflict with one another? [@Moravcsik1997; @Bils2017]
 
 # Thank You  {.aligncenter}
 

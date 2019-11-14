@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="generator" content="pandoc">
   <meta name="author" content="Brendan Cooley" />
-  <meta name="dcterms.date" content="2019-03-13" />
+  <meta name="dcterms.date" content="2019-11-14" />
   <title>Gunboat Diplomacy</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -455,6 +455,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 \[
 \require{color}
 \definecolor{bcOrange}{RGB}{189,97,33}
+\definecolor{bcYellow}{RGB}{189,142,40}
 \newcommand\iddots{\mathinner{
   \kern1mu\raise1pt{.}
   \kern2mu\raise4pt{.}
@@ -482,7 +483,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 	<div class="cover-top">
 	  	<h1 class="title">Gunboat Diplomacy</h1>
 			  	<h2 class="subtitle">Political Bias, Trade Policy, and War</h1>
-						<h3 class="date">13 March 2019</h3>
+						<h3 class="date">14 November 2019</h3>
 			</div>
 	<div class="cover-bottom">
 				<h3>Brendan Cooley</h3>
@@ -575,8 +576,8 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <li>Trade and Conflict
 <ul>
 <li>Liberal governments experience smaller conflicts of interest (Proposition 3)</li>
-<li>"" fight war less frequently (Proposition 4)</li>
-<li>"" trade more when peace prevails (Proposition 6)</li>
+<li>Most liberal governments never fight wars (Proposition 4)</li>
+<li>When shadow of power absent, trade increasing as governments become more liberal (Proposition 5)</li>
 </ul></li>
 </ul>
 </div>
@@ -584,7 +585,7 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <ul>
 <li>Trade Policy in the Shadow of Power
 <ul>
-<li>Trade policies reflect balance of military power, powerful countries more protectionist in equilibrium (Proposition 5)</li>
+<li>Trade policies reflect balance of military power, powerful countries more protectionist in equilibrium (Proposition 6)</li>
 </ul></li>
 </ul>
 </div>
@@ -703,14 +704,16 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><strong>Assumption 1:</strong> <span class="math inline">\(\bar{c}_j \leq \kappa_j\)</span> and <span class="math inline">\(c_i &lt; \kappa_i(\bar{c}_j)\)</span> where <span class="math inline">\(\kappa_j\)</span> and <span class="math inline">\(\kappa_i(\bar{c}_j)\)</span> are positive constants defined in the Appendix.</p>
 </div>
 </section></section>
-<section><section id="economy" class="title-slide slide level1"><h1>Economy (I)</h1><div class="fragment">
+<section><section id="economy" class="title-slide slide level1"><h1>Economy (Overview)</h1><div class="fragment">
 <p><strong>Primitives</strong></p>
 <ul>
-<li>Factor endowments: <span class="math inline">\(L_i = L_j = L\)</span></li>
-<li>Income: <span class="math inline">\(I_i = w_i L_i + r_i(\tau_i)\)</span></li>
-<li>Mass of industrial firms indexed <span class="math inline">\(\nu_i\)</span>
+<li>Income: <span class="math inline">\(I_i(\tau_i) = w_i L_i + r_i(\tau_i)\)</span>
 <ul>
-<li><span class="math inline">\(\int_{\nu_i} d \nu_i = \int_{\nu_j} d \nu_j = 1\)</span></li>
+<li>Factor endowments: <span class="math inline">\(L_i = L_j = L\)</span></li>
+</ul></li>
+<li>Mass of “manufacturing” firms producing differentiated products, indexed <span class="math inline">\(\nu_i\)</span>
+<ul>
+<li>Monopolistic competition <span class="citation" data-cites="Krugman1980">(New Trade, Krugman 1980)</span></li>
 <li><em>No entry <span class="math inline">\(\implies\)</span> positive profits in equilibrium</em> (short-run)</li>
 </ul></li>
 </ul>
@@ -719,16 +722,84 @@ document.getElementsByTagName('head')[0].appendChild(style);
 <p><strong>Consumption</strong></p>
 <ul>
 <li>Agricultural consumption: <span class="math inline">\(Y_i\)</span> (homogenous and numeraire, <span class="math inline">\(p_i^y = 1\)</span>)</li>
-<li>Cobb-Douglas upper-level preferences</li>
 </ul>
-<p><span class="math display">\[\begin{equation} \label{eq:cMax}
+<p><span class="math display">\[\begin{equation*}
 \begin{split}
 \max_{X_i, Y_i} &amp; \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} &amp; \quad P_i X_i + Y_i \leq w_i L
+\text{subject to} &amp; \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
 \end{split}
-\end{equation}\]</span></p>
+\end{equation*}\]</span></p>
 </div>
 <div class="fragment">
+<p><strong>Domestic Conflict of Interest</strong></p>
+<p><span class="math display">\[\begin{equation*}
+V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\tau_i)^\alpha}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\Pi_i(\tau_i, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right)
+\end{equation*}\]</span></p>
+</div></section><section id="economy-overview" class="slide level2">
+<h2>Economy (Overview)</h2>
+<p><strong>Primitives</strong></p>
+<ul>
+<li>Income: <span class="math inline">\(I_i(\tau_i) = w_i L_i + r_i(\tau_i)\)</span>
+<ul>
+<li>Factor endowments: <span class="math inline">\(L_i = L_j = L\)</span></li>
+</ul></li>
+<li>Mass of “manufacturing” firms producing differentiated products, indexed <span class="math inline">\(\nu_i\)</span>
+<ul>
+<li>Monopolistic competition <span class="citation" data-cites="Krugman1980">(New Trade, Krugman 1980)</span></li>
+<li><em>No entry <span class="math inline">\(\implies\)</span> positive profits in equilibrium</em> (short-run)</li>
+</ul></li>
+</ul>
+<p><strong>Consumption</strong></p>
+<ul>
+<li>Agricultural consumption: <span class="math inline">\(Y_i\)</span> (homogenous and numeraire, <span class="math inline">\(p_i^y = 1\)</span>)</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+\max_{X_i, Y_i} &amp; \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} &amp; \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>Domestic Conflict of Interest</strong></p>
+<p><span class="math display">\[\begin{equation*}
+V_i(\color{bcYellow} \tau_i \color{black}) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\color{bcYellow} \tau_i \color{black})}{P_i(\color{bcYellow} \tau_i \color{black})^\alpha}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\Pi_i(\color{bcYellow} \tau_i \color{black}, \tau_j) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\color{bcYellow} \tau_i \color{black}) + x_{ji}^\star(\tau_j) \right)
+\end{equation*}\]</span></p>
+</section><section id="economy-overview-1" class="slide level2">
+<h2>Economy (Overview)</h2>
+<p><strong>Primitives</strong></p>
+<ul>
+<li>Income: <span class="math inline">\(I_i(\tau_i) = w_i L_i + r_i(\tau_i)\)</span>
+<ul>
+<li>Factor endowments: <span class="math inline">\(L_i = L_j = L\)</span></li>
+</ul></li>
+<li>Mass of “manufacturing” firms producing differentiated products, indexed <span class="math inline">\(\nu_i\)</span>
+<ul>
+<li>Monopolistic competition <span class="citation" data-cites="Krugman1980">(New Trade, Krugman 1980)</span></li>
+<li><em>No entry <span class="math inline">\(\implies\)</span> positive profits in equilibrium</em> (short-run)</li>
+</ul></li>
+</ul>
+<p><strong>Consumption</strong></p>
+<ul>
+<li>Agricultural consumption: <span class="math inline">\(Y_i\)</span> (homogenous and numeraire, <span class="math inline">\(p_i^y = 1\)</span>)</li>
+</ul>
+<p><span class="math display">\[\begin{equation*}
+\begin{split}
+\max_{X_i, Y_i} &amp; \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} &amp; \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
+\end{split}
+\end{equation*}\]</span></p>
+<p><strong>Domestic Conflict of Interest</strong></p>
+<p><span class="math display">\[\begin{equation*}
+V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\tau_i)^\alpha}
+\end{equation*}\]</span></p>
+<p><span class="math display">\[\begin{equation*}
+\Pi_i(\tau_i, \color{bcYellow} \tau_j \color{black}) = \int_{v_i} \Pi_i(p_i(\nu_i)) = (p_i^\star - w_i) \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\color{bcYellow} \tau_j \color{black}) \right)
+\end{equation*}\]</span></p>
 </section><section id="economy-ii" class="slide level2">
 <h2>Economy (II)</h2>
 <p><strong>Consumption (Continued)</strong></p>
@@ -741,12 +812,6 @@ X_i = \left( \int_{\nu_i} x_{ii}(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \i
 \end{equation}\]</span></p>
 <p><span class="math display">\[\begin{equation} \label{eq:P}
 P_i = \left( \int_{\nu_i} p_{ii}(\nu_i)^{1-\sigma} d \nu_i + \int_{\nu_j} p_{ij}(\nu_j)^{1-\sigma} d \nu_j \right)^{\frac{1}{1 - \sigma}}
-\end{equation}\]</span></p>
-<ul>
-<li>Indirect utility</li>
-</ul>
-<p><span class="math display">\[\begin{equation} \label{eq:V}
-V_i(P_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i}{P_i^\alpha}
 \end{equation}\]</span></p>
 </section><section id="economy-iii" class="slide level2">
 <h2>Economy (III)</h2>
@@ -784,7 +849,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 </section><section id="economic-equilibrium" class="slide level2">
 <h2>Economic Equilibrium</h2>
 <ul>
-<li><span class="math inline">\(\bm{w} = \left\{ w_i^x, w_i^y \right\}_{i \in \left\{ i, j \right\} }\)</span></li>
+<li><span class="math inline">\(\bm{w} = \left\{ w_i, w_j \right\}\)</span></li>
 <li><span class="math inline">\(\bm{L} = \left\{ L_i^x, L_i^y \right\}_{ i \in \left\{ i, j \right\} }\)</span></li>
 </ul>
 <div class="fragment">
@@ -832,9 +897,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <p><strong>Assumption 3:</strong> <span class="math inline">\(a_i \in (\ubar{a}, \bar{a}]\)</span> for all <span class="math inline">\(i\)</span> where <span class="math inline">\(\ubar{a}\)</span> is a positive constant defined in Appendix C and <span class="math inline">\(\bar{a}\)</span> is an arbitrarily large but finite number.</p>
 </div>
 <div class="fragment">
-<p><strong>Lemma 1:</strong> If Assumption 3 is satisfied, then for all <span class="math inline">\(a_i \in (\ubar{a}, \bar{a}]\)</span>, there exists a unique <span class="math inline">\(\tau_i^\star(a_i) \in [1, \bar{\tau})\)</span> satisfying <span class="math display">\[
-\tau_i^\star(a_i) = \argmax_{\tau_i \in [1, \bar{\tau}]} G_i(\tau_i; a_i)
-\]</span> where <span class="math inline">\(\tau_i^\star(a_i)\)</span> does not depend on <span class="math inline">\(\tau_j\)</span>.</p>
+<p><strong>Lemma 1:</strong> <span class="math inline">\(\tau_i^\star(a_i) \in (1, \bar{\tau})\)</span></p>
 </div></section><section id="government-preferences-ii" class="slide level2">
 <h2>Government Preferences (II)</h2>
 <p><img src="index_files/figure-revealjs/G1-1.png" width="2400" /></p>
@@ -870,7 +933,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <section><section id="regimeChange" class="title-slide slide level1"><h1>Conflicts of Interest and Regime Change (I)</h1><div class="fragment">
 <p><strong>Optimal Puppet Regimes</strong></p>
 <p><span class="math display">\[
-\max_{a \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a) | a_i )
+\max_{\color{bcYellow} a \color{black} \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(\color{bcYellow} a \color{black}) | a_i )
 \]</span></p>
 <ul>
 <li>When a government wins a war, it earns the right to replace the vanquished government with a “puppet” that prefers lower barriers to trade</li>
@@ -878,12 +941,15 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </ul>
 </div>
 <div class="fragment">
+<p><strong>Proposition 2:</strong> <span class="math inline">\(a^\star = \bar{a}\)</span></p>
+</div>
+<div class="fragment">
 <p><strong>War Outcomes</strong></p>
 <p><span class="math display">\[\begin{equation*} \label{eq:Gbar}
-\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\overline{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\color{bcYellow} \bar{a} \color{black}); a_i)
 \end{equation*}\]</span></p>
 <p><span class="math display">\[\begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\color{bcYellow} \bar{a} \color{black}), \tau_j^\star(a_j); a_i)
 \end{equation*}\]</span></p>
 </div>
 <div class="fragment">
@@ -896,7 +962,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </ul>
 </div></section><section id="conflicts-of-interest-and-regime-change-ii" class="slide level2">
 <h2>Conflicts of Interest and Regime Change (II)</h2>
-<p><strong>Proposition 3:</strong> <span class="math inline">\(\Gamma_i(a_i, a_j)\)</span> is decreasing in <span class="math inline">\(a_i\)</span>, <span class="math inline">\(a_j\)</span></p>
+<p><strong>Proposition 3:</strong> <span class="math inline">\(\Gamma_i(a_i, a_j)\)</span> is decreasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span></p>
 <div class="fragment">
 <ul>
 <li>Recall war outcomes</li>
@@ -914,11 +980,8 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 <li>Increasing <span class="math inline">\(a_j\)</span> reduces difference between <span class="math inline">\(\tau_j^\star(a_j)\)</span> and <span class="math inline">\(\tau_j^\star(\bar{a})\)</span></li>
 </ul>
 </div>
-</section><section id="barEnv" class="slide level2">
-<h2>Bargaining Environment (I)</h2>
-<p><img src="index_files/figure-revealjs/bar-1.png" width="2400" /></p>
-</section><section id="bargaining-environment-ii" class="slide level2">
-<h2>Bargaining Environment (II)</h2>
+</section><section id="bargaining-environment-1" class="slide level2">
+<h2>Bargaining Environment</h2>
 <p><strong>War Values</strong></p>
 <p><span class="math display">\[\begin{align*}
 \hat{G}_j(a_j, a_i) &amp;= \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j \\ 
@@ -937,7 +1000,6 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 </div>
 </section></section>
 <section><section id="results" class="title-slide slide level1"><h1>Results</h1><div class="fragment">
-<p><strong>Liberal Peace</strong></p>
 <p><strong>Lemma 5:</strong> If <span class="math display">\[
 W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_j, a_i) \leq \ubar{c}_j
 \]</span> then <span class="math display">\[
@@ -948,9 +1010,14 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 </div>
 <div class="fragment">
 <p><strong>Lemma 6 (Zone of Peace):</strong> For every <span class="math inline">\(\ubar{c}_j \in [ 0, \bar{c}_j )\)</span> there exists a <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> such that for all <span class="math inline">\(a_j \in [ a_j(\ubar{c}_j, a_i), \bar{a} )\)</span> the probability of war is 0.</p>
-</div></section><section id="liberal-peace" class="slide level2 centercontent">
+</div></section><section id="liberal-peace" class="slide level2">
 <h2>Liberal Peace</h2>
+<p><img data-src="figs/aLine.png" alt="test" /></p>
 <p><strong>Proposition 4 (Liberal Peace):</strong> <span class="math inline">\(a_j(\ubar{c}_j, a_i)\)</span> is weakly decreasing in <span class="math inline">\(a_i\)</span>.</p>
+<p><strong>Proposition 5 (Liberal Trade):</strong> If <span class="math inline">\(a_j \geq a_j(\ubar{c}_j, a_i)\)</span> then trade in manufactured goods is increasing in <span class="math inline">\(a_i\)</span>.</p>
+<ul>
+<li><span class="math inline">\(a_i \uparrow \implies \tau_i^\star(a_i) \downarrow \implies x_{ij}^\star(\tau_i^\star(a_i)) \uparrow\)</span></li>
+</ul>
 </section><section id="power-and-protection-i" class="slide level2">
 <h2>Power and Protection (I)</h2>
 <p><strong>Probability of War</strong></p>
@@ -976,15 +1043,39 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 </div>
 </section><section id="power-and-protection-ii" class="slide level2 centercontent">
 <h2>Power and Protection (II)</h2>
-<p><strong>Proposition 5 (Power and Protection):</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{c}_j, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
-</section><section id="liberal-trade-i" class="slide level2">
-<h2>Liberal Trade (I)</h2>
-<p><img src="index_files/figure-revealjs/bar2-1.png" width="2400" /></p>
-</section><section id="liberal-trade-ii" class="slide level2 centercontent">
-<h2>Liberal Trade (II)</h2>
-<p><strong>Proposition 6 (Liberal Trade):</strong> In a peaceful bargaining equilibrium (Definition 1), trade is weakly increasing in <span class="math inline">\(a_i\)</span> and <span class="math inline">\(a_j\)</span>.</p>
+<p><strong>Proposition 6 (Power and Protection):</strong> If <span class="math inline">\(a_j &lt; a_j(\ubar{c}_j, a_i)\)</span> and peace prevails, government <span class="math inline">\(i\)</span>’s trade barriers are increasing in its military strength, i.e. <span class="math inline">\(\tilde{\tau}_i^\star(a_i, c_i, \rho)\)</span> is increasing in <span class="math inline">\(\rho\)</span>.</p>
 </section></section>
-<section><section id="implications" class="title-slide slide level1"><h1>Implications</h1><p><strong>Preferences, Institutions, and the Democratic Peace</strong></p>
+<section><section id="implications" class="title-slide slide level1"><h1>Implications (I)</h1><div class="fragment">
+<p><strong>Commercial Peace: Globalization or Liberalism?</strong></p>
+<ul>
+<li>Barriers to trade (globalization) result of governments’ <em>choices</em></li>
+<li>Liberalization of government preferences increases trade <em>and</em> reduces incentives for conflict</li>
+<li>Economic exchange or policy liberalization as root cause of peace?
+<ul>
+<li>Market access and conflict: <span class="citation" data-cites="Mcdonald2004">McDonald (2004)</span>, <span class="citation" data-cites="Mcdonald2007">McDonald and Sweeney (2007)</span>; <span class="citation" data-cites="Chatagnier2015">Chatagnier and Kavakli (2015)</span></li>
+</ul></li>
+<li>Political economy of foreign policy belligerence
+<ul>
+<li><span class="citation" data-cites="Gerschenkron1943">Gerschenkron (1943)</span>, <span class="citation" data-cites="Fordham2019">Fordham (2019)</span>, <span class="citation" data-cites="Fordham1998">Fordham (1998)</span>, <span class="citation" data-cites="Kleinberg2013">Kleinberg and Fordham (2013)</span></li>
+</ul></li>
+</ul>
+</div>
+<div class="fragment">
+<p><strong>Shadow of Power in International Political Economy</strong></p>
+<ul>
+<li>Equilibrium trade policies balance
+<ul>
+<li>Domestic political interests</li>
+<li>Foreign military constraints</li>
+</ul></li>
+<li>Trade policies <em>are not</em> a sufficient statistic for government preferences
+<ul>
+<li><span class="citation" data-cites="Goldberg1999">Goldberg and Maggi (1999)</span>; <span class="citation" data-cites="Mitra2006">Mitra, Thomakos, and Ulubasoglu (2006)</span>; <span class="citation" data-cites="Gawande2009">Gawande, Krishna, and Olarreaga (2009)</span>; <span class="citation" data-cites="Gawande2012">Gawande, Krishna, and Olarreaga (2012)</span>; <span class="citation" data-cites="Ossa2014">Ossa (2014)</span>; <span class="citation" data-cites="Gawande2015">Gawande, Krishna, and Olarreaga (2015)</span></li>
+</ul></li>
+</ul>
+</div></section><section id="implications-ii" class="slide level2">
+<h2>Implications (II)</h2>
+<p><strong>Preferences, Institutions, and the Democratic Peace</strong></p>
 <div class="fragment">
 <ul>
 <li>Hypothesis: Democracies more liberal in trade policy preferences than autocracies
@@ -1001,32 +1092,13 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 </ul></li>
 </ul>
 </div>
-<div class="fragment">
-<p><strong>Shadow of Power in International Political Economy</strong></p>
-<ul>
-<li>Equilibrium trade policies balance
-<ul>
-<li>Domestic political interests</li>
-<li>Foreign military constraints</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Trade policies <em>are not</em> a sufficient statistic for government preferences
-<ul>
-<li><span class="citation" data-cites="Goldberg1999">Goldberg and Maggi (1999)</span>; <span class="citation" data-cites="Mitra2006">Mitra, Thomakos, and Ulubasoglu (2006)</span>; <span class="citation" data-cites="Gawande2009">Gawande, Krishna, and Olarreaga (2009)</span>; <span class="citation" data-cites="Gawande2012">Gawande, Krishna, and Olarreaga (2012)</span>; <span class="citation" data-cites="Ossa2014">Ossa (2014)</span>; <span class="citation" data-cites="Gawande2015">Gawande, Krishna, and Olarreaga (2015)</span></li>
-</ul></li>
-</ul>
-</div></section><section id="conclusion" class="slide level2">
-<h2>Conclusion</h2>
-<hr style="height:6em; visibility:hidden;" />
+</section></section>
+<section id="conclusion" class="title-slide slide level1"><h1>Conclusion</h1><hr style="height:6em; visibility:hidden;" />
 <p><strong>Conflicts of Interest versus Bargaining Failures</strong></p>
 <ul>
 <li><em>Given</em> a conflict of interest, what prevents peaceful settlement? <span class="citation" data-cites="Fearon1995">(Fearon 1995)</span></li>
-<li>What do governments want? and why do their objectives bring them into conflict with one another? <span class="citation" data-cites="Moravcsik1997">(Moravcsik 1997)</span></li>
-</ul>
-</section></section>
+<li>What do governments want? and why do their objectives bring them into conflict with one another? <span class="citation" data-cites="Moravcsik1997 Bils2017">(Moravcsik 1997; Bils and Spaniel 2017)</span></li>
+</ul></section>
 <section id="thank-you" class="title-slide slide level1 aligncenter"><h1>Thank You</h1><p><a href="http://brendancooley.com">brendancooley.com</a></p>
 <p><a href="bcooley@princeton.edu">bcooley@princeton.edu</a></p>
 <p><small><strong>Title Slide Image Credit:</strong> Charles Severin (American lithographer, born between 1808-1820; died ca. 1860). 1853 (creation). The American Expedition, Under Commodore Perry, Landing in Japan, July 14, 1853, Overall view. visual works; prints (visual works); planographic prints; lithographs. <a href="https://library.artstor.org/asset/SS35100_35100_35234600" class="uri">https://library.artstor.org/asset/SS35100_35100_35234600</a></small></p></section>
@@ -1070,6 +1142,9 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 <div id="ref-Benson2007">
 <p>Benson, Brett V, and Emerson M S Niou. 2007. “Economic Interdependence and Peace: A Game-Theoretic Analysis.” <em>Journal of East Asian Studies</em> 7 (1): 35–59.</p>
 </div>
+<div id="ref-Bils2017">
+<p>Bils, Peter, and William Spaniel. 2017. “Policy bargaining and militarized conflict.” <em>Journal of Theoretical Politics</em> 29 (4): 647–78.</p>
+</div>
 <div id="ref-BuenodeMesquita2003">
 <p>Bueno De Mesquita, Bruce, Alastair Smith, Randolph M Siverson, and James D Morrow. 2003. <em>The logic of political survival</em>. MIT press.</p>
 </div>
@@ -1094,6 +1169,12 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 <div id="ref-Fey2019">
 <p>Fey, Mark, and Brenton Kenkel. 2019. “Is an Ultimatum the Last Word on Crisis Bargaining?” <em>Journal of Politics</em>.</p>
 </div>
+<div id="ref-Fordham1998">
+<p>Fordham, Benjamin O. 1998. “Economic Interests, Party, and Ideology in Early Cold War Era U.S. Foreign Policy.” <em>International Organization</em> 52 (2): 359–96.</p>
+</div>
+<div id="ref-Fordham2019">
+<p>———. 2019. “The Domestic Politics of World Power: Explaining Debates over the United States Battleship Fleet, 1890-91.” <em>International Organization</em>, 1–34.</p>
+</div>
 <div id="ref-Gartzke2007">
 <p>Gartzke, Erik. 2007. “The capitalist peace.” <em>American Journal of Political Science</em> 51 (1): 166–91.</p>
 </div>
@@ -1108,6 +1189,9 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 </div>
 <div id="ref-Gawande2012">
 <p>———. 2012. “Lobbying Competition over Trade Policy.” <em>International Economic Review</em> 53 (1): 115–32.</p>
+</div>
+<div id="ref-Gerschenkron1943">
+<p>Gerschenkron, Alexander. 1943. <em>Bread and Democracy in Germany</em>. Cornell University Press.</p>
 </div>
 <div id="ref-Goldberg1999">
 <p>Goldberg, Pinelopi Koujianou, and Giovanni Maggi. 1999. “Protection for Sale: An Empirical Investigation.” <em>American Economic Review</em>, 1135–55.</p>
@@ -1132,6 +1216,9 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 </div>
 <div id="ref-Jackson2007">
 <p>Jackson, Matthew O, and Massimo Morelli. 2007. “Political bias and war.” <em>The American Economic Review</em>, 1353–73.</p>
+</div>
+<div id="ref-Kleinberg2013">
+<p>Kleinberg, Katja B, and Benjamin O Fordham. 2013. “The Domestic Politics of Trade and Conflict.” <em>International Studies Quarterly</em> 57 (3): 605–19.</p>
 </div>
 <div id="ref-Kono2008">
 <p>Kono, Daniel Yuichi. 2008. “Democracy and Trade Discrimination.” <em>Journal of Politics</em> 70 (4): 942–55.</p>
