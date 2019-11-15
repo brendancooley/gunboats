@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -229,12 +229,6 @@ rm(wars)
 
 </div>
 
-## Comparative Statics {.centercontent}
-
-- $\Delta$ Preferences $\rightarrow \text{Pr} (\text{war})$
-- $\Delta$ Preferences $\rightarrow$ protection, trade flows
-- $\Delta$ Military power $\rightarrow$ protection, trade flows
-
 ## Bargaining Environment
 
 <div class="fragment">
@@ -256,8 +250,6 @@ $$
 $$
 
 - $\widetilde{G}$ - government utility
-- $a_i$ - preference for protectionism
-- $\rho \in [0, 1]$ - probability $i$ wins war (military strength)
 
 </div>
 <div class="fragment">
@@ -277,20 +269,6 @@ $$
 - Mass of "manufacturing" firms producing differentiated products, indexed $\nu_i$
     + Monopolistic competition [New Trade, @Krugman1980]
     + *No entry $\implies$ positive profits in equilibrium* (short-run)
-
-</div>
-<div class="fragment">
-
-**Consumption**
-
-- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
-
-\begin{equation*}
-\begin{split}
-\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
-\end{split}
-\end{equation*}
 
 </div>
 <div class="fragment">
@@ -317,17 +295,6 @@ V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\ta
     + Monopolistic competition [New Trade, @Krugman1980]
     + *No entry $\implies$ positive profits in equilibrium* (short-run)
 
-**Consumption**
-
-- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
-
-\begin{equation*}
-\begin{split}
-\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
-\end{split}
-\end{equation*}
-
 **Domestic Conflict of Interest**
 
 \begin{equation*}
@@ -349,17 +316,6 @@ V_i(\color{bcYellow} \tau_i \color{black}) = \alpha^\alpha (1 - \alpha)^{1 - \al
     + Monopolistic competition [New Trade, @Krugman1980]
     + *No entry $\implies$ positive profits in equilibrium* (short-run)
 
-**Consumption**
-
-- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
-
-\begin{equation*}
-\begin{split}
-\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
-\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
-\end{split}
-\end{equation*}
-
 **Domestic Conflict of Interest**
 
 \begin{equation*}
@@ -372,7 +328,16 @@ V_i(\tau_i) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} \frac{I_i(\tau_i)}{P_i(\ta
 
 ## Economy (II)
 
-**Consumption (Continued)**
+**Consumption**
+
+- Agricultural consumption: $Y_i$ (homogenous and numeraire, $p_i^y = 1$)
+
+\begin{equation*}
+\begin{split}
+\max_{X_i, Y_i} & \quad X_i^\alpha Y_i^{1 - \alpha} \\
+\text{subject to} & \quad P_i(\tau_i) X_i + Y_i \leq I_i(\tau_i)
+\end{split}
+\end{equation*}
 
 - Industrial consumption: $P_i X_i = \alpha I_i$
 - Constant elasticity of substitution (CES) preferences over industrial varieties
@@ -454,7 +419,7 @@ r_i(\tau_i) = (\tau_i - 1) p_j x_{ij}^\star(\tau_i p_j)
 <hr style="height:1em; visibility:hidden;" />
 
 \begin{equation} \label{eq:G}
-G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
+G_i(\bm{\tau} | \color{bcYellow} a_i \color{black}) = \color{bcYellow} a_i \color{black} V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 \end{equation}
 
 <hr style="height:1em; visibility:hidden;" />
@@ -463,7 +428,7 @@ G_i(\bm{\tau} | a_i) = a_i V_i(\tau_i) + \Pi_i(\tau_i, \tau_j)
 - $\Pi_i(\tau_i, \tau_j)$ - firm profits
     - increasing in $\tau_i$, decreasing in $\tau_j$
 
-<p class="center">*$a_i$ is measure of government's sensitivity to interests of consumers*</p>
+<p class="center">*$\color{bcYellow} a_i \color{black}$ is measure of government's sensitivity to interests of consumers*</p>
 
 </div>
 <div class="fragment">
@@ -604,6 +569,8 @@ $$
 - Increasing $a_j$ reduces difference between $\tau_j^\star(a_j)$ and $\tau_j^\star(\bar{a})$
 
 ## Bargaining Environment
+
+- $\rho \in [0, 1]$ - probability $i$ wins war (military strength)
 
 **War Values**
 
