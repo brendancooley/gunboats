@@ -7,7 +7,7 @@ position: Ph.D. Candidate
 institution: Princeton University
 email: "bcooley (at) princeton.edu"
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: /Users/brendancooley/Dropbox (Princeton)/References/library.bib
 biblio-style: apsr
 
 backgroundTitle: "figs/perry.jpg"
@@ -684,6 +684,7 @@ $$
 - Liberalization of government preferences increases trade *and* reduces incentives for conflict
 - Economic exchange or policy liberalization as root cause of peace?
     + Market access and conflict: @Mcdonald2004, @Mcdonald2007; @Chatagnier2015
+    + However, level market access depends on distribution of power in international system
 - Political economy of foreign policy belligerence
     + @Gerschenkron1943, @Fordham2019, @Fordham1998, @Kleinberg2013
 
