@@ -231,11 +231,11 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 ## Preferences
 
-![Government preferences over own tariff rates with $a > a^\prime$ \label{fig:G}](figure/G-1.png)
+![Government preferences over own tariff rates with $a > a^\prime$ \label{fig:G}](figure/G-1.pdf)
 
 Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
 
-![Government iso-welfare curve over home and foreign tariff rates \label{fig:iso}](figure/iso-1.png)
+![Government iso-welfare curve over home and foreign tariff rates \label{fig:iso}](figure/iso-1.pdf)
 
 Figure \ref{fig:iso} depicts the government's welfare in $\left\{ \tau_i, \tau_j \right\}$ space. By decreasing the market access afforded to firms in $i$, non-zero tariffs in $j$ strictly decrease the government's welfare. For any given $\tau_i$, the government's welfare is increasing as $\tau_j$ decreases.
 
@@ -265,7 +265,7 @@ Our next result shows that as governments become more liberal, their optimal tar
 **Lemma 3:** 
 $\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 
-![Government best response functions \label{fig:br}](figure/br-1.png)
+![Government best response functions \label{fig:br}](figure/br-1.pdf)
 
 Figure \ref{fig:br} depicts each governments' best response curves through the policy space. Because the governments' optimal choices do not depend on one another's policy choice, their best response curves are straight lines. Their intersection constitutes the noncooperative equilibrium. As the governments preferences become more biased, these curves shift outward, resulting in a more autarkic noncooperative equilibrium.
 
@@ -468,9 +468,9 @@ Finally, the theory highlights an underappreciated prerequisite for internationa
 ## A: Trade, War, and Democracy: Empirical Facts
 
 
-![Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:tradeRD}](figure/tradeRD-1.png)
+![Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:tradeRD}](figure/tradeRD-1.pdf)
 
-![Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:comdempeace}](figure/comdempeace-1.png)
+![Data from @Marshall2002, @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \label{fig:comdempeace}](figure/comdempeace-1.pdf)
 
 \clearpage
 
