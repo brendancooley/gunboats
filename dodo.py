@@ -42,7 +42,8 @@ def task_transfer_figs():
     for i in figs_to_transfer:
         yield {
             'name': "transferring figs" + i + "...",
-            'actions':["cp figs/" + i + " " + "figure/aLine.pdf"]
+            'actions':["mkdir -p figure/",
+                       "cp figs/" + i + " " + "figure/aLine.pdf"]
         }
 
 def task_write_paper():
