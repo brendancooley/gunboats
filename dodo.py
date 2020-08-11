@@ -14,6 +14,8 @@ verticatorPath = "~/Dropbox\ \(Princeton\)/8_Templates/plugin/verticator"
 pluginDest = "index_files/reveal.js-3.8.0/plugin"
 revealPath = "~/Dropbox\ \(Princeton\)/8_Templates/reveal.js-3.8.0"
 
+figs_to_transfer = ["aLine.pdf"]
+
 def task_source():
     yield {
         'name': "migrating templates and helper functions...",
@@ -35,6 +37,13 @@ def task_figs():
         'name': 'building figs...',
         'actions': ["cd figs/;  latexmk -pdf aLine.tex; latexmk -c; magick -density 300 aLine.pdf aLine.png"]
     }
+
+def task_transfer_figs():
+    for i in figs_to_transfer:
+        yield {
+            'name': "transferring figs" + i + "...",
+            'actions':["cp figs/" + i + " " + "figure/aLine.pdf"]
+        }
 
 def task_write_paper():
     if os.path.isfile("references.RData") is False:

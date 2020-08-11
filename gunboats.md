@@ -365,7 +365,7 @@ For every $\ubar{c}_j \in [ 0, \bar{c}_j )$ there exists a $a_j(\ubar{c}_j, a_i)
 
 Lemma 6 proves the existence of a "Zone of Peace" -- a set of foreign bias types that never fight in equilibrium. Combining this observation with the fact that $j$'s conflict of interest with $i$ is decreasing in $i$'s bias type yields our first core result. Namely, that the size of this zone of peace is increasing as $i$ becomes more liberal in its policy preferences. Figure \ref{fig:zop} depicts this result.
 
-![As the home government becomes more liberal, the set of foreign types that accept its ideal point expands. \label{fig:zop}](figs/aLine.pdf)
+![As the home government becomes more liberal, the set of foreign types that accept its ideal point expands. \label{fig:zop}](figure/aLine.pdf)
 
 
 
