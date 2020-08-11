@@ -19,6 +19,10 @@ $endif$
 % set font
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{pifont}
+\usepackage{newunicodechar}
+\newunicodechar{✓}{\ding{51}}
+\newunicodechar{✗}{\ding{55}}
 \usepackage[oldstyle]{libertine}
 
 
@@ -82,7 +86,23 @@ $endif$
 
 % add ubar command
 \usepackage{accents}
-\newcommand{\ubar}[1]{\underaccent{\bar}{#1}}
+\DeclareRobustCommand{\ubar}[1]{\underaccent{\bar}{#1}}
+
+% Expectation, Variance, Covariance
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+% brackets on top/bottom of block matrix
+\newcommand\overmat[2]{% http://tex.stackexchange.com/a/102468/5764
+  \makebox[0pt][l]{$$\smash{\overbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}^{\text{$$#1$$}}}$$}#2}
+\newcommand\undermat[2]{% http://tex.stackexchange.com/a/102468/5764
+  \makebox[0pt][l]{$$\smash{\underbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}_{\text{$$#1$$}}}$$}#2}
+
+% nice matrix package
+\usepackage{nicematrix}
 
 % hyperlinked citations
 \usepackage{color}
@@ -105,6 +125,9 @@ $endif$
     \fi}
 \renewcommand{\backreftwosep}{ and~} 
 \renewcommand{\backreflastsep}{ and~}
+
+% bbm
+\usepackage{bbm}
 
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -239,14 +262,14 @@ $header-includes$
 $endfor$
 
 $if(title)$
-\title{$title$}
+\title{$title$$if(thanks)$\thanks{$thanks$}$endif$}
 $endif$
 $if(subtitle)$
 \providecommand{\subtitle}[1]{}
 \subtitle{$subtitle$}
 $endif$
 $if(author)$
-\author{$author$$if(thanks)$\thanks{$thanks$}$endif$}
+\author{$for(author)$$author.name$\thanks{$author.affiliation$} $sep$ \and $endfor$}
 $endif$
 $if(institute)$
 \providecommand{\institute}[1]{}
@@ -272,8 +295,10 @@ $endif$
 
 $for(include-before)$
 $include-before$
-
 $endfor$
+
+\newpage
+
 $if(toc)$
 {
 $if(colorlinks)$
