@@ -3,7 +3,9 @@ title: |
     | Gunboat Diplomacy
     | \tiny \hfill
     | \Large Political Bias, Trade Policy, and War
-author: Brendan Cooley
+author:
+	- name: Brendan Cooley
+      affiliation: Ph.D. Candidate, Department of Politics, Princeton University
 date: 13 November 2019
 abstract: Countries with deep trading relationships rarely fight wars with one another. Here, I develop a theory of trade, war, and political bias, in which both trade and war are endogenous objects. Governments can rectify poor market access conditions abroad through war and subsequent regime change, in which the victorious country installs a liberal "puppet" government abroad. Trade policy bargaining is therefore conducted "in the shadow of power," with counterfactual wars shaping the policy choices that prevail in times of peace. When peace prevails, militarily weak countries are more open to trade than powerful ones, all else equal. Equilibrium trade policies balance domestic interests against military threats from abroad. War is less likely between liberal governments because they prefer less protectionist trade policies. As a result, trade flows and the probability of peace are positively correlated in equilibrium, even though trade does not cause peace.
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Timm Betz, Adrien Bilal, Tyson Chatagnier, Rob Carroll, Andrew Coe, Noel Foster, Erik Gartzke, Kishore Gawande, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, John Oneal, Kris Ramsay, Bryan Schonfeld, Brad Smith, Sondre Solstad, and Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
@@ -24,8 +26,6 @@ output:
 ---
 
 
-
-\newpage
 
 # Introduction
 

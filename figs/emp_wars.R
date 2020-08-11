@@ -1,11 +1,11 @@
 ### SETUP ###
 
-# helperPath <- "source/R/"
+# helperPath <- "../source/R/"
 # helperFiles <- list.files(helperPath)
 # for (i in helperFiles) {
 #   source(paste0(helperPath, i))
 # }
-
+# 
 # libs <- c("tidyverse", "patchwork", "ggrepel", "latex2exp", "ggpubr", "padr", "countrycode")
 # ipak(libs)
 
@@ -188,6 +188,8 @@ empty <- ggplot() + geom_point(aes(1,1), colour="white")+
   theme(axis.ticks=element_blank(), panel.background=element_blank(),
         axis.text=element_blank(), axis.line=element_blank(),
         axis.title=element_blank())
+
+# polityDensity + empty + main + tradeIntDensity + polityRail + empty + caption.a + empty + plot_layout(ncol=2, widths=c(8,1), heights=c(1,10,2,5))
 
 ### "Regression Discontinuity" ###
 

@@ -48,12 +48,14 @@ isoDataL <- bind_cols(isoListL[seq(2, length(isoListL) - 1)])
 isoDataR <- bind_cols(isoListR[seq(2, length(isoListR) - 1)])
 
 isoData <- bind_rows(isoDataL, isoDataR)
+colnames(isoData) <- seq(1, 6)
 
 isoDataM <- melt(isoData)
 isoDataM$value <- ifelse(isoDataM$value < 1.01, NA, isoDataM$value)
 isoDataM$value <- ifelse(isoDataM$value > top1 - .0001, NA, isoDataM$value)
 
-isoDataM$variable <- as.numeric(substring(isoDataM$variable, 2))
+# isoDataM$variable <- as.numeric(substring(isoDataM$variable, 2))
+isoDataM$variable <- as.numeric(isoDataM$variable)
 
 isoDataM$tau <- rep(tauSeq, length(unique(isoDataM$variable)))
 isoDataM$G <- rep(Gseq[seq(2, length(isoListL) - 1)], each=length(tauSeq))

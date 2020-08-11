@@ -11,7 +11,7 @@ x <- function(p, tau, sigma, alpha, L) {
 }
 
 Pi <- function(tau_i, tau_j, sigma, alpha, L) {
-  return(n * (p(sigma) - 1) * (x(p(sigma), tau_i, sigma, alpha, L) + x(p(sigma) * tau_j, tau_j, sigma, alpha, L)))
+  return((p(sigma) - 1) * (x(p(sigma), tau_i, sigma, alpha, L) + x(p(sigma) * tau_j, tau_j, sigma, alpha, L)))
 }
 
 r <- function(tau_i, sigma, alpha, L) {
