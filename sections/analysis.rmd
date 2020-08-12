@@ -4,7 +4,7 @@ The results can be summarized as follows. Because they internalize the welfare o
 
 ## Preferences
 
-```{r G, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government preferences over own tariff rates with $a > a^\\prime$ \\label{fig:G}", fig.pos="t", fig.height=5, dpi=300}
+```{r G, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government preferences over own tariff rates with $a > a^\\prime$ \\label{fig:G}", fig.pos="t", fig.height=4.5, fig.width=4.5, dpi=300}
 
 source("../figs/G.R")
 
@@ -14,7 +14,7 @@ Gplot
 
 Figure \ref{fig:G} depicts the governments' objective functions as a function of their own tariff choice, $\tau_i$. As the government becomes more representative, the peak of the curve shifts to the left, indicating that the government prefers a lower tariff. This is a natural result. As the government becomes more representative, it values the welfare of the consumer more and more. This pushes the government to adopt a policy that is closer to the consumer's ideal.
 
-```{r iso, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government iso-welfare curve over home and foreign tariff rates \\label{fig:iso}", fig.pos="t", fig.height=5, dpi=300}
+```{r iso, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government iso-welfare curve over home and foreign tariff rates \\label{fig:iso}", fig.pos="t", fig.height=4.5, fig.width=4.5, dpi=300}
 
 source("../figs/iso.R")
 
@@ -55,7 +55,7 @@ LtauiText <- knit_child("../results/Ltaui.md")
 
 **Lemma `r Ltaui`:** `r LtauiText`
 
-```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government best response functions \\label{fig:br}", fig.pos="t", fig.height=5, dpi=300}
+```{r br, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Government best response functions \\label{fig:br}", fig.pos="t", fig.height=4.5, fig.width=4.5, dpi=300}
 
 brPlot
 

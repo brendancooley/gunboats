@@ -1,4 +1,4 @@
-```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:tradeRD}", fig.height=6, dpi=300, cache=FALSE}
+```{r tradeRD, echo=FALSE, warning=FALSE, message=FALSE, fig.cap = "Plot depicts trade relations between dyads that experienced wars, 10 years prior to and 10 years following the outbreak of hostilities. Economic integration is measured as the average of the countries' directed imports to gdp ratio. An inverse hyperbolic sine transformation was applied to normalize this measure. Data from @Barbieri2008, @Barbieri2009, @Sarkees2010, @Bolt2018. \\label{fig:tradeRD}", fig.height=4.5, fig.width=4.5, dpi=300, cache=FALSE}
 
 source("../figs/emp_wars.R")
 
