@@ -1,1 +1,1 @@
-$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$ and $a_j$
+$\Gamma_i(a_i, a_j)$ is decreasing in $a_i$ and $a_j$ .

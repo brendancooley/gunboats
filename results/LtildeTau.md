@@ -1,1 +1,1 @@
-$\tilde{\bm{\tau}} = \left\{ \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right\} \leq \left\{ \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right\}$ with $\leq$ the natural vector order.
+$\tilde{\bm{\tau}} = \left( \tilde{\tau}_i^\star, \tilde{\tau}_j^\star \right) \leq \left( \tau_i^\star(a_i, c_i, \rho), \tau_j^\star(a_i, c_i, \rho) \right)$ with $\leq$ the natural vector order.

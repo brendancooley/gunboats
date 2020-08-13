@@ -4,5 +4,5 @@ $$
 $$
 and
 $$
-\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \argmax_{\bm{\tau} \in [1, \bar{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \tilde{G}_i \left(\tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right]
+\tilde{\bm{\tau}}^\star(a_i, c_i, \rho) \in \argmax_{\bm{\tau} \in [1, \bar{\tau}]^2} \mathbb{E}_{f(c_j)} \left[ \tilde{G}_i \left(\tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) \right] .
 $$

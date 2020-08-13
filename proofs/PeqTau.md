@@ -1,17 +1,17 @@
 By Assumption `r AwCosts`, $i$'s first order condition must characterize $\tilde{\tau}_i^\star$ when $a_j < a_j(\ubar{c}_j, a_i)$. Here, we have
 $$
-\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0
+\frac{\partial \tilde{G}_i(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} = \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i | a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} + \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( G_i(\tilde{\tau}_i) - \hat{G}_i(a_i, a_j) \right) = 0 .
 $$
 Rearranging,
 \begin{align*}
 \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( \hat{G}_i(a_i, a_j) - G_i(\tilde{\tau}_i) \right) \\
 \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
 \left( 1 - F \left( W_j(a_j, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{\partial G_i(\tilde{\tau}_i)}{\partial \tau_i} &= \frac{1}{\bar{c}_j - \ubar{c}_j} \frac{\partial G_j(\tilde{\tau}_i)}{\partial \tilde{\tau}_i} \left( W_i(a_i, a_j) - c_i - G_i(\tilde{\tau}_i) \right) \\
-(\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i)
+(\bar{c}_j - \ubar{c}_j) \left( 1 - F \left( W_j(0, a_i) - G_j(\cdot, \tilde{\tau}_i; a_j) \right) \right) \frac{ \frac{\partial G_i(\tau_i, \cdot; a_i)}{\partial \tau_i} }{ \frac{\partial G_j(\cdot, \tau_i; a_i)}{\partial \tau_i} } + c_i &= W_i(a_i, a_j) - G_i(\tilde{\tau}_i) .
 \end{align*}
 By Assumption `r AwCosts`, the LHS of this expression must be negative, this ensures that $i$'s payoff at the solution is higher than its war value,^[Note also that by applying the definition of $W_i$, wwe see this condition implies $G_i(\tilde{\bm{\tau}})$ is concave about the pareto set.] 
 $$
-W_i(a_i, a_j) < G_i(\tilde{\tau}_i)
+W_i(a_i, a_j) < G_i(\tilde{\tau}_i) .
 $$
 Now note that 
 $$
@@ -19,7 +19,7 @@ $$
 $$
 and
 $$
-\frac{\partial \hat{G}_i}{\partial \rho} = \Gamma_i > 0
+\frac{\partial \hat{G}_i}{\partial \rho} = \Gamma_i > 0 .
 $$
 We have
 $$

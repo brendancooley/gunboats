@@ -22,7 +22,7 @@ isoPlot
 
 ```
 
-Figure \ref{fig:iso} depicts the government's welfare in $\left\{ \tau_i, \tau_j \right\}$ space. By decreasing the market access afforded to firms in $i$, non-zero tariffs in $j$ strictly decrease the government's welfare. For any given $\tau_i$, the government's welfare is increasing as $\tau_j$ decreases.
+Figure \ref{fig:iso} depicts the government's welfare in $\left( \tau_i, \tau_j \right)$ space. By decreasing the market access afforded to firms in $i$, non-zero tariffs in $j$ strictly decrease the government's welfare. For any given $\tau_i$, the government's welfare is increasing as $\tau_j$ decreases.
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
 Ltauj <- Ltick
@@ -69,7 +69,7 @@ It is now clear that each government cares indirectly about the preferences of i
 
 The optimal puppet's type solves
 $$
-\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i )
+\max_{a_j \in (\ubar{a}, \bar{a}]} G_i( \tau_i^\star(a_i), \tau_j^\star(a_j); a_i ) .
 $$
 
 ```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
@@ -87,12 +87,12 @@ If a government wins a war, it will replace the vanquished government with a max
 
 If a government wins a war it adopts its optimal policy and enjoys complete access to the markets of its trading partner. This best case scenario yields the government utility
 \begin{equation*} \label{eq:Gbar}
-\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i)
+\bar{G}_i(a_i) = G_i(\tau_i^\star(a_i), \tau_j^\star(\bar{a}); a_i) .
 \end{equation*}
 
 If a government loses a war, it is replaced by a puppet and must suffer under the policies implemented by the puppet regime. This is consistent with a notion of the government as a particular amalgamation of social actors that continues to exist at the conclusion of a war. The vanquished government yields utility
 \begin{equation*} \label{eq:Gubar}
-\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i)
+\ubar{G}_i(a_i, a_j) = G_i(\tau_i^\star(\bar{a}), \tau_j^\star(a_j); a_i) .
 \end{equation*}
 
 These outcomes represent upper and lower utility bounds on the outcome of any coercive negotiation. Each government can be made no worse off than if it were to lose a war. And each government can secure no better bargaining outcome than if they were to (costlessly) win a war for regime change. The welfare difference between these two scenarios is taken to be $i$'s *conflict of interest* with $j$. Note that this conflict of interest, unlike standard models of bargaining and war, need not be symmetric. The "pie" at stake in the negotiation over trade policies may be valued differently by each government –- $i$’s preference intensity may be stronger than $j$’s or vice versa. This variation in preference intensity, combined with variable military power, determines bargaining outcomes.
@@ -121,12 +121,12 @@ Proposition `r Pgamma` states that as government $i$ becomes more welfare-concio
 
 These conflicts of interest structure what sets of policies $i$ will offer and what offers $j$ will prefer to war. Working backward, recall from Definition `r Dbeq` that $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho)$ is a function that takes an offer from $i$ and returns a choice of whether or not to declare war. $j$'s utility for war is given by
 \begin{equation*} \label{eq:Ghatj}
-\hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j
+\hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j .
 \end{equation*}
 
 Note that $j$'s utility can be written in terms of it's conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
 $$
-\hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j)
+\hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) .
 $$
 This condition allows us to characterize $\omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho)$.
 
@@ -190,20 +190,20 @@ If $a_j < a_j(\ubar{c}_j, a_i)$, however, then $i$ faces a risk-return tradeoff 
 For any offer, the probability that $j$ will declare war is given by
 \begin{equation} \label{eq:prwar}
 \begin{split}
-\text{Pr} \left\{ c_j \leq W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right\} = F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right)
+\text{Pr} \left( c_j \leq W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) | \tilde{\bm{\tau}}, a_i, a_j \right) = F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j)  \right) .
 \end{split}
 \end{equation}
 
 With this quantity known, we can work to characterize $i$'s offer function, $\tilde{\bm{\tau}}^\star(a_i)$. If war occurs, $i$ receives utility
 \begin{equation*} \label{eq:Ghati}
-\hat{G}_i(a_i, a_j) = \rho \Gamma_i(a_i, a_j) + \ubar{G}_i(a_i, a_j) - c_i
+\hat{G}_i(a_i, a_j) = \rho \Gamma_i(a_i, a_j) + \ubar{G}_i(a_i, a_j) - c_i .
 \end{equation*}
 
 With the probability of war given in Equation \ref{eq:prwar}, we can write $i$'s utility for any offer as
 \begin{equation} \label{eq:Gtildei}
 \begin{split}
 \tilde{G}_i \left( \tilde{\bm{\tau}}, \omega^\star(\tilde{\bm{\tau}}; a_j, c_j, \rho); a_i, c_i, \rho \right) = \underbrace{\left( 1 - F \left( W_j(a_j, a_i) - G_j( \tilde{\bm{\tau}}; a_j ) \right) \right) \left( G_i( \tilde{\bm{\tau}}; a_i ) \right)}_{\neg \text{war}} + \\
-\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}}
+\underbrace{F \left( W_j(a_j, a_i) - G_j(\tilde{\bm{\tau}}; a_j) \right) \left( \hat{G}_i(a_i, a_j) \right)}_{\text{war}} .
 \end{split}
 \end{equation}
 

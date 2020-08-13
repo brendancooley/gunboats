@@ -1,30 +1,32 @@
 
 **Demand for Manufactured Goods:** Total expenditure on manufactured goods is $\alpha I_i = P_i X_i$. Cobb Douglas preferences ensure that consumers will spend an $\alpha$-share of their income on manufactured goods. We can derive Equation \ref{eq:demand} by solving Equation \ref{eq:CES} subject to the constraint
 \begin{equation} \label{eq:CESconstraint}
-\int_{\nu_i} p_{ii}(\nu_i) x_{ii}(\nu_i) d \nu_i + \int_{\nu_j} p_{ij}(\nu_j) x_{ij}(\nu_j) \leq \alpha w_i L
+\int_{\nu_i} p_{ii}(\nu_i) x_{ii}(\nu_i) d \nu_i + \int_{\nu_j} p_{ij}(\nu_j) x_{ij}(\nu_j) \leq \alpha w_i L .
 \end{equation} 
 For any two domestic varieties, $\nu_i$ and $\nu_i^\prime$, we must have
 \begin{align*}
 x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} p_{ii}(\nu_i^\prime)^{1 - \sigma} &= p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) \\
-x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime
+x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime .
 \end{align*}
+
 The same must hold for foreign varieties:
 $$
-x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime = \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime
+x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime = \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime .
 $$
 Summing these conditions and noting $x_{ij}^\star(\nu_j) p_{ij}(\nu_j)^{\sigma} = x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma}$ at equilibrium consumption gives
 \begin{align*}
 x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} \left( \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime)^{1 - \sigma} d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime)^{1 - \sigma} d \nu_j^\prime \right) &= \int_{\nu_i^\prime} p_{ii}(\nu_i^\prime) x_{ii}^\star(\nu_i^\prime) d \nu_i^\prime + \int_{\nu_j^\prime} p_{ij}(\nu_j^\prime) x_{ij}^\star(\nu_j^\prime) d \nu_j^\prime \\
 x_{ii}^\star(\nu_i) p_{ii}(\nu_i)^{\sigma} P_i(\tau_i)^{1 - \sigma} &= \alpha I_i(\tau_i) \\
-x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i)
+x_{ii}^\star(\nu_i) &= p_{ii}(\nu_i)^{-\sigma} P_i(\tau_i)^{\sigma - 1} \alpha I_i(\tau_i) .
 \end{align*}
 
 **Indirect Utility:** Indirect utility is $X_i^\alpha Y_i^\alpha$ evaluated at equilibrium consumption. Substituting our demand equations \ref{eq:demand} into Equation \ref{eq:CES} gives
 \begin{align*}
 X_i^\star &= \left( \int_{\nu_i} x_{ii}^\star(\nu_i)^{\frac{\sigma - 1}{\sigma}} d \nu_i + \int_{\nu_j} x_{ij}^\star(\nu_j)^{\frac{\sigma - 1}{\sigma}} d \nu_j \right)^{\frac{\sigma}{\sigma - 1}} \\
 &= P_i(\tau_i)^{\sigma - 1} I_i(\tau_i) \left( \int_{\nu_i} p_{ii}(\nu_i)^{1 - \sigma} + p_{ij}(\nu_j)^{1 - \sigma} \right)^{\frac{\sigma}{\sigma - 1}} \\
-&= \alpha \frac{I_i(\tau_i)}{P_i(\tau_i)}
+&= \alpha \frac{I_i(\tau_i)}{P_i(\tau_i)} .
 \end{align*}
+
 Because they serve as numeraire, equilibrium consumption of agricultural goods is equivalent to expenditure: $Y_i^\star = (1 - \alpha) I_i(\tau_i)$. Substituting these into the consumer's utility function yields Equation \ref{eq:V}.
 
 **Prices:** The firms' first order condition is
@@ -37,17 +39,17 @@ $$
 $$
 and
 $$
-\frac{\partial x_{ji}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i
+\frac{\partial x_{ji}(\nu_i)}{\partial p_i(\nu_i)} = - \sigma \tau_j^{-\sigma} p_i^(\nu_i)^{- \sigma - 1} P_j^{\sigma - 1} \alpha I_i .
 $$
 Note that 
 $$
-- \frac{\sigma}{p_i^\star(\nu_i)} \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) = \frac{\partial x_{ii}(\nu_i)}{\partial p_i^\star(\nu_i)} + \frac{\partial x_{ji}(\nu_i)}{\partial p_i^\star(\nu_i)}
+- \frac{\sigma}{p_i^\star(\nu_i)} \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) = \frac{\partial x_{ii}(\nu_i)}{\partial p_i^\star(\nu_i)} + \frac{\partial x_{ji}(\nu_i)}{\partial p_i^\star(\nu_i)} .
 $$
 The first order condition then becomes
 \begin{align*}
 \sigma \frac{w_i}{p_i^\star(\nu_i)} \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) - \sigma \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) + \left( x_{ii}^\star(\nu_i) + x_{ji}^\star(\nu_i) \right) &= 0 \\
 \sigma \frac{w_i}{p_i^\star(\nu_i)} - \sigma + 1 &= 0 \\
-\frac{\sigma}{\sigma - 1} w_i &=  p_i^\star(\nu_i)
+\frac{\sigma}{\sigma - 1} w_i &=  p_i^\star(\nu_i) .
 \end{align*}
 
 **Economic Equilibrium:**
@@ -58,7 +60,7 @@ With unit costs of production in manufacturing and agriculture, goods market cle
 L_i^y + L_j^y = (1 - \alpha) \left( I_i(\tau_i) + I_j(\tau_j) \right) \\
 L_i^x = \left( x_{ii}^\star(\tau_i) + x_{ji}^\star(\tau_j) \right) \\
 L_j^x = \left( x_{ij}^\star(\tau_i) + x_{jj}^\star(\tau_j) \right) \\
-L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( I_i(\tau_i) + I_j(\tau_j) \right)
+L_i^x + L_j^x + \Pi_i(p_i^\star) + \Pi_j(p_j^\star) = \alpha \left( I_i(\tau_i) + I_j(\tau_j) \right) .
 \end{split}
 \end{equation*}
 
@@ -66,6 +68,6 @@ Domestic factor market clearing requires
 \begin{equation*}
 \begin{split}
 L_i^x + L_i^y = L \\
-L_j^x + L_j^y = L
+L_j^x + L_j^y = L .
 \end{split}
 \end{equation*}

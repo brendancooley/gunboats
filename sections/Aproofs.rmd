@@ -3,7 +3,7 @@ $$
 A(\tau_i) = p^\star x_{ij}^\star(\tau_i) (\alpha I(\tau_i))^{-1} = \left( 1 + \tau_i^{1-\sigma} \right)^{-1} \tau_i^{-\sigma}
 $$
 $$
-B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1}
+B(\tau_i) = (\sigma - 1) A(\tau_i) - \sigma \tau_i^{-1} .
 $$
 
 

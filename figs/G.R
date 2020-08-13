@@ -24,7 +24,8 @@ G_data <- data.frame(tau_i, G_vals1, G_vals2)
 
 tick <- .1
 
-aprimecolor <- "steelblue4"
+# aprimecolor <- "steelblue4"
+aprimecolor <- bcOrange
 
 Gplot1 <- ggplot(G_data, aes(x=tau_i, y=G_vals1_n)) + 
   scale_x_continuous(limits=c(1, tau_i[length(tau_i)] + tick / 2), breaks=c(1, tauStar1, tauStar2), labels=c(1, "", "")) +

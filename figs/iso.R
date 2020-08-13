@@ -64,6 +64,7 @@ isoDataM <- isoDataM %>% filter(!(value >= tauStar1 - .03 & value <= tauStar1 + 
 
 # x <- seq(0, 1, length = length(isoDataM$variable %>% unique()))
 # colors <- tableau_seq_gradient_pal("Orange-Gold")(x)
+colors <- colorRampPalette(c("white", bcOrange))(10)
 
 isoPlot1 <- ggplot(isoDataM, aes(x=value, y=tau, group=variable, color=variable)) +
   scale_x_continuous(limits=c(1, top1), breaks=c(1, tauStar1), labels=c(1, TeX("$\\tau_i^{*}(a_i)$"))) +
@@ -76,14 +77,16 @@ isoPlot2 <- isoPlot1 +
   geom_line() + 
   annotate("segment", x=top1 - .1, xend = top1 - .1, y = 1.5, yend = 1.3, arrow = arrow(length = unit(1, "lines"))) +
   annotate("text", x = top1-.3, y = 1.4, label = "Increasing \niso-welfare", family="Palatino") + 
-  scale_color_gradient_tableau(palette="Blue") 
+  # scale_color_gradient_tableau(palette="Blue") +
+  scale_color_gradient(low=colors[3], high=colors[length(colors)])
 
 isoPlot <- isoPlot2
 
 
 brPlot <- ggplot(isoDataM, aes(x=value, y=tau, group=variable, color=variable)) + 
   geom_line(alpha=.5) + 
-  scale_color_gradient_tableau(palette="Blue") +
+  # scale_color_gradient_tableau(palette="Blue") +
+  scale_color_gradient(low=colors[3], high=colors[length(colors)]) +
   geom_vline(xintercept=tauStar1, size=1.25) +
   geom_hline(yintercept=tauStar2, size=1.25) +
   annotate("text", x=tauStar1 + .05, y=tauStar2 + .05, size=4, hjust=0, label=TeX("$\\tau_i^{*}(a_i), \\tau_j^{*}(a_j)$"), family="Palatino") +

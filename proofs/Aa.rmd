@@ -1,12 +1,13 @@
+Let
 $$
 \ubar{a} = (\sigma - 1) k(\alpha)^{-1} (p^\star)^{\alpha} (1 - (p^\star)^{-1})
 $$
 where
 $$
-k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha}
+k(\alpha) = \alpha^\alpha (1 - \alpha)^{1 - \alpha} .
 $$
 This quantity is derived by letting
 $$
-\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} a_i V_i^\prime(\tau_i) + \Pi_i^\prime(\tau_i) = 0 \right\}
+\ubar{a} = \left\{ a_i \,\middle|\, \lim_{\tau_i \rightarrow \infty} a_i V_i^\prime(\tau_i) + \Pi_i^\prime(\tau_i) = 0 \right\} .
 $$
-. Note that it is positive. 
+Note that it is positive. 

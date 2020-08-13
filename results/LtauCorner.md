@@ -4,7 +4,7 @@ W_j(a_j, a_i) - G_j(\tau_j^\star(\bar{a}), \tau_i^\star(a_i); a_j) = \Gamma_j(a_
 $$
 then
 $$
-\tilde{\bm{\tau}}^\star = \left\{ \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right\}
+\tilde{\bm{\tau}}^\star = \left( \tau_i^\star(a_i), \tau_i^\star(\bar{a}) \right)
 $$
 and
 $$

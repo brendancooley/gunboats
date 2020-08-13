@@ -1,1 +1,1 @@
-$a^\star = \bar{a}$
+$a^\star = \bar{a}$ .

@@ -90,14 +90,15 @@ deathsSummary <- summary(warsAll$deaths) / max(warsAll$deaths, na.rm=T) * maxSiz
 # lineColor <- "#34556D"
 lineColor <- "#191309"
 # pointsColor <- "#CCA686"
-pointsColor <- "#A8BFD9"
+# pointsColor <- "#A8BFD9"
+pointsColor <- "#a6a6a6"
 # warsColor <- "#DD2E2B"
 # warsColor <- "#B15740"
 warsColor <- bcOrange
 # warsColorBoundary <- "#C7502B"
 # warsColorFill <- "#F17929"
-warsColorBoundary <- "#C7502B"
-warsColorFill <- "#F17929"
+# warsColorBoundary <- "#C7502B"
+# warsColorFill <- "#F17929"
 
 labelSize <- 11
 titleSize <- 16
@@ -109,7 +110,7 @@ annotationSize <- 4
 pos <- position_jitter()
 main <- tradeS %>% ggplot(aes(x=meanPolity.plot, y=tradeInt.plot, label=lab)) +
   # geom_point(size=.5, alpha=.5) +
-  stat_smooth(geom="line", method="lm", se=FALSE, color=lineColor, size=.75, alpha=1) +
+  stat_smooth(geom="line", method="lm", se=FALSE, color="black", size=.75, alpha=1) +
   geom_point( alpha=.2, fill=pointsColor, color=pointsColor, pch=21,
              position=pos) +
   geom_point(data=tradeFwars, aes(size=deaths, text=dyadName),

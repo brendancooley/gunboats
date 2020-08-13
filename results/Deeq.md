@@ -1,1 +1,1 @@
-An *economic equilibrium* is a function $h : \left\{ \bm{\tau} \right\} \rightarrow \left\{ \bm{w}, \bm{L} \right\}$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices and corresponding demands.
+An *economic equilibrium* is a function $h : \bm{\tau} \rightarrow \left( \bm{w}, \bm{L} \right)$ mapping trade policy choices to endogenous wages and labor allocations such that goods and factor markets clear given equilibrium prices and corresponding demands.

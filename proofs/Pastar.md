@@ -1,1 +1,1 @@
-Follows immediately from Lemma `r Ltauj` and Lemma `r Ltaui` $\blacksquare$
+Follows immediately from Lemma `r Ltauj` and Lemma `r Ltaui`. $\blacksquare$
