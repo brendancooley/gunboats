@@ -35,8 +35,12 @@ for (i in helperFiles) {
   source(paste0(helperPath, i))
 }
 
-libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggthemes", "ggpubr", "padr", "latex2exp")
+libs <- c('tidyverse', "stargazer", "countrycode", "knitr", "ggrepel", "patchwork", "ggpubr", "padr", "latex2exp", "bibtex", "knitcitations")
 ipak(libs)
+
+# setup bib
+mkdir("bib/")
+file.copy("~/Dropbox (Princeton)/References/library.bib", "bib/library.bib", overwrite=TRUE)
 
 # not available
 Deeq <- "NA"
@@ -165,8 +169,16 @@ AddxProofs <- LETTERS[a]
 
 # References
 
-```{r, echo=FALSE, warning=FALSE, message=FALSE, results='hide'}
+<div id="refs"></div>
+
+# Software
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE, results="asis"}
 
 save.image('references.RData')
+# libs_all <- (.packages())
+write_bib(file="bib/Rpackages.bib")
+software_bib <- read.bib("bib/Rpackages.bib")
+software_bib %>% sort()
 
 ```
