@@ -11,7 +11,7 @@ abstract: Countries with deep trading relationships rarely fight wars with one a
 thanks: Ph.D. candidate, Department of Politics, Princeton University. Previous versions of this paper were circulated under the titles "Trade Wars, Hot Wars, and the Commercial Peace" and "Trade Policy in the Shadow of Power." For helpful comments and discussions on earlier drafts of this paper, I thank Timm Betz, Adrien Bilal, Tyson Chatagnier, Rob Carroll, Andrew Coe, Noel Foster, Erik Gartzke, Kishore Gawande, Dan Gibbs, Joanne Gowa, Gene Grossman, Bobby Gulotty, Matias Iaryczower, Amanda Kennard, Colin Krainin, Melissa Lee, James Mao, Helen Milner, John Oneal, Kris Ramsay, Bryan Schonfeld, Brad Smith, Sondre Solstad, and Jack Zhang as well as audiences at Princeton's Political Economy Graduate Colloquium, Princeton's International Relations Graduate Seminar, Princeton's Fellowship of Woodrow Wilson Scholars, the Midwest Political Science Association's 2018 Annual Meeting, Southern Political Science Association's 2019 Annual Meeting, and the International Studies Association's 2019 Annual Meeting.
 jelcodes: D72, D74, F13, F51, F52, F54
 
-bibliography: /Users/bcooley/Dropbox (Princeton)/References/library.bib
+bibliography: bib/library.bib
 biblio-style: apsr
 
 papersize: letter
@@ -48,7 +48,7 @@ Governments care about trade policy choices abroad because of market access exte
 
 As a consequence, governments themselves experience conflicts of interest over trade policy, which vary as a function of the governments' bias. When governments value consumer welfare, they prefer to adopt low barriers to trade. In doing so, they impose small market access externalities on their trading partners. When both governments hold liberal policy preferences, their relations are harmonious -- there is no incentive for conflict, militarized or otherwise. As governments become less liberal, conflicts of interest become more severe.
 
-If a government wins a war, it earns the right to impose regime change and install a "puppet" government abroad.^[See @Owen2002 for an empirical study of regime change.] Puppets open their markets to foreign firms, allowing victorious governments impose their trade policy preferences by force. This is the threat point governments leverage in bilateral trade policy negotiations. War sometimes occurs due to information frictions.
+If a government wins a war, it earns the right to impose regime change and install a "puppet" government abroad.^[See @Owen2002 for an empirical study of regime change.] Puppets open their markets to foreign firms, allowing victorious governments to impose their trade policy preferences by force. This is the threat point governments leverage in bilateral trade policy negotiations. War sometimes occurs due to information frictions.
 
 Two primary insights emerge from this environment. First, governments' degree of bias affects their propensity to trade and fight wars. When both governments are liberal, the costs of regime change never exceed its policy benefits. As a result, highly liberal governments never fight wars with one another. Their liberal preferences also result in liberal equilibrium trade policies. Naturally, lowering barriers to trade increases trade itself. The governments' preference compatibility produces a relationship between trade and peace, but this relationship is spurious — trade itself has no pacifying effect. Second, even when governments avoid conflict, trade policies reflect the balance of military power between the governments. Powerful countries can credibly threaten to impose regime change. They leverage this power to extract trade policy concessions and resist liberalization. After bargaining, powerful countries are more protectionist than weaker ones.
 
@@ -69,7 +69,7 @@ Here and in the Analysis section, I relegate proofs and derivations of key quant
 
 ## International Bargaining
 
-Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left( \tau_i, \tau_j \right) \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an aribitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [\ubar{a}, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analagous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
+Two governments, home ($i$) and foreign ($j$) bargain over their joint trade policies $\bm{\tau} = \left( \tau_i, \tau_j \right) \in [1, \bar{\tau}]^2$.^[Here, $\bar{\tau}$ is an arbitrary prohibitively high tariff that shuts down bilateral trade.] By controlling the degree of market access afforded to foreign firms, governments' trade policies impose externalities on one another. Government preferences depend on an exogenous parameter $a_i \in [\ubar{a}, \bar{a}]$, which controls the value these governments place on consumer welfare, relative to firm profits.^[$\bar{a}$ is defined below.] Government utility is denoted $G_i( \bm{\tau} | a_i)$.^[I develop the international economy from the home country's perspective, but analogous primitives exist for the foreign country.] Higher tariffs increase firm profits by shifting market share to local firms. This comes at the expense of consumers, however, who benefit from having access to a variety of products, home and foreign. Higher tariffs also harm foreign firms and the foreign government. This is the model's core conflict of interest. Each government would like to implement some degree of protectionism at home, while maintaining access to markets abroad.
 
 Bargaining occurs in the shadow of power. Government $i$ makes a take-it-or-leave-it (TIOLI) offer $\tilde{\bm{\tau}} = \left( \tilde{\tau}_i, \tilde{\tau}_j \right)$ to Government $j$. Government $j$ can either accept the offer or declare war, a choice denoted with $\omega \in \left\{ \text{accept}, \text{war} \right\}$. This is a simple coercive bargaining framework following @Fearon1995.^[While this bargaining protocol is restrictive, @Fey2019 show more complex bargaining processes are equivalent to a TIOLI offer in terms of their associated payoffs and probability of war.] Here, however, war results in *regime change*, rather than a simple costly division of a fixed surplus. Regime change is modeled as a change in a vanquished government's *preferences*. If government $i$ wins a war, it replaces the government of its counterpart, fixing its preference parameter at $a^\star$. $\rho$ denotes the probability that Government $i$ is successful in a war for regime change.^[With complementary probability, the initiating government is overthrown. A more realistic formulation might allow for the possibility that no regime change occurs, with $\rho_i + \rho_j \leq 1$. While this "all or nothing" conception of war is stark, it simplifies the analysis and highlights the forces at play.] $c_i$ is the cost that government $i$ must pay if a war occurs. $c_j > 0$ is held as private information. Government $i$ believes $c_j$ is distributed according to $F$ where $F$ is the uniform c.d.f. on $[\ubar{c}_j, \bar{c}_j]$.
 
@@ -84,7 +84,7 @@ A strategy for Government $i$ is an offer, $\tilde{\bm{\tau}}(a_i, c_i, \rho)$. 
 $$
 \omega : \tilde{\bm{\tau}} \rightarrow \left\{ \text{accept}, \text{war} \right\} .
 $$
-Let $\tilde{G}_k(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choice. From these objects we can define a subgame perfect bargaining equilibrium.
+Let $\tilde{G}_k(\tilde{\bm{\tau}}, \omega | a_k, c_k, \rho)$ denote government $k$'s utility as a function of these choices. From these objects we can define a subgame perfect bargaining equilibrium.
 
 
 
@@ -100,7 +100,7 @@ $$
 
 ## International Economy
 
-Government preferences in the game described above depend on the mechanics of the international economy. To simply the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i(\tau_i)$ is $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of measure 1 in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
+Government preferences in the game described above depend on the mechanics of the international economy. To simplify the presentation and focus on the dynamics of coercive bargaining in this political economy, I consider the special case in which countries are mirror images of one another in terms of their economic primitives. Each country is inhabited by a representative consumer with labor endowment $L_i = L_j = L$. Consumers value varieties of manufactured goods and goods from an undifferentiated outside sector, which I'll call agriculture. By providing their labor to local producers of these goods, they earn an endogenous wage $w_i$. Consumers' income inclusive of tariff revenues $r_i(\tau_i)$ is $I_i(\tau_i) = w_i L_i + r_i(\tau_i)$. A unit of labor can produce one unit of both differentiated goods and agricultural goods. There is a mass of firms of measure 1 in each economy which produce differentiated manufactured goods, indexed $\nu_i$.^[In a completely general equilibrium, this quantity would also be an endogenous object. Fixing the number of firms allows each firm to derive positive profits, providing biased governments with an incentive to implement a positive tariff. In this sense, the model is in a "short run" equilibrium in which profits have not yet been competed away.] Agricultural goods are produced competitively. The setup borrows from @Venables1987 and @Ossa2012.
 
 ### Tariffs and Prices
 
@@ -265,11 +265,11 @@ $\tau_i^\star(a_i)$ is strictly decreasing in $a_i$.
 
 ![Government best response functions \label{fig:br}](figure/br-1.pdf)
 
-Figure \ref{fig:br} depicts each governments' best response curves through the policy space. Because the governments' optimal choices do not depend on one another's policy choice, their best response curves are straight lines. Their intersection constitutes the noncooperative equilibrium. As the governments preferences become more biased, these curves shift outward, resulting in a more autarkic noncooperative equilibrium.
+Figure \ref{fig:br} depicts each governments' best response curves through the policy space. Because the governments' optimal choices do not depend on one another's policy choice, their best response curves are straight lines. Their intersection constitutes the noncooperative equilibrium. As the governments' preferences become more biased, these curves shift outward, resulting in a more autarkic noncooperative equilibrium.
 
 ## Regime Change
 
-It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
+It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-conscious governments adopt lower barriers to trade (Lemma 3) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -281,7 +281,7 @@ $$
 **Proposition 2:** 
 $a^\star = \bar{a}$ .
 
-If a government wins a war, it will replace the vanquished government with a maximimally-responsive puppet. This government will adopt no trade barriers, providing maximal market access for the victorious country's firms. This is the threat point that governments leverage in international coercive bargaining.
+If a government wins a war, it will replace the vanquished government with a maximally-responsive puppet. This government will adopt no trade barriers, providing maximal market access for the victorious country's firms. This is the threat point that governments leverage in international coercive bargaining.
 
 ## Conflicts of Interest
 
@@ -310,7 +310,7 @@ The magnitude of government $i$'s *conflict of interest* with government $j$ is
 **Proposition 3:** 
 $\Gamma_i(a_i, a_j)$ is decreasing in $a_i$ and $a_j$ .
 
-Proposition 3 states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
+Proposition 3 states that as government $i$ becomes more welfare-conscious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-conscious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-conscious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-conscious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
 
 ## Bargaining
 
@@ -319,7 +319,7 @@ These conflicts of interest structure what sets of policies $i$ will offer and w
 \hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j .
 \end{equation*}
 
-Note that $j$'s utility can be written in terms of it's conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
+Note that $j$'s utility can be written in terms of its conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
 $$
 \hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) .
 $$
@@ -430,7 +430,7 @@ If $a_j < a_j(\ubar{c}_j, a_i)$ and peace prevails, government $i$'s trade barri
 # Discussion
 
 
-Jointly, Propositions 4 and 5 establish that the most liberal governments never fight and also trade more than illiberal governments. Contra the commercial peace framework, trade is endogenously determined by governments trade policy choices. These endogenous trade policies determines trade flows and generate conflicts between governments. Economic integration is not exogenously given. Rather, participation in the international economy is a choice. Even in today's globalized era, such policy frictions persist [@Anderson2004; @Cooley2019b].
+Jointly, Propositions 4 and 5 establish that the most liberal governments never fight and also trade more than illiberal governments. Contra the commercial peace framework, trade is endogenously determined by governments trade policy choices. These endogenous trade policies determine trade flows and generate conflicts between governments. Economic integration is not exogenously given. Rather, participation in the international economy is a choice. Even in today's globalized era, such policy frictions persist [@Anderson2004; @Cooley2019b].
 
 These policy choices are the object of contention between governments in the model. Protectionist barriers cause conflicts of interest between market access-motivated governments. @Mcdonald2004 shows that measures of protection are better predictors of conflict than trade.^[His analysis covers the years 1960-2000.] Trade can persist in the presence of trade barriers. For example, World War I broke out during an era of rapid globalization. @Mcdonald2007 show that the great powers maintained high protective tariffs during this era, which provided a rationale for conflict over market access conditions, despite high trade volumes. @Chatagnier2015 examine governments whose firms compete in the same export markets. They show these governments are more likely to experience international conflicts.
 
@@ -447,11 +447,11 @@ Territory plays a central role in theories and empirical studies of interstate c
 
 The model envisions a stylized world. Two governments preside over identical economies exogenous military capacities and political bias types. If the countries were heterogeneous in market size ($L_i$), the economically larger country would possess an additional source of bargaining power. Whether this outside option affects bargaining outcomes would depend on the distribution of economic and military strength. This analysis might shed light the substitutability of economic and military coercion [@Hirschman1945].
 
-Military power ($\rho$) is also treated as exogenous here. If military investment was possible, $\rho$ would depend on economic and political primitives.^[See, for example, @Jackson2009.] Because they have more at stake in bargaining, illiberal governments might invest more in their militaries. This results would hold especially if the costs of militarization are borne by consumers [@Jackson2007; @Chapman2015]. This variant might explain why democracies spend less on their militaries [@Fordham2005].
+Military power ($\rho$) is also treated as exogenous here. If military investment was possible, $\rho$ would depend on economic and political primitives.^[See, for example, @Jackson2009.] Because they have more at stake in bargaining, illiberal governments might invest more in their militaries. This result would hold especially if the costs of militarization are borne by consumers [@Jackson2007; @Chapman2015]. This variant might explain why democracies spend less on their militaries [@Fordham2005].
 
 If the game developed here was dynamic, regime type itself would be an endogenous object. Wars impose puppet governments more liberal than those that preceded them. The world would democratize over time, as conquering powers installed liberal governments abroad. [@Mcdonald2015].
 
-While imperial powers sometimes seek to democratize defeated countries, they often instead install allied strongmen or colonial administrations. If the liberal democracy hypothesis holds, these actions are puzzling. Controlling these governments presents agency problem absent in relations with liberal regimes. Liberal regimes adopt liberal trade policies of their own accord. Conquerers must incentivize their agents to adopt these policies.
+While imperial powers sometimes seek to democratize defeated countries, they often instead install allied strongmen or colonial administrations. If the liberal democracy hypothesis holds, these actions are puzzling. Controlling these governments presents agency problems absent in relations with liberal regimes. Liberal regimes adopt liberal trade policies of their own accord. Conquerors must incentivize their agents to adopt these policies.
 
 A multi-country variant of this framework might provide a rationale for this behavior. Consider a world populated with three countries — A, B, and C. For firms in A, an ideal policy for B is one that is open to trade with A but closed to trade from C. This allows A's firms to maximize their share of B's market.^[This assumes, of course, that B cannot tax its own firms.] In other words, firms seek *preferential* access to foreign markets. It is immediate that a low bias government would not provide such preferential access. Coercing governments might be willing to suffer the agency costs of obtaining preferential access to B if B's market was valuable enough. This framework might be profitably applied to the study of imperialism [@Gallagher1953].
 
@@ -885,114 +885,93 @@ By Lemma 3, $\tau_i^\star(a_i)$ is decreasing in $a_i$ and $x_{ij}^\star(\tau_i)
 
 # Software
 
-Arel-Bundock V (2020). _countrycode: Convert Country Names and Country
-Codes_. R package version 1.2.0, <URL:
+Arel-Bundock V (2018). _countrycode: Convert Country Names and
+Country Codes_. R package version 1.1.0, <URL:
 https://CRAN.R-project.org/package=countrycode>.
-
-Arel-Bundock V, Enevoldsen N, Yetman C (2018). "countrycode: An R
-package to convert country names and country codes." _Journal of Open
-Source Software_, *3*(28), 848. <URL:
-https://doi.org/10.21105/joss.00848>.
 
 Arnold JB (2019). _ggthemes: Extra Themes, Scales and Geoms for
 'ggplot2'_. R package version 4.2.0, <URL:
 https://CRAN.R-project.org/package=ggthemes>.
 
-Boettiger C (2019). _knitcitations: Citations for 'Knitr' Markdown
+Bache SM, Wickham H (2014). _magrittr: A Forward-Pipe Operator for
+R_. R package version 1.5, <URL:
+https://CRAN.R-project.org/package=magrittr>.
+
+Boettiger C (2020). _knitcitations: Citations for 'Knitr' Markdown
 Files_. R package version 1.0.10, <URL:
-https://CRAN.R-project.org/package=knitcitations>.
+https://github.com/cboettig/knitcitations>.
 
-Francois R (2020). _bibtex: Bibtex Parser_. R package version 0.4.2.2,
-<URL: https://CRAN.R-project.org/package=bibtex>.
+Francois R (2020). _bibtex: Bibtex Parser_. R package version
+0.4.2.2, <URL: https://CRAN.R-project.org/package=bibtex>.
 
-Henry L, Wickham H (2020). _purrr: Functional Programming Tools_. R
-package version 0.3.4, <URL: https://CRAN.R-project.org/package=purrr>.
+Henry L, Wickham H (2019). _purrr: Functional Programming Tools_.
+R package version 0.3.3, <URL:
+https://CRAN.R-project.org/package=purrr>.
 
 Hlavac M (2018). _stargazer: Well-Formatted Regression and Summary
 Statistics Tables_. R package version 5.2.2, <URL:
 https://CRAN.R-project.org/package=stargazer>.
 
-Kassambara A (2020). _ggpubr: 'ggplot2' Based Publication Ready Plots_.
-R package version 0.4.0, <URL:
+Kassambara A (2019). _ggpubr: 'ggplot2' Based Publication Ready
+Plots_. R package version 0.2.4, <URL:
 https://CRAN.R-project.org/package=ggpubr>.
 
 Meschiari S (2015). _latex2exp: Use LaTeX Expressions in Plots_. R
 package version 0.4.0, <URL:
 https://CRAN.R-project.org/package=latex2exp>.
 
-Müller K, Wickham H (2020). _tibble: Simple Data Frames_. R package
-version 3.0.3, <URL: https://CRAN.R-project.org/package=tibble>.
+Müller K, Wickham H (2020). _tibble: Simple Data Frames_. R
+package version 3.0.1, <URL:
+https://CRAN.R-project.org/package=tibble>.
 
-Pedersen TL (2020). _patchwork: The Composer of Plots_. R package
-version 1.0.1, <URL: https://CRAN.R-project.org/package=patchwork>.
+Pedersen TL (2019). _patchwork: The Composer of ggplots_. R
+package version 0.0.1.9000, <URL:
+https://github.com/thomasp85/patchwork>.
 
-R Core Team (2020). _R: A Language and Environment for Statistical
-Computing_. R Foundation for Statistical Computing, Vienna, Austria.
-<URL: https://www.R-project.org/>.
+R Core Team (2019). _R: A Language and Environment for Statistical
+Computing_. R Foundation for Statistical Computing, Vienna,
+Austria. <URL: https://www.R-project.org/>.
 
-Slowikowski K (2020). _ggrepel: Automatically Position Non-Overlapping
-Text Labels with 'ggplot2'_. R package version 0.8.2, <URL:
-https://CRAN.R-project.org/package=ggrepel>.
+Slowikowski K (2019). _ggrepel: Automatically Position
+Non-Overlapping Text Labels with 'ggplot2'_. R package version
+0.8.1, <URL: https://CRAN.R-project.org/package=ggrepel>.
 
-Thoen E (2020). _padr: Quickly Get Datetime Data Ready for Analysis_. R
-package version 0.5.2, <URL: https://CRAN.R-project.org/package=padr>.
+Thoen E (2020). _padr: Quickly Get Datetime Data Ready for
+Analysis_. R package version 0.5.2, <URL:
+https://CRAN.R-project.org/package=padr>.
 
-Wickham H (2020). _forcats: Tools for Working with Categorical
-Variables (Factors)_. R package version 0.5.0, <URL:
+Wickham H (2019). _forcats: Tools for Working with Categorical
+Variables (Factors)_. R package version 0.4.0, <URL:
 https://CRAN.R-project.org/package=forcats>.
 
-Wickham H (2020). _reshape2: Flexibly Reshape Data: A Reboot of the
-Reshape Package_. R package version 1.4.4, <URL:
+Wickham H (2017). _reshape2: Flexibly Reshape Data: A Reboot of
+the Reshape Package_. R package version 1.4.3, <URL:
 https://CRAN.R-project.org/package=reshape2>.
 
 Wickham H (2019). _stringr: Simple, Consistent Wrappers for Common
 String Operations_. R package version 1.4.0, <URL:
 https://CRAN.R-project.org/package=stringr>.
 
-Wickham H (2019). _tidyverse: Easily Install and Load the 'Tidyverse'_.
-R package version 1.3.0, <URL:
+Wickham H (2017). _tidyverse: Easily Install and Load the
+'Tidyverse'_. R package version 1.2.1, <URL:
 https://CRAN.R-project.org/package=tidyverse>.
 
-Wickham H (2016). _ggplot2: Elegant Graphics for Data Analysis_.
-Springer-Verlag New York. ISBN 978-3-319-24277-4, <URL:
-https://ggplot2.tidyverse.org>.
+Wickham H, Chang W, Henry L, Pedersen TL, Takahashi K, Wilke C,
+Woo K, Yutani H, Dunnington D (2020). _ggplot2: Create Elegant
+Data Visualisations Using the Grammar of Graphics_. R package
+version 3.3.0, <URL: https://CRAN.R-project.org/package=ggplot2>.
 
-Wickham H (2007). "Reshaping Data with the reshape Package." _Journal
-of Statistical Software_, *21*(12), 1-20. <URL:
-http://www.jstatsoft.org/v21/i12/>.
-
-Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R,
-Grolemund G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E,
-Bache SM, Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi
-K, Vaughan D, Wilke C, Woo K, Yutani H (2019). "Welcome to the
-tidyverse." _Journal of Open Source Software_, *4*(43), 1686. doi:
-10.21105/joss.01686 (URL: https://doi.org/10.21105/joss.01686).
-
-Wickham H, Chang W, Henry L, Pedersen TL, Takahashi K, Wilke C, Woo K,
-Yutani H, Dunnington D (2020). _ggplot2: Create Elegant Data
-Visualisations Using the Grammar of Graphics_. R package version 3.3.2,
-<URL: https://CRAN.R-project.org/package=ggplot2>.
-
-Wickham H, François R, Henry L, Müller K (2020). _dplyr: A Grammar of
-Data Manipulation_. R package version 1.0.0, <URL:
+Wickham H, François R, Henry L, Müller K (2020). _dplyr: A Grammar
+of Data Manipulation_. R package version 0.8.5, <URL:
 https://CRAN.R-project.org/package=dplyr>.
 
-Wickham H, Henry L (2020). _tidyr: Tidy Messy Data_. R package version
-1.1.0, <URL: https://CRAN.R-project.org/package=tidyr>.
+Wickham H, Henry L (2019). _tidyr: Tidy Messy Data_. R package
+version 1.0.0, <URL: https://CRAN.R-project.org/package=tidyr>.
 
-Wickham H, Hester J, Francois R (2018). _readr: Read Rectangular Text
-Data_. R package version 1.3.1, <URL:
+Wickham H, Hester J, Francois R (2018). _readr: Read Rectangular
+Text Data_. R package version 1.3.1, <URL:
 https://CRAN.R-project.org/package=readr>.
 
-Xie Y (2020). _knitr: A General-Purpose Package for Dynamic Report
-Generation in R_. R package version 1.29, <URL:
+Xie Y (2019). _knitr: A General-Purpose Package for Dynamic Report
+Generation in R_. R package version 1.25, <URL:
 https://CRAN.R-project.org/package=knitr>.
-
-Xie Y (2015). _Dynamic Documents with R and knitr_, 2nd edition.
-Chapman and Hall/CRC, Boca Raton, Florida. ISBN 978-1498716963, <URL:
-https://yihui.org/knitr/>.
-
-Xie Y (2014). "knitr: A Comprehensive Tool for Reproducible Research in
-R." In Stodden V, Leisch F, Peng RD (eds.), _Implementing Reproducible
-Computational Research_. Chapman and Hall/CRC. ISBN 978-1466561595,
-<URL: http://www.crcpress.com/product/isbn/9781466561595>.

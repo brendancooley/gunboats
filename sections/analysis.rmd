@@ -61,11 +61,11 @@ brPlot
 
 ```
 
-Figure \ref{fig:br} depicts each governments' best response curves through the policy space. Because the governments' optimal choices do not depend on one another's policy choice, their best response curves are straight lines. Their intersection constitutes the noncooperative equilibrium. As the governments preferences become more biased, these curves shift outward, resulting in a more autarkic noncooperative equilibrium.
+Figure \ref{fig:br} depicts each governments' best response curves through the policy space. Because the governments' optimal choices do not depend on one another's policy choice, their best response curves are straight lines. Their intersection constitutes the noncooperative equilibrium. As the governments' preferences become more biased, these curves shift outward, resulting in a more autarkic noncooperative equilibrium.
 
 ## Regime Change
 
-It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-concious governments adopt lower barriers to trade (Lemma `r Ltaui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
+It is now clear that each government cares indirectly about the preferences of its bargaining partner. More welfare-conscious governments adopt lower barriers to trade (Lemma `r Ltaui`) in a non-cooperative equilibrium, which benefits governments abroad by providing greater market access to their firms. If each government were able to choose the preferences of their negotiating partner, they would do so in order to minimize trade barriers. This is the purpose of regime change in this model. If a government wins a war, it earns the right to replace the government with a puppet with more "dovish" preferences. Regime change is therefore used instrumentally to pry open international markets. Let $a^\star \in (\ubar{a}, \bar{a}]$ denote the type of the optimal puppet government.
 
 The optimal puppet's type solves
 $$
@@ -81,7 +81,7 @@ PastarText <- knit_child("../results/Pastar.md")
 
 **Proposition `r Pastar`:** `r PastarText`
 
-If a government wins a war, it will replace the vanquished government with a maximimally-responsive puppet. This government will adopt no trade barriers, providing maximal market access for the victorious country's firms. This is the threat point that governments leverage in international coercive bargaining.
+If a government wins a war, it will replace the vanquished government with a maximally-responsive puppet. This government will adopt no trade barriers, providing maximal market access for the victorious country's firms. This is the threat point that governments leverage in international coercive bargaining.
 
 ## Conflicts of Interest
 
@@ -115,7 +115,7 @@ PgammaText <- knit_child("../results/Pgamma.md")
 
 **Proposition `r Pgamma`:** `r PgammaText`
 
-Proposition `r Pgamma` states that as government $i$ becomes more welfare-concious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-concious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-concious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-concious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
+Proposition `r Pgamma` states that as government $i$ becomes more welfare-conscious, the magnitude of its conflict of interest decreases. Likewise, as government $j$ becomes more welfare-conscious, $i$'s conflict of interest with it decreases. As government $i$ becomes more welfare-conscious, it prefers less protectionism. This decreases the difference between $i$'s ideal policy and the (free trading) policy that will be imposed upon it if $j$ is victorious in a war. As $j$ becomes more welfare-conscious, it imposes smaller market access externalities on $i$. Regime change becomes relatively less appealing, because the distance between $j$'s preferred policy and the policy that a puppet would impose shrinks. In the corner case where $a_i = a_j = \bar{a}$, the conflict of interest evaporates -- puppets would implement the exact same policies as the sitting governments.
 
 ## Bargaining
 
@@ -124,7 +124,7 @@ These conflicts of interest structure what sets of policies $i$ will offer and w
 \hat{G}_j(a_j, a_i) = \underbrace{(1 - \rho) \bar{G}_j(a_j) + \rho \ubar{G}_j(a_j, a_i)}_{W_j(a_j, a_i)} - c_j = (1 - \rho) \Gamma_j(a_j, a_i) + \ubar{G}_j(a_j, a_i) - c_j .
 \end{equation*}
 
-Note that $j$'s utility can be written in terms of it's conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
+Note that $j$'s utility can be written in terms of its conflict of interest with $i$. $j$ will prefer war to $i$'s offer whenever
 $$
 \hat{G}_j(a_j, a_i) \geq G_j(\tilde{\bm{\tau}}; a_j) .
 $$
